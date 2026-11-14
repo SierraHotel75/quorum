@@ -6,7 +6,7 @@
    data/lois : rien de faux ne doit traîner dans le dossier publié.
 
    Usage : node scripts/preuve-gate.mjs
-   Code de sortie 0 si les onze attentes sont tenues. */
+   Code de sortie 0 si les douze attentes sont tenues. */
 
 import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
@@ -151,7 +151,7 @@ function fichierComplet() {
   loi.verifications = {
     chiffres: [
       {
-        affirmation: "12 % des logements sont concernés.",
+        affirmation: "12 % des logements concernés.",
         chiffre: "12 %",
         auteur: fiche.nom,
         role: fiche.role,
@@ -363,6 +363,21 @@ try {
     attendu: "code 1 et contradiction",
     tenu: casContradiction.code === 1 && /contradiction/.test(casContradiction.sortie),
     sortie: casContradiction.sortie
+  });
+
+  /* WP1.9 — l'affirmation affichée entre guillemets doit être un fragment exact
+     de la citation prononcée : la retoucher, c'est citer faux. */
+  const affirmationFausse = JSON.parse(JSON.stringify(loi));
+  affirmationFausse.verifications.chiffres[0].affirmation = "12 % des loyers sont concernés.";
+  const fauxAffirmation = join(dossier, "faux-affirmation.json");
+  writeFileSync(fauxAffirmation, JSON.stringify(affirmationFausse, null, 2), "utf8");
+  const casAffirmation = lancer(fauxAffirmation, dossier);
+  resultats.push({
+    nom: "affirmation retouchée refusée",
+    attendu: "code 1 et affirmation absente de la citation",
+    tenu:
+      casAffirmation.code === 1 && /affirmation absente de la citation/.test(casAffirmation.sortie),
+    sortie: casAffirmation.sortie
   });
 } finally {
   rmSync(dossier, { recursive: true, force: true });

@@ -97,6 +97,12 @@ function normaliser(s) {
     .trim();
 }
 
+/* Le point final et la majuscule de début viennent de l'affichage, pas du
+   verbatim : ils sont retirés avant de comparer un fragment à sa citation. */
+function sansPonctuationFinale(s) {
+  return normaliser(s).toLowerCase().replace(/[.!?\u2026]+$/, "");
+}
+
 function estDate(iso) {
   if (typeof iso !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return false;
   const d = new Date(iso + "T12:00:00Z");
@@ -629,6 +635,15 @@ function verifierVerifications(loi, r, refs) {
     }
 
     verifierCitation(quoi, x, refs, r, "WP1.9");
+
+    /* L'affirmation est affichée entre guillemets : elle doit donc être un
+       fragment exact de la citation prononcée, jamais une reformulation. */
+    if (
+      sansPonctuationFinale(x.affirmation) &&
+      !sansPonctuationFinale(x.citation).includes(sansPonctuationFinale(x.affirmation))
+    ) {
+      r.ajouter("WP1.9", `${quoi} : affirmation absente de la citation`);
+    }
 
     const sources = Array.isArray(x.sources) ? x.sources : [];
     if (x.verdict === "non documenté") {

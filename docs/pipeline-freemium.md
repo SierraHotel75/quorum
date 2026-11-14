@@ -381,7 +381,7 @@ ignorés, ainsi que `index.json`.
 | WP1.6 | ressources et journal | média hors liste, affiliation divergente, contrôle non vert |
 | WP1.7 | variante | clause absente de sa source, encore présente dans le texte adopté |
 | WP1.8 | débat | citation retouchée, mauvaise séance, auteur absent de la liste |
-| WP1.9 | chiffres vérifiés | `confirmé` sans source, `non documenté` avec source, chiffre absent de la citation |
+| WP1.9 | chiffres vérifiés | `confirmé` sans source, `non documenté` avec source, chiffre absent de la citation, affirmation affichée qui n'est pas un fragment exact de la citation |
 
 `meta.controles` doit lister les 10 noms **exactement** :
 `Schéma du fichier`, `Chiffres cohérents avec le scrutin`, `Sièges attribués = 577`,
@@ -389,7 +389,7 @@ ignorés, ainsi que `index.json`.
 `Ressources citées vérifiées`, `Variante contrôlée` (seulement si `variante` existe),
 `Débat cité`, `Chiffres vérifiés` — tous avec `etat: "ok"`.
 
-### 6.2 `scripts/preuve-gate.mjs` — 11 cas
+### 6.2 `scripts/preuve-gate.mjs` — 12 cas
 
 ```
 node scripts/preuve-gate.mjs
@@ -410,7 +410,8 @@ introduit une faute à la fois et exige le refus. Résultat au 14/11/2026 :
 [OK] citation retouchée refusée
 [OK] verdict « confirmé » sans source refusé
 [OK] « non documenté » avec source refusé
-Preuve tenue : 11 cas sur 11.
+[OK] affirmation retouchée refusée
+Preuve tenue : 12 cas sur 12.
 ```
 
 Ce script ne prouve pas que la base est vraie ; il prouve que le passage **refuse**.
@@ -493,7 +494,7 @@ data/lois/index.json         1 entrée par loi publiée
 data/lois/<id>.json          la loi
 data/lois/_<id>.json         jeu de travail, jamais publié
 scripts/verifier.mjs         gate 5
-scripts/preuve-gate.mjs      11 cas de refus
+scripts/preuve-gate.mjs      12 cas de refus
 ```
 
 Aucun script de génération n'est versionné. La collecte se fait par appels MCP dans une
