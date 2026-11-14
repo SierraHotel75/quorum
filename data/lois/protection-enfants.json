@@ -333,7 +333,7 @@
     "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
   },
   "verifications": {
-    "chapeau": "Deux chiffres du débat ont pu être confrontés à une source officielle. Pour le troisième, la source primaire n’est pas publiée : il reste « non documenté ».",
+    "chapeau": "Deux chiffres du débat ont pu être confrontés à une source publiée. Pour le troisième, le rapport d’origine n’a pas été retrouvé : il reste « non documenté ».",
     "chiffres": [
       {
         "affirmation": "Moins de 3 % des auteurs sont condamnés.",
@@ -345,7 +345,7 @@
         "date": "2026-07-17",
         "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N019",
         "verdict": "confirmé",
-        "explication": "La CIIVISE reprend ce chiffre dans son rapport public de novembre 2023 et dans son bilan du 15 juin 2026. Ce n’est pas un comptage direct des condamnations : le taux croise la part des victimes qui portent plainte (19 %, et 12 % en cas d’inceste) avec la part des plaintes qui aboutissent à une condamnation (une sur six, une sur dix en inceste). C’est donc un ordre de grandeur calculé sur les 160 000 victimes estimées chaque année, pas une statistique exhaustive.",
+        "explication": "La CIIVISE retient 3 % dans son rapport public de novembre 2023 et le rappelle dans son bilan du 15 juin 2026. Ce n’est pas un comptage des condamnations année par année. La CIIVISE part de la part des victimes qui portent plainte (19 %, et 12 % en cas d’inceste), puis de la part des plaintes qui aboutissent à une condamnation (une sur six, une sur dix en inceste). Appliqué aux 160 000 victimes estimées chaque année, ce calcul donne un ordre de grandeur, pas un décompte exhaustif.",
         "sources": [
           {
             "nom": "CIIVISE — rapport public, novembre 2023",
@@ -367,7 +367,7 @@
         "date": "2026-07-21",
         "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023",
         "verdict": "confirmé",
-        "explication": "La CIIVISE donne 1 % pour les violences incestueuses : une plainte sur dix aboutit à une condamnation. Dire « moins de 1 % » est donc cohérent avec la source, qui parle d’environ 1 %. Comme pour les 3 %, il s’agit d’une estimation calculée à partir des plaintes déposées, et non d’un comptage des faits commis.",
+        "explication": "La CIIVISE retient 1 % pour les violences incestueuses : une plainte sur dix y aboutit à une condamnation. Le chiffre prononcé est du même ordre que celui de la source. Comme pour les 3 %, il s’agit d’une estimation calculée à partir des plaintes déposées, et non d’un comptage des faits commis.",
         "sources": [
           {
             "nom": "CIIVISE — rapport public, novembre 2023",
@@ -389,7 +389,7 @@
         "date": "2026-07-17",
         "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020",
         "verdict": "non documenté",
-        "explication": "Le chiffre est attribué à un rapport inter-inspections de juillet 2022 sur les violences sexuelles faites aux enfants. Ce rapport n’est publié sur aucun site officiel : nous n’avons pas pu le lire, ni vérifier le chiffre à la source. Il n’est donc pas repris comme un fait. La règle s’applique : sans source vérifiable, « non documenté ».",
+        "explication": "Le chiffre renvoie à un rapport inter-inspections de juillet 2022 sur les violences sexuelles faites aux enfants. Ce rapport n’a pas été retrouvé sur un site officiel : nous n’avons pas pu le lire, ni vérifier le chiffre à sa source. Il n’est donc pas repris comme un fait. Sans source vérifiable, le verdict reste « non documenté ».",
         "sources": []
       }
     ],
