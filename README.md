@@ -16,6 +16,21 @@ relatif à la protection des enfants, scrutin n° 8429 du 21 juillet 2026.
 - Pas un produit fini : le backend, le RAG et le freemium décrits plus bas sont des
   possibilités, pas des fonctionnalités livrées.
 
+## Captures
+
+Écrans réels de l'application, capturés sur le serveur local par
+`node scripts/captures.mjs` (680 × 960, thème sombre par défaut). Ce ne sont pas des
+maquettes : les maquettes sont dans `assets/mockups/`.
+
+| **Accueil**<br>![Accueil](docs/captures/desktop-accueil.png) | **Le devoir du jour**<br>![Sommaire du devoir](docs/captures/desktop-sommaire.png) |
+|---|---|
+| **La chronologie**<br>![Chronologie](docs/captures/desktop-chronologie.png) | **Le résumé**<br>![Résumé](docs/captures/desktop-resume.png) |
+| **L'article entier**<br>![Article entier](docs/captures/desktop-article.png) | **Votre vote**<br>![Votre vote](docs/captures/desktop-vote.png) |
+| **Les chiffres**<br>![Les chiffres](docs/captures/desktop-chiffres.png) | **Le débat, mot pour mot**<br>![Le débat](docs/captures/desktop-debat.png) |
+| **Les chiffres vérifiés**<br>![Chiffres vérifiés](docs/captures/desktop-verif.png) | **La presse**<br>![La presse](docs/captures/desktop-presse.png) |
+| **Votre vote final**<br>![Vote final](docs/captures/desktop-resultat.png) | **La carte**<br>![La carte](docs/captures/desktop-carte.png) |
+| **L'arbre de progression**<br>![L'arbre](docs/captures/desktop-arbre.png) | **La méthode**<br>![La méthode](docs/captures/desktop-methode.png) |
+
 ## Démo
 
 ```
@@ -535,7 +550,7 @@ les chiffres et le débat ; le vote reste privé.
 ├── service-worker.js       hors ligne, réseau d'abord
 ├── styles/                 tokens, mise en page, plan
 ├── js/                     hémicycle SVG, routage et écrans, plan
-├── scripts/                gate, preuve du gate, captures mobiles
+├── scripts/                gate, preuve du gate, captures d'écran
 ├── data/lois/              fiches publiées, index, jeux de travail _
 ├── data/ref/               référentiels fermés et arbre
 ├── assets/                 icônes et maquettes
@@ -554,6 +569,7 @@ js/wp.js                plan du jour, cases cochées, horloge
 scripts/verifier.mjs    contrôles bloquants avant publication
 scripts/preuve-gate.mjs preuve : accepte un fichier complet, refuse le reste
 scripts/mobile.mjs      captures et mesure de débordement, 390 et 360 px
+scripts/captures.mjs    captures du README, 680 px, thème sombre
 data/ref/groupes.json   composition de l'Assemblée, datée et sourcée
 data/ref/medias.json    médias suivis par flux RSS, liste fermée
 data/ref/experts.json   personnes et organisations citables, liste fermée
@@ -567,7 +583,7 @@ data/lois/_demo.json    jeu de travail, jamais publié (les fichiers en _ sont i
 data/lois/_archive-…json  lois retirées de la publication, gardées pour mémoire
 data/plan.json          les sept lots de la journée
 assets/mockups/         rendus photo, maquettes
-docs/captures/          captures mobiles générées par scripts/mobile.mjs
+docs/captures/          captures générées par scripts/mobile.mjs et scripts/captures.mjs
 docs/pipeline-freemium.md  pipeline général et freemium
 docs/methode-donnees.md    fabrication pas à pas de la fiche protection-enfants
 ```
@@ -582,6 +598,7 @@ node scripts/verifier.mjs
 node scripts/verifier.mjs --reseau
 node scripts/preuve-gate.mjs
 node scripts/mobile.mjs
+node scripts/captures.mjs
 ```
 
 - `verifier.mjs` doit rendre `Verdict : 1 fichier(s) conforme(s). Publication autorisée.`
@@ -591,6 +608,9 @@ node scripts/mobile.mjs
   lancé à `http://127.0.0.1:8000`. Il écrit `docs/captures/mobile-390-*.png` et
   `docs/captures/mobile-360-*.png` et affiche un tableau de débordement. Chrome absent :
   définir `CHROME_PATH`.
+- `captures.mjs` fait de même en 680 × 960 pour les captures du README et écrit
+  `docs/captures/desktop-*.png`. Il remet la mémoire locale à zéro : les captures ne
+  montrent aucun vote.
 
 Règles de contribution :
 
