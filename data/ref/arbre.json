@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "titre": "Arbre des compétences civiques",
+    "regle": "Un nœud s’ouvre avec des points d’exploration. Aucun point ne vient du contenu d’un vote : voter rapporte le même point quel que soit le choix, et changer d’avis n’en rapporte aucun.",
+    "points_max": 8,
+    "actions": [
+      { "cle": "fait", "nom": "Lire le fait" },
+      { "cle": "v1", "nom": "Premier vote" },
+      { "cle": "lu", "nom": "Ouvrir les extraits" },
+      { "cle": "oppose", "nom": "Lire les deux bords" },
+      { "cle": "source", "nom": "Ouvrir la presse" },
+      { "cle": "quiz", "nom": "Répondre au quiz" },
+      { "cle": "carte", "nom": "Voir l’hémicycle" },
+      { "cle": "v2", "nom": "Vote final" }
+    ]
+  },
+  "tronc": [
+    { "nom": "Lire le fait", "cle": "fait" },
+    { "nom": "Lire les extraits", "cle": "lu" },
+    { "nom": "Lire les deux bords", "cle": "oppose" },
+    { "nom": "Vérifier une source", "cle": "source" }
+  ],
+  "themes": [
+    {
+      "id": "economie",
+      "nom": "Économie",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Investissement", "seuil": 4 },
+        { "nom": "Finances publiques", "seuil": 6 },
+        { "nom": "Budget", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "social",
+      "nom": "Société",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Protection de l’enfance", "seuil": 4 },
+        { "nom": "Santé", "seuil": 6 },
+        { "nom": "Logement", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "institutions",
+      "nom": "Institutions",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Assemblée nationale", "seuil": 4 },
+        { "nom": "Sénat", "seuil": 6 },
+        { "nom": "Commission mixte paritaire", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "travail",
+      "nom": "Travail",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Salaires", "seuil": 4 },
+        { "nom": "Temps de travail", "seuil": 6 },
+        { "nom": "Retraites", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "environnement",
+      "nom": "Environnement",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Climat", "seuil": 4 },
+        { "nom": "Agriculture", "seuil": 6 },
+        { "nom": "Énergie", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "securite",
+      "nom": "Sécurité",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Justice pénale", "seuil": 4 },
+        { "nom": "Ordre public", "seuil": 6 },
+        { "nom": "Renseignement", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "education",
+      "nom": "Éducation",
+      "seuil": 2,
+      "branches": [
+        { "nom": "École", "seuil": 4 },
+        { "nom": "Enseignement supérieur", "seuil": 6 },
+        { "nom": "Recherche", "seuil": 8 }
+      ]
+    },
+    {
+      "id": "numerique",
+      "nom": "Numérique",
+      "seuil": 2,
+      "branches": [
+        { "nom": "Données personnelles", "seuil": 4 },
+        { "nom": "Intelligence artificielle", "seuil": 6 },
+        { "nom": "Plateformes", "seuil": 8 }
+      ]
+    }
+  ]
+}

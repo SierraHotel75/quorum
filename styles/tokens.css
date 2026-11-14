@@ -62,6 +62,10 @@
   --pour: #4e9a72;
   --contre: #cf6357;
   --abstention: #a39c8c;
+  --pour-fond: #1b2b23;
+  --contre-fond: #2d1d1b;
+  --pour-texte: #7fc39f;
+  --contre-texte: #e09189;
 
   /* Typographie — replis locaux, WOFF2 à ajouter plus tard */
   --serif: "Newsreader", "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -136,6 +140,10 @@
   --pour: #2f6b4f;
   --contre: #9b3a32;
   --abstention: #8a8578;
+  --pour-fond: #e3f1e8;
+  --contre-fond: #f8e4e1;
+  --pour-texte: #2f6b4f;
+  --contre-texte: #9b3a32;
 }
 
 /* Reset minimal */

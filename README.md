@@ -35,6 +35,7 @@ scripts/preuve-gate.mjs preuve : accepte un fichier complet, refuse le reste
 data/ref/groupes.json   composition de l'Assemblée, datée et sourcée
 data/ref/medias.json    médias suivis par flux RSS, liste fermée
 data/ref/experts.json   personnes et organisations citables, liste fermée
+data/ref/arbre.json     arbre de compétences : 4 jalons, 8 thèmes, 3 branches
 data/lois/index.json    les lois publiées, une entrée par fichier
 data/lois/protection-enfants.json
                         le projet de loi « protection des enfants »,
@@ -107,8 +108,9 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 ## Ce qui est vrai, ce qui ne l'est pas
 
 - **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
-- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les deux bords ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les citations exactes restent dans « Les voix citées ».
+- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les arguments », présentés comme une carte « Comprendre en une minute ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les citations exactes restent dans « Les voix citées ».
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
+- **Maquette, assumé** : l'arbre de `data/ref/arbre.json`. Les 4 jalons, 8 thèmes et 24 branches sont une nomenclature de démonstration ; seuls les points gagnés sont réels, ils ne comptent que des actions du parcours, jamais le contenu d'un vote.
 - **Règle** : aucun contenu de démonstration ne doit être présenté comme vérifié dans une slide. Les images de `assets/mockups/` sont des maquettes.
 
 ## Plan du jour

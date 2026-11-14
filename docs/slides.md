@@ -55,8 +55,9 @@ Vote à froid → le fait → les extraits → les chiffres → les arguments �
 ## 7. Le vote reste à vous
 
 - Stocké dans le navigateur, jamais envoyé.
-- Les points récompensent le parcours : lire, ouvrir la source, lire le camp opposé, répondre au quiz.
-- Changer d'avis ne rapporte rien.
+- Les points récompensent le parcours : huit actions, de la lecture au vote final.
+- L'arbre de compétences s'ouvre avec ces points : 4 jalons, 8 thèmes de société, 24 branches.
+- Changer d'avis ne rapporte rien, et le contenu du vote ne rapporte jamais rien.
 
 ## 8. Ce que ça coûte
 

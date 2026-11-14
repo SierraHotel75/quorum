@@ -670,6 +670,142 @@ body {
   cursor: default;
 }
 
+/* ---------- Arguments : la carte « comprendre en une minute » ---------- */
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  padding: var(--s3);
+  border: 1px solid var(--filet-fort);
+  border-left: 3px solid var(--bois);
+  border-radius: var(--rayon);
+  background: var(--fond-2);
+}
+
+.contenu__titre {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 600;
+}
+
+.contenu__texte,
+.contenu__points {
+  color: var(--texte-doux);
+  font-size: var(--t-md);
+  line-height: 1.55;
+}
+
+.contenu__points {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.contenu__points li::marker {
+  color: var(--bois);
+}
+
+.contenu strong,
+.debat strong {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+.debat-ensemble {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+
+.bande-debat {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.bande-debat__cote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 var(--s2);
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bande-debat__cote--pour {
+  background: var(--pour-fond);
+  color: var(--pour-texte);
+}
+
+.bande-debat__cote--contre {
+  background: var(--contre-fond);
+  color: var(--contre-texte);
+}
+
+.bande-debat__titre {
+  position: relative;
+  z-index: 1;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--filet-fort);
+  border-radius: var(--rayon);
+  background: var(--fond);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.debat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  padding: var(--s3);
+  border-left: 3px solid;
+}
+
+.debat--pour {
+  background: var(--pour-fond);
+  border-left-color: var(--pour);
+}
+
+.debat--contre {
+  background: var(--contre-fond);
+  border-left-color: var(--contre);
+}
+
+.debat__texte {
+  font-size: var(--t-md);
+  line-height: 1.6;
+}
+
+.sources {
+  font-size: var(--t-xs);
+  line-height: 1.8;
+  color: var(--texte-doux);
+}
+
+.sources__titre {
+  font-family: var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+}
+
+.sources a {
+  text-decoration-color: var(--filet-fort);
+}
+
+.sources a:hover {
+  color: var(--bois);
+}
+
 /* ---------- Arguments, presse, experts ---------- */
 
 .bord {
@@ -796,24 +932,186 @@ body {
   box-shadow: inset 0 -2px 0 var(--bois);
 }
 
-/* ---------- Arbre ---------- */
+/* ---------- Arbre de compétences ---------- */
 
-.arbre {
+.jauge {
+  height: 3px;
+  background: var(--filet);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.jauge__part {
+  display: block;
+  height: 100%;
+  background: var(--bois);
+  transition: width var(--duree) var(--courbe);
+}
+
+.tronc {
   display: flex;
   flex-direction: column;
   gap: var(--s2);
 }
 
-.arbre svg {
-  width: 100%;
-  height: auto;
-  display: block;
+.jalons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.arbre__compteur {
+.jalon {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
   font-family: var(--mono);
   font-size: var(--t-xs);
-  color: var(--texte-doux);
+  color: var(--texte-faible);
+}
+
+.jalon__marque {
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--filet-fort);
+  border-radius: 50%;
+}
+
+.jalon--ouvert {
+  color: var(--texte);
+}
+
+.jalon--ouvert .jalon__marque {
+  background: var(--bois);
+  border-color: var(--bois);
+}
+
+.essaims {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.essaim {
+  padding-left: var(--s3);
+  border-left: 1px solid var(--filet-fort);
+}
+
+.essaim--ouvert {
+  border-left-color: var(--bois);
+}
+
+.essaim__tete {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+}
+
+.essaim__nom {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 400;
+  color: var(--texte-faible);
+}
+
+.essaim--ouvert .essaim__nom {
+  color: var(--texte);
+}
+
+.essaim__loi {
+  padding: 0 0.3rem;
+  border: 1px solid var(--bois);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bois);
+}
+
+.essaim__etat {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--texte-faible);
+}
+
+.noeuds {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  margin: var(--s2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.noeud {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+  padding: 0.3rem 0 0.3rem var(--s3);
+  color: var(--texte-faible);
+}
+
+.noeud::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: var(--s2);
+  border-top: 1px solid var(--filet-fort);
+}
+
+.noeud--ouvert {
+  color: var(--texte);
+}
+
+.noeud--ouvert::before {
+  border-top-color: var(--bois);
+}
+
+.noeud__nom {
+  font-size: var(--t-sm);
+}
+
+.noeud__seuil {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--texte-faible);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action {
+  display: flex;
+  gap: var(--s1);
+  font-size: var(--t-sm);
+  color: var(--texte-faible);
+}
+
+.action__marque {
+  width: 1ch;
+  font-family: var(--mono);
+}
+
+.action--faite {
+  color: var(--texte);
+}
+
+.action--faite .action__marque {
+  color: var(--bois);
 }
 
 /* ---------- États vides ---------- */

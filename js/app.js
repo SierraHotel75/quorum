@@ -30,6 +30,7 @@
 
   var etat = {
     groupes: [],
+    arbre: null,
     loin: null,
     pret: false
   };
@@ -98,6 +99,12 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  /* Les textes de données peuvent marquer un mot clé avec **…**. On échappe
+     d'abord, on remplace ensuite : jamais de HTML venu du fichier. */
+  function gras(s) {
+    return esc(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   }
 
   function dateCourte(iso) {
@@ -322,7 +329,7 @@
   }
 
   function ecranFait(loi) {
-    marquer(loi.id, "lu");
+    marquer(loi.id, "fait");
     return (
       barre("#/devoir/" + loi.id, "Le fait") +
       '<main class="ecran">' +
@@ -594,30 +601,83 @@
   }
 
   function ecranArguments(loi) {
+    var a = loi.arguments || {};
+    var contenu = a.contenu || {};
+    var pour = a.pour || [];
+    var contre = a.contre || [];
+
+    function blocDebat(cote, titre, liste) {
+      if (!liste.length) {
+        return (
+          '<section class="debat debat--' + cote + '">' +
+          vide(
+            "Rien pour ce bord",
+            "Aucune position publiée pour ce bord. La sélection ne remplace jamais un manque par une invention.",
+            ""
+          ) +
+          "</section>"
+        );
+      }
+      return (
+        '<section class="debat debat--' + cote + '" aria-label="' + esc(titre) + '">' +
+        liste
+          .map(function (x) {
+            return '<p class="debat__texte">' + gras(x.texte) + "</p>";
+          })
+          .join("") +
+        "</section>"
+      );
+    }
+
+    var sources = pour.concat(contre).filter(function (x) {
+      return x.url;
+    });
+
     return (
       barre("#/devoir/" + loi.id, "Les arguments") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Les arguments</span>' +
-      '<h2 class="ecran__titre">Les deux bords</h2>' +
-      '<p class="compteur">Les mêmes règles pour chaque bord : même nombre, même longueur, même source.</p>' +
+      '<h2 class="ecran__titre">Comprendre en une minute</h2>' +
+      (a.chapeau ? '<p class="ecran__chapeau">' + esc(a.chapeau) + "</p>" : "") +
       "</div>" +
-      bord(
-        "pour",
-        "Pour",
-        loi.arguments.pour.map(function (a) {
-          return { titre: a.titre, texte: a.texte, meta: a.source, url: a.url };
-        }),
-        "pour"
-      ) +
-      bord(
-        "contre",
-        "Contre",
-        loi.arguments.contre.map(function (a) {
-          return { titre: a.titre, texte: a.texte, meta: a.source, url: a.url };
-        }),
-        "contre"
-      ) +
+      '<section class="contenu">' +
+      '<p class="contenu__titre">' + esc(contenu.titre || "Contenu de l’article") + " :</p>" +
+      (contenu.texte ? '<p class="contenu__texte">' + gras(contenu.texte) + "</p>" : "") +
+      (contenu.points && contenu.points.length
+        ? '<ul class="contenu__points">' +
+          contenu.points
+            .map(function (p) {
+              return "<li>" + gras(p) + "</li>";
+            })
+            .join("") +
+          "</ul>"
+        : "") +
+      "</section>" +
+      '<div class="debat-ensemble">' +
+      '<div class="bande-debat">' +
+      '<span class="bande-debat__cote bande-debat__cote--pour">Pour</span>' +
+      '<span class="bande-debat__titre">Le débat, en bref :</span>' +
+      '<span class="bande-debat__cote bande-debat__cote--contre">Contre</span>' +
+      "</div>" +
+      blocDebat("pour", a.pour_titre || "Pour", pour) +
+      blocDebat("contre", a.contre_titre || "Contre", contre) +
+      "</div>" +
+      (sources.length
+        ? '<p class="sources">' +
+          '<span class="sources__titre">Sources :</span> ' +
+          sources
+            .map(function (x) {
+              return (
+                '<a href="' + esc(x.url) + '" rel="noopener" target="_blank">' +
+                esc(x.court || x.source || x.titre) +
+                "</a>"
+              );
+            })
+            .join(" · ") +
+          "</p>"
+        : "") +
+      (a.note ? '<p class="mono">' + esc(a.note) + "</p>" : "") +
       '<a class="bouton" href="#/devoir/' + loi.id + '/presse" data-action="oppose">Voir la presse</a>' +
       "</main>" +
       navbas("#/")
@@ -761,6 +821,7 @@
   }
 
   function ecranCarte(loi) {
+    marquer(loi.id, "carte");
     var v = voteDe(loi.id);
     var choix = v ? v.v2 || v.v1 : null;
     var mode = etat.modeCarte || "groupe";
@@ -807,87 +868,160 @@
     );
   }
 
-  function arbreSvg(themeActif, feuilles) {
-    var TRONC = { x: 100, y: 128 };
-    var HAUT = { x: 100, y: 98 };
-    var parts = [];
-    parts.push(
-      '<line x1="' + TRONC.x + '" y1="' + TRONC.y + '" x2="' + HAUT.x + '" y2="' + HAUT.y +
-      '" stroke="#A9744B" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>'
-    );
+  /* ---------- Arbre des compétences ---------- */
 
-    THEMES.forEach(function (t, i) {
-      var angle = (150 - i * 17.1) * (Math.PI / 180);
-      var r = 46;
-      var fin = { x: HAUT.x + r * Math.cos(angle), y: HAUT.y - r * Math.sin(angle) };
-      var ctrl = {
-        x: HAUT.x + r * 0.5 * Math.cos(angle),
-        y: HAUT.y - r * 0.92 * Math.sin(angle)
-      };
-      var n = t.id === themeActif ? feuilles : 0;
-      var epaisseur = 1 + n * 0.45;
-      var opacite = n > 0 ? 0.55 + n * 0.11 : 0.22;
+  /* Un point par action du parcours, jamais par contenu de vote : le premier
+     et le second vote rapportent un point quel que soit le choix, et changer
+     d'avis n'en rapporte aucun de plus. */
+  function pointsExploration(loi) {
+    var p = progresDe(loi.id);
+    var v = voteDe(loi.id) || {};
+    var n = 0;
+    if (p.fait) n++;
+    if (v.v1) n++;
+    if (p.lu) n++;
+    if (p.oppose) n++;
+    if (p.source) n++;
+    if (p.quiz) n++;
+    if (p.carte) n++;
+    if (v.v2) n++;
+    return n;
+  }
 
-      parts.push(
-        '<path d="M' + HAUT.x + " " + HAUT.y + " Q" + ctrl.x.toFixed(1) + " " + ctrl.y.toFixed(1) +
-        " " + fin.x.toFixed(1) + " " + fin.y.toFixed(1) + '" fill="none" stroke="' +
-        (n > 0 ? "#A9744B" : "#5A5049") + '" stroke-width="' + epaisseur.toFixed(1) +
-        '" stroke-linecap="round" opacity="' + opacite.toFixed(2) + '"/>'
-      );
+  function actionFaite(loi, cle) {
+    if (cle === "v1" || cle === "v2") {
+      var v = voteDe(loi.id) || {};
+      return !!v[cle];
+    }
+    return !!progresDe(loi.id)[cle];
+  }
 
-      [0.62, 0.76, 0.9, 1].forEach(function (t2, k) {
-        var px = Math.pow(1 - t2, 2) * HAUT.x + 2 * (1 - t2) * t2 * ctrl.x + t2 * t2 * fin.x;
-        var py = Math.pow(1 - t2, 2) * HAUT.y + 2 * (1 - t2) * t2 * ctrl.y + t2 * t2 * fin.y;
-        var plein = k < n;
-        parts.push(
-          '<circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="2.4" fill="' +
-          (plein ? "#C98A55" : "none") + '" stroke="' + (plein ? "#C98A55" : "#4E443B") +
-          '" stroke-width="0.8"/>'
-        );
-      });
-    });
-
+  function jalon(nom, cle, loi) {
+    var ouvert = actionFaite(loi, cle);
     return (
-      '<svg viewBox="0 0 200 140" role="img" aria-label="Arbre des thèmes explorés">' +
-      parts.join("") + "</svg>"
+      '<li class="jalon' + (ouvert ? " jalon--ouvert" : "") + '">' +
+      '<span class="jalon__marque" aria-hidden="true"></span>' +
+      '<span class="jalon__nom">' + esc(nom) + "</span></li>"
+    );
+  }
+
+  function noeudArbre(nom, seuil, xp) {
+    var ouvert = xp >= seuil;
+    return (
+      '<li class="noeud' + (ouvert ? " noeud--ouvert" : "") + '">' +
+      '<span class="noeud__nom">' + esc(nom) + "</span>" +
+      (ouvert ? "" : '<span class="noeud__seuil">' + esc(seuil) + " pts</span>") +
+      "</li>"
+    );
+  }
+
+  function essaim(t, xp, themeLoi) {
+    var ouvert = xp >= t.seuil;
+    var faits = t.branches.filter(function (b) {
+      return xp >= b.seuil;
+    }).length;
+    return (
+      '<section class="essaim' + (ouvert ? " essaim--ouvert" : "") + '">' +
+      '<div class="essaim__tete">' +
+      '<h3 class="essaim__nom">' + esc(t.nom) + "</h3>" +
+      (t.id === themeLoi ? '<span class="essaim__loi">loi du jour</span>' : "") +
+      '<span class="essaim__etat">' + faits + " / " + t.branches.length + "</span>" +
+      "</div>" +
+      '<ul class="noeuds">' +
+      t.branches
+        .map(function (b) {
+          return noeudArbre(b.nom, b.seuil, xp);
+        })
+        .join("") +
+      "</ul></section>"
     );
   }
 
   function ecranArbre() {
-    var p = progresDe(etat.loi.id);
-    var feuilles = (p.lu ? 1 : 0) + (p.source ? 1 : 0) + (p.oppose ? 1 : 0) + (p.quiz ? 1 : 0);
+    var loi = etat.loi;
+    var arbre = etat.arbre;
+
+    if (!arbre) {
+      return (
+        masthead() +
+        '<main class="ecran">' +
+        '<div class="ecran__entete">' +
+        '<span class="theme">Progression</span>' +
+        '<h2 class="ecran__titre">L\u2019arbre</h2>' +
+        "</div>" +
+        vide(
+          "Arbre indisponible",
+          "Le fichier data/ref/arbre.json n\u2019a pas pu \u00eatre lu. Aucun n\u0153ud n\u2019est invent\u00e9.",
+          ""
+        ) +
+        "</main>" +
+        navbas("#/arbre")
+      );
+    }
+
+    var xp = pointsExploration(loi);
+    var max = arbre.meta.points_max;
+    var total = arbre.tronc.length;
+    var ouverts = arbre.tronc.filter(function (j) {
+      return actionFaite(loi, j.cle);
+    }).length;
+    arbre.themes.forEach(function (t) {
+      total += 1 + t.branches.length;
+      if (xp >= t.seuil) ouverts++;
+      t.branches.forEach(function (b) {
+        if (xp >= b.seuil) ouverts++;
+      });
+    });
+
     return (
       masthead() +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Progression</span>' +
       '<h2 class="ecran__titre">L\u2019arbre</h2>' +
-      '<p class="ecran__chapeau">Il pousse avec ce que vous avez exploré, jamais avec ce que vous avez voté.</p>' +
+      '<p class="ecran__chapeau">Il pousse avec ce que vous avez explor\u00e9, jamais avec ce que vous avez vot\u00e9.</p>' +
       "</div>" +
-      '<div class="arbre">' +
-      arbreSvg("logement", feuilles) +
-      '<p class="arbre__compteur">1 thème exploré sur 8 \u00b7 ' + feuilles +
-        (feuilles > 1 ? " feuilles sur 32" : " feuille sur 32") + "</p>" +
+      '<div class="jauge" aria-hidden="true"><span class="jauge__part" style="width:' +
+      Math.round((xp * 100) / max) +
+      '%"></span></div>' +
+      '<p class="compteur">' + xp + " points d\u2019exploration sur " + max + " \u00b7 " + ouverts +
+      " comp\u00e9tences ouvertes sur " + total + "</p>" +
+      '<section class="tronc">' +
+      '<p class="etiquette">Tronc commun</p>' +
+      '<ul class="jalons">' +
+      arbre.tronc
+        .map(function (j) {
+          return jalon(j.nom, j.cle, loi);
+        })
+        .join("") +
+      "</ul></section>" +
+      '<div class="essaims">' +
+      arbre.themes
+        .map(function (t) {
+          return essaim(t, xp, loi.theme);
+        })
+        .join("") +
       "</div>" +
-      '<ul class="liste">' +
-      [
-        { nom: "Loi lue", fait: p.lu },
-        { nom: "Source ouverte", fait: p.source },
-        { nom: "Camp opposé lu", fait: p.oppose },
-        { nom: "Quiz répondu", fait: p.quiz }
-      ]
-        .map(function (f) {
+      '<section class="tronc">' +
+      '<p class="etiquette">Comment gagner un point</p>' +
+      '<ul class="actions">' +
+      arbre.meta.actions
+        .map(function (a) {
+          var faite = actionFaite(loi, a.cle);
           return (
-            '<li class="ligne ligne--etroit"><span class="ligne__date">' + (f.fait ? "\u2713" : "\u00b7") +
-            '</span><span class="ligne__texte">' + esc(f.nom) + "</span></li>"
+            '<li class="action' + (faite ? " action--faite" : "") + '">' +
+            '<span class="action__marque" aria-hidden="true">' + (faite ? "\u2713" : "\u00b7") + "</span>" +
+            '<span class="action__nom">' + esc(a.nom) + "</span></li>"
           );
         })
         .join("") +
-      "</ul>" +
+      "</ul></section>" +
+      '<p class="mono">' + esc(arbre.meta.regle) + "</p>" +
       "</main>" +
       navbas("#/arbre")
     );
   }
+
 
   function ecranMethode(loi) {
     return (
@@ -1160,9 +1294,18 @@
     });
   }
 
-  Promise.all([chargerJson("data/ref/groupes.json"), chargerJson("data/lois/index.json")])
+  Promise.all([
+    chargerJson("data/ref/groupes.json"),
+    chargerJson("data/lois/index.json"),
+    /* L'arbre est un ornement de progression : s'il manque, l'application
+       fonctionne et l'écran le dit, sans inventer de nœud. */
+    chargerJson("data/ref/arbre.json").catch(function () {
+      return null;
+    })
+  ])
     .then(function (res) {
       etat.groupes = res[0].groupes;
+      etat.arbre = res[2];
       var index = res[1];
       if (!index || !Array.isArray(index.lois) || !index.lois.length) {
         throw new Error("index des lois vide");
