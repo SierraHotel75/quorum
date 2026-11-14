@@ -731,55 +731,6 @@ body {
   color: var(--texte-doux);
 }
 
-/* ---------- Quiz ---------- */
-
-.quiz__option {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: var(--s2);
-  margin-bottom: var(--s1);
-  border: 1px solid var(--filet-fort);
-  border-radius: var(--rayon);
-  background: transparent;
-  color: var(--texte);
-  font-size: var(--t-sm);
-  line-height: 1.45;
-  cursor: pointer;
-  transition:
-    border-color var(--duree) var(--courbe),
-    background var(--duree) var(--courbe),
-    transform 120ms var(--courbe);
-}
-
-.quiz__option:hover {
-  border-color: var(--texte-doux);
-}
-
-.quiz__option:active {
-  transform: scale(0.99);
-}
-
-.quiz__option:disabled {
-  cursor: default;
-  color: var(--texte-faible);
-  border-color: var(--filet);
-}
-
-/* Après la réponse, les deux états gardent un contraste lisible : le vert et
-   le rouge restent des bords, jamais un jugement sur la loi. */
-.quiz__option[data-etat="juste"] {
-  border-color: var(--pour);
-  background: var(--pour-fond);
-  color: var(--pour-texte);
-}
-
-.quiz__option[data-etat="faux"] {
-  border-color: var(--contre);
-  background: var(--contre-fond);
-  color: var(--contre-texte);
-}
-
 /* ---------- Débat cité ---------- */
 
 .debat strong {

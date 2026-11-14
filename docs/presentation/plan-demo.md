@@ -12,10 +12,10 @@ Loi : **projet de loi relatif à la protection des enfants**, scrutin **n° 8429
 | # | Temps | Ce qu'on dit — une phrase | Ce qu'on montre | Preuve chiffrée |
 |---|---|---|---|---|
 | 1 | 0:00–0:08 | « Une loi, un devoir : ce qui s'est dit, ce qui s'est voté, et où vous vous situez. » | Accueil, puis **Commencer** ; écran du devoir. | Scrutin n° 8429 du 21 juillet 2026 (`protection-enfants.json`). |
-| 2 | 0:08–0:20 | « Du dépôt au 5 novembre, le texte n'est pas définitif : une commission mixte paritaire est convoquée. » | Le fait, chronologie défilée. | 13 entrées datées, du 27 mai au 5 novembre 2026. |
-| 3 | 0:20–0:38 | « L'article 11, mot pour mot : la perpétuité pour un mineur de quinze ans, et une seule mention marquée supprimée, b). » | Les extraits, puis l'article entier et **Ce qui a changé**. | 9 extraits ; 1 mention `b) (Supprimé)` ; le même jour, 8428 : 178 pour, 163 contre, 5 abstentions, 15 voix d'écart. |
+| 2 | 0:08–0:20 | « Du dépôt au 5 novembre, le texte n'est pas définitif : une commission mixte paritaire est convoquée. » | La chronologie, défiler. | 13 entrées datées, du 27 mai au 5 novembre 2026. |
+| 3 | 0:20–0:38 | « L'article 11, mot pour mot : la perpétuité pour un mineur de quinze ans, et une seule mention marquée supprimée, b). » | Le résumé, puis l'article entier et **Ce qui a changé**. | 9 extraits ; 1 mention `b) (Supprimé)` ; le même jour, 8428 : 178 pour, 163 contre, 5 abstentions, 15 voix d'écart. |
 | 4 | 0:38–0:48 | « Le premier vote arrive après le texte, et il reste dans ce navigateur : pas de compte, pas de serveur, pas d'envoi. » | Écran **Votre vote**, cliquer **Pour**. | 2 votes dans le parcours, aucun publié ; stockage `localStorage` uniquement. |
-| 5 | 0:48–1:02 | « 258 pour, 84 contre : c'est le rétablissement de l'article 11 ; la clause de sûreté est tombée par 178 contre 163, le même jour. » | Les chiffres, répondre au quiz. | 258 / 84 / 10 ; 352 votants ; 342 exprimés ; 1 non-votant ; majorité absolue des 342 exprimés, soit 172. |
+| 5 | 0:48–1:02 | « 258 pour, 84 contre : c'est le rétablissement de l'article 11 ; la clause de sûreté est tombée par 178 contre 163, le même jour. » | Les chiffres, lire le décompte. | 258 / 84 / 10 ; 352 votants ; 342 exprimés ; 1 non-votant ; majorité absolue des 342 exprimés, soit 172. |
 | 6 | 1:02–1:18 | « Ici, aucune reformulation : trois voix de chaque côté, chacune recopiée du compte rendu. » | Le débat, mot pour mot ; ouvrir un compte rendu. | 6 citations (3 + 3) ; rapport maximal de 2,5 entre les totaux de caractères par bord. |
 | 7 | 1:18–1:32 | « 3 % et 1 % sont confirmés par la CIIVISE ; 70 % reste non documenté, parce que le rapport de 2022 n'a pas été retrouvé. » | Les chiffres vérifiés, trois cartes. | 3 % et 1 % confirmés ; 70 % non documenté ; 0 source pour le 70 %. |
 | 8 | 1:32–1:40 | « Des titres réels, datés, liés : deux colonnes classées par type de publication, jamais par bord politique. » | La presse, survol des deux colonnes. | 4 titres (2 + 2) ; 2 types de publication. |
@@ -27,11 +27,11 @@ Loi : **projet de loi relatif à la protection des enfants**, scrutin **n° 8429
 | `docs/demo.md` | Diapo | Traitement |
 |---|---|---|
 | 1 Accueil | 1 | même phrase, même geste |
-| 2 Le fait | 2 | idem |
-| 3 Les extraits | 3 | fusionné avec l'étape 4 |
+| 2 La chronologie | 2 | idem |
+| 3 Le résumé | 3 | fusionné avec l'étape 4 |
 | 4 L'article entier | 3 | même écran, même mention `b)` |
 | 5 Votre vote | 4 | idem |
-| 6 Les chiffres | 5 | idem, quiz conservé |
+| 6 Les chiffres | 5 | idem |
 | 7 Le débat | 6 | idem |
 | 8 Les chiffres vérifiés | 7 | idem |
 | 9 La presse | 8 | idem |

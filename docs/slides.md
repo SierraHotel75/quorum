@@ -22,7 +22,7 @@ Ce qui s'est dit. Ce qui s'est voté.
 
 ## 3. Un devoir, de bout en bout
 
-Le fait → les extraits → l'article entier → premier vote → les chiffres → le débat mot pour mot → les chiffres vérifiés → la presse → vote final → la carte.
+La chronologie → le résumé → l'article entier → premier vote → les chiffres → le débat mot pour mot → les chiffres vérifiés → la presse → vote final → la carte.
 
 - Le premier vote arrive après le texte, pas avant : on sait ce qu'on vote.
 - Le second arrive après le débat et la vérification des chiffres.

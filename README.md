@@ -129,21 +129,22 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 
 ## Écrans
 
-`#/` accueil · `#/devoir/<id>` sommaire · `/fait` chronologie · `/texte` extraits ·
-`/article` texte entier · `/vote` premier vote · `/chiffres` décompte et quiz ·
+`#/` accueil · `#/devoir/<id>` sommaire · `/chronologie` chronologie · `/resume` résumé
+et extraits · `/article` texte entier · `/vote` premier vote · `/chiffres` décompte ·
 `/debat` le débat mot pour mot · `/verif` les chiffres vérifiés · `/presse` ·
 `/resultat` vote final · `/carte` hémicycle · `#/arbre` progression ·
 `#/methode` contrôles · `#/archive` · `#/recherche`
 
-L'ordre est linéaire : le fait, les extraits et l'article entier viennent **avant** le
+L'ordre est linéaire : la chronologie, le résumé et l'article entier viennent **avant** le
 premier vote. Le vote est demandé après avoir lu le texte, pas avant. Les anciennes
-adresses `/arguments` et `/experts` renvoient vers `/debat` et `/presse`.
+adresses `/fait` et `/texte` renvoient vers `/chronologie` et `/resume`, `/arguments` et
+`/experts` vers `/debat` et `/presse`.
 
 ## Ce qui est vrai, ce qui ne l'est pas
 
 - **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
-- **Reformulé, source à l'appui** : les rares textes de synthèse (résumé, fait, points de l'article). Les prises de position ne sont plus reformulées : l'écran « Le débat, mot pour mot » donne les phrases des députés telles quelles, recopiées des comptes rendus et contrôlées une à une. Aucune position n'est qualifiée de meilleure.
-- **Vérifié, avec sa limite** : les trois chiffres de l'écran « Les chiffres, vérifiés ». Le 3 % et le 1 % sont confirmés par la CIIVISE (rapport public de novembre 2023, bilan du 15 juin 2026) : ce sont des ordres de grandeur calculés à partir des plaintes, pas des comptages exhaustifs. Le 70 % reste « non documenté » : le rapport inter-inspections de juillet 2022 qui le porte n'est publié sur aucun site officiel, donc il n'est pas repris comme un fait.
+- **Reformulé, source à l'appui** : les rares textes de synthèse (résumé, chronologie, points de l'article). Les prises de position ne sont plus reformulées : l'écran « Le débat, mot pour mot » donne les phrases des députés telles quelles, recopiées des comptes rendus et contrôlées une à une. Aucune position n'est qualifiée de meilleure.
+- **Vérifié, avec sa limite** : les trois chiffres de l'écran « Les chiffres, vérifiés ». Le 3 % et le 1 % sont confirmés par la CIIVISE (rapport public de novembre 2023, bilan du 15 juin 2026) : ce sont des ordres de grandeur calculés à partir des plaintes, pas des comptages exhaustifs. Le 70 % reste « non documenté » : le rapport inter-inspections de juillet 2022 qui le porte n'a pas été retrouvé sur un site officiel, donc il n'est pas repris comme un fait.
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
 - **Maquette, assumé** : l'arbre de `data/ref/arbre.json`. Les 4 jalons, 8 thèmes et 24 branches sont une nomenclature de démonstration ; seuls les points gagnés sont réels, ils ne comptent que des actions du parcours, jamais le contenu d'un vote.
 - **Règle** : aucun contenu de démonstration ne doit être présenté comme vérifié dans une slide. Les images de `assets/mockups/` sont des maquettes.

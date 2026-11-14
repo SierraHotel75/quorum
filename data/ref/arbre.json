@@ -4,19 +4,19 @@
     "regle": "Un nœud s’ouvre avec des points d’exploration. Aucun point ne vient du contenu d’un vote : voter rapporte le même point quel que soit le choix, et changer d’avis n’en rapporte aucun.",
     "points_max": 8,
     "actions": [
-      { "cle": "fait", "nom": "Lire le fait" },
+      { "cle": "fait", "nom": "Lire la chronologie" },
       { "cle": "v1", "nom": "Premier vote" },
-      { "cle": "lu", "nom": "Ouvrir les extraits" },
+      { "cle": "lu", "nom": "Ouvrir le résumé" },
       { "cle": "oppose", "nom": "Lire les deux bords" },
       { "cle": "source", "nom": "Ouvrir la presse" },
-      { "cle": "quiz", "nom": "Répondre au quiz" },
+      { "cle": "chiffres", "nom": "Lire les chiffres" },
       { "cle": "carte", "nom": "Voir l’hémicycle" },
       { "cle": "v2", "nom": "Vote final" }
     ]
   },
   "tronc": [
-    { "nom": "Lire le fait", "cle": "fait" },
-    { "nom": "Lire les extraits", "cle": "lu" },
+    { "nom": "Lire la chronologie", "cle": "fait" },
+    { "nom": "Ouvrir le résumé", "cle": "lu" },
     { "nom": "Lire les deux bords", "cle": "oppose" },
     { "nom": "Vérifier une source", "cle": "source" }
   ],

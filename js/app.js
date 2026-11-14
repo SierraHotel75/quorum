@@ -36,11 +36,12 @@
   };
 
   var memoire = charger();
+  migrer();
 
   /* ---------- Mémoire locale ---------- */
 
   function memoireVierge() {
-    return { version: 1, votes: {}, progres: {}, reponses: {}, intro: false };
+    return { version: 1, votes: {}, progres: {}, intro: false };
   }
 
   function charger() {
@@ -51,7 +52,6 @@
       if (!objet || typeof objet !== "object" || objet.version !== 1) return memoireVierge();
       if (!objet.votes || typeof objet.votes !== "object") objet.votes = {};
       if (!objet.progres || typeof objet.progres !== "object") objet.progres = {};
-      if (!objet.reponses || typeof objet.reponses !== "object") objet.reponses = {};
       return objet;
     } catch (e) {
       return memoireVierge();
@@ -68,9 +68,28 @@
 
   function progresDe(id) {
     if (!memoire.progres[id]) {
-      memoire.progres[id] = { lu: false, source: false, oppose: false, quiz: false };
+      memoire.progres[id] = { lu: false, source: false, oppose: false, chiffres: false };
     }
     return memoire.progres[id];
+  }
+
+  /* Migration : la clé `quiz` notait l'ouverture de l'écran des chiffres.
+     Elle devient `chiffres` ; l'ancien compteur de réponses au quiz, retiré
+     de l'interface, n'est plus conservé. Rien n'est perdu du parcours fait. */
+  function migrer() {
+    var change = false;
+    Object.keys(memoire.progres).forEach(function (id) {
+      var p = memoire.progres[id];
+      if (!p || typeof p !== "object" || !("quiz" in p)) return;
+      if (!p.chiffres) p.chiffres = !!p.quiz;
+      delete p.quiz;
+      change = true;
+    });
+    if (memoire.reponses) {
+      delete memoire.reponses;
+      change = true;
+    }
+    if (change) sauver();
   }
 
   function marquer(id, cle) {
@@ -78,13 +97,6 @@
     if (p[cle]) return;
     p[cle] = true;
     sauver();
-  }
-
-  /* Les réponses au quiz sont gardées pour que l'état « juste / faux » survive
-     à un changement d'écran. Elles ne quittent pas l'appareil. */
-  function reponsesDe(id) {
-    if (!memoire.reponses[id]) memoire.reponses[id] = {};
-    return memoire.reponses[id];
   }
 
   function voteDe(id) {
@@ -160,8 +172,8 @@
   /* L'ordre du parcours, pour situer l'écran courant dans la barre haute.
      Aucune étape n'est inventée : c'est exactement la liste des écrans. */
   var PARCOURS = [
-    "fait",
-    "texte",
+    "chronologie",
+    "resume",
     "article",
     "vote",
     "chiffres",
@@ -260,11 +272,11 @@
       "</p>" +
       (v
         ? '<a class="bouton" href="#/devoir/' + loi.id + '">Reprendre le devoir</a>'
-        : '<a class="bouton" href="#/devoir/' + loi.id + '/fait">Commencer</a>') +
+        : '<a class="bouton" href="#/devoir/' + loi.id + '/chronologie">Commencer</a>') +
       "</div>" +
       '<div class="pile">' +
       '<p class="etiquette">Ce qui vient ensuite</p>' +
-      '<p class="petit">Une loi, un parcours : le fait, les extraits, l\u2019article entier, puis votre vote. Ensuite les chiffres, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres et la presse, avant votre vote final.</p>' +
+      '<p class="petit">Une loi, un parcours : la chronologie, le r\u00e9sum\u00e9, l\u2019article entier, puis votre vote. Ensuite les chiffres, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres et la presse, avant votre vote final.</p>' +
       "</div>" +
       '<p class="mention-independance">Projet indépendant, non affilié à l\u2019Assemblée nationale ni au Sénat. Le vote reste sur cet appareil.</p>' +
       "</main>" +
@@ -276,11 +288,11 @@
     var p = progresDe(loi.id);
     var v = voteDe(loi.id);
     return [
-      { cle: "fait", nom: "Le fait", fait: p.lu, href: "#/devoir/" + loi.id + "/fait" },
-      { cle: "texte", nom: "Les extraits", fait: p.lu, href: "#/devoir/" + loi.id + "/texte" },
+      { cle: "chronologie", nom: "La chronologie", fait: p.lu, href: "#/devoir/" + loi.id + "/chronologie" },
+      { cle: "resume", nom: "Le r\u00e9sum\u00e9", fait: p.lu, href: "#/devoir/" + loi.id + "/resume" },
       { cle: "article", nom: "L\u2019article entier", fait: p.lu, href: "#/devoir/" + loi.id + "/article" },
       { cle: "vote", nom: "Votre vote", fait: !!v, href: "#/devoir/" + loi.id + "/vote" },
-      { cle: "chiffres", nom: "Les chiffres", fait: p.quiz, href: "#/devoir/" + loi.id + "/chiffres" },
+      { cle: "chiffres", nom: "Les chiffres", fait: p.chiffres, href: "#/devoir/" + loi.id + "/chiffres" },
       { cle: "debat", nom: "Le débat, mot pour mot", fait: p.oppose, href: "#/devoir/" + loi.id + "/debat" },
       { cle: "verif", nom: "Les chiffres vérifiés", fait: false, href: "#/devoir/" + loi.id + "/verif" },
       { cle: "presse", nom: "La presse", fait: p.source, href: "#/devoir/" + loi.id + "/presse" },
@@ -381,10 +393,10 @@
   function ecranFait(loi) {
     marquer(loi.id, "fait");
     return (
-      barre("#/devoir/" + loi.id, "Le fait") +
+      barre("#/devoir/" + loi.id, "La chronologie") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
-      '<span class="theme">Le fait</span>' +
+      '<span class="theme">La chronologie</span>' +
       '<h1 class="ecran__titre">Du dépôt au vote</h1>' +
       "</div>" +
       '<ol class="timeline">' +
@@ -405,7 +417,7 @@
       '<span class="legende__item"><span class="legende__pastille" style="background:var(--senat)"></span>Sénat</span>' +
       '<span class="legende__item"><span class="legende__pastille" style="background:var(--commission)"></span>Commission</span>' +
       "</div>" +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/texte">Voir les extraits</a>' +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/resume">Voir le r\u00e9sum\u00e9</a>' +
       "</main>" +
       navbas("#/")
     );
@@ -418,16 +430,37 @@
     return "";
   }
 
-  function ecranTexte(loi) {
+  function ecranResume(loi) {
     var p = progresDe(loi.id);
     p.lu = true;
     sauver();
+    /* Les deux blocs ne reprennent que des champs publiés : le résumé déjà
+       contrôlé, puis le texte voté et ses points. Rien n'est rédigé ici. */
+    var contenu = loi.ce_qui_est_vote || {};
+    var points = contenu.points || [];
     return (
-      barre("#/devoir/" + loi.id, "Les extraits") +
+      barre("#/devoir/" + loi.id, "Le résumé") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
-      '<span class="theme">Les extraits</span>' +
-      '<h1 class="ecran__titre">Ce que dit le texte</h1>' +
+      '<span class="theme">Le résumé</span>' +
+      '<h1 class="ecran__titre">Le résumé</h1>' +
+      '<p class="ecran__chapeau">' + esc(loi.resume) + "</p>" +
+      "</div>" +
+      '<section class="ce-vote" aria-labelledby="ce-change-titre">' +
+      '<h2 class="etiquette" id="ce-change-titre">Ce que change le texte</h2>' +
+      '<p class="ce-vote__texte">' + gras(contenu.texte || "Non documenté") + "</p>" +
+      (points.length
+        ? '<ul class="pile petit">' +
+          points
+            .map(function (t) {
+              return "<li>" + gras(t) + "</li>";
+            })
+            .join("") +
+          "</ul>"
+        : "") +
+      "</section>" +
+      '<div class="ecran__entete">' +
+      '<h2 class="article__titre">Ce que dit le texte</h2>' +
       '<p class="compteur">' + loi.extraits.length + " passages retenus" +
       (loi.nb_phrases > loi.extraits.length ? " sur " + loi.nb_phrases + " phrases" : "") + "</p>" +
       "</div>" +
@@ -492,7 +525,7 @@
     }
 
     return (
-      barre("#/devoir/" + loi.id + "/texte", "Article entier") +
+      barre("#/devoir/" + loi.id + "/resume", "Article entier") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Texte</span>' +
@@ -560,38 +593,8 @@
     );
   }
 
-  function carteQuiz(loi, q, qi) {
-    var donnee = reponsesDe(loi.id)[qi];
-    var repondu = donnee != null;
-    return (
-      '<div class="carte" data-quiz="' + qi + '">' +
-      '<p>' + esc(q.question) + "</p>" +
-      q.options
-        .map(function (o, oi) {
-          var marque = "";
-          var juste = "";
-          if (repondu) {
-            if (oi === q.bonne) {
-              marque = ' data-etat="juste"';
-              juste = '<span class="sr"> Bonne réponse.</span>';
-            } else if (oi === donnee) {
-              marque = ' data-etat="faux"';
-              juste = '<span class="sr"> Votre réponse.</span>';
-            }
-          }
-          return (
-            '<button class="quiz__option" type="button" data-action="quiz" data-quiz="' + qi +
-            '" data-option="' + oi + '"' + (repondu ? " disabled" : "") + marque + ">" +
-            esc(o) + juste + "</button>"
-          );
-        })
-        .join("") +
-      '<p class="mono" data-source aria-live="polite"' + (repondu ? "" : " hidden") + ">" + esc(q.source) + "</p>" +
-      "</div>"
-    );
-  }
-
   function ecranChiffres(loi) {
+    marquer(loi.id, "chiffres");
     return (
       barre("#/devoir/" + loi.id, "Les chiffres") +
       '<main class="ecran">' +
@@ -611,14 +614,6 @@
         .join("") +
       "</div>" +
       '<p class="petit">Règle appliquée : ' + esc(loi.scrutin.regle) + ".</p>" +
-      '<div class="pile">' +
-      '<p class="etiquette">Vérifier</p>' +
-      loi.quiz
-        .map(function (q, qi) {
-          return carteQuiz(loi, q, qi);
-        })
-        .join("") +
-      "</div>" +
       '<a class="bouton" href="#/devoir/' + loi.id + '/debat">Le débat, mot pour mot</a>' +
       "</main>" +
       navbas("#/")
@@ -970,7 +965,7 @@
     if (p.lu) n++;
     if (p.oppose) n++;
     if (p.source) n++;
-    if (p.quiz) n++;
+    if (p.chiffres) n++;
     if (p.carte) n++;
     if (v.v2) n++;
     return n;
@@ -1217,8 +1212,16 @@
       var sous = p[2] || "";
       if (sous === "vote") return rendre(ecranVote(loi, false));
       if (sous === "vote-final") return rendre(ecranVote(loi, true));
-      if (sous === "fait") return rendre(ecranFait(loi));
-      if (sous === "texte") return rendre(ecranTexte(loi));
+      if (sous === "chronologie") return rendre(ecranFait(loi));
+      if (sous === "fait") {
+        location.hash = "#/devoir/" + loi.id + "/chronologie";
+        return;
+      }
+      if (sous === "resume") return rendre(ecranResume(loi));
+      if (sous === "texte") {
+        location.hash = "#/devoir/" + loi.id + "/resume";
+        return;
+      }
       if (sous === "article") return rendre(ecranArticle(loi));
       if (sous === "chiffres") return rendre(ecranChiffres(loi));
       if (sous === "arguments") {
@@ -1322,7 +1325,7 @@
     if (final) {
       location.hash = "#/devoir/" + loi.id + "/resultat";
     } else {
-      location.hash = "#/devoir/" + loi.id + "/fait";
+      location.hash = "#/devoir/" + loi.id + "/chronologie";
     }
   }
 
@@ -1344,29 +1347,6 @@
     if (action === "mode-carte") {
       etat.modeCarte = el.getAttribute("data-mode");
       rendre(ecranCarte(etat.loi));
-      return;
-    }
-
-    if (action === "quiz") {
-      var qi = Number(el.getAttribute("data-quiz"));
-      var oi = Number(el.getAttribute("data-option"));
-      var q = etat.loi.quiz[qi];
-      var deja = reponsesDe(etat.loi.id);
-      if (deja[qi] != null) return;
-      deja[qi] = oi;
-      sauver();
-      var bloc = el.closest("[data-quiz='" + qi + "']");
-      if (bloc) {
-        bloc.querySelectorAll(".quiz__option").forEach(function (b) {
-          b.disabled = true;
-          var j = Number(b.getAttribute("data-option"));
-          if (j === q.bonne) b.setAttribute("data-etat", "juste");
-          else if (j === oi) b.setAttribute("data-etat", "faux");
-        });
-        var src = bloc.querySelector("[data-source]");
-        if (src) src.hidden = false;
-      }
-      marquer(etat.loi.id, "quiz");
       return;
     }
   });
