@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quorum — le compte rendu</title>
+<style>
+  :root{
+    --fond:#151110; --texte:#ede7dc; --doux:#9a8f82;
+    --bois:#a9744b; --bordeaux:#8e1b22;
+    --filet:#3a322c; --filet-fort:#4e443b;
+    --pour:#4e9a72; --contre:#cf6357;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Cascadia Mono",Consolas,ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:#0b0908;color:var(--texte);font-family:var(--sans);font-size:30px;line-height:1.3;overflow:hidden}
+  h1,h2,h3,p,figure,blockquote,ol,ul,li{margin:0}
+  ol,ul{padding:0;list-style:none}
+  img{display:block;max-width:100%}
+  :focus-visible{outline:2px solid var(--bois);outline-offset:4px}
+
+  .scene{position:fixed;top:50%;left:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));transform-origin:center center}
+  .diapo{position:absolute;inset:0;width:1920px;height:1080px;display:none;overflow:hidden;background:var(--fond);color:var(--texte)}
+  .diapo.actif{display:block}
+  .diapo:focus-visible{outline:2px solid var(--bois);outline-offset:-10px}
+
+  .haut{position:absolute;left:96px;right:96px;top:52px;display:flex;justify-content:space-between;align-items:baseline;gap:40px;padding-bottom:16px;border-bottom:1px solid var(--filet);font-family:var(--mono);font-size:18px;line-height:1.3;color:var(--doux)}
+  .mast{font-family:var(--serif);font-size:26px;letter-spacing:.34em;color:var(--texte)}
+
+  .corps{position:absolute;left:96px;right:96px;top:252px;bottom:120px;display:grid;grid-template-columns:186px minmax(0,1fr);gap:56px}
+  .marge{position:relative;display:flex;flex-direction:column;border-right:1px solid var(--filet);padding-right:28px;font-family:var(--mono);font-size:18px;line-height:1.55;color:var(--doux)}
+  .marge .cote{color:var(--bois)}
+  .marge p + p{margin-top:14px}
+  .marge .src{margin-top:auto;font-size:15px;line-height:1.5;color:#82786d;padding-top:24px}
+  .contenu{min-width:0}
+
+  .tete{position:absolute;left:326px;right:96px;top:130px}
+  .tete h2{font-family:var(--serif);font-size:96px;line-height:1;letter-spacing:-.025em;font-weight:600}
+
+  .pied{position:absolute;left:96px;right:96px;bottom:42px;border-top:1px solid var(--filet-fort);padding-top:16px}
+  .pied .phrase{font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.22}
+
+  .compteur{position:absolute;right:26px;bottom:16px;font-family:var(--mono);font-size:16px;line-height:1;color:#70675d}
+
+  /* 1 · couverture */
+  .s1 .corps{top:238px}
+  .cv-titre{font-family:var(--serif);font-size:148px;line-height:.98;letter-spacing:-.032em;font-weight:600}
+  .cv-titre em{font-style:italic;font-weight:400}
+  .cv-sous{margin-top:30px;font-size:34px;line-height:1.3;color:var(--doux)}
+  .cv-mention{margin-top:44px;border-top:1px solid var(--filet);padding-top:18px;font-family:var(--mono);font-size:18px;line-height:1.6;color:var(--doux);max-width:1000px}
+  .cv-pieces{margin-top:34px;font-family:var(--mono);font-size:18px;line-height:1.5;color:var(--bois)}
+
+  /* 2 · chronologie */
+  .chrono{border-left:1px solid var(--filet);padding-left:32px}
+  .chrono li{display:grid;grid-template-columns:160px minmax(0,1fr);gap:28px;align-items:baseline;padding:6px 0;border-top:1px solid var(--filet)}
+  .chrono li:first-child{border-top:0;padding-top:0}
+  .chrono time{font-family:var(--mono);font-size:18px;line-height:1.45;color:var(--texte);white-space:nowrap}
+  .chrono span{font-size:30px;line-height:1.24}
+
+  /* 3 · article 11 */
+  .art{display:grid;grid-template-columns:1fr 1fr;column-gap:72px;row-gap:0}
+  .extraits li{padding:7px 0;border-top:1px solid var(--filet)}
+  .extraits li:first-child{border-top:0;padding-top:0}
+  .al{font-family:var(--mono);font-size:16px;line-height:1.3;color:var(--doux);margin-bottom:5px}
+  .ex{font-size:30px;line-height:1.15}
+  .sup{border-top:1px solid var(--bois)!important}
+  .ex-sup{font-family:var(--serif);font-size:38px;line-height:1.1;letter-spacing:-.01em}
+  .variante{margin-top:24px;border-top:1px solid var(--filet);padding-top:14px}
+  .variante blockquote{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.3;margin:8px 0 12px}
+  .renvoi{font-family:var(--mono);font-size:16px;line-height:1.45;color:var(--doux)}
+
+  /* 4 · premier vote */
+  .vote{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:88px}
+  .bloc{border-top:1px solid var(--filet);padding:14px 0 16px}
+  .bloc:first-child{border-top:0;padding-top:0}
+  .lab{font-family:var(--mono);font-size:18px;line-height:1.3;color:var(--bois);margin-bottom:8px}
+  .bloc .b{font-size:30px;line-height:1.3}
+  .action{display:flex;align-items:center;gap:16px;margin-top:20px;font-family:var(--mono);font-size:18px;color:var(--texte)}
+  .action::before{content:"";width:3px;height:34px;background:var(--bordeaux)}
+  .piece img{width:390px;height:560px;object-fit:cover;object-position:top;border:1px solid var(--filet);background:#1e1815}
+  .piece figcaption{margin-top:10px;font-family:var(--mono);font-size:18px;line-height:1.4;color:var(--doux)}
+
+  /* 5 · deux décomptes */
+  .comptes{display:grid;grid-template-columns:1fr 1fr}
+  .compte{padding-right:64px}
+  .compte + .compte{border-left:1px solid var(--filet);padding-left:64px;padding-right:0}
+  .cote-scrutin{font-family:var(--mono);font-size:18px;line-height:1.4;color:var(--bois)}
+  .objet{margin-top:10px;font-size:30px;line-height:1.3;color:var(--doux);min-height:120px}
+  .nrow{display:flex;align-items:baseline;gap:22px;margin-top:4px}
+  .n{font-family:var(--serif);font-size:128px;line-height:1;letter-spacing:-.045em;font-weight:600}
+  .nl{font-family:var(--mono);font-size:20px;line-height:1.3;color:var(--doux)}
+  .nl.p{color:var(--pour)}
+  .nl.c{color:var(--contre)}
+  .totaux{margin-top:22px;border-top:1px solid var(--filet);padding-top:12px;font-family:var(--mono);font-size:18px;line-height:1.5;color:var(--doux)}
+  .ecart{margin-top:10px;font-family:var(--mono);font-size:18px;line-height:1.5;color:var(--texte)}
+
+  /* 6 · débat */
+  .cite{display:grid;grid-template-columns:330px minmax(0,1fr);gap:32px;border-top:1px solid var(--filet);padding:6px 0;align-items:start}
+  .cite:first-of-type{border-top:0;padding-top:0}
+  .cite .csrc{font-family:var(--mono);font-size:15px;line-height:1.35;color:var(--bois)}
+  .cite blockquote{font-family:var(--serif);font-size:30px;line-height:1.12}
+  .marge .note2{padding-top:18px;font-family:var(--mono);font-size:15px;line-height:1.5;color:#82786d}
+
+  /* 7 · chiffres vérifiés */
+  .verifs{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:80px}
+  .verif{display:grid;grid-template-columns:210px minmax(0,1fr);gap:28px;border-top:1px solid var(--filet);padding:16px 0 18px}
+  .verif:first-child{border-top:0;padding-top:0}
+  .v-num{font-family:var(--serif);font-size:104px;line-height:.95;letter-spacing:-.04em;font-weight:600}
+  .v-aff{font-size:30px;line-height:1.25}
+  .v-auteur{margin-top:8px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--doux)}
+  .v-verdict{margin-top:12px;font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.1}
+  .v-src{margin-top:6px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--doux)}
+  .v-rule{margin-top:26px;border-top:1px solid var(--filet);padding-top:14px;font-size:30px;line-height:1.3;color:var(--doux);max-width:980px}
+
+  /* 8 · presse */
+  .presse{display:grid;grid-template-columns:minmax(0,1fr) 236px;gap:84px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;column-gap:60px;align-items:start}
+  .pcol h3{font-family:var(--mono);font-size:18px;line-height:1.3;color:var(--bois);font-weight:400;margin-bottom:10px}
+  .article-p{border-top:1px solid var(--filet);padding:12px 0 16px}
+  .article-p .meta{font-family:var(--mono);font-size:16px;line-height:1.3;color:var(--doux);margin-bottom:6px}
+  .article-p .titre-p{font-family:var(--serif);font-size:28px;line-height:1.22}
+  .presse-note{margin-top:24px;border-top:1px solid var(--filet);padding-top:12px;font-family:var(--mono);font-size:17px;line-height:1.5;color:var(--doux)}
+  .shot img{width:236px;height:420px;object-fit:cover;object-position:top;border:1px solid var(--filet);background:#1e1815}
+  .shot figcaption{margin-top:8px;font-family:var(--mono);font-size:15px;line-height:1.4;color:var(--doux)}
+  .shot-lg img{width:390px;height:620px;object-fit:cover;object-position:top;border:1px solid var(--filet);background:#1e1815}
+  .shot-lg figcaption{margin-top:10px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--doux)}
+
+  /* 9 · parcours */
+  .parcours{display:grid;grid-template-columns:minmax(0,1fr) 236px;gap:84px}
+  .regle{font-size:30px;line-height:1.3;max-width:1000px}
+  .actions{display:grid;grid-template-columns:1fr 1fr;column-gap:60px;margin-top:28px}
+  .actions li{border-top:1px solid var(--filet);padding:11px 0;font-size:30px;line-height:1.2}
+  .actions li:first-child{border-top:0}
+  .points{margin-top:28px;border-top:1px solid var(--filet);padding-top:14px;font-family:var(--mono);font-size:18px;line-height:1.6;color:var(--doux)}
+  .points b{color:var(--texte);font-weight:400}
+
+  /* 10 · carte et contrôles */
+  .carte{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:80px}
+  .sieges{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;border-bottom:1px solid var(--filet);padding-bottom:20px}
+  .siege b{display:block;font-family:var(--serif);font-size:112px;line-height:.95;letter-spacing:-.04em;font-weight:600}
+  .siege span{display:block;margin-top:8px;font-family:var(--mono);font-size:18px;line-height:1.35;color:var(--doux)}
+  .ctrl-tete{margin-top:24px;display:flex;justify-content:space-between;align-items:baseline;gap:20px;font-family:var(--mono);font-size:18px;line-height:1.3;color:var(--bois)}
+  .ctrl-tete span:last-child{color:var(--doux)}
+  .controles{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;margin-top:8px}
+  .controles li{display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--filet);padding:8px 0;font-family:var(--mono);font-size:17px;line-height:1.3}
+  .controles li span:last-child{color:var(--doux)}
+
+  @media print{
+    @page{size:1920px 1080px;margin:0}
+    html,body{height:auto;overflow:visible;background:var(--fond)}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .scene{position:static;transform:none;width:auto;height:auto}
+    .diapo{position:relative;display:block!important;width:1920px;height:1080px;break-after:page;page-break-after:always;break-inside:avoid}
+    .diapo:last-of-type{break-after:auto;page-break-after:auto}
+    .compteur{display:none!important}
+    .diapo:focus-visible{outline:0}
+  }
+</style>
+</head>
+<body>
+<main class="scene">
+
+<section class="diapo s1 actif" id="d1" tabindex="0" aria-labelledby="t1">
+  <header class="haut"><span class="mast">QUORUM</span><span>n° 8429 · 21 juillet 2026</span></header>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Le document</p>
+      <p>Assemblée nationale<br>Première lecture<br>Texte adopté n° 338</p>
+      <p class="src">Source : Assemblée nationale, dossier législatif. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu">
+      <h1 class="cv-titre" id="t1">Le compte rendu<br><em>d’une loi.</em></h1>
+      <p class="cv-sous">Projet de loi relatif à la protection des enfants</p>
+      <p class="cv-mention">Texte non définitivement adopté — commission mixte paritaire convoquée le 5 novembre 2026.</p>
+      <p class="cv-pieces">Neuf extraits · six citations · quatre titres de presse · trois chiffres vérifiés</p>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Ce qui s’est dit. Ce qui s’est voté.</p>
+  </div>
+</section>
+
+<section class="diapo s2" id="d2" tabindex="0" aria-labelledby="t2">
+  <header class="haut"><span>Le fait</span><span>n° 8429 · 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t2">Du dépôt au 5 novembre.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Le fait</p>
+      <p>13 étapes<br>27 mai – 5 novembre 2026</p>
+      <p class="src">Source : dossier législatif, Assemblée nationale. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu">
+      <ol class="chrono">
+        <li><time datetime="2026-05-27">27 mai 2026</time><span>Dépôt du projet de loi à l’Assemblée nationale (texte n° 2841).</span></li>
+        <li><time datetime="2026-05-27">27 mai 2026</time><span>Le Gouvernement engage la procédure accélérée.</span></li>
+        <li><time datetime="2026-05-27">27 mai 2026</time><span>Renvoi en commission au fond.</span></li>
+        <li><time datetime="2026-06-23">23 juin 2026</time><span>Nomination d’un rapporteur.</span></li>
+        <li><time datetime="2026-07-01">1er juillet 2026</time><span>Dépôt d’une lettre rectificative (texte n° 3000).</span></li>
+        <li><time datetime="2026-07-07">7 juillet 2026</time><span>Dépôt du rapport et du texte de la commission (n° 3018).</span></li>
+        <li><time datetime="2026-07-15">15 juillet 2026</time><span>Discussion en séance publique.</span></li>
+        <li><time datetime="2026-07-21">21 juillet 2026</time><span>L’Assemblée nationale adopte le texte en première lecture, après une seconde délibération sur l’article 11.</span></li>
+        <li><time datetime="2026-07-22">22 juillet 2026</time><span>Le texte adopté est transmis au Sénat (texte n° 911).</span></li>
+        <li><time datetime="2026-07-22">22 juillet 2026</time><span>Renvoi en commission au fond au Sénat.</span></li>
+        <li><time datetime="2026-10-21">21 octobre 2026</time><span>Dépôt du rapport du Sénat et de son texte (n° 89).</span></li>
+        <li><time datetime="2026-11-03">3 novembre 2026</time><span>Discussion en séance publique et adoption du texte par le Sénat.</span></li>
+        <li><time datetime="2026-11-05">5 novembre 2026</time><span>Convocation d’une commission mixte paritaire.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Le texte n’est pas définitif : une commission mixte paritaire est convoquée.</p>
+  </div>
+</section>
+
+<section class="diapo s3" id="d3" tabindex="0" aria-labelledby="t3">
+  <header class="haut"><span>L’article</span><span>n° 8429 · 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t3">L’article 11, mot pour mot.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Article 11</p>
+      <p>Texte adopté n° 338<br>9 extraits<br>1 mention supprimée</p>
+      <p class="src">Source : texte adopté n° 338, article 11. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu art">
+      <div>
+        <ol class="extraits">
+          <li><p class="al">Article 11 · alinéa 1</p><p class="ex">Le code pénal est ainsi modifié :</p></li>
+          <li><p class="al">Article 11 · alinéa 2</p><p class="ex">1° (nouveau) L’article 222‑25 est ainsi modifié :</p></li>
+          <li><p class="al">Article 11 · alinéa 3</p><p class="ex">« La peine est portée à la réclusion criminelle à perpétuité lorsque la victime est un mineur de quinze ans. »</p></li>
+          <li class="sup"><p class="al">Article 11 · alinéa 4</p><p class="ex-sup">b) (Supprimé)</p></li>
+        </ol>
+        <aside class="variante">
+          <p class="al">La phrase retirée de l’alinéa b)</p>
+          <blockquote>« La cour d’assises peut toutefois, par décision spéciale, porter la période de sûreté jusqu’à trente ans. »</blockquote>
+          <p class="renvoi">Retirée par le scrutin n° 8428 du 21 juillet 2026 : 178 pour, 163 contre, 5 abstentions.</p>
+        </aside>
+      </div>
+      <div>
+        <ol class="extraits" start="5">
+          <li><p class="al">Article 11 · alinéa 5</p><p class="ex">2° Le premier alinéa de l’article 222‑26 est remplacé par quatre alinéas ainsi rédigés :</p></li>
+          <li><p class="al">Article 11 · alinéa 6</p><p class="ex">« Le viol défini aux articles 222‑23, 222‑23‑1 et 222‑23‑2 est puni de la réclusion criminelle à perpétuité lorsqu’il est :</p></li>
+          <li><p class="al">Article 11 · alinéa 7</p><p class="ex">« 1° Précédé, accompagné ou suivi de tortures ou d’actes de barbarie ;</p></li>
+          <li><p class="al">Article 11 · alinéa 8</p><p class="ex">« 2° Commis sur un mineur de quinze ans et en concours avec un ou plusieurs autres viols commis sur d’autres victimes.</p></li>
+          <li><p class="al">Article 11 · alinéa 9</p><p class="ex">« Les victimes sont informées, dès le début de la procédure, des dispositifs spécialisés de prise en charge du psycho‑traumatisme et des associations d’aide aux victimes. »</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Une seule mention est marquée supprimée : b).</p>
+  </div>
+</section>
+
+<section class="diapo s4" id="d4" tabindex="0" aria-labelledby="t4">
+  <header class="haut"><span>Le vote</span><span>premier vote · n° 8429</span></header>
+  <div class="tete"><h2 id="t4">Le vote vient après le texte.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Votre vote</p>
+      <p>Premier vote<br>Stockage local<br>Clé quorum.v1</p>
+      <p class="src">Source : application Quorum, écran de vote. Capture du 14 novembre 2026.</p>
+    </div>
+    <div class="contenu vote">
+      <div>
+        <div class="bloc">
+          <p class="lab">Ce qui est voté</p>
+          <p class="b">Cet article porte à la réclusion criminelle à perpétuité la peine du viol commis sur un mineur de quinze ans.</p>
+        </div>
+        <div class="bloc">
+          <p class="lab">Où va le vote</p>
+          <p class="b">Il est écrit dans le navigateur, sous la clé quorum.v1. Aucun compte, aucun serveur.</p>
+        </div>
+        <div class="bloc">
+          <p class="lab">Ce qui est envoyé</p>
+          <p class="b">Rien. Le vote reste sur l’appareil et n’est pas publié.</p>
+        </div>
+        <div class="bloc">
+          <p class="lab">Quand il arrive</p>
+          <p class="b">Après la chronologie, le résumé et l’article entier : on vote après avoir lu.</p>
+        </div>
+        <p class="action">Pour · Abstention · Contre</p>
+      </div>
+      <figure class="piece">
+        <img src="../captures/mobile-390-vote.png" alt="Capture de l’écran de vote : le titre du projet de loi, « Ce qui est voté », puis les trois boutons Pour, Abstention, Contre.">
+        <figcaption>Écran du premier vote · 390 px</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Le vote arrive après le texte et reste dans le navigateur.</p>
+  </div>
+</section>
+
+<section class="diapo s5" id="d5" tabindex="0" aria-labelledby="t5">
+  <header class="haut"><span>Les décomptes</span><span>21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t5">Deux décomptes, le même jour.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Scrutins</p>
+      <p>n° 8429<br>n° 8428<br>21 juillet 2026</p>
+      <p class="src">Source : Assemblée nationale, scrutins publics n° 8429 et n° 8428. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu comptes">
+      <div class="compte">
+        <p class="cote-scrutin">n° 8429 · Assemblée nationale</p>
+        <p class="objet">Objet : l’amendement n° 1 du Gouvernement de rétablissement de l’article 11 (supprimé) du projet de loi relatif à la protection des enfants (seconde délibération) (première lecture).</p>
+        <div class="nrow"><span class="n">258</span><span class="nl p">pour</span></div>
+        <div class="nrow"><span class="n">84</span><span class="nl c">contre</span></div>
+        <div class="nrow"><span class="n">10</span><span class="nl">abstentions</span></div>
+        <p class="totaux">352 votants · 342 exprimés<br>1 non-votant</p>
+      </div>
+      <div class="compte">
+        <p class="cote-scrutin">n° 8428 · Assemblée nationale</p>
+        <p class="objet">Objet : le sous-amendement n° 2 de Mme Perrine Goulet à l’amendement n° 1 du Gouvernement.</p>
+        <div class="nrow"><span class="n">178</span><span class="nl p">pour</span></div>
+        <div class="nrow"><span class="n">163</span><span class="nl c">contre</span></div>
+        <div class="nrow"><span class="n">5</span><span class="nl">abstentions</span></div>
+        <p class="totaux">346 votants · 341 exprimés<br>1 non-votant</p>
+        <p class="ecart">15 voix d’écart entre 178 et 163.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">258 contre 84. 178 contre 163, le même jour.</p>
+  </div>
+</section>
+
+<section class="diapo s6" id="d6" tabindex="0" aria-labelledby="t6">
+  <header class="haut"><span>Le débat</span><span>comptes rendus des 15, 17 et 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t6">Chaque phrase est recopiée.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Le débat</p>
+      <p>Six citations<br>21, 17 et 15 juillet 2026</p>
+      <p class="note2">Le contrôle refuse un fichier dont un bord pèse plus de 2,5 fois l’autre, sur les totaux de caractères.</p>
+      <p class="src">Source : comptes rendus des séances des 15, 17 et 21 juillet 2026, Assemblée nationale. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu">
+      <div class="cite">
+        <p class="csrc">Christophe Mongardien<br>21 juillet 2026<br>CRSANR5L17S2026E1N023</p>
+        <blockquote>En effet, face à la gravité de ces faits, seule une peine de réclusion criminelle à perpétuité peut, d’une part, avoir un effet dissuasif et, d’autre part, prévenir toute récidive.</blockquote>
+      </div>
+      <div class="cite">
+        <p class="csrc">Gabriel Tomatis<br>17 juillet 2026<br>CRSANR5L17S2026E1N020</p>
+        <blockquote>Lorsqu’il s’agit de pédocriminalité, le moindre risque de récidive est déjà un risque de trop.</blockquote>
+      </div>
+      <div class="cite">
+        <p class="csrc">Alexandra Martin<br>Alpes-Maritimes<br>15 juillet 2026<br>CRSANR5L17S2026E1N015</p>
+        <blockquote>La protection de l’enfance passe aussi par la sévérité et la certitude de la sanction.</blockquote>
+      </div>
+      <div class="cite">
+        <p class="csrc">Gabrielle Cathala<br>17 juillet 2026<br>CRSANR5L17S2026E1N020</p>
+        <blockquote>Ce qui dissuade les potentiels auteurs de passer à l’acte, ce n’est pas la lourdeur de la peine, mais la certitude d’être pris et de faire l’objet de poursuites.</blockquote>
+      </div>
+      <div class="cite">
+        <p class="csrc">Mathilde Panot<br>21 juillet 2026<br>CRSANR5L17S2026E1N023</p>
+        <blockquote>La perpétuité, comme la peine de mort, fait peser une telle responsabilité sur l’enfant qu’elle le silencie encore davantage.</blockquote>
+      </div>
+      <div class="cite">
+        <p class="csrc">Arnaud Bonnet<br>17 juillet 2026<br>CRSANR5L17S2026E1N019</p>
+        <blockquote>De notre côté, nous craignons que la perpétuité puisse avoir pour effet de dissuader le dépôt de plainte. Les plaintes sont déjà peu nombreuses lorsque les faits ont été commis dans le cadre familial, et ce n’est pas un hasard, car porter plainte à l’encontre d’une personne de sa famille est une cause de désaffiliation. Si l’auteur des faits encourt la perpétuité, nous avons peur que les victimes soient encore plus dissuadées de porter plainte.</blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Chaque phrase est recopiée ; une seule erreur refuse le fichier.</p>
+  </div>
+</section>
+
+<section class="diapo s7" id="d7" tabindex="0" aria-labelledby="t7">
+  <header class="haut"><span>La vérification</span><span>comptes rendus des 17 et 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t7">Trois chiffres vérifiés.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Vérification</p>
+      <p>3 chiffres<br>CIIVISE 2023<br>et 15 juin 2026</p>
+      <p class="note2">Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit.</p>
+      <p class="src">Source : data/lois/protection-enfants.json, verifications.</p>
+    </div>
+    <div class="contenu verifs">
+      <div>
+        <article class="verif">
+          <p class="v-num">3 %</p>
+          <div>
+            <p class="v-aff">Moins de 3 % des auteurs sont condamnés.</p>
+            <p class="v-auteur">Marianne Maximi, députée, rapporteure · compte rendu du 17 juillet 2026</p>
+            <p class="v-verdict">confirmé</p>
+            <p class="v-src">CIIVISE — rapport public, novembre 2023 · bilan du 15 juin 2026</p>
+          </div>
+        </article>
+        <article class="verif">
+          <p class="v-num">1 %</p>
+          <div>
+            <p class="v-aff">Moins de 1 % des agresseurs incestueux sont condamnés.</p>
+            <p class="v-auteur">Mathilde Panot, députée · compte rendu du 21 juillet 2026</p>
+            <p class="v-verdict">confirmé</p>
+            <p class="v-src">CIIVISE — rapport public, novembre 2023 · bilan du 15 juin 2026</p>
+          </div>
+        </article>
+        <article class="verif">
+          <p class="v-num">70 %</p>
+          <div>
+            <p class="v-aff">Dans 70 % des affaires de viol, aucun acte d’enquête n’est réalisé.</p>
+            <p class="v-auteur">Gabrielle Cathala, députée · compte rendu du 17 juillet 2026</p>
+            <p class="v-verdict">non documenté</p>
+            <p class="v-src">Le rapport inter-inspections de juillet 2022 n’a pas été retrouvé sur un site officiel.</p>
+          </div>
+        </article>
+      </div>
+      <figure class="shot-lg">
+        <img src="../captures/mobile-390-verif.png" alt="Capture de l’écran « Les chiffres, vérifiés » : trois cartes, verdicts confirmé, confirmé, non documenté.">
+        <figcaption>Écran des chiffres vérifiés · 390 px</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Un chiffre sans source reste non documenté.</p>
+  </div>
+</section>
+
+<section class="diapo s8" id="d8" tabindex="0" aria-labelledby="t8">
+  <header class="haut"><span>La presse</span><span>18 et 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t8">Quatre titres de presse.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">La presse</p>
+      <p>4 titres<br>2 types de publication<br>18 et 21 juillet 2026</p>
+      <p class="src">Source : data/lois/protection-enfants.json, presse. Médias de data/ref/medias.json.</p>
+    </div>
+    <div class="contenu presse">
+      <div>
+        <div class="cols">
+          <div class="pcol">
+            <h3>Presse quotidienne nationale</h3>
+            <article class="article-p">
+              <p class="meta">Le Monde · 18 juillet 2026</p>
+              <p class="titre-p">Imprescriptibilité des crimes sur mineurs, refus de la perpétuité pour les viols sériels… Les députés modifient le projet de loi de protection des enfants</p>
+            </article>
+            <article class="article-p">
+              <p class="meta">Le Figaro · 21 juillet 2026</p>
+              <p class="titre-p">Lors d’un nouveau vote, les députés approuvent la perpétuité pour les viols en série sur les moins de 15 ans</p>
+            </article>
+          </div>
+          <div class="pcol">
+            <h3>Presse hebdomadaire et numérique</h3>
+            <article class="article-p">
+              <p class="meta">Le HuffPost · 21 juillet 2026</p>
+              <p class="titre-p">L’Assemblée adopte la perpétuité pour les viols en série sur mineur, avec le projet de loi sur la protection de l’enfance</p>
+            </article>
+            <article class="article-p">
+              <p class="meta">Le HuffPost · 18 juillet 2026</p>
+              <p class="titre-p">Pourquoi la gauche a refusé de voter la perpétuité pour les viols en série sur mineur</p>
+            </article>
+          </div>
+        </div>
+        <p class="presse-note">Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire.</p>
+      </div>
+      <figure class="shot">
+        <img src="../captures/mobile-390-presse.png" alt="Capture de l’écran « Ce qu’en disent les journaux » : deux colonnes de titres, chacun avec son média et sa date.">
+        <figcaption>Écran de la presse · 390 px</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Les colonnes sont classées par type de publication, pas par bord.</p>
+  </div>
+</section>
+
+<section class="diapo s9" id="d9" tabindex="0" aria-labelledby="t9">
+  <header class="haut"><span>Le parcours</span><span>huit actions · huit points</span></header>
+  <div class="tete"><h2 id="t9">Le parcours, pas le choix.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">Le parcours</p>
+      <p>8 actions<br>8 points au maximum</p>
+      <p class="src">Source : data/ref/arbre.json, actions et règle des points.</p>
+    </div>
+    <div class="contenu parcours">
+      <div>
+        <p class="regle">Un nœud s’ouvre avec des points d’exploration. Aucun point ne vient du contenu d’un vote : voter rapporte le même point quel que soit le choix, et changer d’avis n’en rapporte aucun.</p>
+        <div class="actions">
+          <ul>
+            <li>Lire la chronologie</li>
+            <li>Ouvrir le résumé</li>
+            <li>Lire les deux bords</li>
+            <li>Vérifier une source</li>
+          </ul>
+          <ul>
+            <li>Premier vote</li>
+            <li>Lire les chiffres</li>
+            <li>Voir l’hémicycle</li>
+            <li>Vote final</li>
+          </ul>
+        </div>
+        <p class="points"><b>Huit actions, huit points.</b> Le changement d’avis n’ajoute rien.</p>
+      </div>
+      <figure class="shot">
+        <img src="../captures/mobile-390-arbre.png" alt="Capture de l’écran « L’arbre » : les huit actions du parcours et les branches de compétences.">
+        <figcaption>Écran de l’arbre · 390 px</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Changer d’avis ne rapporte rien ; les points ne récompensent que le parcours.</p>
+  </div>
+</section>
+
+<section class="diapo s10" id="d10" tabindex="0" aria-labelledby="t10">
+  <header class="haut"><span>La carte</span><span>n° 8429 · 21 juillet 2026</span></header>
+  <div class="tete"><h2 id="t10">La carte du scrutin.</h2></div>
+  <div class="corps">
+    <div class="marge">
+      <p class="cote">La carte</p>
+      <p>577 sièges<br>353 présents<br>224 non occupés</p>
+      <p>Fichier publié après gate 5.</p>
+      <p class="src">Source : Assemblée nationale, scrutin public n° 8429. Licence Ouverte (Etalab).</p>
+    </div>
+    <div class="contenu carte">
+      <div>
+        <div class="sieges">
+          <div class="siege"><b>577</b><span>sièges à l’Assemblée nationale</span></div>
+          <div class="siege"><b>353</b><span>présents au scrutin</span></div>
+          <div class="siege"><b>224</b><span>sièges non occupés</span></div>
+        </div>
+        <div class="ctrl-tete"><span>Dix contrôles avant publication</span><span>gate 5</span></div>
+        <ul class="controles">
+          <li><span>Schéma du fichier</span><span>ok</span></li>
+          <li><span>Chiffres cohérents avec le scrutin</span><span>ok</span></li>
+          <li><span>Sièges attribués = 577</span><span>ok</span></li>
+          <li><span>Extraits verbatim</span><span>ok</span></li>
+          <li><span>Symétrie des bords</span><span>ok</span></li>
+          <li><span>Sources des médias</span><span>ok</span></li>
+          <li><span>Ressources citées vérifiées</span><span>ok</span></li>
+          <li><span>Variante contrôlée</span><span>ok</span></li>
+          <li><span>Débat cité</span><span>ok</span></li>
+          <li><span>Chiffres vérifiés</span><span>ok</span></li>
+        </ul>
+      </div>
+      <figure class="shot-lg">
+        <img src="../captures/mobile-390-carte.png" alt="Capture de l’écran « Le scrutin » : l’hémicycle en points colorés par groupe, les sièges non occupés en gris.">
+        <figcaption>Écran de la carte · 390 px</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pied">
+    <p class="phrase">Les absents restent des absents.</p>
+  </div>
+</section>
+
+<p class="compteur" aria-live="polite">1 / 10</p>
+</main>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".diapo"));
+  var total = slides.length;
+  var counter = document.querySelector(".compteur");
+  var scene = document.querySelector(".scene");
+  var key = "quorum.deck.a";
+  var cur = 1;
+
+  function fit() {
+    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    scene.style.setProperty("--s", String(s));
+  }
+  function show(n, write) {
+    cur = Math.max(1, Math.min(total, n));
+    slides.forEach(function (slide, i) {
+      var on = i + 1 === cur;
+      slide.classList.toggle("actif", on);
+      slide.setAttribute("aria-hidden", on ? "false" : "true");
+    });
+    counter.textContent = cur + " / " + total;
+    try { localStorage.setItem(key, String(cur)); } catch (e) {}
+    if (write !== false) {
+      try { history.replaceState(null, "", "#" + cur); } catch (e) {}
+    }
+  }
+  function hashSlide() {
+    var m = /^#(\d+)$/.exec(window.location.hash);
+    return m ? parseInt(m[1], 10) : null;
+  }
+
+  fit();
+  window.addEventListener("resize", fit);
+
+  var start = hashSlide();
+  if (start === null) {
+    try { start = parseInt(localStorage.getItem(key), 10) || 1; } catch (e) { start = 1; }
+  }
+  show(start || 1, false);
+
+  document.addEventListener("keydown", function (e) {
+    var k = e.key;
+    if (k === "ArrowRight" || k === "PageDown" || k === " " || k === "Spacebar") {
+      e.preventDefault();
+      show(cur + 1);
+    } else if (k === "ArrowLeft" || k === "PageUp") {
+      e.preventDefault();
+      show(cur - 1);
+    } else if (k === "Home") {
+      e.preventDefault();
+      show(1);
+    } else if (k === "End") {
+      e.preventDefault();
+      show(total);
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("a")) return;
+    show(e.clientX >= window.innerWidth / 2 ? cur + 1 : cur - 1);
+  });
+
+  window.addEventListener("hashchange", function () {
+    var h = hashSlide();
+    if (h !== null) show(h, false);
+  });
+})();
+</script>
+</body>
+</html>
