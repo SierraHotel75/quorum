@@ -1,0 +1,54 @@
+{
+  "experts": [
+    {
+      "nom": "Thibault Bazin",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Philippe Vigier",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Camille Galliard-Minier",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Joëlle Mélin",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Hadrien Clouet",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Éric Michoux",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    },
+    {
+      "nom": "Cyrielle Chatelain",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "note": "S'exprime contre le texte ; les députés de son groupe se sont majoritairement abstenus lors du vote.",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+    }
+  ]
+}

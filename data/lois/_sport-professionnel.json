@@ -1,0 +1,532 @@
+{
+  "id": "sport-professionnel",
+  "titre": "Proposition de loi relative à l’organisation, à la gestion et au financement du sport professionnel",
+  "theme": "culture",
+  "nb_phrases": 24,
+  "statut": "Adopté",
+  "resume": "L’Assemblée nationale a adopté le 20 juillet 2026, par 359 voix pour, 1 contre et 81 abstentions, le texte de la commission mixte paritaire sur la proposition de loi relative à l’organisation, à la gestion et au financement du sport professionnel. Le Sénat l’a adopté définitivement le lendemain. La loi n° 2026-725 a été promulguée le 3 août 2026.",
+  "source": {
+    "nom": "Légifrance — dossier législatif de la loi n° 2026-725",
+    "url": "https://www.legifrance.gouv.fr/dossierlegislatif/JORFDOLE000051712830/",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0334_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Scrutin public n° 8418 du 20 juillet 2026 sur le texte de la commission mixte paritaire (T.A. n° 334). Loi n° 2026-725 du 3 août 2026, publiée au Journal officiel du 4 août 2026. L’article 1er du texte adopté correspond à l’article 8 de la loi publiée, de même rédaction ; le texte est repris de cette publication pour la fidélité typographique."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8418",
+    "date": "2026-07-20",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8418",
+    "pour": 359,
+    "contre": 1,
+    "abstention": 81,
+    "non_votants": 1,
+    "votants": 441,
+    "suffrages_exprimes": 360,
+    "regle": "majorité des suffrages exprimés",
+    "objet": "l’ensemble de la proposition de loi relative à l’organisation, à la gestion et au financement du sport professionnel, dans la rédaction issue de la commission mixte paritaire.",
+    "sort": "adopté"
+  },
+  "sieges_vides": 135,
+  "chronologie": [
+    {
+      "date": "2025-03-18",
+      "chambre": "SENAT",
+      "texte": "Dépôt de la proposition de loi au Sénat (texte n° 456) et renvoi en commission."
+    },
+    {
+      "date": "2025-05-28",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat (n° 669) et du texte de la commission (n° 670)."
+    },
+    {
+      "date": "2025-06-10",
+      "chambre": "SENAT",
+      "texte": "Discussion en séance publique et adoption en première lecture (T.A. n° 137), la procédure accélérée ayant été engagée."
+    },
+    {
+      "date": "2025-06-11",
+      "chambre": "AN",
+      "texte": "Dépôt à l’Assemblée nationale (texte n° 1560) et renvoi en commission."
+    },
+    {
+      "date": "2026-04-29",
+      "chambre": "COMMISSION",
+      "texte": "Nomination de Lionel Duparay rapporteur de la commission des affaires culturelles et de l’éducation."
+    },
+    {
+      "date": "2026-05-13",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de l’Assemblée nationale (n° 2797) et du texte de la commission."
+    },
+    {
+      "date": "2026-06-29",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique et adoption en première lecture (T.A. n° 322)."
+    },
+    {
+      "date": "2026-07-02",
+      "chambre": "CMP",
+      "texte": "Convocation d’une commission mixte paritaire."
+    },
+    {
+      "date": "2026-07-08",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission mixte paritaire à l’Assemblée nationale (n° 3057) et du texte de la CMP (T.A. n° 334)."
+    },
+    {
+      "date": "2026-07-09",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission mixte paritaire au Sénat (n° 885) et du texte de la CMP (n° 886)."
+    },
+    {
+      "date": "2026-07-20",
+      "chambre": "AN",
+      "texte": "Adoption du texte de la commission mixte paritaire : scrutin public n° 8418, 359 pour, 1 contre, 81 abstentions."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "SENAT",
+      "texte": "Adoption définitive du texte par le Sénat."
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "note": "Article L. 132-1 du code du sport, tel que modifié par l’article 1er du texte adopté.",
+      "paragraphes": [
+        "Le code du sport est ainsi modifié :",
+        "1° L’article L. 132-1 est ainsi modifié :",
+        "a) Au premier alinéa, les mots : « ligue professionnelle » sont remplacés par les mots : « ou deux ligues professionnelles » ;",
+        "b) Après le même premier alinéa, sont insérés six alinéas ainsi rédigés :",
+        "« Lorsque la fédération crée une seule ligue professionnelle, celle-ci peut gérer concomitamment le secteur masculin et le secteur féminin.",
+        "« Lorsque la fédération constitue deux ligues professionnelles, les missions mentionnées au premier alinéa sont exercées obligatoirement par :",
+        "« 1° Une ligue professionnelle pour le secteur masculin ;",
+        "« 2° Une ligue professionnelle pour le secteur féminin.",
+        "« La ou les ligues professionnelles remettent chaque année à la fédération délégataire et au ministre chargé des sports un rapport rendant compte de la mise en œuvre de la convention de subdélégation prévue à l’article L. 131-14. Un décret précise le contenu et les modalités de ce rapport. Celui-ci rend notamment compte des mesures prises pour tendre vers une égalité entre le secteur masculin et le secteur féminin lorsqu’ils sont gérés par une même ligue professionnelle. Il précise les actions de sensibilisation, de prévention et de formation mises en œuvre par la ou les ligues professionnelles, le cas échéant en coordination avec les associations et les sociétés sportives qui en sont membres, dans le cadre de la lutte contre la haine, les discriminations et les violences sexistes et sexuelles.",
+        "« Lorsque la fédération a constitué une ligue professionnelle non dotée d’une personnalité juridique distincte, les règlements spécifiques aux activités de cette ligue professionnelle établis par la fédération comportent des dispositions obligatoires définies par décret. Ces règlements ainsi que les modifications qui y sont apportées sont approuvés par l’assemblée générale de la fédération et figurent en annexe du contrat de délégation mentionné au même article L. 131-14. » ;",
+        "c) Sont ajoutés trois alinéas ainsi rédigés :",
+        "« La rémunération des dirigeants et des salariés de la ligue professionnelle ne peut excéder le plafond applicable à la rémunération du président du conseil d’administration d’un établissement public de l’Etat à caractère industriel et commercial. Lorsque la ligue professionnelle a constitué une société commerciale en application de l’article L. 333-1, ce plafond s’applique à l’ensemble des rémunérations versées par la ligue professionnelle et par ladite société.",
+        "« Lorsque la ligue professionnelle commercialise des droits d’exploitation audiovisuelle, directement ou par l’intermédiaire d’une société commerciale, la fonction de dirigeant ou de membre de l’organe collégial d’administration de la ligue professionnelle est incompatible avec la détention d’intérêts ou l’exercice de fonctions dans une entreprise de diffusion audiovisuelle. Sans préjudice de l’application du IV de l’article 32 de la loi n° 2010-476 du 12 mai 2010 relative à l’ouverture à la concurrence et à la régulation du secteur des jeux d’argent et de hasard en ligne, la fonction de dirigeant ou de membre de l’organe délibérant de la ligue professionnelle est incompatible avec la détention d’intérêts ou l’exercice de fonctions au sein d’un opérateur de jeux en ligne titulaire de l’agrément prévu à l’article 21 de la même loi pour une activité de pari sportif et au sein de la personne morale unique faisant l’objet d’un contrôle étroit de l’Etat mentionnée à l’article 137 de la loi n° 2019-486 du 22 mai 2019 relative à la croissance et à la transformation des entreprises.",
+        "« La subdélégation mentionnée à l’avant-dernier alinéa de l’article L. 131-14 du présent code ne peut être octroyée ni renouvelée en cas de manquement aux dixième et avant-dernier alinéas du présent article. » ;",
+        "2° A la fin des deuxième et sixième alinéas de l’article L. 222-2-4, les mots : « la ligue professionnelle » sont remplacés par les mots : « l’une des ligues professionnelles mentionnées à l’article L. 132-1 » ;",
+        "3° Au premier alinéa de l’article L. 222-2-6, les mots : « la ligue professionnelle » sont remplacés par les mots : « l’une des ligues professionnelles mentionnées à l’article L. 132-1 » ;",
+        "4° L’article L. 222-3 est ainsi modifié :",
+        "a) Au premier alinéa, la troisième occurrence du mot : « la » est remplacée par le mot : « une » ;",
+        "b) Le second alinéa est complété par le mot : « correspondante »."
+      ]
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "a) Au premier alinéa, les mots : « ligue professionnelle » sont remplacés par les mots : « ou deux ligues professionnelles » ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Lorsque la fédération crée une seule ligue professionnelle, celle-ci peut gérer concomitamment le secteur masculin et le secteur féminin.",
+      "article": "Article 1er",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 2° Une ligue professionnelle pour le secteur féminin.",
+      "article": "Article 1er",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La ou les ligues professionnelles remettent chaque année à la fédération délégataire et au ministre chargé des sports un rapport rendant compte de la mise en œuvre de la convention de subdélégation prévue à l’article L. 131-14.",
+      "article": "Article 1er",
+      "alinea": "alinéa 9"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La rémunération des dirigeants et des salariés de la ligue professionnelle ne peut excéder le plafond applicable à la rémunération du président du conseil d’administration d’un établissement public de l’Etat à caractère industriel et commercial.",
+      "article": "Article 1er",
+      "alinea": "alinéa 12"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Lorsque la ligue professionnelle a constitué une société commerciale en application de l’article L. 333-1, ce plafond s’applique à l’ensemble des rémunérations versées par la ligue professionnelle et par ladite société.",
+      "article": "Article 1er",
+      "alinea": "alinéa 12"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Lorsque la ligue professionnelle commercialise des droits d’exploitation audiovisuelle, directement ou par l’intermédiaire d’une société commerciale, la fonction de dirigeant ou de membre de l’organe collégial d’administration de la ligue professionnelle est incompatible avec la détention d’intérêts ou l’exercice de fonctions dans une entreprise de diffusion audiovisuelle.",
+      "article": "Article 1er",
+      "alinea": "alinéa 13"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La subdélégation mentionnée à l’avant-dernier alinéa de l’article L. 131-14 du présent code ne peut être octroyée ni renouvelée en cas de manquement aux dixième et avant-dernier alinéas du présent article. » ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 14"
+    },
+    {
+      "tag": "adopte",
+      "texte": "b) Le second alinéa est complété par le mot : « correspondante ».",
+      "article": "Article 1er",
+      "alinea": "alinéa 19"
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "359",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "81",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "441",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "360",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Que mesure le décompte 359 pour, 1 contre et 81 abstentions du 20 juillet 2026 ?",
+      "options": [
+        "L’adoption du texte de la commission mixte paritaire par l’Assemblée nationale",
+        "L’adoption en première lecture par l’Assemblée nationale, le 29 juin 2026",
+        "L’adoption définitive du texte par le Sénat, le 21 juillet 2026"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8418 du 20 juillet 2026 ; texte adopté n° 334"
+    },
+    {
+      "question": "À quel niveau l’article 1er plafonne-t-il la rémunération des dirigeants et des salariés d’une ligue professionnelle ?",
+      "options": [
+        "Au plafond applicable au président du conseil d’administration d’un établissement public de l’État à caractère industriel et commercial",
+        "À trois fois le plafond annuel de la sécurité sociale",
+        "À 10 % du budget annuel du club employeur"
+      ],
+      "bonne": 0,
+      "source": "Article 1er du texte adopté n° 334, article L. 132-1 du code du sport"
+    },
+    {
+      "question": "Que prévoit l’article 1er pour un dirigeant de ligue qui commercialise les droits audiovisuels ?",
+      "options": [
+        "Sa fonction est incompatible avec la détention d’intérêts dans une entreprise de diffusion audiovisuelle",
+        "Il peut détenir ces intérêts s’il le déclare au ministre chargé des sports",
+        "Il peut les détenir s’il n’est pas président de la ligue"
+      ],
+      "bonne": 0,
+      "source": "Article 1er du texte adopté n° 334, article L. 132-1 du code du sport"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article 1er",
+    "texte": "L’article 1er **plafonne les rémunérations** versées par les ligues professionnelles et pose des **règles d’incompatibilité** pour leurs dirigeants.",
+    "points": [
+      "Le plafond est celui applicable au président du conseil d’administration d’un **établissement public de l’État à caractère industriel et commercial** ; il couvre aussi les rémunérations versées par la société commerciale de la ligue.",
+      "Une fédération peut créer **deux ligues professionnelles**, l’une pour le secteur masculin et l’autre pour le secteur féminin, qui remettent chaque année un rapport au ministre chargé des sports.",
+      "La fonction de dirigeant est **incompatible** avec des intérêts dans une entreprise de diffusion audiovisuelle ou dans un opérateur de paris en ligne."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-06-29",
+        "titre": "Foot : les députés se prononcent en faveur de la réforme de la gouvernance et contre la multipropriété",
+        "url": "https://www.lefigaro.fr/sports/football/ligue-1/foot-la-proposition-de-loi-sur-la-reforme-du-sport-professionnel-et-de-la-gouvernance-du-foot-adoptee-par-l-assemblee-20260629"
+      },
+      {
+        "media": "La Croix",
+        "date": "2026-06-28",
+        "titre": "L’Assemblée adopte une réforme du sport professionnel et de la gouvernance du foot",
+        "url": "https://www.la-croix.com/gouvernance-du-sport-et-derives-du-foot-un-autre-match-s-ouvre-a-l-assemblee-20260628"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "LCP",
+        "date": "2026-06-30",
+        "titre": "Football, salaires, multipropriété: l’Assemblée adopte la proposition de loi sur la gouvernance du sport",
+        "url": "https://lcp.fr/actualites/football-salaires-multipropriete-l-assemblee-adopte-la-proposition-de-loi-sur-la"
+      },
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-09",
+        "titre": "Zinédine Zidane futur sélectionneur de l’équipe de France ? Cette décision du Parlement ouvre encore plus la voie",
+        "url": "https://www.huffingtonpost.fr/france/article/zinedine-zidane-futur-selectionneur-de-l-equipe-de-france-cette-decision-du-parlement-ouvre-encore-plus-la-voie_285684.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l’hémicycle du 20 juillet 2026. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils votent le texte",
+    "contre_titre": "Ils ne le votent pas",
+    "pour": [
+      {
+        "nom": "Lionel Duparay",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "La CMP a permis d’aboutir à un équilibre satisfaisant sur la quarantaine d’articles encore en discussion. Certains sujets ont concentré les débats, comme l’encadrement des rémunérations versées au sein des fédérations délégataires. Le compromis trouvé sur ce point repose sur un plafonnement de la rémunération des dirigeants à hauteur de trois fois le plafond annuel de la sécurité sociale – soit environ 145 000 euros brut par an – et de celle des salariés à hauteur de la rémunération maximale pouvant être versée dans les établissements publics à caractère industriel et commercial – soit environ 450 000 euros brut par an.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Michèle Martinez",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Pour toutes ces raisons, malgré les réserves que nous avons exprimées au sujet de certaines dispositions, le groupe Rassemblement national votera en faveur de la proposition de loi.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Soumya Bourouaha",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "En définitive, ce texte ne marque ni une aggravation franche, ni une remise en cause des logiques néolibérales qui gouvernent le football professionnel. C’est la raison pour laquelle notre groupe s’abstiendra.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Matthieu Bloch",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Malgré quelques mesures de bon sens, notamment en matière de transparence, de protection du sport amateur et d’encadrement de certaines dérives, le texte demeure imparfait. Il continue d’ajouter des contraintes qui mettent en question la liberté d’entreprendre et la compétitivité de nos clubs.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Le scrutin n’a compté qu’une voix contre, celle d’Emmanuel Duplessy (écologistes et sociaux). Les deux orateurs de la colonne « contre » ont annoncé l’abstention de leur groupe : ils s’opposent au texte sans le rejeter dans l’urne. Aucune autre opposition ne s’est exprimée dans cette séance."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres prononcés dans l’hémicycle ont été confrontés à une source publiée : deux sur les plafonds de rémunération, un sur les peines prévues contre le piratage.",
+    "chiffres": [
+      {
+        "affirmation": "environ 145 000 euros brut par an",
+        "chiffre": "145 000 euros",
+        "auteur": "Lionel Duparay",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "citation": "La CMP a permis d’aboutir à un équilibre satisfaisant sur la quarantaine d’articles encore en discussion. Certains sujets ont concentré les débats, comme l’encadrement des rémunérations versées au sein des fédérations délégataires. Le compromis trouvé sur ce point repose sur un plafonnement de la rémunération des dirigeants à hauteur de trois fois le plafond annuel de la sécurité sociale – soit environ 145 000 euros brut par an – et de celle des salariés à hauteur de la rémunération maximale pouvant être versée dans les établissements publics à caractère industriel et commercial – soit environ 450 000 euros brut par an.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "nuancé",
+        "explication": "Le plafond annuel de la sécurité sociale pour 2026 est fixé à 4 005 euros par mois, soit 48 060 euros par an, par l’arrêté du 22 décembre 2025. Trois fois ce montant donnent 144 180 euros : l’ordre de grandeur annoncé est juste, le chiffre exact est inférieur d’environ 800 euros. La loi renvoie au plafond de l’article L. 241-3 du code de la sécurité sociale sans inscrire le montant dans son texte.",
+        "sources": [
+          {
+            "nom": "Arrêté du 22 décembre 2025 portant fixation du plafond de la sécurité sociale pour 2026",
+            "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053143451"
+          },
+          {
+            "nom": "Loi n° 2026-725 du 3 août 2026, article 3 (article L. 131-14 du code du sport)",
+            "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054608060"
+          }
+        ]
+      },
+      {
+        "affirmation": "environ 450 000 euros brut par an",
+        "chiffre": "450 000 euros",
+        "auteur": "Lionel Duparay",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "citation": "La CMP a permis d’aboutir à un équilibre satisfaisant sur la quarantaine d’articles encore en discussion. Certains sujets ont concentré les débats, comme l’encadrement des rémunérations versées au sein des fédérations délégataires. Le compromis trouvé sur ce point repose sur un plafonnement de la rémunération des dirigeants à hauteur de trois fois le plafond annuel de la sécurité sociale – soit environ 145 000 euros brut par an – et de celle des salariés à hauteur de la rémunération maximale pouvant être versée dans les établissements publics à caractère industriel et commercial – soit environ 450 000 euros brut par an.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "confirmé",
+        "explication": "Le plafond des salariés est celui du président du conseil d’administration d’un établissement public de l’État à caractère industriel et commercial. Le rapport du Sénat sur le texte (n° 669) le chiffre à 450 000 euros bruts annuels et le rattache au décret n° 2012-915 du 26 juillet 2012 relatif au contrôle de l’État sur les rémunérations des dirigeants d’entreprises publiques. La loi reprend ce renvoi sans écrire le montant.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 669 sur la proposition de loi (2024-2025)",
+            "url": "https://www.senat.fr/rap/l24-669/l24-6695.html"
+          },
+          {
+            "nom": "Loi n° 2026-725 du 3 août 2026, article 3 (article L. 131-14 du code du sport)",
+            "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054608060"
+          }
+        ]
+      },
+      {
+        "affirmation": "jusqu’à dix ans d’emprisonnement pour la diffusion non autorisée d’un match",
+        "chiffre": "dix ans",
+        "auteur": "Soumya Bourouaha",
+        "role": "Députée",
+        "citation": "Nous ne pouvons pas non plus passer sous silence le volet répressif de ce texte. Le fait de prévoir jusqu’à dix ans d’emprisonnement pour la diffusion non autorisée d’un match témoigne d’un paradoxe saisissant : votre modération lorsqu’il s’agit de réformer le sport-business est inversement proportionnelle à votre sévérité lorsqu’il s’agit de punir ceux qui en enfreignent les règles.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "nuancé",
+        "explication": "Le texte définitif ne prévoit pas dix ans. L’article L. 333-13 du code du sport, créé par l’article 31 de la loi, punit la diffusion non autorisée de trois ans d’emprisonnement et de 300 000 euros d’amende ; les peines sont portées à sept ans et 750 000 euros lorsque les faits sont commis en bande organisée. L’échelle annoncée par l’oratrice est donc supérieure à celle du texte adopté.",
+        "sources": [
+          {
+            "nom": "Loi n° 2026-725 du 3 août 2026, article 31 (article L. 333-13 du code du sport)",
+            "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054608060"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "RN",
+      "sieges": 106,
+      "pour": 106,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 55,
+      "pour": 53,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 1
+    },
+    {
+      "id": "LFI",
+      "sieges": 52,
+      "pour": 0,
+      "contre": 0,
+      "abstention": 52,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 43,
+      "pour": 43,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 38,
+      "pour": 38,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 35,
+      "pour": 35,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 32,
+      "pour": 31,
+      "contre": 1,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DEM",
+      "sieges": 26,
+      "pour": 26,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 4,
+      "contre": 0,
+      "abstention": 13,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 15,
+      "pour": 0,
+      "contre": 0,
+      "abstention": 15,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 6,
+      "pour": 6,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

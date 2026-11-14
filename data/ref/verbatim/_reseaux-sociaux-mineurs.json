@@ -1,0 +1,46 @@
+{
+  "seances": {
+    "CRSANR5L17S2026E1N023": {
+      "date": "2026-07-21",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    }
+  },
+  "citations": [
+    {
+      "cle": "reseaux-sociaux-mineurs-1",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Laure Miller",
+      "texte": "Cette mesure est robuste tant du point de vue conventionnel que constitutionnel."
+    },
+    {
+      "cle": "reseaux-sociaux-mineurs-2",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Alexandre Portier",
+      "texte": "L’heure n’est plus aux hésitations : il faut protéger nos enfants, protéger le temps de l’enfance."
+    },
+    {
+      "cle": "reseaux-sociaux-mineurs-3",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Alexandre Portier",
+      "texte": "Ces derniers passent déjà plus de cinq heures par jour sur les écrans."
+    },
+    {
+      "cle": "reseaux-sociaux-mineurs-4",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Anne Le Hénanff",
+      "texte": "La Grèce et l’Espagne nous suivront dans quelques semaines ; pas moins de quinze pays européens souhaitent inscrire cette norme sociale dans leur droit national."
+    },
+    {
+      "cle": "reseaux-sociaux-mineurs-5",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Louis Boyard",
+      "texte": "Vous savez que vos mesures sont inapplicables ! Aujourd’hui, seul un collège sur dix arrive à appliquer l’interdiction du téléphone portable."
+    },
+    {
+      "cle": "reseaux-sociaux-mineurs-6",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Arnaud Saint-Martin",
+      "texte": "Mais parce que vous ne le ferez pas, que vous vous donnez bonne conscience par une mesure d’interdiction et de contrôle, nous donnons rendez-vous aux Français en 2027."
+    }
+  ]
+}

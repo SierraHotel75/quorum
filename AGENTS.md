@@ -45,4 +45,5 @@
 
 - Source unique pendant la génération : MCP Hémicycle (`hemicycle`).
 - Chaque loi générée devient un fichier JSON dans `data/lois/`, publié seulement après les contrôles automatiques.
+- `data/lois/suivis.json` est un corpus distinct de textes suivis `v2` : actes datés sourcés, sans vote ; il n'entre ni dans `index.json` ni dans le gate des lois.
 - L'app ne doit dépendre ni de Hémicycle ni d'un service IA à l'exécution.

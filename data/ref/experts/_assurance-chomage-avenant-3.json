@@ -1,0 +1,46 @@
+{
+  "experts": [
+    {
+      "nom": "Jérôme End",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    },
+    {
+      "nom": "Nicolas Turquois",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    },
+    {
+      "nom": "Christophe Mongardien",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    },
+    {
+      "nom": "Ségolène Amiot",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    },
+    {
+      "nom": "Sophie Taillé-Polian",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    },
+    {
+      "nom": "Yannick Monnet",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    }
+  ]
+}

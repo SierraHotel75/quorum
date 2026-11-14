@@ -1,0 +1,32 @@
+{
+  "experts": [
+    {
+      "nom": "Lionel Duparay",
+      "role": "Député, rapporteur de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Michèle Martinez",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Soumya Bourouaha",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Matthieu Bloch",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    }
+  ]
+}

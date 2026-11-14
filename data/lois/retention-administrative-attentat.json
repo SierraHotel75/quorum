@@ -1,0 +1,584 @@
+{
+  "id": "retention-administrative-attentat",
+  "titre": "Proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat",
+  "theme": "securite",
+  "nb_phrases": 29,
+  "statut": "Adopté",
+  "resume": "L'Assemblée nationale a adopté définitivement le texte de la commission mixte paritaire le 16 juin 2026, par 345 voix contre 177. Le Sénat avait adopté le même texte la veille. Le Conseil constitutionnel l'a déclaré conforme à la Constitution, avec réserves, le 23 juillet 2026, et la loi n° 2026-667 a été promulguée le 27 juillet 2026.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif et texte adopté n° 315",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/docs/PIONANR5L17BTA0315.raw",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 7405 du 16 juin 2026, vote sur l'ensemble de la proposition de loi dans le texte de la commission mixte paritaire. Les articles 8, 9 et 10 sont recopiés depuis le texte adopté n° 315 (document PIONANR5L17BTA0315.raw consulté le 14 novembre 2026) : article 8 pour L. 742-7, article 9 pour L. 742-6, article 10 pour L. 741-7 et L. 741-7-1. Chronologie établie sur les actes du dossier DLR5L17N53284."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V7405",
+    "date": "2026-06-16",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 7405",
+    "pour": 345,
+    "contre": 177,
+    "abstention": 11,
+    "non_votants": 1,
+    "votants": 533,
+    "suffrages_exprimes": 522,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble de la proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 43,
+  "chronologie": [
+    {
+      "date": "2025-12-02",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l'Assemblée nationale (texte n° 2180) et renvoi en commission des lois."
+    },
+    {
+      "date": "2026-01-21",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d'un rapporteur par la commission des lois."
+    },
+    {
+      "date": "2026-02-11",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission des lois et de son texte (n° 2468)."
+    },
+    {
+      "date": "2026-03-23",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-05-05",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique et adoption du texte en première lecture (T.A. n° 278)."
+    },
+    {
+      "date": "2026-05-13",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat (n° 611) et de son texte (n° 612)."
+    },
+    {
+      "date": "2026-05-20",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte modifié en première lecture (T.A. n° 116)."
+    },
+    {
+      "date": "2026-05-29",
+      "chambre": "CMP",
+      "texte": "Convocation d'une commission mixte paritaire."
+    },
+    {
+      "date": "2026-06-04",
+      "chambre": "CMP",
+      "texte": "Accord en commission mixte paritaire et dépôt des rapports n° 2877 (Assemblée nationale) et n° 705 (Sénat)."
+    },
+    {
+      "date": "2026-06-15",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte de la commission mixte paritaire (T.A. n° 136)."
+    },
+    {
+      "date": "2026-06-16",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte définitivement le texte de la commission mixte paritaire (scrutin n° 7405, T.A. n° 315)."
+    },
+    {
+      "date": "2026-06-23",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Saisine du Conseil constitutionnel."
+    },
+    {
+      "date": "2026-07-23",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Décision : le texte est déclaré conforme à la Constitution, avec réserves."
+    },
+    {
+      "date": "2026-07-27",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-667."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "« Si le juge ordonne la prolongation de la rétention, celle-ci court pour une nouvelle période d’une durée maximale de trente jours. La durée totale de la rétention n’excède alors pas deux cent dix jours. »",
+      "article": "Article 8",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° La seconde phrase est supprimée ;",
+      "article": "Article 8",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° Au premier alinéa, le mot : « trente » est remplacé par le mot : « quatre-vingt-dix » ;",
+      "article": "Article 9",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« À titre exceptionnel, peut être prolongée au delà de quatre-vingt-dix jours, dans les conditions prévues au premier alinéa du présent article, la rétention de l’étranger qui représente une menace réelle, actuelle et d’une particulière gravité pour l’ordre public et qui fait l’objet d’une condamnation définitive pour l’un des crimes ou des délits suivants punis de cinq ans ou plus d’emprisonnement :",
+      "article": "Article 9",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 5° Les crimes et les délits de participation à une association de malfaiteurs prévus à l’article 450-1 du même code, lorsque l’association de malfaiteurs a pour objet la préparation d’un crime ou d’un délit mentionné aux 1° à 4° du présent article. »",
+      "article": "Article 9",
+      "alinea": "alinéa 9"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 741-7. – I. – L’autorité administrative peut prendre une nouvelle décision de placement en rétention en vue de l’exécution de la même mesure d’éloignement si le comportement de l’étranger représente toujours une menace pour l’ordre public, s’il s’est soustrait aux mesures de surveillance dont il faisait l’objet ou en cas de circonstances nouvelles, notamment lorsqu’il n’a pas respecté les conditions de son assignation à résidence depuis le terme de sa dernière rétention.",
+      "article": "Article 10",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Toutefois, pour l’étranger dont la rétention a été prolongée en application de l’article L. 742-6, cette durée est portée à cinq cent quarante jours.",
+      "article": "Article 10",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« L’étranger ne peut faire l’objet de plus de cinq placements en rétention pour l’exécution d’une même mesure d’éloignement.",
+      "article": "Article 10",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° Après le même article L. 741-7, il est inséré un article L. 741-7-1 ainsi rédigé :",
+      "article": "Article 10",
+      "alinea": "alinéa 9"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 8",
+      "note": "Article L. 742-7 du code de l'entrée et du séjour des étrangers et du droit d'asile (CESEDA), tel que modifié par l'article 8 du texte adopté n° 315 : prolongation ordonnée par le juge, durée totale plafonnée à deux cent dix jours.",
+      "paragraphes": [
+        "L’article L. 742-7 du code de l’entrée et du séjour des étrangers et du droit d’asile est ainsi modifié :",
+        "1° À la fin de la première phrase, les mots : « conditions prévues à l’article L. 742-5 » sont remplacés par les mots : « cas prévus aux 2° et 3° de l’article L. 742-4 » ;",
+        "2° La seconde phrase est supprimée ;",
+        "3° Il est ajouté un alinéa ainsi rédigé :",
+        "« Si le juge ordonne la prolongation de la rétention, celle-ci court pour une nouvelle période d’une durée maximale de trente jours. La durée totale de la rétention n’excède alors pas deux cent dix jours. »"
+      ]
+    },
+    {
+      "reference": "Article 9",
+      "note": "Article L. 742-6 du CESEDA, tel que modifié par l'article 9 du texte adopté n° 315 : prolongation exceptionnelle au-delà de quatre-vingt-dix jours pour l'étranger condamné pour l'un des crimes ou délits visés.",
+      "paragraphes": [
+        "L’article L. 742-6 du code de l’entrée et du séjour des étrangers et du droit d’asile est ainsi modifié :",
+        "1° Au premier alinéa, le mot : « trente » est remplacé par le mot : « quatre-vingt-dix » ;",
+        "2° Après le même premier alinéa, sont insérés six alinéas ainsi rédigés :",
+        "« À titre exceptionnel, peut être prolongée au delà de quatre-vingt-dix jours, dans les conditions prévues au premier alinéa du présent article, la rétention de l’étranger qui représente une menace réelle, actuelle et d’une particulière gravité pour l’ordre public et qui fait l’objet d’une condamnation définitive pour l’un des crimes ou des délits suivants punis de cinq ans ou plus d’emprisonnement :",
+        "« 1° Les crimes et les délits prévus au livre II du code pénal ;",
+        "« 2° Les crimes et les délits de vol aggravé avec violences prévus aux articles 311-5 à 311-11 du même code ;",
+        "« 3° Les crimes et les délits d’extorsion prévus aux articles 312-1 à 312-9 dudit code ;",
+        "« 4° Les crimes et les délits de destruction, de dégradation et de détérioration dangereuses pour les personnes prévus aux articles 322-6 à 322-11-1 du même code ;",
+        "« 5° Les crimes et les délits de participation à une association de malfaiteurs prévus à l’article 450-1 du même code, lorsque l’association de malfaiteurs a pour objet la préparation d’un crime ou d’un délit mentionné aux 1° à 4° du présent article. »"
+      ]
+    },
+    {
+      "reference": "Article 10",
+      "note": "Articles L. 741-7 et L. 741-7-1 du CESEDA, réécrit et créé par l'article 10 du texte adopté n° 315 : nouveau placement en rétention, durée cumulée des périodes de rétention, contrôle du magistrat.",
+      "paragraphes": [
+        "Le code de l’entrée et du séjour des étrangers et du droit d’asile est ainsi modifié :",
+        "1° L’article L. 741-7 est ainsi rédigé :",
+        "« Art. L. 741-7. – I. – L’autorité administrative peut prendre une nouvelle décision de placement en rétention en vue de l’exécution de la même mesure d’éloignement si le comportement de l’étranger représente toujours une menace pour l’ordre public, s’il s’est soustrait aux mesures de surveillance dont il faisait l’objet ou en cas de circonstances nouvelles, notamment lorsqu’il n’a pas respecté les conditions de son assignation à résidence depuis le terme de sa dernière rétention.",
+        "« Cette décision, spécialement motivée et qui tient compte des précédentes périodes de rétention dont l’étranger a fait l’objet, ne peut être prise avant l’expiration d’un délai de quarante-huit heures à compter du terme du précédent placement. Toutefois, si ce précédent placement a pris fin en raison de la soustraction de l’étranger aux mesures de surveillance dont il faisait l’objet, l’autorité administrative peut décider d’un nouveau placement en rétention avant l’expiration de ce délai.",
+        "« II. – La durée cumulée des périodes de rétention pour l’exécution d’une même mesure d’éloignement ne peut excéder trois cent soixante jours.",
+        "« Toutefois, pour l’étranger dont la rétention a été prolongée en application de l’article L. 742-6, cette durée est portée à cinq cent quarante jours.",
+        "« L’étranger ne peut faire l’objet de plus de cinq placements en rétention pour l’exécution d’une même mesure d’éloignement.",
+        "« III. – Le magistrat du siège du tribunal judiciaire, saisi d’une nouvelle décision de placement en rétention en vue de l’exécution d’une même mesure d’éloignement ou saisi aux fins de sa prolongation, contrôle si la privation de liberté n’excède pas la rigueur nécessaire en tenant compte des précédentes périodes de rétention dont l’étranger a déjà fait l’objet. » ;",
+        "2° Après le même article L. 741-7, il est inséré un article L. 741-7-1 ainsi rédigé :",
+        "« Art. L. 741-7-1. – Les durées mentionnées au II de l’article L. 741-7 constituent, pour l’application des paragraphes 5 et 6 de l’article 15 de la directive 2008/115/CE du Parlement européen et du Conseil du 16 décembre 2008 relative aux normes et procédures communes applicables dans les États membres au retour des ressortissants de pays tiers en séjour irrégulier, la durée maximale de rétention pour l’exécution d’une même décision d’éloignement. »"
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "345",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "177",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "11",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "533",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "522",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel décompte a réuni le vote sur l'ensemble du texte de la commission mixte paritaire ?",
+      "options": [
+        "345 pour, 177 contre, 11 abstentions",
+        "258 pour, 84 contre, 10 abstentions",
+        "178 pour, 163 contre, 5 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 7405 du 16 juin 2026"
+    },
+    {
+      "question": "À l'article L. 742-6 du CESEDA, par quel mot l'article 9 remplace-t-il le mot « trente » ?",
+      "options": [
+        "« quatre-vingt-dix »",
+        "« soixante »",
+        "« deux cent dix »"
+      ],
+      "bonne": 0,
+      "source": "Article 9 du texte adopté n° 315, 1°"
+    },
+    {
+      "question": "Quelle durée totale de rétention l'article 8 fixe-t-il lorsque le juge ordonne une nouvelle prolongation au titre de l'article L. 742-7 ?",
+      "options": [
+        "Cent quatre-vingts jours",
+        "Deux cent dix jours",
+        "Trois cent soixante jours"
+      ],
+      "bonne": 1,
+      "source": "Article 8 du texte adopté n° 315, 3° (article L. 742-7 du CESEDA)"
+    },
+    {
+      "question": "Quelle est la durée cumulée maximale des périodes de rétention pour une même mesure d'éloignement prévue à l'article 10 ?",
+      "options": [
+        "Trois cent soixante jours, portés à cinq cent quarante jours pour l'étranger dont la rétention a été prolongée au titre de l'article L. 742-6",
+        "Quatre-vingt-dix jours, portés à deux cent dix jours dans certains cas",
+        "Cinq placements de quinze jours chacun"
+      ],
+      "bonne": 0,
+      "source": "Article 10 du texte adopté n° 315, II de l'article L. 741-7"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Trois articles, trois régimes de rétention",
+    "texte": "Le texte réécrit trois articles du CESEDA. L'**article 8** plafonne à **deux cent dix jours** la durée totale de la rétention prolongée par le juge (L. 742-7). L'**article 9** porte de trente à **quatre-vingt-dix jours** la prolongation exceptionnelle de l'étranger condamné (L. 742-6). L'**article 10** ouvre de **nouveaux placements** pour une même mesure d'éloignement, avec une durée cumulée de **trois cent soixante jours**, portée à **cinq cent quarante jours** pour les personnes déjà prolongées au titre de L. 742-6 (L. 741-7).",
+    "points": [
+      "L'article 9 ne vise que l'étranger qui représente une menace réelle, actuelle et d'une particulière gravité pour l'ordre public **et** qui fait l'objet d'une condamnation définitive pour l'un des crimes ou délits limitativement énumérés, punis de **cinq ans ou plus** d'emprisonnement. Le remplacement de « trente » par « quatre-vingt-dix » ne supprime pas ce cadre : la prolongation au-delà de quatre-vingt-dix jours reste exceptionnelle et doit être motivée.",
+      "L'article 8 fixe le régime de la prolongation ordonnée par le juge : nouvelle période de **trente jours** au plus, pour une durée totale qui **n'excède pas deux cent dix jours**. C'est ce plafond de 210 jours que décrit le débat, et non un régime uniforme pour tous les étrangers retenus.",
+      "L'article 10 n'exige pas, dans chaque hypothèse, une condamnation pour des faits graves : un nouveau placement est possible si le comportement de l'étranger représente toujours une menace pour l'ordre public, s'il s'est soustrait aux mesures de surveillance ou en cas de circonstances nouvelles, notamment s'il n'a pas respecté son assignation à résidence.",
+      "La durée cumulée des périodes de rétention ne peut excéder **trois cent soixante jours** pour une même mesure d'éloignement. Elle est portée à **cinq cent quarante jours** pour l'étranger dont la rétention a été prolongée en application de l'article L. 742-6, avec un maximum de **cinq placements**.",
+      "Le magistrat du tribunal judiciaire contrôle que la privation de liberté **n'excède pas la rigueur nécessaire**, en tenant compte des périodes de rétention déjà subies."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-06-15",
+        "titre": "Étrangers criminels : comment la loi «Philippine» pourrait éviter de nouvelles tragédies",
+        "url": "https://www.lefigaro.fr/actualite-france/etrangers-criminels-comment-la-loi-philippine-aurait-pu-eviter-des-tragedies-passees-20260615"
+      },
+      {
+        "media": "L'Humanité",
+        "date": "2026-06-16",
+        "titre": "Jusqu’à 210 jours en CRA : avec la loi Rodwell, l’Assemblée nationale durcit une nouvelle fois la rétention des étrangers",
+        "url": "https://www.humanite.fr/politique/affaire-philippine/jusqua-210-jours-en-cra-avec-la-loi-rodwell-lassemblee-nationale-sapprete-a-durcir-une-nouvelle-fois-la-retention-des-etrangers"
+      }
+    ],
+    "contre_titre": "Presse numérique et parlementaire",
+    "contre": [
+      {
+        "media": "franceinfo",
+        "date": "2026-06-16",
+        "titre": "Le Parlement allonge la durée de rétention des étrangers en situation irrégulière et jugés dangereux",
+        "url": "https://www.francetvinfo.fr/societe/immigration/le-parlement-allonge-la-duree-de-retention-des-etrangers-en-situation-irreguliere-et-juges-dangereux_8064749.html"
+      },
+      {
+        "media": "LCP",
+        "date": "2026-06-16",
+        "titre": "Loi \"Philippine\": les députés allongent la durée de rétention des étrangers en situation irrégulière jugés dangereux",
+        "url": "https://lcp.fr/actualites/loi-philippine-les-deputes-allongent-la-duree-de-retention-des-etrangers-en-situation"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Trois voix de chaque côté, mot pour mot, dans l'hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent l'allongement",
+    "contre_titre": "Ils le refusent",
+    "pour": [
+      {
+        "nom": "Marie Lebec",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce texte n’est pas une réaction mais une anticipation. Il prend en compte l’évolution de la menace, notamment les profils hybrides, à la frontière entre radicalisation et troubles psychiatriques, qui échappent encore trop souvent au cadre juridique.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      },
+      {
+        "nom": "Élisabeth de Maistre",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "La sécurité n’est pas un service parmi d’autres ; elle est le fondement même du contrat social. Quand l’État faillit à cette mission, ce n’est pas seulement une défaillance administrative, c’est aussi une rupture de contrat.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      },
+      {
+        "nom": "Gabriel Tomatis",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Notre devoir est de protéger les Français, d’écarter du territoire national les étrangers qui représentent une menace grave pour la sécurité publique, de soutenir les victimes plutôt que de chercher des circonstances atténuantes à ceux qui troublent l’ordre public.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Antoine Léaument",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Vous instrumentalisez la peur en proposant d’enfermer les étrangers sans procès et sur décision du pouvoir exécutif pendant 210 jours en centre de rétention administrative.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      },
+      {
+        "nom": "Céline Hervieu",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "On ne lutte pas contre le terrorisme en externalisant vers la psychiatrie ce que la police et la justice ne sont pas en mesure de réaliser.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      },
+      {
+        "nom": "Léa Balage El Mariky",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "D’ailleurs, des dispositifs de soins sans consentement existent pour soigner les personnes. Lorsqu’elles présentent un danger pour elles-mêmes ou pour autrui, le droit en vigueur permet déjà d’intervenir. Où était donc le vide juridique ? Et pourquoi entretenir cette confusion dangereuse entre maladie mentale et radicalisation ? Les psychiatres eux-mêmes vous alertent depuis des années sur cette assimilation : le fanatisme est une idéologie, ce n’est pas une pathologie.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d'entrées et un volume de parole comparable. Les interruptions et applaudissements ne sont pas repris dans les extraits."
+  },
+  "verifications": {
+    "chapeau": "Deux chiffres du débat ont pu être confrontés au texte adopté et à une source publiée. Pour le troisième, les recherches n'ont trouvé aucun document public : il reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "La durée maximale de rétention pourra atteindre 540 jours dans certaines situations.",
+        "chiffre": "540 jours",
+        "auteur": "Marcellin Nadeau",
+        "role": "Député",
+        "citation": "La durée maximale de rétention pourra atteindre 540 jours dans certaines situations.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272",
+        "verdict": "confirmé",
+        "explication": "L'article 10 du texte adopté n° 315 réécrit l'article L. 741-7 du CESEDA : le II fixe la « durée cumulée des périodes de rétention » à trois cent soixante jours au plus pour une même mesure d'éloignement, puis la porte à cinq cent quarante jours pour l'étranger dont la rétention a été prolongée en application de l'article L. 742-6. Le chiffre prononcé correspond au plafond inscrit dans le texte, dans l'hypothèse qu'il décrit.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte adopté n° 315 (PIONANR5L17BTA0315.raw)",
+            "url": "https://www.assemblee-nationale.fr/dyn/docs/PIONANR5L17BTA0315.raw"
+          },
+          {
+            "nom": "Sénat — la loi en clair, loi n° 2026-667",
+            "url": "https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-visant-a-renforcer-la-securite-la-retention-administrative-et-la-prevention-des-risques-dattentat.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "l'allongement de 180 à 210 jours de la durée de rétention en centre administratif",
+        "chiffre": "210 jours",
+        "auteur": "Romain Eskenazi",
+        "role": "Député",
+        "citation": "Le dispositif d’injonction d’examen psychiatrique, l’extension de la rétention de sûreté judiciaire et, surtout, l’allongement de 180 à 210 jours de la durée de rétention en centre administratif ne sont pas des mesures sérieuses.",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272",
+        "verdict": "nuancé",
+        "explication": "L'article 8 ajoute à l'article L. 742-7 que, si le juge ordonne la prolongation, « la durée totale de la rétention n'excède alors pas deux cent dix jours » : le plafond de 210 jours est donc bien dans le texte. Mais il ne s'applique pas à tous : la durée maximale est de quatre-vingt-dix jours en droit commun et de cent quatre-vingts jours pour les personnes condamnées pour terrorisme avant ce texte ; l'allongement de 180 à 210 jours ne décrit donc que le cas de ces dernières, alors que l'article 9 vise plus largement les condamnés pour des crimes et délits punis de cinq ans ou plus.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte adopté n° 315 (PIONANR5L17BTA0315.raw)",
+            "url": "https://www.assemblee-nationale.fr/dyn/docs/PIONANR5L17BTA0315.raw"
+          },
+          {
+            "nom": "LCP — 16 juin 2026",
+            "url": "https://lcp.fr/actualites/loi-philippine-les-deputes-allongent-la-duree-de-retention-des-etrangers-en-situation"
+          }
+        ]
+      },
+      {
+        "affirmation": "en Île-de-France, on compte sept lits d'urgence psychiatrique pour 12 millions d'habitants",
+        "chiffre": "sept lits",
+        "auteur": "Andy Kerbrat",
+        "role": "Député",
+        "citation": "Rappelons ce chiffre effarant : en Île-de-France, on compte sept lits d’urgence psychiatrique pour 12 millions d’habitants !",
+        "seance": "CRSANR5L17S2026O1N272",
+        "date": "2026-06-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272",
+        "verdict": "non documenté",
+        "explication": "Les recherches menées pendant la génération n'ont trouvé aucun document public qui recense « sept lits d'urgence psychiatrique » en Île-de-France. Les données publiques consultées sur l'offre psychiatrique francilienne dénombrent des milliers de lits et ne permettent pas d'isoler un tel chiffre. Le chiffre est repris tel qu'il a été prononcé dans l'hémicycle, mais il n'est pas présenté comme un fait établi.",
+        "sources": []
+      }
+    ],
+    "note": "Un chiffre n'est publié ici que s'il a été prononcé dans l'hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 67,
+      "pour": 0,
+      "contre": 67,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 13,
+      "pour": 0,
+      "contre": 12,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 62,
+      "pour": 0,
+      "contre": 62,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 35,
+      "pour": 0,
+      "contre": 35,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 21,
+      "pour": 12,
+      "contre": 0,
+      "abstention": 9,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 87,
+      "pour": 86,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 27,
+      "pour": 26,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 47,
+      "pour": 47,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 117,
+      "pour": 117,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 8,
+      "pour": 7,
+      "contre": 1,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

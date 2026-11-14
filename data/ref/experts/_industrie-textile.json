@@ -1,0 +1,46 @@
+{
+  "experts": [
+    {
+      "nom": "Anne-Cécile Violland",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    },
+    {
+      "nom": "Antoine Vermorel-Marques",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    },
+    {
+      "nom": "Véronique Riotton",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    },
+    {
+      "nom": "Alma Dufour",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    },
+    {
+      "nom": "Stéphane Delautrette",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    },
+    {
+      "nom": "Charles Fournier",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    }
+  ]
+}

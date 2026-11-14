@@ -8,6 +8,69 @@
       "titre": "Projet de loi relatif à la protection des enfants",
       "theme": "social",
       "scrutin": "VTANR5L17V8429"
+    },
+    {
+      "id": "antisemitisme-enseignement-superieur",
+      "fichier": "data/lois/antisemitisme-enseignement-superieur.json",
+      "titre": "Proposition de loi relative à la lutte contre l’antisémitisme dans l’enseignement supérieur",
+      "theme": "education",
+      "scrutin": "VTANR5L17V2880"
+    },
+    {
+      "id": "assurance-chomage-avenant-3",
+      "fichier": "data/lois/assurance-chomage-avenant-3.json",
+      "titre": "Projet de loi portant transposition de l’avenant n° 3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage",
+      "theme": "travail",
+      "scrutin": "VTANR5L17V7260"
+    },
+    {
+      "id": "legitime-defense-forces-ordre",
+      "fichier": "data/lois/legitime-defense-forces-ordre.json",
+      "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre dans l'exercice de leurs fonctions",
+      "theme": "securite",
+      "scrutin": "VTANR5L17V7987"
+    },
+    {
+      "id": "ordre-public",
+      "fichier": "data/lois/ordre-public.json",
+      "titre": "Projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l’ordre public, la sécurité et la tranquillité de nos concitoyens",
+      "theme": "securite",
+      "scrutin": "VTANR5L17V8433"
+    },
+    {
+      "id": "nouvelle-caledonie-natifs",
+      "fichier": "data/lois/nouvelle-caledonie-natifs.json",
+      "titre": "Proposition de loi organique portant régularisation des natifs dans le corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+      "theme": "outremer",
+      "scrutin": "VTANR5L17V6753"
+    },
+    {
+      "id": "violences-sexuelles-femmes-enfants",
+      "fichier": "data/lois/violences-sexuelles-femmes-enfants.json",
+      "titre": "Proposition de loi apportant une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants",
+      "theme": "social",
+      "scrutin": "VTANR5L17V8705"
+    },
+    {
+      "id": "plfss-2026",
+      "fichier": "data/lois/plfss-2026.json",
+      "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+      "theme": "budget",
+      "scrutin": "VTANR5L17V4758"
+    },
+    {
+      "id": "retention-administrative-attentat",
+      "fichier": "data/lois/retention-administrative-attentat.json",
+      "titre": "Proposition de loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat",
+      "theme": "securite",
+      "scrutin": "VTANR5L17V7405"
+    },
+    {
+      "id": "fin-de-gestion-2025",
+      "fichier": "data/lois/fin-de-gestion-2025.json",
+      "titre": "Projet de loi de finances de fin de gestion pour 2025",
+      "theme": "budget",
+      "scrutin": "VTANR5L17V4442"
     }
   ]
 }

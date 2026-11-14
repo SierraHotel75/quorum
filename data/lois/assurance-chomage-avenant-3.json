@@ -1,0 +1,496 @@
+{
+  "id": "assurance-chomage-avenant-3",
+  "titre": "Projet de loi portant transposition de l’avenant n° 3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage",
+  "theme": "travail",
+  "nb_phrases": 3,
+  "statut": "Adopté",
+  "resume": "Le texte transpose l’avenant n° 3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage : il ajoute aux critères de durée maximale d’indemnisation le fait que le contrat ait été rompu par une rupture conventionnelle individuelle, ce qui permet d’appliquer les durées négociées dans l’avenant, dont 15 mois pour les moins de 55 ans contre 18 auparavant. Le Sénat l’a adopté le 1er avril 2026 ; l’Assemblée nationale l’a rejeté le 16 avril 2026, puis a adopté le texte le 2 juin 2026. La loi a été promulguée le 11 juin 2026.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0296_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 7260 du 2 juin 2026, vote solennel sur l’ensemble du projet de loi. Texte adopté : n° 296. Article unique lu dans le jeu articles_textes du MCP Hémicycle ; mécanisme décrit par le rapport n° 488 du Sénat."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V7260",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/7260",
+    "date": "2026-06-02",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 7260",
+    "pour": 353,
+    "contre": 114,
+    "abstention": 37,
+    "non_votants": 1,
+    "votants": 504,
+    "suffrages_exprimes": 467,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l’ensemble du projet de loi portant transposition de l’avenant n° 3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage (deuxième lecture).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 72,
+  "chronologie": [
+    {
+      "date": "2026-03-25",
+      "chambre": "SENAT",
+      "texte": "Dépôt du projet de loi au Sénat (texte n° 470) ; le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-03-31",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 488 et du texte de la commission n° 489."
+    },
+    {
+      "date": "2026-04-01",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture (T.A. n° 80)."
+    },
+    {
+      "date": "2026-04-02",
+      "chambre": "AN",
+      "texte": "Dépôt du texte à l’Assemblée nationale pour la première lecture (texte n° 2619)."
+    },
+    {
+      "date": "2026-04-08",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 2633 et du texte de la commission n° 2633."
+    },
+    {
+      "date": "2026-04-16",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale rejette le texte en première lecture."
+    },
+    {
+      "date": "2026-04-17",
+      "chambre": "SENAT",
+      "texte": "Dépôt du texte au Sénat pour la deuxième lecture (texte n° 561)."
+    },
+    {
+      "date": "2026-05-13",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 620 et du texte de la commission n° 621."
+    },
+    {
+      "date": "2026-05-18",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en deuxième lecture (T.A. n° 114)."
+    },
+    {
+      "date": "2026-05-19",
+      "chambre": "AN",
+      "texte": "Dépôt du texte à l’Assemblée nationale pour la deuxième lecture (texte n° 2805)."
+    },
+    {
+      "date": "2026-05-20",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 2809 et du texte de la commission n° 2809."
+    },
+    {
+      "date": "2026-05-26",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique."
+    },
+    {
+      "date": "2026-06-02",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte en deuxième lecture (T.A. n° 296)."
+    },
+    {
+      "date": "2026-06-11",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-470."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "La deuxième phrase de l’article L. 5422‑2 du code du travail est complétée par les mots :",
+      "article": "Article unique",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« ou de ce que les intéressés relèvent du 2° du I de l’article L. 5422‑1 ».",
+      "article": "Article unique",
+      "alinea": "alinéa 1"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article unique",
+      "note": "Article L. 5422‑2 du code du travail, tel que modifié par l’article unique. Le texte ajoute la rupture conventionnelle individuelle aux critères de durée maximale d’indemnisation.",
+      "paragraphes": [
+        "La deuxième phrase de l’article L. 5422‑2 du code du travail est complétée par les mots : « ou de ce que les intéressés relèvent du 2° du I de l’article L. 5422‑1 »."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "353",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "114",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "37",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "504",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "467",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel est le résultat du scrutin public n° 7260 du 2 juin 2026 ?",
+      "options": [
+        "353 pour, 114 contre, 37 abstentions",
+        "258 pour, 84 contre, 10 abstentions",
+        "353 pour, 114 contre, aucune abstention"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 7260 du 2 juin 2026"
+    },
+    {
+      "question": "Quel avenant le texte transpose-t-il dans la loi ?",
+      "options": [
+        "L’avenant n° 3 du 25 février 2026 au protocole d’accord du 10 novembre 2023",
+        "L’avenant n° 2 du 10 novembre 2023 au protocole d’accord de 2019",
+        "L’avenant n° 1 du 23 mars 2026 au protocole d’accord de 2023"
+      ],
+      "bonne": 0,
+      "source": "Dossier législatif DLR5L17N53981 ; titre du projet de loi"
+    },
+    {
+      "question": "Quel critère l’article unique ajoute-t-il à l’article L. 5422‑2 du code du travail ?",
+      "options": [
+        "La rupture conventionnelle individuelle",
+        "L’âge du salarié",
+        "Le montant de l’allocation"
+      ],
+      "bonne": 0,
+      "source": "Texte adopté n° 296, article unique ; rapport n° 488 du Sénat"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article",
+    "texte": "L’article unique complète l’article **L. 5422‑2 du code du travail** pour ajouter, parmi les critères de durée maximale d’indemnisation, le fait que le contrat ait été rompu par une **rupture conventionnelle individuelle**.",
+    "points": [
+      "L’article L. 5422‑2 énumère les critères qui font varier la durée maximale d’indemnisation : l’âge, les conditions d’activité professionnelle antérieure et le suivi d’une formation.",
+      "Le texte y ajoute le fait que le contrat de travail ait été rompu par une **rupture conventionnelle individuelle**.",
+      "Il donne une base légale à l’**avenant n° 3 du 25 février 2026** et à son agrément par le Premier ministre."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-06-02",
+        "titre": "Ruptures conventionnelles: le Parlement valide l'accord des partenaires sociaux réduisant la durée de l’allocation chômage",
+        "url": "https://www.lefigaro.fr/social/ruptures-conventionnelles-le-parlement-valide-l-accord-des-partenaires-sociaux-reduisant-la-duree-de-l-allocation-chomage-20260602"
+      },
+      {
+        "media": "La Croix",
+        "date": "2026-06-02",
+        "titre": "Ruptures conventionnelles : le Parlement valide la réduction de la durée d’allocation chômage",
+        "url": "https://www.la-croix.com/politique/ruptures-conventionnelles-le-parlement-valide-la-reduction-de-la-duree-d-allocation-chomage-20260602"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-06-02",
+        "titre": "Après une rupture conventionnelle, vous toucherez le chômage moins longtemps qu’avant",
+        "url": "https://www.huffingtonpost.fr/france/article/apres-une-rupture-conventionnelle-vous-toucherez-le-chomage-moins-longtemps-qu-avant_264369.html"
+      },
+      {
+        "media": "L'Humanité",
+        "date": "2026-06-03",
+        "titre": "Ruptures conventionnelles : droites et extrême droite valident main dans la main l’amputation des indemnités chômage",
+        "url": "https://www.humanite.fr/politique/assemblee-nationale/ruptures-conventionnelles-droites-et-extreme-droite-valident-main-dans-la-main-lamputation-des-indemnites-chomage"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Six voix, trois de chaque côté, mot pour mot, dans l’hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte",
+    "contre_titre": "Ils s’y opposent",
+    "pour": [
+      {
+        "nom": "Jérôme End",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "La durée maximale d’indemnisation sera réduite pour les bénéficiaires d’une rupture conventionnelle, mais des protections spécifiques seront maintenues pour les seniors et les territoires ultramarins.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      },
+      {
+        "nom": "Nicolas Turquois",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le groupe Les Démocrates votera pour ce texte, parce qu’il est le fruit du dialogue social, qu’il est économiquement nécessaire et qu’il faut assumer de mener des réformes utiles même si elles sont difficiles.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      },
+      {
+        "nom": "Christophe Mongardien",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Rejeter le projet de loi reviendrait à empêcher l’application de l’accord conclu et donc à l’ignorer, alors qu’il vise à mieux encadrer les ruptures conventionnelles individuelles et à prévenir certaines utilisations abusives du dispositif qui, au bout du compte, nuisent aux intérêts des chômeurs victimes de licenciement.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Ségolène Amiot",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Parce que des travailleurs et des travailleuses n’ont pas attendu d’être licenciés, le gouvernement va leur imposer la perte de trois mois de chômage s’ils sont âgés de moins de 55 ans et la perte de trois à six mois d’indemnisation au-delà de cet âge.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      },
+      {
+        "nom": "Sophie Taillé-Polian",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Avec cette réforme, vous allez frapper beaucoup de monde. Les moins de 55 ans perdront trois mois d’indemnisation, mais on atteint un summum avec les salariés en fin de carrière : les plus de 55 ans s’apprêtent à perdre six mois et demi de droits, soit un quart du montant total de leurs allocations !",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      },
+      {
+        "nom": "Yannick Monnet",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Il s’agit, cette fois-ci, de sanctionner le salarié qui userait de son droit de négocier une rupture conventionnelle, sans interroger les motifs qui peuvent le pousser à recourir à ce dispositif et sans bien sûr remettre en cause l’usage qu’en fait le patronat pour mettre en œuvre un licenciement déguisé sans cause réelle et sérieuse.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres du débat ont pu être confrontés à une source publiée. Le rapport n° 488 de la commission des affaires sociales du Sénat les documente.",
+    "chiffres": [
+      {
+        "affirmation": "le coût pour l’assurance chômage s’élevait à 9,4 milliards d’euros en 2024",
+        "chiffre": "9,4 milliards d’euros",
+        "auteur": "Jérôme End",
+        "role": "Député",
+        "citation": "Il s’agit d’une véritable dérive qui pèse sur les finances publiques puisque le coût pour l’assurance chômage s’élevait à 9,4 milliards d’euros en 2024 – c’est considérable.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259",
+        "verdict": "confirmé",
+        "explication": "Le rapport n° 488, déposé le 31 mars 2026, indique que les allocataires ayant connu le chômage après une rupture conventionnelle représentaient 19 % des nouveaux assurés en 2024 et 26 % des dépenses totales d’allocation, soit 9,4 milliards d’euros. Le chiffre prononcé correspond à cette source.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 488 (2025-2026), déposé le 31 mars 2026",
+            "url": "https://www.senat.fr/rap/l25-488/l25-488_mono.html",
+            "date": "2026-03-31"
+          }
+        ]
+      },
+      {
+        "affirmation": "Son déficit devrait atteindre 2,1 milliards d’euros en 2026",
+        "chiffre": "2,1 milliards d’euros",
+        "auteur": "Nicolas Turquois",
+        "role": "Député",
+        "citation": "L’Unedic en a besoin. Son déficit devrait atteindre 2,1 milliards d’euros en 2026.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259",
+        "verdict": "confirmé",
+        "explication": "Le rapport n° 488 retient un solde attendu pour 2026 de -2,1 milliards d’euros pour l’Unedic, avant mesure sur les ruptures conventionnelles. L’ordre de grandeur et l’année sont ceux de la source.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 488 (2025-2026), déposé le 31 mars 2026",
+            "url": "https://www.senat.fr/rap/l25-488/l25-488_mono.html",
+            "date": "2026-03-31"
+          }
+        ]
+      },
+      {
+        "affirmation": "En 2024, 515 000 ruptures conventionnelles individuelles ont été signées",
+        "chiffre": "515 000",
+        "auteur": "Jérôme End",
+        "role": "Député",
+        "citation": "En 2024, 515 000 ruptures conventionnelles individuelles ont été signées et ce nombre augmente chaque année.",
+        "seance": "CRSANR5L17S2026O1N259",
+        "date": "2026-06-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259",
+        "verdict": "confirmé",
+        "explication": "Le rapport n° 488 affiche 514 000 ruptures conventionnelles dans son encadré et précise 514 768 dans sa partie « Le succès de la rupture conventionnelle », en citant la Dares. Les 515 000 prononcés constituent un arrondi au millier cohérent de 514 768.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 488 (2025-2026), déposé le 31 mars 2026",
+            "url": "https://www.senat.fr/rap/l25-488/l25-488_mono.html",
+            "date": "2026-03-31"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 63,
+      "pour": 0,
+      "contre": 63,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 17,
+      "pour": 0,
+      "contre": 17,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 56,
+      "pour": 1,
+      "contre": 18,
+      "abstention": 37,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 14,
+      "pour": 0,
+      "contre": 14,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 21,
+      "pour": 19,
+      "contre": 2,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 88,
+      "pour": 87,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 30,
+      "pour": 30,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 44,
+      "pour": 44,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 115,
+      "pour": 115,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 14,
+      "pour": 14,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 10,
+      "pour": 10,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

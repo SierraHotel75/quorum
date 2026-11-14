@@ -1,0 +1,568 @@
+{
+  "id": "violences-sexuelles-femmes-enfants",
+  "titre": "Proposition de loi apportant une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants",
+  "theme": "social",
+  "statut": "En discussion",
+  "resume": "L'Assemblée nationale a adopté le 13 octobre 2026, en première lecture, la proposition de loi apportant une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants : 503 voix pour, 0 contre et 67 abstentions. Le texte définit dans le code pénal les violences intrafamiliales et les violences sexuelles et sexistes, et institue une Autorité de lutte contre ces violences. Il a été transmis au Sénat le 13 octobre 2026 ; son adoption définitive n'est pas acquise.",
+  "nb_phrases": 11,
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/apporter_reponse_integrale_phenomene_violences_sexuelles_sexistes_contre_femmes_enfants_17e",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0356_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8705 du 13 octobre 2026. Texte adopté : n° 356 (T.A. n° 356). Article 1er lu dans le texte adopté publié par l'Assemblée nationale (PIONANR5L17BTA0356)."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8705",
+    "date": "2026-10-13",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8705",
+    "pour": 503,
+    "contre": 0,
+    "abstention": 67,
+    "non_votants": 0,
+    "votants": 570,
+    "suffrages_exprimes": 503,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "la proposition de loi apportant une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants (première lecture).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 7,
+  "contexte": "La proposition de loi a été déposée le 11 août 2026 par la députée socialiste Céline Thiébault-Martinez et plusieurs de ses collègues (n° 3106), puis renvoyée le même jour à une commission spéciale. Après le rapport n° 3190 du 23 septembre 2026 et l'engagement de la procédure accélérée le 25 septembre, l'Assemblée a examiné le texte du 1er au 13 octobre 2026. Elle l'a adopté en première lecture par 503 voix pour, aucune contre et 67 abstentions, et l'a transmis au Sénat le jour même.",
+  "chronologie": [
+    {
+      "date": "2026-08-11",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l'Assemblée nationale (texte n° 3106) et renvoi, le même jour, à la commission spéciale."
+    },
+    {
+      "date": "2026-09-07",
+      "chambre": "COMMISSION",
+      "texte": "Nomination de Mme Céline Thiébault-Martinez comme rapporteure générale de la commission spéciale."
+    },
+    {
+      "date": "2026-09-16",
+      "chambre": "COMMISSION",
+      "texte": "Réunion de la commission spéciale pour l'examen du texte."
+    },
+    {
+      "date": "2026-09-22",
+      "chambre": "COMMISSION",
+      "texte": "Nouvelle réunion de la commission spéciale."
+    },
+    {
+      "date": "2026-09-23",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 3190 et du texte de la commission (n° 3190-A0)."
+    },
+    {
+      "date": "2026-09-25",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-10-01",
+      "chambre": "AN",
+      "texte": "Ouverture de la discussion en séance publique."
+    },
+    {
+      "date": "2026-10-06",
+      "chambre": "AN",
+      "texte": "Poursuite de l'examen du texte en séance publique."
+    },
+    {
+      "date": "2026-10-13",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte en première lecture (scrutin public n° 8705) et le transmet au Sénat (texte n° 45)."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Le chapitre II du titre II du livre II du code pénal est ainsi modifié :",
+      "article": "Article 1er",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. 222‑1 A. – Les infractions prévues à la section 1 du chapitre Ier du présent titre, à la présente section et aux articles 227‑4‑2 et 227‑4‑3 constituent des violences intrafamiliales lorsqu’elles sont commises :",
+      "article": "Article 1er",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 1° Par le conjoint, le partenaire lié à la victime par un pacte civil de solidarité ou le concubin ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 2° Par l’ancien conjoint, l’ancien partenaire lié à la victime par un pacte civil de solidarité ou l’ancien concubin ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 4° Sur son enfant ou l’enfant de son conjoint, du partenaire lié à elle par un pacte civil de solidarité ou de son concubin, sur un descendant en ligne directe, entre alliés en ligne directe ou entre collatéraux jusqu’au quatrième degré inclus.",
+      "article": "Article 1er",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Les violences intrafamiliales commises dans les conditions prévues aux 1° à 3° du présent article sont également qualifiées de violences sexistes. » ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 10"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° Au début de la section 3, il est ajouté un article 222‑21‑1 ainsi rédigé :",
+      "article": "Article 1er",
+      "alinea": "alinéa 11"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. 222‑21‑1. – Les infractions prévues aux articles 221‑1 à 221‑5, lorsqu’elles sont commises en raison du sexe de la victime dans les conditions déterminées à l’article 132‑77, à l’article 222‑9, lorsqu’elles présentent un caractère sexuel, à la présente section et aux articles 222‑33‑1‑1, 222‑33‑2‑4, 225‑4‑11, 225‑4‑12, 225‑5 à 225‑12, 225‑12‑1, 225‑12‑2, 226‑2‑1, 226‑8‑1 et 227‑21‑1 à 227‑28‑3 du présent code ainsi qu’aux articles L. 1111‑4‑1 à L. 1111‑4‑2 du code de la santé publique constituent des violences sexuelles et sexistes. »",
+      "article": "Article 1er",
+      "alinea": "alinéa 12"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "note": "Articles 222‑1 A et 222‑21‑1 du code pénal, créés par l'article 1er.",
+      "paragraphes": [
+        "Le chapitre II du titre II du livre II du code pénal est ainsi modifié :",
+        "1° Au début de la section 1, il est ajouté un article 222‑1 A ainsi rédigé :",
+        "« Art. 222‑1 A. – Les infractions prévues à la section 1 du chapitre Ier du présent titre, à la présente section et aux articles 227‑4‑2 et 227‑4‑3 constituent des violences intrafamiliales lorsqu’elles sont commises :",
+        "« 1° Par le conjoint, le partenaire lié à la victime par un pacte civil de solidarité ou le concubin ;",
+        "« 2° Par l’ancien conjoint, l’ancien partenaire lié à la victime par un pacte civil de solidarité ou l’ancien concubin ;",
+        "« 3° Sur un ascendant légitime ou naturel ou sur les pères et mères adoptifs ;",
+        "« 4° Sur son enfant ou l’enfant de son conjoint, du partenaire lié à elle par un pacte civil de solidarité ou de son concubin, sur un descendant en ligne directe, entre alliés en ligne directe ou entre collatéraux jusqu’au quatrième degré inclus.",
+        "« Constituent également des violences intrafamiliales, lorsqu’elles sont commises par les personnes mentionnées aux 1° à 4° du présent article, les infractions prévues aux articles 222‑33‑2‑1, 227‑3 et 227‑4, l’infraction prévue à l’article 311‑1 lorsqu’elle porte sur les objets ou les documents mentionnés au a de l’article 311‑12, les infractions prévues aux articles 312‑1 à 312‑7, 312‑10, 312‑11, 313‑1, 313‑2 et 314‑1 à 314‑3 ainsi que l’infraction prévue à l’article 314‑7 pour les décisions et les conventions mentionnées à l’article 314‑9.",
+        "« Constituent également des violences intrafamiliales les faits réprimés au premier alinéa de l’article 225‑4‑13 qui sont commis dans les circonstances prévues aux 1° à 4° du présent article.",
+        "« Les violences intrafamiliales commises dans les conditions prévues aux 1° à 3° du présent article sont également qualifiées de violences sexistes. » ;",
+        "2° Au début de la section 3, il est ajouté un article 222‑21‑1 ainsi rédigé :",
+        "« Art. 222‑21‑1. – Les infractions prévues aux articles 221‑1 à 221‑5, lorsqu’elles sont commises en raison du sexe de la victime dans les conditions déterminées à l’article 132‑77, à l’article 222‑9, lorsqu’elles présentent un caractère sexuel, à la présente section et aux articles 222‑33‑1‑1, 222‑33‑2‑4, 225‑4‑11, 225‑4‑12, 225‑5 à 225‑12, 225‑12‑1, 225‑12‑2, 226‑2‑1, 226‑8‑1 et 227‑21‑1 à 227‑28‑3 du présent code ainsi qu’aux articles L. 1111‑4‑1 à L. 1111‑4‑2 du code de la santé publique constituent des violences sexuelles et sexistes. »"
+      ]
+    }
+  ],
+  "mecanisme": {
+    "titre": "Ce que l'article 1er change dans le code pénal",
+    "points": [
+      "Il crée l'article 222‑1 A, qui qualifie de violences intrafamiliales des infractions déjà prévues par le code pénal lorsqu'elles sont commises dans l'une de quatre situations : par le conjoint, le partenaire lié par un pacs ou le concubin (1°) ; par l'ancien conjoint, l'ancien partenaire lié par un pacs ou l'ancien concubin (2°) ; sur un ascendant légitime ou naturel, ou sur les pères et mères adoptifs (3°) ; sur son enfant ou l'enfant de son conjoint, sur un descendant en ligne directe, entre alliés en ligne directe ou entre collatéraux jusqu'au quatrième degré inclus (4°).",
+      "Il crée l'article 222‑21‑1, qui qualifie de violences sexuelles et sexistes les infractions prévues aux articles 221‑1 à 221‑5 lorsqu'elles sont commises en raison du sexe de la victime dans les conditions déterminées à l'article 132‑77, l'infraction prévue à l'article 222‑9 lorsqu'elle présente un caractère sexuel, puis les infractions prévues à la présente section et une liste d'infractions nommément citées, sans leur imposer ces deux conditions.",
+      "Il précise que les violences intrafamiliales commises dans les conditions prévues aux 1° à 3° de l'article 222‑1 A sont également qualifiées de violences sexistes."
+    ]
+  },
+  "chiffres": [
+    {
+      "valeur": "503",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "0",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "67",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "570",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "503",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "0",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel décompte le scrutin public n° 8705 a-t-il enregistré le 13 octobre 2026 ?",
+      "options": [
+        "503 pour, 0 contre, 67 abstentions",
+        "258 pour, 84 contre, 10 abstentions",
+        "178 pour, 163 contre, 5 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8705 du 13 octobre 2026"
+    },
+    {
+      "question": "Quelles définitions l'article 1er inscrit-il dans le code pénal ?",
+      "options": [
+        "Les violences intrafamiliales et les violences sexuelles et sexistes",
+        "Le féminicide et l'infanticide comme crimes autonomes",
+        "La perpétuité pour le viol incestueux"
+      ],
+      "bonne": 0,
+      "source": "Article 1er du texte adopté n° 356, articles 222‑1 A et 222‑21‑1 du code pénal"
+    },
+    {
+      "question": "Quel groupe a voté majoritairement pour l'abstention lors de ce scrutin ?",
+      "options": [
+        "La France insoumise - Nouveau Front Populaire (4 pour, 66 abstentions)",
+        "Le Rassemblement national (121 pour)",
+        "Les Socialistes et apparentés (68 pour)"
+      ],
+      "bonne": 0,
+      "source": "Analyse du scrutin n° 8705, décompte par groupe"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l'article 1er",
+    "texte": "Cet article inscrit dans le code pénal deux **définitions nouvelles** : les **violences intrafamiliales** et les **violences sexuelles et sexistes**.",
+    "points": [
+      "Les violences intrafamiliales sont définies par la relation entre l'auteur et la victime : infraction commise par le conjoint, le partenaire de pacs ou le concubin, ou par l'ancien conjoint, l'ancien partenaire ou l'ancien concubin ; ou infraction commise **sur un ascendant**, sur son enfant, sur un descendant, entre alliés en ligne directe ou entre collatéraux jusqu'au quatrième degré.",
+      "Les violences commises dans les conditions prévues aux 1° à 3° sont aussi qualifiées de **violences sexistes**.",
+      "L'article 222‑21‑1 qualifie de violences sexuelles et sexistes les atteintes à la vie (221‑1 à 221‑5) commises **en raison du sexe de la victime**, et l'article 222‑9 lorsque les violences présentent un **caractère sexuel**. Il y ajoute, sans ces conditions, les infractions de la section des agressions sexuelles et une liste d'infractions citées."
+    ]
+  },
+  "pedagogie": {
+    "titre": "Trois mots du texte",
+    "notions": [
+      {
+        "terme": "Violences intrafamiliales",
+        "definition": "Le texte ne dresse pas une liste d'auteurs : il décrit quatre situations. L'infraction est commise par le conjoint, le partenaire de pacs ou le concubin (1°) ; par l'ancien conjoint, l'ancien partenaire ou l'ancien concubin (2°) ; sur un ascendant ou sur les pères et mères adoptifs (3°) ; sur son enfant, l'enfant de son conjoint, sur un descendant, entre alliés en ligne directe ou entre collatéraux jusqu'au quatrième degré (4°)."
+      },
+      {
+        "terme": "Violences sexistes",
+        "definition": "Les violences intrafamiliales commises dans les conditions prévues aux 1° à 3° de l'article 222‑1 A sont également qualifiées de violences sexistes."
+      },
+      {
+        "terme": "Violences sexuelles et sexistes",
+        "definition": "L'article 222‑21‑1 vise d'abord les atteintes à la vie (221‑1 à 221‑5) commises en raison du sexe de la victime, puis l'article 222‑9 lorsque les violences présentent un caractère sexuel. Il inclut aussi, sans ces conditions, les infractions de la section des agressions sexuelles et une liste d'infractions citées."
+      }
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "La Croix",
+        "date": "2026-10-13",
+        "titre": "Violences sexistes et sexuelles : l'Assemblée nationale adopte la proposition de loi « intégrale »",
+        "url": "https://www.la-croix.com/politique/violences-sexistes-et-sexuelles-l-assemblee-nationale-adopte-la-proposition-de-loi-integrale-20261013"
+      },
+      {
+        "media": "Le Figaro",
+        "date": "2026-10-13",
+        "titre": "L'Assemblée nationale adopte à l'unanimité des votants la proposition de loi «intégrale» contre les violences sexistes et sexuelles",
+        "url": "https://www.lefigaro.fr/politique/l-assemblee-nationale-adopte-a-l-unanimite-des-votants-la-proposition-de-loi-integrale-contre-les-violences-sexistes-et-sexuelles-20261013"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-10-13",
+        "titre": "La proposition de loi « intégrale » sur les violences sexistes et sexuelles votée à l'Assemblée (mais son avenir reste très incertain)",
+        "url": "https://www.huffingtonpost.fr/politique/article/la-proposition-de-loi-integrale-sur-les-violences-sexistes-et-sexuelles-votee-a-l-assemblee-mais-son-avenir-reste-tres-incertain_339473.html"
+      },
+      {
+        "media": "Le HuffPost",
+        "date": "2026-10-14",
+        "titre": "Toutes les associations féministes ne se réjouissent pas du vote de la loi intégrale à l'Assemblée",
+        "url": "https://www.huffingtonpost.fr/france/article/toutes-les-associations-feministes-ne-se-rejouissent-pas-du-vote-de-la-loi-integrale-a-l-assemblee_339986.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Onze explications de vote se succèdent dans la séance du 13 octobre 2026. Aucun groupe ne vote contre : le désaccord oppose les partisans du texte à ceux qui s'abstiennent. Une seule oratrice, Mme Élise Leboucher (LFI-NFP), écarte le vote favorable ; aucune seconde voix d'opposition n'est attestée dans le compte rendu. Les passages cités sont continus et renvoient à ce compte rendu.",
+    "pour_titre": "Ils votent le texte",
+    "contre_titre": "Ils critiquent le texte ou s'abstiennent",
+    "pour": [
+      {
+        "nom": "Elsa Faucillon",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Mon groupe votera en faveur de ce texte, non pas – vous l'aurez compris – en confiance béate à l'égard du gouvernement, mais bien en lutte aux côtés des victimes et aux côtés de celles et ceux qui se sont battus pour que ce texte advienne.",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      },
+      {
+        "nom": "Alexandra Martin",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "C’est précisément ce chemin que trace la proposition de loi que nous nous apprêtons à voter. Comme l’a rappelé notre président Gabriel Attal, le groupe Ensemble pour la République soutient ce texte avec une force et une conviction absolues. Face aux violences sexistes et sexuelles, nous avons trop longtemps apporté des réponses partielles à un problème global. Prévenir, détecter, protéger, enquêter, juger, accompagner les victimes : toutes ces réponses doivent désormais former un ensemble cohérent. Tout le sens de cette loi intégrale est là : ne plus agir petit bout par petit bout, mais agir sur toute la chaîne des violences. Le drame de la petite Lyhanna nous rappelle avec une brutalité insoutenable ce que nous ne pouvons plus accepter. Comment ne pas penser également à Gisèle Pelicot, à son courage immense, et à toutes celles qui portent en elles des blessures invisibles et indélébiles ? Le silence tue. Il isole les victimes, il protège les agresseurs et laisse trop souvent les violences se poursuivre jusqu’à l’irréparable. En France, en 2026, nous ne pouvons plus nous satisfaire de réponses insuffisantes face à ces drames. Nous ne pouvons plus détourner les yeux, attendre qu’une nouvelle victime nous rappelle l’urgence d’agir, ni laisser celles et ceux qui souffrent affronter seuls l’indicible.",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Élise Leboucher",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Une « loi intégrale » –⁠ mais sans les soins pour les victimes majeures. Pour les victimes de violences sexuelles dans l’enfance, le reste à charge est en moyenne de 21 000 euros. Pourtant, et contrairement à ce que vous prétendez, le parcours de soins proposé ne concernera que les victimes mineures. La Ciivise confirme que votre loi ne prend pas en charge, pour les majeurs, les thérapies cognitivo-comportementales ou l’EMDR –⁠ l’intégration neuro-émotionnelle par les mouvements oculaires –, effectuées dans l’immense majorité des cas par des professionnels non médicaux libéraux. Que les victimes adultes qui nous écoutent l’entendent bien : oui, vous continuerez de payer les séances de psychothérapie essentielles à votre reconstruction. Avec cette loi, il est trop tard pour vous soigner si vous n’en avez pas les moyens. (Mêmes mouvements.)",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      },
+      {
+        "nom": "Élise Leboucher",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "À La France insoumise, nous ne hiérarchisons pas les oppressions. Nous ne considérerons pas ce texte comme une victoire tant que les femmes étrangères seront menacées d’OQTF lorsqu’elles portent plainte. (Mêmes mouvements.) Nous ne considérerons pas ce texte comme une victoire tant qu’il contribuera à renforcer un système punitif, classiste et raciste. Nous ne considérerons pas ce texte comme une victoire tant que rien ne sera fait pour enrayer la culture du viol. Cette loi n’a d’intégral que le nom et nous sommes loin du grand soir. Toutefois, par respect pour le travail colossal et essentiel de l’ensemble des associations féministes et enfantistes, nous nous abstiendrons. (Mêmes mouvements.)",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Mme Élise Leboucher annonce l'abstention de son groupe : elle figure du côté des critiques du texte, sans que son vote soit un vote contre. Le compte rendu ne contient pas de seconde explication de vote hostile au texte ; nous n'en inventons pas."
+  },
+  "experts": {
+    "pour": [
+      {
+        "nom": "Elsa Faucillon",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Mon groupe votera en faveur de ce texte, non pas – vous l'aurez compris – en confiance béate à l'égard du gouvernement, mais bien en lutte aux côtés des victimes et aux côtés de celles et ceux qui se sont battus pour que ce texte advienne. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      },
+      {
+        "nom": "Alexandra Martin",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "« C'est précisément ce chemin que trace la proposition de loi que nous nous apprêtons à voter. Comme l'a rappelé notre président Gabriel Attal, le groupe Ensemble pour la République soutient ce texte avec une force et une conviction absolues. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Élise Leboucher",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Pour les victimes de violences sexuelles dans l'enfance, le reste à charge est en moyenne de 21 000 euros. Pourtant, et contrairement à ce que vous prétendez, le parcours de soins proposé ne concernera que les victimes mineures. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      },
+      {
+        "nom": "Élise Leboucher",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Cette loi n'a d'intégral que le nom et nous sommes loin du grand soir. Toutefois, par respect pour le travail colossal et essentiel de l'ensemble des associations féministes et enfantistes, nous nous abstiendrons. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+      }
+    ]
+  },
+  "verifications": {
+    "chapeau": "Les trois chiffres prononcés dans l'hémicycle ont été confrontés à des documents publiés. Les deux premiers renvoient aux travaux de la CIIVISE ; le troisième à deux rapports parlementaires qui reprennent une enquête de Nook Care. Aucun n'est présenté ici comme une statistique administrative officielle.",
+    "chiffres": [
+      {
+        "affirmation": "chaque année, 160 000 d'entre eux sont victimes d'agressions sexuelles ou de viol",
+        "chiffre": "160 000",
+        "auteur": "Florence Herouin-Léautey",
+        "role": "Députée",
+        "citation": "chaque année, 160 000 d'entre eux sont victimes d'agressions sexuelles ou de viol, soit un enfant toutes les trois minutes.",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020",
+        "verdict": "confirmé",
+        "explication": "La CIIVISE retient 160 000 enfants victimes de violences sexuelles ou d'inceste chaque année. Son bilan de mise en œuvre des recommandations reprend ce chiffre en le rattachant à son rapport public de 2023, qui est la source de l'ordre de grandeur prononcé dans l'hémicycle.",
+        "sources": [
+          {
+            "nom": "CIIVISE — rapport public, novembre 2023",
+            "url": "https://www.ciivise.fr/le-rapport-public-de-2023"
+          },
+          {
+            "nom": "CIIVISE — bilan de mise en œuvre des 82 recommandations",
+            "url": "https://www.ciivise.fr/le-bilan-de-mise-en-oeuvre-des-82-recommandations"
+          }
+        ]
+      },
+      {
+        "affirmation": "seulement 3 % des agressions sexuelles et des viols commis sur des enfants conduisent à une condamnation",
+        "chiffre": "3 %",
+        "auteur": "Florence Herouin-Léautey",
+        "role": "Députée",
+        "citation": "86 % des plaintes déposées sont classées sans suite, et seulement 3 % des agressions sexuelles et des viols commis sur des enfants conduisent à une condamnation.",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020",
+        "verdict": "confirmé",
+        "explication": "La CIIVISE retient que 3 % des agressions sexuelles et des viols commis sur des enfants aboutissent à une condamnation, et que ce taux tombe à 1 % dans le cas de l'inceste. Le dénominateur est donc l'ensemble des agressions et des viols, et non le nombre d'agresseurs : il s'agit d'une estimation calculée à partir des plaintes et des signalements, pas d'un comptage exhaustif de tous les faits commis.",
+        "sources": [
+          {
+            "nom": "CIIVISE — rapport public, novembre 2023",
+            "url": "https://www.ciivise.fr/le-rapport-public-de-2023"
+          },
+          {
+            "nom": "CIIVISE — bilan de mise en œuvre des 82 recommandations",
+            "url": "https://www.ciivise.fr/le-bilan-de-mise-en-oeuvre-des-82-recommandations"
+          }
+        ]
+      },
+      {
+        "affirmation": "le reste à charge est en moyenne de 21 000 euros",
+        "chiffre": "21 000 euros",
+        "auteur": "Élise Leboucher",
+        "role": "Députée",
+        "citation": "Pour les victimes de violences sexuelles dans l'enfance, le reste à charge est en moyenne de 21 000 euros.",
+        "seance": "CRSANR5L17S2027O1N020",
+        "date": "2026-10-13",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020",
+        "verdict": "confirmé",
+        "explication": "Le chiffre est repris par deux rapports parlementaires. Le rapport d'information n° 3196, enregistré le 29 septembre 2026, cite une enquête de l'association Nook Care selon laquelle le reste à charge des victimes de violences sexuelles dans l'enfance s'élève en moyenne à 21 000 euros, soit 210 euros par mois. Le rapport n° 3379, enregistré le 21 octobre 2026, précise 21 009 euros sur un parcours de soins de huit ans en moyenne. Il ne s'agit donc pas d'une statistique administrative : le chiffre vient d'une enquête associative reprise par les rapporteurs.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport d'information n° 3196 (29 septembre 2026), enquête Nook Care",
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/RINFANR5L17B3196.html"
+          },
+          {
+            "nom": "Assemblée nationale — rapport n° 3379 (21 octobre 2026), sondage Nook Care",
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/RAPPANR5L17B3379.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n'est publié ici que s'il a été prononcé dans l'hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 70,
+      "pour": 4,
+      "contre": 0,
+      "abstention": 66,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 68,
+      "pour": 68,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 38,
+      "pour": 38,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 23,
+      "pour": 23,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 90,
+      "pour": 90,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DEM",
+      "sieges": 36,
+      "pour": 36,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 34,
+      "pour": 34,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 45,
+      "pour": 45,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 121,
+      "pour": 121,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 16,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 11,
+      "pour": 11,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

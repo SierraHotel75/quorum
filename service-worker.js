@@ -2,7 +2,7 @@
    L'application doit fonctionner sans lui : il ne fait qu'accélérer et
    permettre le mode avion. Toute erreur ici est rattrapable en le désactivant. */
 
-var CACHE = "quorum-v29";
+var CACHE = "quorum-v39";
 
 var FICHIERS = [
   "./",
@@ -14,7 +14,17 @@ var FICHIERS = [
   "./data/ref/groupes.json",
   "./data/ref/arbre.json",
   "./data/lois/index.json",
+  "./data/lois/suivis.json",
   "./data/lois/protection-enfants.json",
+  "./data/lois/antisemitisme-enseignement-superieur.json",
+  "./data/lois/assurance-chomage-avenant-3.json",
+  "./data/lois/legitime-defense-forces-ordre.json",
+  "./data/lois/ordre-public.json",
+  "./data/lois/nouvelle-caledonie-natifs.json",
+  "./data/lois/violences-sexuelles-femmes-enfants.json",
+  "./data/lois/plfss-2026.json",
+  "./data/lois/retention-administrative-attentat.json",
+  "./data/lois/fin-de-gestion-2025.json",
   "./manifest.json",
   "./assets/icone.svg",
   "./assets/icone-maskable.svg"

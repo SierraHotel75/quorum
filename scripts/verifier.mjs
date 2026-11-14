@@ -948,7 +948,7 @@ async function main() {
     fichiers = chemins.map((c) => resolve(process.cwd(), c));
   } else {
     fichiers = readdirSync(DOSSIER_LOIS)
-      .filter((f) => f.endsWith(".json") && !f.startsWith("_") && f !== "index.json")
+      .filter((f) => f.endsWith(".json") && !f.startsWith("_") && f !== "index.json" && f !== "suivis.json")
       .map((f) => join(DOSSIER_LOIS, f));
   }
 

@@ -1,0 +1,520 @@
+{
+  "id": "reseaux-sociaux-mineurs",
+  "titre": "Proposition de loi visant à protéger les mineurs des risques auxquels les expose l’utilisation des réseaux sociaux",
+  "theme": "numerique",
+  "nb_phrases": 14,
+  "statut": "Promulgué",
+  "resume": "L’Assemblée nationale a adopté le 21 juillet 2026, par 279 voix contre 81 et 66 abstentions, le texte élaboré par la commission mixte paritaire qui interdisait l’accès aux réseaux sociaux aux mineurs de quinze ans à compter du 1er septembre 2026 ; le Sénat a adopté le même texte le même jour. Par sa décision n° 2026-911 DC du 14 août 2026, le Conseil constitutionnel a déclaré l’article 1er de la loi contraire à la Constitution dans son intégralité. La loi n° 2026-813 du 24 août 2026 ne reprend à son article 1er qu’une mention de non-conformité : l’interdiction n’est jamais entrée en vigueur, le texte promulgué conservant notamment l’extension de l’interdiction du téléphone portable aux lycées prévue à son article 3.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/proteger_mineurs_reseaux_sociaux_17e",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3069_texte-adopte-commission",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8431 du 21 juillet 2026, vote sur l’ensemble de la proposition de loi dans le texte de la commission mixte paritaire. Texte de la CMP : n° 3069, adopté par l’Assemblée nationale (T.A. n° 339). Article 1er lu au texte de la CMP publié par l’Assemblée nationale ; débat lu au compte rendu intégral de la séance du 21 juillet 2026. L’article 1er a été déclaré contraire à la Constitution dans son intégralité par la décision n° 2026-911 DC du 14 août 2026 (Conseil constitutionnel, décision consultée le 14 novembre 2026). Loi n° 2026-813 du 24 août 2026, publiée au Journal officiel du 25 août 2026 (JORF n° 0197, texte n° 1) : son article 1er porte la mention « [Dispositions déclarées non conformes à la Constitution par la décision du Conseil constitutionnel n° 2026-911 DC du 14 août 2026.] ». Le texte reproduit dans cette fiche est le texte voté par le Parlement, non le droit en vigueur."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8431",
+    "date": "2026-07-21",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8431",
+    "pour": 279,
+    "contre": 81,
+    "abstention": 66,
+    "non_votants": 2,
+    "votants": 426,
+    "suffrages_exprimes": 360,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l’ensemble de la proposition de loi visant à protéger les mineurs des risques auxquels les expose l’utilisation des réseaux sociaux (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 149,
+  "chronologie": [
+    {
+      "date": "2025-11-18",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Avis du Conseil d’État sur la proposition de loi."
+    },
+    {
+      "date": "2025-11-18",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l’Assemblée nationale (texte n° 2107)."
+    },
+    {
+      "date": "2025-11-18",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi en commission au fond."
+    },
+    {
+      "date": "2025-12-17",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d’un rapporteur."
+    },
+    {
+      "date": "2026-01-14",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission (n° 2341)."
+    },
+    {
+      "date": "2026-01-23",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-01-26",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique et adoption du texte en première lecture."
+    },
+    {
+      "date": "2026-01-27",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté est transmis au Sénat (texte n° 304) et renvoyé en commission au fond."
+    },
+    {
+      "date": "2026-03-25",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat et de son texte (n° 469)."
+    },
+    {
+      "date": "2026-03-31",
+      "chambre": "SENAT",
+      "texte": "Discussion en séance publique et adoption du texte par le Sénat."
+    },
+    {
+      "date": "2026-07-20",
+      "chambre": "CMP",
+      "texte": "Dépôt du rapport de la commission mixte paritaire et de son texte (n° 3069)."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte de la commission mixte paritaire par 279 voix contre 81 ; le Sénat adopte le même texte le même jour."
+    },
+    {
+      "date": "2026-08-14",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Décision n° 2026-911 DC : l’article 1er de la loi est déclaré contraire à la Constitution dans son intégralité ; les autres dispositions ne sont pas examinées d’office."
+    },
+    {
+      "date": "2026-08-24",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-813, publiée au Journal officiel du 25 août 2026 : son article 1er porte une mention de non-conformité, l’interdiction des réseaux sociaux aux mineurs de quinze ans n’étant jamais entrée en vigueur."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "1° Après la même section 3 est insérée une section 3 bis ainsi rédigée :",
+      "alinea": "alinéa 3",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Section 3 bis",
+      "alinea": "alinéa 4",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Protection des mineurs en ligne",
+      "alinea": "alinéa 5",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. 6‑9. – I. – L’accès à un service de réseaux sociaux en ligne fourni par une plateforme en ligne est interdit aux mineurs de quinze ans.",
+      "alinea": "alinéa 6",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« II. – Le premier alinéa du I du présent article ne s’applique ni aux encyclopédies en ligne, ni aux répertoires éducatifs ou scientifiques, ni aux plateformes de développement et de partage de logiciels libres ou de projets numériques à vocation éducative en source ouverte.",
+      "alinea": "alinéa 8",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "supprime",
+      "texte": "« III. – (Supprimé)",
+      "alinea": "alinéa 9",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° Après le mot : « loi », la fin du premier alinéa du I de l’article 57 est ainsi rédigée : « n° du visant à protéger les mineurs des risques auxquels les expose l’utilisation des réseaux sociaux. »",
+      "alinea": "alinéa 10",
+      "article": "Article 1er"
+    },
+    {
+      "tag": "adopte",
+      "texte": "II. – Le présent article entre en vigueur le 1er septembre 2026. Pour les comptes d’accès aux services de réseaux sociaux en ligne créés avant cette date, le I s’applique à l’expiration d’un délai de quatre mois à compter de celle‑ci.",
+      "alinea": "alinéa 11",
+      "article": "Article 1er"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "note": "Article 1er du texte élaboré par la commission mixte paritaire (n° 3069), adopté par l’Assemblée nationale le 21 juillet 2026. Ce texte est reproduit à titre historique : l’article 1er a été déclaré contraire à la Constitution dans son intégralité par la décision n° 2026-911 DC du 14 août 2026, et la loi promulguée n’en conserve qu’une mention de non-conformité. Il ne constitue pas le droit en vigueur.",
+      "paragraphes": [
+        "I. – La loi n° 2004‑575 du 21 juin 2004 pour la confiance dans l’économie numérique est ainsi modifiée :",
+        "1° A La section 3 du chapitre II du titre Ier comprend les articles 6‑3 à 6‑8 ;",
+        "1° Après la même section 3 est insérée une section 3 bis ainsi rédigée :",
+        "« Section 3 bis",
+        "« Protection des mineurs en ligne",
+        "« Art. 6‑9. – I. – L’accès à un service de réseaux sociaux en ligne fourni par une plateforme en ligne est interdit aux mineurs de quinze ans.",
+        "Pour l’application du présent article, une plateforme en ligne et un service de réseaux sociaux en ligne s’entendent au sens de l’article 6.",
+        "« II. – Le premier alinéa du I du présent article ne s’applique ni aux encyclopédies en ligne, ni aux répertoires éducatifs ou scientifiques, ni aux plateformes de développement et de partage de logiciels libres ou de projets numériques à vocation éducative en source ouverte.",
+        "« III. – (Supprimé)",
+        "2° Après le mot : « loi », la fin du premier alinéa du I de l’article 57 est ainsi rédigée : « n° du visant à protéger les mineurs des risques auxquels les expose l’utilisation des réseaux sociaux. »",
+        "II. – Le présent article entre en vigueur le 1er septembre 2026. Pour les comptes d’accès aux services de réseaux sociaux en ligne créés avant cette date, le I s’applique à l’expiration d’un délai de quatre mois à compter de celle‑ci.",
+        "Le présent II est applicable en Nouvelle‑Calédonie, en Polynésie française et à Wallis‑et‑Futuna."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "279",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "81",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "66",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "426",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "360",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "2",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel décompte a recueilli le vote sur l’ensemble du texte de la CMP, le 21 juillet 2026 ?",
+      "options": [
+        "279 pour, 81 contre, 66 abstentions",
+        "81 pour, 279 contre, 66 abstentions",
+        "279 pour, 66 contre, 81 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8431 du 21 juillet 2026"
+    },
+    {
+      "question": "Qu’a décidé le Conseil constitutionnel le 14 août 2026 sur l’article 1er de la loi ?",
+      "options": [
+        "Il l’a déclaré contraire à la Constitution dans son intégralité",
+        "Il l’a validé sous réserve d’interprétation",
+        "Il a reporté son entrée en vigueur d’un an"
+      ],
+      "bonne": 0,
+      "source": "Décision n° 2026-911 DC du 14 août 2026, article 1er du dispositif"
+    },
+    {
+      "question": "Dans le texte de la CMP, jamais entré en vigueur, quels services échappaient à l’interdiction ?",
+      "options": [
+        "Les encyclopédies en ligne, les répertoires éducatifs ou scientifiques et les plateformes de logiciels libres ou de projets numériques éducatifs",
+        "Les messageries instantanées et les jeux vidéo en ligne",
+        "Aucun : l’interdiction valait pour tous les services en ligne"
+      ],
+      "bonne": 0,
+      "source": "Article 1er du texte de la commission mixte paritaire n° 3069, paragraphe II de l’article 6-9 (texte censuré)"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu du texte voté (version CMP, censurée depuis)",
+    "texte": "Le texte voté le 21 juillet 2026 **interdisait l’accès aux services de réseaux sociaux en ligne** fournis par une plateforme en ligne aux **mineurs de quinze ans**, à compter du 1er septembre 2026. **Cette interdiction n’est jamais entrée en vigueur :** l’article 1er a été déclaré contraire à la Constitution.",
+    "points": [
+      "Le Conseil constitutionnel a jugé que l’interdiction générale et absolue portait une atteinte non nécessaire, adaptée et proportionnée à la liberté d’expression et de communication, et a censuré l’article 1er dans son intégralité (décision n° 2026-911 DC du 14 août 2026).",
+      "La loi promulguée du 24 août 2026 ne contient plus, à son article 1er, qu’une mention de non-conformité ; son article 3 étend notamment l’interdiction du téléphone portable aux lycées à la rentrée scolaire 2026-2027."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-21",
+        "titre": "Le Parlement valide définitivement l’interdiction des réseaux sociaux aux moins de 15 ans, une première en Europe",
+        "url": "https://www.lefigaro.fr/secteur/high-tech/le-parlement-valide-definitivement-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-une-premiere-en-europe-20260721"
+      },
+      {
+        "media": "L'Humanité",
+        "date": "2026-07-21",
+        "titre": "L’interdiction des réseaux sociaux aux moins de 15 ans définitivement adoptée, qu’est-ce que ça va changer ?",
+        "url": "https://www.humanite.fr/societe/reseaux-sociaux/le-parlement-vote-linterdiction-des-reseaux-sociaux-aux-moins-de-15-ans-quest-ce-que-ca-va-changer"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-26",
+        "titre": "L’interdiction des réseaux sociaux aux moins de 15 ans sera-t-elle vraiment applicable dès la rentrée ?",
+        "url": "https://www.huffingtonpost.fr/politique/article/l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-sera-t-elle-vraiment-applicable-des-la-rentree-clx1_292256.html"
+      },
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-24",
+        "titre": "L’avis des adolescents sur l’interdiction des réseaux sociaux aux moins de 15 ans a de quoi surprendre",
+        "url": "https://www.huffingtonpost.fr/france/article/l-avis-des-adolescents-sur-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-a-de-quoi-surprendre_293438.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l’hémicycle du 21 juillet 2026. Chaque citation renvoie au compte rendu intégral de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent l’interdiction",
+    "contre_titre": "Ils la contestent",
+    "pour": [
+      {
+        "nom": "Laure Miller",
+        "role": "Députée, rapporteure de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Cette mesure est robuste tant du point de vue conventionnel que constitutionnel.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      },
+      {
+        "nom": "Alexandre Portier",
+        "role": "Député, vice-président de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "L’heure n’est plus aux hésitations : il faut protéger nos enfants, protéger le temps de l’enfance.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Louis Boyard",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Vous savez que vos mesures sont inapplicables ! Aujourd’hui, seul un collège sur dix arrive à appliquer l’interdiction du téléphone portable.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      },
+      {
+        "nom": "Arnaud Saint-Martin",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Mais parce que vous ne le ferez pas, que vous vous donnez bonne conscience par une mesure d’interdiction et de contrôle, nous donnons rendez-vous aux Français en 2027.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "verifications": {
+    "chapeau": "Trois affirmations chiffrées prononcées dans l’hémicycle le 21 juillet 2026, confrontées à des documents publiés par les commissions parlementaires. Chaque verdict dit ce que la source établit, rien de plus.",
+    "chiffres": [
+      {
+        "affirmation": "plus de cinq heures par jour sur les écrans",
+        "chiffre": "cinq heures",
+        "auteur": "Alexandre Portier",
+        "role": "Député, vice-président de la commission mixte paritaire",
+        "citation": "Ces derniers passent déjà plus de cinq heures par jour sur les écrans.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023",
+        "verdict": "nuancé",
+        "explication": "Le rapport n° 2341 de la commission des affaires culturelles et de l’éducation restitue une moyenne de quatre heures par jour devant un écran, et non plus de cinq : aucun document consulté ne porte le seuil avancé. L’ordre de grandeur d’une exposition quotidienne de plusieurs heures est documenté, le chiffre précis ne l’est pas.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport n° 2341 de la commission des affaires culturelles et de l’éducation",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-cedu/l17b2341_rapport-fond.pdf"
+          }
+        ]
+      },
+      {
+        "affirmation": "pas moins de quinze pays européens souhaitent inscrire cette norme sociale dans leur droit national",
+        "chiffre": "quinze pays",
+        "auteur": "Anne Le Hénanff",
+        "role": "Ministre déléguée chargée de l’intelligence artificielle et du numérique",
+        "citation": "La Grèce et l’Espagne nous suivront dans quelques semaines ; pas moins de quinze pays européens souhaitent inscrire cette norme sociale dans leur droit national.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023",
+        "verdict": "nuancé",
+        "explication": "Le rapport n° 902 de la commission mixte paritaire mentionne, dans le discours de Mme Morin-Desailly, l’Espagne, la Grèce et la Finlande comme examinant déjà des textes comparables, et l’Allemagne comme ayant choisi d’attendre ; il ne recense pas quinze pays. Le mouvement européen est documenté, le décompte annoncé ne l’est pas.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 902 de la commission mixte paritaire, déposé le 20 juillet 2026",
+            "url": "https://www.senat.fr/rap/l25-902/l25-9020.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "seul un collège sur dix arrive à appliquer l’interdiction du téléphone portable",
+        "chiffre": "un collège sur dix",
+        "auteur": "Louis Boyard",
+        "role": "Député",
+        "citation": "Vous savez que vos mesures sont inapplicables ! Aujourd’hui, seul un collège sur dix arrive à appliquer l’interdiction du téléphone portable.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023",
+        "verdict": "nuancé",
+        "explication": "Le rapport n° 902 de la commission mixte paritaire (Sénat) indique que l’interdiction du téléphone portable n’est effective que dans 15 % des collèges, et non un sur dix : l’ordre de grandeur est proche, le taux diffère. Aucun document consulté ne mesure précisément un collège sur dix.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 902 de la commission mixte paritaire",
+            "url": "https://www.senat.fr/rap/l25-902/l25-902.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 63,
+      "pour": 0,
+      "contre": 63,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 14,
+      "pour": 6,
+      "contre": 3,
+      "abstention": 5,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 58,
+      "pour": 30,
+      "contre": 0,
+      "abstention": 28,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 33,
+      "pour": 19,
+      "contre": 7,
+      "abstention": 7,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 23,
+      "pour": 22,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 84,
+      "pour": 83,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 35,
+      "pour": 32,
+      "contre": 1,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 43,
+      "pour": 40,
+      "contre": 0,
+      "abstention": 3,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 17,
+      "pour": 0,
+      "contre": 2,
+      "abstention": 14,
+      "non_votants": 1
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 8,
+      "contre": 5,
+      "abstention": 4,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 8,
+      "pour": 6,
+      "contre": 0,
+      "abstention": 2,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

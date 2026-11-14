@@ -1,0 +1,590 @@
+{
+  "id": "industrie-textile",
+  "titre": "Proposition de loi visant à réduire l’impact environnemental de l’industrie textile",
+  "theme": "environnement",
+  "nb_phrases": 72,
+  "statut": "Adopté",
+  "resume": "L’Assemblée nationale a adopté le 24 juin 2026, par 338 voix pour et 151 abstentions, le texte de la commission mixte paritaire de la proposition de loi visant à réduire l’impact environnemental de l’industrie textile. Aucun suffrage ne s’est exprimé contre : les groupes de gauche se sont majoritairement abstenus, la Gauche démocrate et républicaine comptant trois voix pour. Le Sénat a adopté le même texte le 29 juin 2026 et la loi a été promulguée le 8 juillet 2026.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/impact_environnemental_industrie_textile",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0321_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 7494 du 24 juin 2026, sur l’ensemble du texte de la commission mixte paritaire. Texte adopté : n° 321. Texte de la commission mixte paritaire : n° 2940. Articles 1er et 2 lus dans le jeu articles_textes du MCP Hémicycle."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V7494",
+    "date": "2026-06-24",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 7494",
+    "pour": 338,
+    "contre": 0,
+    "abstention": 151,
+    "non_votants": 1,
+    "votants": 489,
+    "suffrages_exprimes": 338,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l’ensemble de la proposition de loi visant à réduire l’impact environnemental de l’industrie textile (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 87,
+  "chronologie": [
+    {
+      "date": "2024-01-30",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l’Assemblée nationale (texte n° 2129)."
+    },
+    {
+      "date": "2024-01-30",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi en commission au fond."
+    },
+    {
+      "date": "2024-02-14",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d’un rapporteur."
+    },
+    {
+      "date": "2024-03-07",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission (n° 2307)."
+    },
+    {
+      "date": "2024-03-08",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2024-03-14",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique et adoption du texte en première lecture (T.A. n° 258)."
+    },
+    {
+      "date": "2024-03-14",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté est transmis au Sénat (texte n° 431)."
+    },
+    {
+      "date": "2025-03-19",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat et de son texte (n° 459)."
+    },
+    {
+      "date": "2025-06-10",
+      "chambre": "SENAT",
+      "texte": "Discussion en séance publique et adoption du texte par le Sénat en première lecture."
+    },
+    {
+      "date": "2026-06-12",
+      "chambre": "CMP",
+      "texte": "Convocation d’une commission mixte paritaire."
+    },
+    {
+      "date": "2026-06-17",
+      "chambre": "CMP",
+      "texte": "Dépôt du rapport de la commission mixte paritaire et de son texte (n° 2940)."
+    },
+    {
+      "date": "2026-06-24",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte de la commission mixte paritaire (scrutin n° 7494, texte adopté n° 321)."
+    },
+    {
+      "date": "2026-06-29",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte définitivement le texte (texte n° 150)."
+    },
+    {
+      "date": "2026-07-08",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Après l’article L. 541‑9‑1 du code de l’environnement, il est inséré un article L. 541‑9‑1‑1 ainsi rédigé :",
+      "article": "Article 1er",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 541‑9‑1‑1. – I. – Relèvent de la mode ultra-express les pratiques industrielles et commerciales des producteurs, au sens de l’article L. 541‑10, qui ont pour conséquence la diminution de la durée d’usage ou de la durée de vie de produits mentionnés au 11° de l’article L. 541‑10‑1 en raison de la mise sur le marché d’un nombre élevé de références de produits neufs et de la faible incitation à réparer ces produits.",
+      "article": "Article 1er",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La mise à disposition ou la distribution, par des vendeurs distincts des producteurs des collections, de produits mentionnés au même 11° invendus ne relèvent pas de la pratique mentionnée au premier alinéa du présent I.",
+      "article": "Article 1er",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« II. – Les personnes mentionnées au I bis qui ont recours à la pratique mentionnée au I affichent sur leur interface en ligne des messages encourageant à la sobriété, au réemploi, à la réparation, à la réutilisation et au recyclage des produits, informant sur l’incidence sociale du produit, sensibilisant à son incidence sur l’environnement et sur la santé humaine et informant sur l’incidence sur l’environnement du service de livraison des produits proposé.",
+      "article": "Article 1er",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« III. – Les modalités d’application du présent article, notamment les seuils relatifs au nombre de références de produits neufs ainsi que les critères de la faible incitation à réparer, par marque définie à l’article L. 711‑1 du code de la propriété intellectuelle et par canal de vente, sont définies par décret en Conseil d’État.",
+      "article": "Article 1er",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "supprime",
+      "texte": "« IV et V. – (Supprimés) »",
+      "article": "Article 1er",
+      "alinea": "alinéa 9"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° L’article L. 541‑10‑3 est ainsi modifié :",
+      "article": "Article 2",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Lorsque cette modulation prend la forme d’une pénalité, le montant de celle-ci est compris entre :",
+      "article": "Article 2",
+      "alinea": "alinéa 14"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 1° Vingt-cinq centimes et six euros par produit en 2026 ;",
+      "article": "Article 2",
+      "alinea": "alinéa 15"
+    },
+    {
+      "tag": "supprime",
+      "texte": "4° (Supprimé)",
+      "article": "Article 2",
+      "alinea": "alinéa 26"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "note": "Article L. 541‑9‑1‑1 du code de l’environnement, créé par l’article 1er pour définir la mode ultra-express.",
+      "paragraphes": [
+        "Après l’article L. 541‑9‑1 du code de l’environnement, il est inséré un article L. 541‑9‑1‑1 ainsi rédigé :",
+        "« Art. L. 541‑9‑1‑1. – I. – Relèvent de la mode ultra-express les pratiques industrielles et commerciales des producteurs, au sens de l’article L. 541‑10, qui ont pour conséquence la diminution de la durée d’usage ou de la durée de vie de produits mentionnés au 11° de l’article L. 541‑10‑1 en raison de la mise sur le marché d’un nombre élevé de références de produits neufs et de la faible incitation à réparer ces produits.",
+        "« La mise à disposition ou la distribution, par des vendeurs distincts des producteurs des collections, de produits mentionnés au même 11° invendus ne relèvent pas de la pratique mentionnée au premier alinéa du présent I.",
+        "« I bis. – Lorsqu’une personne physique ou morale permet, par l’utilisation d’une interface en ligne telle qu’une place de marché, une plateforme, un portail ou un dispositif similaire, la vente à distance ou la livraison de produits mentionnés au 11° de l’article L. 541-10-1, la pratique de mode ultra-express est appréciée dans les mêmes conditions, selon les critères mentionnés au I du présent article.",
+        "« La pratique de mode ultra-express est alors appréciée à l’échelle de l’ensemble des références de produits neufs proposés par cette personne, à l’exception des références pour lesquelles elle dispose d’éléments, qu’elle tient à la disposition de l’autorité administrative, justifiant que la personne titulaire de la marque desdits produits est le producteur mentionné au même I et que l’interface en ligne mentionnée au premier alinéa du présent I bis ne constitue pas son canal de vente principal.",
+        "« II. – Les personnes mentionnées au I bis qui ont recours à la pratique mentionnée au I affichent sur leur interface en ligne des messages encourageant à la sobriété, au réemploi, à la réparation, à la réutilisation et au recyclage des produits, informant sur l’incidence sociale du produit, sensibilisant à son incidence sur l’environnement et sur la santé humaine et informant sur l’incidence sur l’environnement du service de livraison des produits proposé. Un décret en Conseil d’État définit le contenu ainsi que les modalités d’affichage de ces messages, qui sont affichés de manière claire, lisible et compréhensible.",
+        "« II bis (nouveau). – Le présent article ne s’applique pas aux personnes établies dans un autre État membre de l’Union européenne ou partie à l’accord sur l’Espace économique européen. Toutefois, lorsque les conditions énumérées aux paragraphes 4 ou 5 de l’article 3 de la directive 2000/31/CE du Parlement européen et du Conseil du 8 juin 2000 relative à certains aspects juridiques des services de la société de l’information, et notamment du commerce électronique, dans le marché intérieur (« directive sur le commerce électronique ») sont remplies, au terme de la procédure prévue par les mêmes 4 et 5, l’autorité administrative indique à ces personnes le service de la société de l’information concerné par cette procédure et quelles dispositions du présent code leur sont applicables.",
+        "« III. – Les modalités d’application du présent article, notamment les seuils relatifs au nombre de références de produits neufs ainsi que les critères de la faible incitation à réparer, par marque définie à l’article L. 711‑1 du code de la propriété intellectuelle et par canal de vente, sont définies par décret en Conseil d’État.",
+        "« IV et V. – (Supprimés) »"
+      ]
+    },
+    {
+      "reference": "Article 2",
+      "note": "Modulation des contributions financières de la filière textile, avec les montants de la pénalité fixés par produit et par année.",
+      "paragraphes": [
+        "I. – Le code de l’environnement est ainsi modifié :",
+        "1° L’article L. 541‑10‑3 est ainsi modifié :",
+        "a) À la première phrase du premier alinéa, après le mot : « lesquels », sont insérés les mots : « l’incidence sur l’environnement, notamment les atteintes à la biodiversité et l’empreinte carbone, » ;",
+        "b) (Supprimé)",
+        "2° Après l’article L. 541‑10‑9, il est inséré un article L. 541-10-9-1 ainsi rédigé :",
+        "« Art. L. 541-10-9-1. – Lorsqu’une personne non établie en France est soumise au principe de responsabilité élargie du producteur en application des articles L. 541‑10 ou L. 541-10-9, elle désigne, par mandat écrit, une personne physique ou morale établie en France en tant que mandataire chargé d’assurer le respect de ses obligations relatives au régime de responsabilité élargie des producteurs. Ce mandataire est subrogé dans toutes les obligations découlant du principe de responsabilité élargie du producteur dont il accepte le mandat.",
+        "« L’obligation de désignation d’un mandataire est réputée satisfaite pour les produits pour lesquels une personne physique ou morale mentionnée à l’article L. 541-10-9 établie en France assure le respect des obligations relatives au régime de responsabilité élargie du producteur. » ;",
+        "3° L’article L. 541‑10‑27 est ainsi modifié :",
+        "a) Au début du premier alinéa, est ajoutée la mention : « I. – » ;",
+        "a bis) Au deuxième alinéa, les mots : « présent article » sont remplacés par les mots : « présent I » ;",
+        "b) Sont ajoutés des II à V ainsi rédigés :",
+        "« II. – Pour les produits mentionnés au 11° de l’article L. 541‑10‑1, les contributions financières mentionnées à l’article L. 541-10-2 sont également modulées, dans les conditions prévues à l’article L. 541-10-3, en fonction du nombre de références mises sur le marché ainsi que de l’incitation à réparer ces produits.",
+        "« Les montants par catégorie de produits sont précisés par le cahier des charges mentionné à l’article L. 541‑10.",
+        "« Lorsque cette modulation prend la forme d’une pénalité, le montant de celle-ci est compris entre :",
+        "« 1° Vingt-cinq centimes et six euros par produit en 2026 ;",
+        "« 2° Cinquante centimes et sept euros par produit en 2027 ;",
+        "« 3° Soixante-quinze centimes et huit euros par produit en 2028 ;",
+        "« 4° Un et neuf euros par produit en 2029 ;",
+        "« 5° Un et dix euros par produit en 2030.",
+        "« Les produits affectés de cette pénalité ne peuvent bénéficier des primes mentionnées à l’article L. 541-10-3.",
+        "« Sur demande motivée du producteur, nonobstant la dernière phrase du troisième alinéa de l’article L. 541‑10‑3, les éco‑organismes sont tenus de limiter le montant de la prime ou de la pénalité à 50 % du prix de vente hors taxe de ces produits, nonobstant le montant des pénalités prévu aux 1° à 5° du présent II.",
+        "« II bis. – (Supprimé)",
+        "« III. – Pour l’application du II du présent article et de l’article L. 541-10-3, les éco-organismes agréés en application du 11° de l’article L. 541-10-1 peuvent mettre en œuvre des collectes automatisées de données ou d’information sur les interfaces en ligne permettant la vente à distance ou la livraison des produits mentionnés au même 11°, telles qu’une place de marché, une plateforme, un portail ou un dispositif similaire. Cette collecte s’effectue nonobstant les conditions générales d’utilisation ou les licences des services des opérateurs concernés ou de leurs applications mettant les données visées à la disposition du public. En application de l’article L. 331-4 du code de la propriété intellectuelle, les producteurs mentionnés à l’article L. 541-10 du présent code et les fournisseurs de plateforme en ligne ne peuvent refuser l’accès aux collectes automatiques sur les plateformes en ligne et les sites internet. Ces collectes sont mises en œuvre de manière strictement nécessaire et proportionnée à l’exercice des missions ainsi dévolues à l’éco-organisme, dans des conditions et selon des modalités précisées par le cahier des charges mentionné à l’article L. 541-10. Ces informations sont transmises par les éco-organismes à l'autorité administrative par l’intermédiaire d’un téléservice.",
+        "« IV. – Une fraction des contributions financières versées par les producteurs des produits mentionnés au 11° de l’article L. 541‑10‑1 est utilisée par les éco‑organismes pour financer des infrastructures de collecte, de réemploi, de réutilisation et de recyclage sur le territoire national.",
+        "« V (nouveau). – Les opérateurs de gestion de produits usagés et de déchets ne peuvent gérer des produits usagés et des déchets issus de produits mentionnés au 11° de l’article L. 541-10-1 que s’ils disposent de contrats passés en vue de la gestion de ces déchets avec les éco-organismes ou les systèmes individuels agréés. » ;",
+        "4° (Supprimé)",
+        "II. – (Supprimé)",
+        "III (nouveau). – Le b du 3° du I du présent article entre en vigueur le 1er septembre 2026."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "338",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "0",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "151",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "489",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "338",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel est le résultat du scrutin du 24 juin 2026 sur l’ensemble du texte de la commission mixte paritaire ?",
+      "options": [
+        "338 pour, 0 contre, 151 abstentions",
+        "338 pour, 151 contre, 0 abstention",
+        "151 pour, 338 abstentions, 0 contre"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 7494 du 24 juin 2026"
+    },
+    {
+      "question": "Selon l’article 1er, quels éléments caractérisent la « mode ultra-express » ?",
+      "options": [
+        "Uniquement le prix de vente des produits",
+        "Un nombre élevé de références de produits neufs mises sur le marché et une faible incitation à réparer",
+        "Uniquement le pays de fabrication des produits"
+      ],
+      "bonne": 1,
+      "source": "Article 1er du texte adopté n° 321, article L. 541‑9‑1‑1 du code de l’environnement"
+    },
+    {
+      "question": "Quelle fourchette de pénalité par produit l’article 2 fixe-t-il pour 2026 ?",
+      "options": [
+        "De 25 centimes à 6 euros par produit",
+        "De 5 à 50 euros par produit",
+        "Aucune pénalité avant 2030"
+      ],
+      "bonne": 0,
+      "source": "Article 2 du texte adopté n° 321 ; rapport de la commission mixte paritaire n° 2940"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu du texte adopté",
+    "texte": "Le texte définit dans le code de l’environnement la **mode ultra-express**, module l’**éco-contribution** des produits qui en relèvent et interdit la **publicité** pour ces produits.",
+    "points": [
+      "La qualification repose sur deux critères cumulatifs : un **nombre élevé de références de produits neufs** mises sur le marché et une **faible incitation à réparer**.",
+      "Les seuils de références et les critères de réparation sont renvoyés à un **décret en Conseil d’État**.",
+      "La pénalité va de **25 centimes à 6 euros par produit en 2026**, et ne peut excéder **50 % du prix de vente hors taxe**."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Monde",
+        "date": "2026-06-24",
+        "titre": "L’Assemblée nationale adopte la proposition de loi contre l’ultrafast-fashion, dernière étape au Sénat lundi",
+        "url": "https://www.lemonde.fr/politique/article/2026/06/24/l-assemblee-nationale-adopte-la-proposition-de-loi-contre-l-ultrafast-fashion-derniere-etape-au-senat-lundi_6713220_823448.html"
+      },
+      {
+        "media": "Le Figaro",
+        "date": "2026-06-24",
+        "titre": "L'Assemblée adopte un texte ciblant l'ultra fast fashion, dernière étape au Sénat lundi",
+        "url": "https://www.lefigaro.fr/flash-eco/l-assemblee-adopte-un-texte-ciblant-l-ultra-fast-fashion-derniere-etape-au-senat-lundi-20260624"
+      }
+    ],
+    "contre_titre": "Presse numérique et audiovisuelle",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-06-29",
+        "titre": "Shein, Temu… Ce que prévoit la loi contre l’ultra fast fashion adoptée par le Parlement",
+        "url": "https://www.huffingtonpost.fr/politique/article/shein-temu-ce-que-prevoit-la-loi-contre-l-ultra-fast-fashion-adoptee-par-le-parlement_280073.html"
+      },
+      {
+        "media": "LCP",
+        "date": "2026-06-24",
+        "titre": "Loi contre la fast fashion: \"C'est une déception totale\"",
+        "url": "https://lcp.fr/actualites/loi-contre-la-fast-fashion-c-est-une-deception-totale-437991"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Aucun suffrage ne s’est exprimé contre le texte lors du scrutin du 24 juin 2026 : les groupes de gauche se sont abstenus. Les deux orateurs placés dans la colonne « contre » sont ceux qui ont contesté le texte dans l’hémicycle et annoncé leur abstention ; leurs citations disent cette position, mot pour mot.",
+    "pour_titre": "Ils défendent le texte",
+    "contre_titre": "Ils contestent le texte adopté",
+    "pour": [
+      {
+        "nom": "Anne-Cécile Violland",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Chaque seconde, l’équivalent d’un camion de vêtements est enfoui ou brûlé quelque part dans le monde.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      },
+      {
+        "nom": "Antoine Vermorel-Marques",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Cette proposition de loi constitue notre réponse. Elle ne défend pas un protectionnisme aveugle ou la fermeture des frontières mais simplement la restauration de l’ordre ; l’ordre du travail bien fait, de la concurrence loyale et des règles égales pour tous.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      },
+      {
+        "nom": "Véronique Riotton",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le groupe Ensemble Pour la République soutient pleinement ce texte et salue l’engagement de tous dans cette démarche.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Alma Dufour",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Je n’essaie même pas de vous convaincre et nous avons tous hâte de tourner la page. Comme d’habitude, vous êtes décevants et nous nous abstiendrons sur ce texte !",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      },
+      {
+        "nom": "Stéphane Delautrette",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Nous déplorons une nouvelle occasion manquée d’avancer de manière concrète et efficace vers une industrie textile vertueuse, socialement et environnementalement responsable. C’est la raison pour laquelle le groupe Socialistes et apparentés s’abstiendra sur ce texte.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      },
+      {
+        "nom": "Charles Fournier",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Après deux ans de travail, la déception est grande. Avant qu’il soit vidé de sa substance et donc rendu inefficace, nous avions adopté ce texte à l’unanimité.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de la séance du 24 juin 2026. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit. La colonne « contre » ne désigne pas un vote contre, puisque le décompte n’en compte aucun : elle réunit les orateurs opposés au texte qui expliquent leur abstention."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres prononcés dans l’hémicycle ont été confrontés à des documents officiels du dossier : les deux montants de la pénalité au rapport de la commission mixte paritaire, la part des émissions au rapport de la commission qui avait examiné le texte en 2024.",
+    "chiffres": [
+      {
+        "affirmation": "en 2026, elles ne pourront dépasser 6 euros par produit",
+        "chiffre": "6 euros",
+        "auteur": "Charles Fournier",
+        "role": "Député",
+        "citation": "Nous nous retrouvons maintenant avec des pénalités plafonnées, si bien qu’en 2026, elles ne pourront dépasser 6 euros par produit.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282",
+        "verdict": "confirmé",
+        "explication": "Le rapport de la commission mixte paritaire indique que les pénalités s’inscriront dans une fourchette allant de 25 centimes à 6 euros par produit en 2026, puis de 2 à 10 euros à partir de 2030. L’article 2 du texte adopté reprend ces montants année par année : six euros en 2026, dix euros en 2030. Le plafond de six euros est donc bien celui que fixe le texte pour 2026.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport de la commission mixte paritaire n° 2940",
+            "url": "https://www.assemblee-nationale.fr/dyn/docs/RAPPANR5L17B2940.raw"
+          },
+          {
+            "nom": "Assemblée nationale — texte adopté n° 321",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0321_texte-adopte-seance"
+          }
+        ]
+      },
+      {
+        "affirmation": "elles s’élèveront à 3,50 euros pour un jean à 7 euros",
+        "chiffre": "3,50 euros",
+        "auteur": "Charles Fournier",
+        "role": "Député",
+        "citation": "Sachant qu’elles ne peuvent par ailleurs excéder 50 % du prix, elles s’élèveront à 3,50 euros pour un jean à 7 euros : ce n’est pas à la hauteur.",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282",
+        "verdict": "confirmé",
+        "explication": "L’article 2 plafonne la prime ou la pénalité à 50 % du prix de vente hors taxe du produit, en plus de la fourchette par produit. Pour un article vendu 7 euros, la moitié du prix fait 3,50 euros, montant inférieur au plafond de 6 euros fixé pour 2026 : c’est bien le plafond de 50 % qui s’applique. Le calcul de l’orateur correspond au mécanisme écrit dans le texte.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte adopté n° 321, article 2",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0321_texte-adopte-seance"
+          },
+          {
+            "nom": "Assemblée nationale — rapport de la commission mixte paritaire n° 2940",
+            "url": "https://www.assemblee-nationale.fr/dyn/docs/RAPPANR5L17B2940.raw"
+          }
+        ]
+      },
+      {
+        "affirmation": "Le secteur textile représente près de 10 % des émissions mondiales de gaz à effet de serre (GES).",
+        "chiffre": "10 %",
+        "auteur": "Anne-Cécile Violland",
+        "role": "Députée, rapporteure",
+        "citation": "Le secteur textile représente près de 10 % des émissions mondiales de gaz à effet de serre (GES).",
+        "seance": "CRSANR5L17S2026O1N282",
+        "date": "2026-06-24",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282",
+        "verdict": "confirmé",
+        "explication": "Le rapport de la commission (n° 2307, mars 2024) reprend la donnée de l’Agence européenne pour l’environnement : l’industrie de la mode est responsable de 10 % des émissions mondiales de CO2, et l’industrie du textile d’environ 10 % des émissions de gaz à effet de serre. Le chiffre prononcé par la rapporteure est du même ordre que cette estimation reprise par le dossier législatif. Il s’agit d’une estimation de l’agence européenne rapportée par la commission, pas d’un comptage effectué par le texte lui-même.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport n° 2307 de la commission chargée d’examiner la proposition de loi, mars 2024",
+            "url": "https://www.assemblee-nationale.fr/dyn/docs/RAPPANR5L16B2307.raw"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 50,
+      "pour": 0,
+      "contre": 0,
+      "abstention": 50,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 15,
+      "pour": 3,
+      "contre": 0,
+      "abstention": 12,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 54,
+      "pour": 0,
+      "contre": 0,
+      "abstention": 54,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 35,
+      "pour": 0,
+      "contre": 0,
+      "abstention": 35,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 16,
+      "pour": 16,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 90,
+      "pour": 89,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 32,
+      "pour": 32,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 44,
+      "pour": 44,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 98,
+      "pour": 98,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 6,
+      "pour": 6,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

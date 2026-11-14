@@ -1,0 +1,64 @@
+{
+  "seances": {
+    "CRSANR5L17S2026O1N272": {
+      "date": "2026-06-16",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N272"
+    }
+  },
+  "citations": [
+    {
+      "cle": "retention-administrative-attentat-1",
+      "auteur": "Marie Lebec",
+      "texte": "Ce texte n’est pas une réaction mais une anticipation. Il prend en compte l’évolution de la menace, notamment les profils hybrides, à la frontière entre radicalisation et troubles psychiatriques, qui échappent encore trop souvent au cadre juridique.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-2",
+      "auteur": "Élisabeth de Maistre",
+      "texte": "La sécurité n’est pas un service parmi d’autres ; elle est le fondement même du contrat social. Quand l’État faillit à cette mission, ce n’est pas seulement une défaillance administrative, c’est aussi une rupture de contrat.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-3",
+      "auteur": "Gabriel Tomatis",
+      "texte": "Notre devoir est de protéger les Français, d’écarter du territoire national les étrangers qui représentent une menace grave pour la sécurité publique, de soutenir les victimes plutôt que de chercher des circonstances atténuantes à ceux qui troublent l’ordre public.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-4",
+      "auteur": "Antoine Léaument",
+      "texte": "Vous instrumentalisez la peur en proposant d’enfermer les étrangers sans procès et sur décision du pouvoir exécutif pendant 210 jours en centre de rétention administrative.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-5",
+      "auteur": "Céline Hervieu",
+      "texte": "On ne lutte pas contre le terrorisme en externalisant vers la psychiatrie ce que la police et la justice ne sont pas en mesure de réaliser.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-6",
+      "auteur": "Léa Balage El Mariky",
+      "texte": "D’ailleurs, des dispositifs de soins sans consentement existent pour soigner les personnes. Lorsqu’elles présentent un danger pour elles-mêmes ou pour autrui, le droit en vigueur permet déjà d’intervenir. Où était donc le vide juridique ? Et pourquoi entretenir cette confusion dangereuse entre maladie mentale et radicalisation ? Les psychiatres eux-mêmes vous alertent depuis des années sur cette assimilation : le fanatisme est une idéologie, ce n’est pas une pathologie.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-7",
+      "auteur": "Marcellin Nadeau",
+      "texte": "La durée maximale de rétention pourra atteindre 540 jours dans certaines situations.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-8",
+      "auteur": "Romain Eskenazi",
+      "texte": "Le dispositif d’injonction d’examen psychiatrique, l’extension de la rétention de sûreté judiciaire et, surtout, l’allongement de 180 à 210 jours de la durée de rétention en centre administratif ne sont pas des mesures sérieuses.",
+      "seance": "CRSANR5L17S2026O1N272"
+    },
+    {
+      "cle": "retention-administrative-attentat-9",
+      "auteur": "Andy Kerbrat",
+      "texte": "Rappelons ce chiffre effarant : en Île-de-France, on compte sept lits d’urgence psychiatrique pour 12 millions d’habitants !",
+      "seance": "CRSANR5L17S2026O1N272"
+    }
+  ]
+}

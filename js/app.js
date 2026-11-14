@@ -32,6 +32,11 @@
     groupes: [],
     arbre: null,
     index: [],
+    suivis: [],
+    sourceSuivis: null,
+    recherche: "",
+    cacheLois: {},
+    requeteLoi: 0,
     loin: null,
     pret: false
   };
@@ -966,6 +971,7 @@
         ? '<p class="petit">Votre vote final : ' + esc(libelleChoix(v.v2)) + ". Il reste sur cet appareil." + "</p>"
         : '<a class="bouton" href="#/devoir/' + loi.id + '/vote-final">Voter une seconde fois</a>') +
       '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + '/carte">Voir la carte</a>' +
+      '<button class="bouton bouton--discret" type="button" data-action="recommencer" data-loi="' + esc(loi.id) + '">Recommencer ce devoir</button>' +
       "</main>" +
       navbas("#/")
     );
@@ -1020,6 +1026,7 @@
               '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + '/vote">Aller au vote</a>'
             )) +
       '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + '/chiffres">Revoir les chiffres</a>' +
+      '<button class="bouton bouton--discret" type="button" data-action="recommencer" data-loi="' + esc(loi.id) + '">Recommencer ce devoir</button>' +
       "</main>" +
       navbas("#/")
     );
@@ -1062,6 +1069,114 @@
     );
   }
 
+  /* Un pictogramme par thème, dessiné au trait dans le même carré de 24 :
+     même poids, même épaisseur, aucun jeu d'icônes chargé. */
+  var LOGOS = {
+    budget:
+      '<circle cx="12" cy="12" r="8.5"/><path d="M8.4 10h5M8.4 13h5"/><path d="M16.4 8.4a5.2 5.2 0 1 0 0 7.2"/>',
+    social:
+      '<circle cx="8.5" cy="8.5" r="3"/><path d="M3 19c0-3.2 2.4-5.2 5.5-5.2S14 15.8 14 19"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.6 14.6c2.7-.4 5.4 1.4 5.4 4.4"/>',
+    institutions:
+      '<path d="M3.5 9.5 12 4l8.5 5.5"/><path d="M5.5 9.5h13"/><path d="M6.5 9.5v6M10 9.5v6M14 9.5v6M17.5 9.5v6"/><path d="M3.5 19h17"/>',
+    travail:
+      '<rect x="3" y="7.5" width="18" height="11" rx="1.5"/><path d="M9 7.5V5.5h6v2"/><path d="M3 12.5h18"/>',
+    environnement:
+      '<path d="M5 19c0-8 5-13 14-13 0 8-5 13-14 13Z"/><path d="M5 19c3.5-3.5 7-7 11-9.5"/>',
+    securite:
+      '<path d="M12 3.5 19 6v6c0 4.2-3 7.2-7 8.5-4-1.3-7-4.3-7-8.5V6Z"/><path d="m9 11.8 2.2 2.2 4-4"/>',
+    education:
+      '<path d="M12 6.5C9.5 5 6.5 4.8 4.5 5.5V18c2-.7 5-.5 7.5 1 2.5-1.5 5.5-1.7 7.5-1V5.5c-2-.7-5-.5-7.5 1Z"/><path d="M12 6.5v12.5"/>',
+    numerique:
+      '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3.5v3.5M14 3.5v3.5M10 17v3.5M14 17v3.5M3.5 10H7M3.5 14H7M17 10h3.5M17 14h3.5"/>'
+  };
+
+  var PI = Math.PI;
+
+  function pointPolaire(cx, cy, r, angle) {
+    return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+  }
+
+  function dixieme(n) {
+    return Math.round(n * 10) / 10;
+  }
+
+  /* Part de camembert translucide : le pictogramme reste lisible dessous. */
+  function camembert(cx, cy, r, part) {
+    if (part <= 0) return "";
+    if (part >= 1) {
+      return '<circle class="part" cx="' + cx + '" cy="' + cy + '" r="' + r + '"/>';
+    }
+    var a0 = -PI / 2;
+    var p0 = pointPolaire(cx, cy, r, a0);
+    var p1 = pointPolaire(cx, cy, r, a0 + 2 * PI * part);
+    return (
+      '<path class="part" d="M' + cx + " " + cy +
+      " L" + dixieme(p0[0]) + " " + dixieme(p0[1]) +
+      " A" + r + " " + r + " 0 " + (part > 0.5 ? 1 : 0) + " 1 " +
+      dixieme(p1[0]) + " " + dixieme(p1[1]) + ' Z"/>'
+    );
+  }
+
+  /* La pieuvre : huit thèmes autour du tronc, reliés par un tentacule. Le
+     remplissage d'une bulle ne compte que les lois publiées de ce thème. */
+  function pieuvre(arbre, xpTheme, nbLois) {
+    var largeur = 448;
+    var hauteur = 500;
+    var cx = 224;
+    var cy = 250;
+    var rayon = 170;
+    var bulle = 46;
+    var moyeu = 40;
+    var max = arbre.meta.points_max;
+    var total = 0;
+    var resume = [];
+    arbre.themes.forEach(function (t) {
+      total += xpTheme[t.id];
+      resume.push(t.nom + " : " + xpTheme[t.id] + " points sur " + max);
+    });
+
+    var svg =
+      '<svg class="pieuvre" viewBox="0 0 ' + largeur + " " + hauteur +
+      '" role="img" aria-label="Huit thèmes reliés au tronc. ' + esc(resume.join(". ")) + '.">';
+
+    arbre.themes.forEach(function (t, i) {
+      var a = -PI / 2 + (i * 2 * PI) / arbre.themes.length;
+      var b = pointPolaire(cx, cy, rayon, a);
+      var dir = [Math.cos(a), Math.sin(a)];
+      var debut = pointPolaire(cx, cy, moyeu, a);
+      var fin = pointPolaire(cx, cy, rayon - bulle, a);
+      var milieu = pointPolaire(cx, cy, (moyeu + rayon - bulle) / 2, a);
+      var ctrl = [milieu[0] - dir[1] * 20, milieu[1] + dir[0] * 20];
+      var ouvert = xpTheme[t.id] >= t.seuil;
+
+      svg +=
+        '<path class="lien' + (ouvert ? " lien--ouvert" : "") + '" d="M' +
+        dixieme(debut[0]) + " " + dixieme(debut[1]) +
+        " Q" + dixieme(ctrl[0]) + " " + dixieme(ctrl[1]) +
+        " " + dixieme(fin[0]) + " " + dixieme(fin[1]) + '"/>';
+
+      svg +=
+        '<g class="bulle-groupe">' +
+        '<circle class="bulle' + (ouvert ? " bulle--ouverte" : "") +
+        (nbLois[t.id] ? "" : " bulle--vide") + '" cx="' + b[0] + '" cy="' + b[1] +
+        '" r="' + bulle + '"/>' +
+        '<g class="logo' + (nbLois[t.id] ? "" : " logo--vide") +
+        '" transform="translate(' + (b[0] - 13) + " " + (b[1] - 23) + ')">' +
+        (LOGOS[t.id] || "") + "</g>" +
+        camembert(b[0], b[1], bulle, xpTheme[t.id] / max) +
+        '<text class="nom' + (ouvert ? " nom--ouverte" : "") + '" x="' + b[0] + '" y="' + (b[1] + 24) + '">' +
+        esc(t.nom.toUpperCase()) + "</text></g>";
+    });
+
+    svg +=
+      '<circle class="moyeu" cx="' + cx + '" cy="' + cy + '" r="' + moyeu + '"/>' +
+      '<text class="moyeu__xp" x="' + cx + '" y="' + (cy + 4) + '">' + total + "</text>" +
+      '<text class="moyeu__legende" x="' + cx + '" y="' + (cy + 24) + '">SUR ' +
+      max * arbre.themes.length + "</text>";
+
+    return svg + "</svg>";
+  }
+
   function noeudArbre(nom, seuil, xp) {
     var ouvert = xp >= seuil;
     return (
@@ -1072,7 +1187,7 @@
     );
   }
 
-  function essaim(t, xp, themeLoi) {
+  function essaim(t, xp, themeLoi, nbLois) {
     var ouvert = xp >= t.seuil;
     var faits = t.branches.filter(function (b) {
       return xp >= b.seuil;
@@ -1080,9 +1195,13 @@
     return (
       '<section class="essaim' + (ouvert ? " essaim--ouvert" : "") + '">' +
       '<div class="essaim__tete">' +
+      '<svg class="essaim__logo" viewBox="0 0 24 24" aria-hidden="true">' +
+      (LOGOS[t.id] || "") + "</svg>" +
       '<h3 class="essaim__nom">' + esc(t.nom) + "</h3>" +
       (t.id === themeLoi ? '<span class="essaim__loi">loi du jour</span>' : "") +
-      '<span class="essaim__etat">' + faits + " / " + t.branches.length + "</span>" +
+      '<span class="essaim__etat">' +
+      (nbLois ? xp + " pts \u00b7 " + faits + " / " + t.branches.length : "aucune loi") +
+      "</span>" +
       "</div>" +
       '<ul class="noeuds">' +
       t.branches
@@ -1122,13 +1241,29 @@
     var ouverts = arbre.tronc.filter(function (j) {
       return actionFaite(loi, j.cle);
     }).length;
+    /* Les points d'un thème sont ceux des lois publiées de ce thème. Un thème
+       sans loi reste vide : l'arbre ne fabrique pas de progression. */
+    var xpTheme = {};
+    var nbLois = {};
+    arbre.themes.forEach(function (t) {
+      xpTheme[t.id] = 0;
+      nbLois[t.id] = 0;
+    });
+    (etat.index || []).forEach(function (l) {
+      if (xpTheme[l.theme] === undefined) return;
+      xpTheme[l.theme] += pointsExploration(l);
+      nbLois[l.theme]++;
+    });
     arbre.themes.forEach(function (t) {
       total += 1 + t.branches.length;
-      if (xp >= t.seuil) ouverts++;
+      if (xpTheme[t.id] >= t.seuil) ouverts++;
       t.branches.forEach(function (b) {
-        if (xp >= b.seuil) ouverts++;
+        if (xpTheme[t.id] >= b.seuil) ouverts++;
       });
     });
+    var sansLoi = arbre.themes.filter(function (t) {
+      return !nbLois[t.id];
+    }).length;
 
     return (
       masthead() +
@@ -1138,11 +1273,17 @@
       '<h1 class="ecran__titre">L\u2019arbre</h1>' +
       '<p class="ecran__chapeau">Il pousse avec ce que vous avez explor\u00e9, jamais avec ce que vous avez vot\u00e9.</p>' +
       "</div>" +
+      pieuvre(arbre, xpTheme, nbLois) +
+      '<p class="pieuvre__note">Chaque bulle se remplit des points gagn\u00e9s sur les lois de son th\u00e8me. ' +
+      (sansLoi
+        ? sansLoi + " th\u00e8me" + (sansLoi > 1 ? "s" : "") + " n\u2019ont encore aucune loi publi\u00e9e."
+        : "Les huit th\u00e8mes ont une loi publi\u00e9e.") +
+      "</p>" +
       '<div class="jauge" aria-hidden="true"><span class="jauge__part" style="width:' +
       Math.round((xp * 100) / max) +
       '%"></span></div>' +
-      '<p class="compteur">' + xp + " points d\u2019exploration sur " + max + " \u00b7 " + ouverts +
-      " comp\u00e9tences ouvertes sur " + total + "</p>" +
+      '<p class="compteur">' + xp + " points d\u2019exploration sur ce devoir, " + max + " au maximum \u00b7 " +
+      ouverts + " comp\u00e9tences ouvertes sur " + total + "</p>" +
       '<section class="tronc">' +
       '<p class="etiquette">Tronc commun</p>' +
       '<ul class="jalons">' +
@@ -1155,7 +1296,7 @@
       '<div class="essaims">' +
       arbre.themes
         .map(function (t) {
-          return essaim(t, xp, loi.theme);
+          return essaim(t, xpTheme[t.id], loi.theme, nbLois[t.id]);
         })
         .join("") +
       "</div>" +
@@ -1209,43 +1350,82 @@
     );
   }
 
-  /* L'archive montre ce qui est publié, pas un état vide. Le lien de recherche
-     n'apparaît qu'à partir de dix lois : en dessous, il menait à un cul-de-sac. */
+  function badgeV2() {
+    return '<span class="v2" aria-label="Version 2">v2</span>';
+  }
+
+  function ligneTexte(texte, suivi) {
+    return (
+      '<li><a class="ligne ligne--lien ligne--archive" href="#/' +
+      (suivi ? "suivi/" : "devoir/") + esc(texte.id) + '">' +
+      '<span class="ligne__date">' + esc(themeNom(texte.theme)) + "</span>" +
+      '<span class="ligne__texte">' + esc(texte.titre) + "</span>" +
+      (suivi ? badgeV2() : "") +
+      "</a></li>"
+    );
+  }
+
+  /* Deux corpus, deux promesses : les devoirs ont passé le gate ; les textes
+     suivis ne montrent que leurs actes datés et leurs sections v2. */
   function ecranArchive() {
     var lois = etat.index || [];
+    var suivis = etat.suivis || [];
     return (
       masthead() +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Archive</span>' +
-      '<h1 class="ecran__titre">Les devoirs</h1>' +
-      '<p class="ecran__chapeau">Chaque devoir est une loi publiée après les contrôles. Rien n\u2019est listé ici qui n\u2019ait passé le gate.</p>' +
+      '<h1 class="ecran__titre">Les textes</h1>' +
+      '<p class="ecran__chapeau">Votez sur les devoirs contrôlés. Suivez les autres textes sans contenu inventé.</p>' +
+      '<a class="lien" href="#/recherche">Chercher dans les titres</a>' +
       "</div>" +
+      '<section class="archive-section" aria-labelledby="devoirs-publies">' +
+      '<div class="section-en-tete"><h2 id="devoirs-publies">Devoirs publiés</h2>' +
+      '<span class="compteur">' + pluriel(lois.length, "devoir") + "</span></div>" +
       (lois.length
-        ? '<ul class="liste">' +
-          lois
-            .map(function (l) {
-              return (
-                '<li><a class="ligne ligne--lien ligne--archive" href="#/devoir/' + esc(l.id) + '">' +
-                '<span class="ligne__date">' + esc(themeNom(l.theme)) + "</span>" +
-                '<span class="ligne__texte">' + esc(l.titre) + "</span>" +
-                "</a></li>"
-              );
-            })
-            .join("") +
-          "</ul>" +
-          '<p class="compteur">' + lois.length +
-          (lois.length > 1 ? " devoirs publiés" : " devoir publié") + "</p>"
-        : vide(
-            "Aucun devoir publié",
-            "L\u2019index des lois est vide. Aucun devoir n\u2019est inventé pour remplir la page.",
-            ""
-          )) +
-      (lois.length >= 10
-        ? '<a class="bouton bouton--discret" href="#/recherche">Chercher un devoir</a>'
-        : "") +
+        ? '<ul class="liste">' + lois.map(function (l) { return ligneTexte(l, false); }).join("") + "</ul>"
+        : vide("Aucun devoir publié", "L\u2019index des lois est vide.", "")) +
+      "</section>" +
+      '<section class="archive-section" aria-labelledby="textes-suivis">' +
+      '<div class="section-en-tete"><h2 id="textes-suivis">Textes suivis ' + badgeV2() + "</h2>" +
+      '<span class="compteur">' + pluriel(suivis.length, "texte") + "</span></div>" +
+      '<p class="petit">Chronologie réelle. Débat, chiffres et vote : non documenté.</p>' +
+      (suivis.length
+        ? '<ul class="liste">' + suivis.map(function (t) { return ligneTexte(t, true); }).join("") + "</ul>"
+        : vide("Aucun texte suivi", "Le fichier des textes suivis est vide.", "")) +
+      "</section>" +
       "</main>" +
       navbas("#/archive")
+    );
+  }
+
+  function normaliseRecherche(s) {
+    return String(s || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  function resultatsRecherche() {
+    var q = normaliseRecherche(etat.recherche);
+    var publies = (etat.index || []).map(function (l) {
+      return { texte: l, suivi: false };
+    });
+    var suivis = (etat.suivis || []).map(function (t) {
+      return { texte: t, suivi: true };
+    });
+    var trouves = publies.concat(suivis).filter(function (entree) {
+      return !q || normaliseRecherche(entree.texte.titre).indexOf(q) >= 0;
+    });
+    if (!trouves.length) {
+      return vide("Aucun titre trouvé", "Essayez un autre mot. La recherche ne porte que sur les titres.", "");
+    }
+    return (
+      '<p class="compteur" role="status">' + pluriel(trouves.length, "résultat") + "</p>" +
+      '<ul class="liste">' +
+      trouves.map(function (entree) { return ligneTexte(entree.texte, entree.suivi); }).join("") +
+      "</ul>"
     );
   }
 
@@ -1255,13 +1435,55 @@
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Recherche</span>' +
-      '<h1 class="ecran__titre">Chercher un devoir</h1>' +
+      '<h1 class="ecran__titre">Chercher un texte</h1>' +
+      '<p class="ecran__chapeau">Un filtre local sur les titres des devoirs publiés et des textes suivis.</p>' +
       "</div>" +
-      vide(
-        "La recherche s\u2019active à partir de 10 lois",
-        "Avec une seule loi, une recherche n\u2019aurait rien à filtrer. Le champ apparaîtra avec l\u2019archive.",
-        ""
-      ) +
+      '<label class="champ-recherche"><span>Titre du texte</span>' +
+      '<input id="recherche" type="search" value="' + esc(etat.recherche) + '" autocomplete="off" placeholder="Ex. logement, numérique…" />' +
+      "</label>" +
+      '<div id="resultats-recherche">' + resultatsRecherche() + "</div>" +
+      "</main>" +
+      navbas("#/archive")
+    );
+  }
+
+  function sectionV2(titre) {
+    return (
+      '<section class="suivi-section">' +
+      '<div class="section-en-tete"><h2>' + esc(titre) + "</h2>" + badgeV2() + "</div>" +
+      '<p class="petit">non documenté</p>' +
+      "</section>"
+    );
+  }
+
+  function ecranSuivi(texte) {
+    var source = etat.sourceSuivis || {};
+    return (
+      masthead() +
+      '<main class="ecran">' +
+      barre("#/archive") +
+      '<div class="ecran__entete">' +
+      '<span class="theme">' + esc(themeNom(texte.theme)) + "</span>" +
+      '<h1 class="ecran__titre">' + esc(texte.titre) + "</h1>" +
+      '<p class="ecran__chapeau">' + esc(texte.procedure) + " · " + esc(texte.dossier) + "</p>" +
+      "</div>" +
+      '<section class="suivi-section" aria-labelledby="chronologie-suivi">' +
+      '<div class="section-en-tete"><h2 id="chronologie-suivi">Chronologie</h2>' + badgeV2() + "</div>" +
+      '<ol class="liste">' +
+      texte.actes.map(function (acte) {
+        var chambre = acte.code.indexOf("AN") === 0
+          ? "Assemblée nationale"
+          : acte.code.indexOf("SN") === 0 ? "Sénat" : "non documenté";
+        return (
+          '<li class="ligne ligne--suivi"><span class="ligne__date">' + esc(dateLongue(acte.date)) + "</span>" +
+          '<span class="ligne__texte">' + esc(acte.libelle) +
+          '<span class="suivi-acte__meta">' + esc(chambre) + " · " + esc(acte.code) + "</span></span></li>"
+        );
+      }).join("") +
+      "</ol></section>" +
+      sectionV2("Débat") + sectionV2("Chiffres") + sectionV2("Vote") +
+      '<p class="petit">Source : <a class="lien" href="' + esc(source.url) + '" target="_blank" rel="noopener">' +
+      esc(source.nom) + "</a> · " + esc(source.licence) + "</p>" +
       "</main>" +
       navbas("#/archive")
     );
@@ -1290,6 +1512,46 @@
     if (entree) entree.focus({ preventScroll: true });
   }
 
+  function selectionnerLoi(id) {
+    var entree = (etat.index || []).filter(function (l) {
+      return l.id === id;
+    })[0];
+    if (!entree) {
+      rendre(
+        masthead() + '<main class="ecran">' +
+        vide("Devoir introuvable", "Cette loi ne figure pas dans l\u2019index des devoirs publiés.", "") +
+        "</main>" + navbas("#/archive")
+      );
+      return Promise.resolve();
+    }
+
+    var jeton = ++etat.requeteLoi;
+    if (etat.cacheLois[id]) {
+      etat.loi = etat.cacheLois[id];
+      progresDe(id);
+      route();
+      return Promise.resolve();
+    }
+
+    rendre(
+      masthead() + '<main class="ecran"><p class="petit" role="status">Chargement…</p></main>'
+    );
+    return chargerJson(entree.fichier).then(function (loi) {
+      if (jeton !== etat.requeteLoi) return;
+      etat.cacheLois[id] = loi;
+      etat.loi = loi;
+      progresDe(id);
+      route();
+    }).catch(function () {
+      if (jeton !== etat.requeteLoi) return;
+      rendre(
+        masthead() + '<main class="ecran">' +
+        vide("Devoir indisponible", "Le fichier de cette loi n\u2019a pas pu être chargé.", "") +
+        "</main>" + navbas("#/archive")
+      );
+    });
+  }
+
   function route() {
     var h = (location.hash || "#/").replace(/^#\/?/, "");
     var p = h.split("/").filter(Boolean);
@@ -1309,8 +1571,23 @@
     if (p[0] === "methode") return rendre(ecranMethode(loi));
     if (p[0] === "archive") return rendre(ecranArchive());
     if (p[0] === "recherche") return rendre(ecranRecherche());
+    if (p[0] === "suivi") {
+      var texte = (etat.suivis || []).filter(function (t) {
+        return t.id === p[1];
+      })[0];
+      if (texte) return rendre(ecranSuivi(texte));
+      return rendre(
+        masthead() + '<main class="ecran">' +
+        vide("Texte introuvable", "Ce texte ne figure pas dans le fichier des textes suivis.", "") +
+        "</main>" + navbas("#/archive")
+      );
+    }
 
     if (p[0] === "devoir") {
+      if (!p[1] || !etat.loi || etat.loi.id !== p[1]) {
+        selectionnerLoi(p[1]);
+        return;
+      }
       var sous = p[2] || "";
       if (sous === "vote") return rendre(ecranVote(loi, false));
       if (sous === "vote-final") return rendre(ecranVote(loi, true));
@@ -1433,6 +1710,13 @@
     }
   }
 
+  app.addEventListener("input", function (e) {
+    if (!e.target || e.target.id !== "recherche") return;
+    etat.recherche = e.target.value;
+    var resultats = app.querySelector("#resultats-recherche");
+    if (resultats) resultats.innerHTML = resultatsRecherche();
+  });
+
   app.addEventListener("click", function (e) {
     var el = e.target.closest("[data-action]");
     if (!el) return;
@@ -1451,6 +1735,21 @@
     if (action === "mode-carte") {
       etat.modeCarte = el.getAttribute("data-mode");
       rendre(ecranCarte(etat.loi));
+      return;
+    }
+
+    /* Remise à zéro d'un seul devoir, pour enchaîner deux démonstrations.
+       Seuls le vote et la progression de cette loi sont effacés : les autres
+       lois et l'écran d'introduction sont conservés. Rien ne quitte l'appareil. */
+    if (action === "recommencer") {
+      var id = el.getAttribute("data-loi");
+      if (!id) return;
+      if (!window.confirm("Recommencer ce devoir ? Votre vote et votre progression sur ce texte sont effacés de cet appareil.")) return;
+      delete memoire.votes[id];
+      delete memoire.progres[id];
+      etat.modeCarte = "groupe";
+      sauver();
+      location.hash = "#/devoir/" + id + "/chronologie";
       return;
     }
   });
@@ -1498,23 +1797,26 @@
        fonctionne et l'écran le dit, sans inventer de nœud. */
     chargerJson("data/ref/arbre.json").catch(function () {
       return null;
+    }),
+    chargerJson("data/lois/suivis.json").catch(function () {
+      return { textes: [], source: null };
     })
   ])
     .then(function (res) {
       etat.groupes = res[0].groupes;
       etat.arbre = res[2];
+      etat.suivis = Array.isArray(res[3].textes) ? res[3].textes : [];
+      etat.sourceSuivis = res[3].source;
       var index = res[1];
       if (!index || !Array.isArray(index.lois) || !index.lois.length) {
         throw new Error("index des lois vide");
       }
       etat.index = index.lois;
-      return chargerJson(index.lois[0].fichier);
-    })
-    .then(function (loi) {
-      etat.loi = loi;
       etat.pret = true;
-      progresDe(etat.loi.id);
-      route();
+      var p = (location.hash || "").replace(/^#\/?/, "").split("/");
+      var demande = p[0] === "devoir" ? p[1] : index.lois[0].id;
+      var existe = index.lois.some(function (l) { return l.id === demande; });
+      return selectionnerLoi(existe ? demande : index.lois[0].id);
     })
     .catch(function () {
       rendre(

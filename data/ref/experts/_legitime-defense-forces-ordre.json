@@ -1,0 +1,32 @@
+{
+  "experts": [
+    {
+      "nom": "Éric Pauget",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+    },
+    {
+      "nom": "Pierre Cazeneuve",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+    },
+    {
+      "nom": "Pouria Amirshahi",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+    },
+    {
+      "nom": "Elsa Faucillon",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+    }
+  ]
+}

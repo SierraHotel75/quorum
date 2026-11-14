@@ -2,7 +2,7 @@
 
 Loi : **projet de loi relatif à la protection des enfants**, scrutin **n° 8429** du 21 juillet 2026.
 Serveur : `python -m http.server 8000` dans le dossier du projet, puis `http://127.0.0.1:8000/`.
-Avant de commencer : navigation privée, ou `localStorage.removeItem("quorum.v1")` puis rechargement.
+Avant de commencer : bouton **Recommencer ce devoir** (écrans résultat et carte), navigation privée, ou `localStorage.removeItem("quorum.v1")` puis rechargement.
 
 | # | Écran | Geste | Ce qui est dit | Temps |
 |---|---|---|---|---|
@@ -42,7 +42,7 @@ Le verdict ne dit jamais si la loi est bonne. Il dit ce que la source établit, 
 
 - **Serveur éteint** : les captures de `docs/captures/` remplacent la démo, et `wp.html` montre l'état du plan.
 - **Donnée manquante** : on ne comble pas. On dit « non documenté » et on passe à l'écran suivant.
-- **Vote déjà fait** : navigation privée, ou `localStorage.removeItem("quorum.v1")` puis rechargement.
+- **Vote déjà fait** : bouton **Recommencer ce devoir** (écrans résultat et carte), navigation privée, ou `localStorage.removeItem("quorum.v1")` puis rechargement.
 - **Question piège sur 8428** : « le sous-amendement a été adopté par 178 voix contre 163, majorité requise 171. » Chiffres du scrutin, recopiés.
 
 ## Ce qu'on ne montre pas

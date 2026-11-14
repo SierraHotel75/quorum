@@ -1,0 +1,568 @@
+{
+  "id": "antisemitisme-enseignement-superieur",
+  "titre": "Proposition de loi relative à la lutte contre l’antisémitisme dans l’enseignement supérieur",
+  "theme": "education",
+  "nb_phrases": 79,
+  "statut": "Adopté",
+  "resume": "L’Assemblée nationale a adopté définitivement le 2 juillet 2025, par 366 voix contre 88, le texte de la commission mixte paritaire de la proposition de loi relative à la lutte contre l’antisémitisme dans l’enseignement supérieur. Le Sénat avait adopté ce même texte le 19 juin 2025. Le Conseil constitutionnel a rendu sa décision le 29 juillet 2025 et la loi a été promulguée le 31 juillet 2025.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50724",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0156_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 2880 du 2 juillet 2025, vote sur l’ensemble du texte de la commission mixte paritaire. Texte adopté : T.A. n° 156 (texte définitif). Ce texte n’est pas présent dans le jeu articles_textes du MCP Hémicycle : les articles ont été lus dans la version HTML officielle du texte adopté (dyn/opendata/PIONANR5L17BTA0156.html)."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V2880",
+    "date": "2025-07-02",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 2880",
+    "pour": 366,
+    "contre": 88,
+    "abstention": 7,
+    "non_votants": 1,
+    "votants": 461,
+    "suffrages_exprimes": 454,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble de la proposition de loi relative à la lutte contre l'antisémitisme dans l'enseignement supérieur (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 115,
+  "chronologie": [
+    {
+      "date": "2024-10-10",
+      "chambre": "SENAT",
+      "texte": "Dépôt de la proposition de loi au Sénat (texte n° 26) et renvoi en commission au fond."
+    },
+    {
+      "date": "2025-02-12",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission sénatoriale et de son texte (rapport n° 335, texte n° 336)."
+    },
+    {
+      "date": "2025-02-17",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2025-02-20",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture."
+    },
+    {
+      "date": "2025-02-21",
+      "chambre": "AN",
+      "texte": "Dépôt à l’Assemblée nationale du texte adopté par le Sénat (texte n° 1009) et renvoi en commission au fond."
+    },
+    {
+      "date": "2025-04-30",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission des affaires culturelles et de l’éducation (rapport n° 1357)."
+    },
+    {
+      "date": "2025-05-06",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique (6 et 7 mai 2025)."
+    },
+    {
+      "date": "2025-05-07",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte en première lecture."
+    },
+    {
+      "date": "2025-05-09",
+      "chambre": "CMP",
+      "texte": "Convocation d’une commission mixte paritaire."
+    },
+    {
+      "date": "2025-05-27",
+      "chambre": "CMP",
+      "texte": "Dépôt des rapports de la commission mixte paritaire (n° 656 au Sénat, n° 1460 à l’Assemblée nationale) et de son texte."
+    },
+    {
+      "date": "2025-06-19",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte de la commission mixte paritaire (T.A. n° 149)."
+    },
+    {
+      "date": "2025-07-02",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte définitivement le texte de la commission mixte paritaire (scrutin n° 2880, T.A. n° 156)."
+    },
+    {
+      "date": "2025-07-29",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Conclusion du Conseil constitutionnel, saisi le 7 juillet 2025."
+    },
+    {
+      "date": "2025-07-31",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2025-732 du 31 juillet 2025."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Le code de l’éducation est ainsi modifié :",
+      "article": "Article 1er",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° Après la quatrième phrase de l’article L. 121‑1, est insérée une phrase ainsi rédigée : « Ils assurent une formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 761‑2. – Les établissements d’enseignement supérieur assurent une formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+      "article": "Article 1er",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 719‑10. – Les établissements publics à caractère scientifique, culturel et professionnel créent en leur sein une mission “égalité et diversité” chargée de la promotion de l’égalité entre les femmes et les hommes et de la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine.",
+      "article": "Article 2",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Au sein de la mission, un référent qualifié est exclusivement chargé de la prévention, de la détection et du traitement des faits d’antisémitisme et de racisme.",
+      "article": "Article 2",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 719‑11. – La mission “égalité et diversité” assure le fonctionnement d’un dispositif de signalement des faits d’antisémitisme, de racisme, de discrimination, de violence et de haine, garantissant l’anonymat des victimes et des témoins.",
+      "article": "Article 2",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Tout membre du personnel ayant connaissance d’un fait d’antisémitisme, de racisme, de discrimination, de violence ou de haine survenu dans ou en dehors de l’établissement et ayant un lien avec la vie universitaire le signale sans délai auprès du dispositif mentionné au premier alinéa.",
+      "article": "Article 2",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Chaque année, le Gouvernement transmet au Parlement le bilan quantitatif et qualitatif des signalements de faits d’antisémitisme et de racisme recueillis par le dispositif mentionné au même premier alinéa.",
+      "article": "Article 2",
+      "alinea": "alinéa 10"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 811‑5‑1. – Dans chaque région académique, une section disciplinaire commune aux établissements publics à caractère scientifique, culturel et professionnel est créée par le recteur.",
+      "article": "Article 3",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 4° Les faits d’antisémitisme, de racisme, de discrimination ou d’incitation à la haine ou à la violence ;",
+      "article": "Article 3",
+      "alinea": "alinéa 18"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "note": "Articles L. 121‑1, L. 123‑2, L. 721‑2, L. 761‑2 et L. 811‑3‑1 du code de l’éducation, tels que modifiés par l’article 1er.",
+      "paragraphes": [
+        "Le code de l’éducation est ainsi modifié :",
+        "1° Après la quatrième phrase de l’article L. 121‑1, est insérée une phrase ainsi rédigée : « Ils assurent une formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+        "2° À la première phrase du 3° de l’article L. 123‑2, les mots : « les discriminations » sont remplacés par les mots : « l’antisémitisme, le racisme, les discriminations, les violences et la haine » ;",
+        "3° À la deuxième phrase du neuvième alinéa de l’article L. 721‑2, les mots : « les discriminations » sont remplacés par les mots : « l’antisémitisme, le racisme, les discriminations, les violences et la haine » ;",
+        "4° Le chapitre Ier du titre VI du livre VII est complété par un article L. 761‑2 ainsi rédigé :",
+        "« Art. L. 761‑2. – Les établissements d’enseignement supérieur assurent une formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+        "5° L’article L. 811‑3‑1 est complété par une phrase ainsi rédigée : « Ils reçoivent à ce titre une formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. »"
+      ]
+    },
+    {
+      "reference": "Article 2",
+      "note": "Section 4 du chapitre IX du titre Ier du livre VII du code de l’éducation, rétablie par l’article 2 (articles L. 719‑10 à L. 719‑11‑2).",
+      "paragraphes": [
+        "Le livre VII du code de l’éducation est ainsi modifié :",
+        "1° Les deux premières phrases du 10° de l’article L. 712‑2 sont ainsi rédigées : « Il installe, sur proposition conjointe du conseil d’administration et du conseil académique, la mission “égalité et diversité” prévue à l’article L. 719‑10. Il présente chaque année au conseil d’administration un rapport sur l’exécution du plan pluriannuel en matière d’égalité entre les femmes et les hommes et sur l’activité de la mission “égalité et diversité”, qui rend notamment compte des actions menées par l’université en matière de lutte contre l’antisémitisme et le racisme ainsi que des signalements recueillis. » ;",
+        "2° La section 4 du chapitre IX du titre Ier est ainsi rétablie :",
+        "« Art. L. 719‑10. – Les établissements publics à caractère scientifique, culturel et professionnel créent en leur sein une mission “égalité et diversité” chargée de la promotion de l’égalité entre les femmes et les hommes et de la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine.",
+        "« Ils veillent à ce que la mission “égalité et diversité” dispose des moyens humains et financiers nécessaires à son fonctionnement.",
+        "« Au sein de la mission, un référent qualifié est exclusivement chargé de la prévention, de la détection et du traitement des faits d’antisémitisme et de racisme.",
+        "« Art. L. 719‑11. – La mission “égalité et diversité” assure le fonctionnement d’un dispositif de signalement des faits d’antisémitisme, de racisme, de discrimination, de violence et de haine, garantissant l’anonymat des victimes et des témoins. Les signalements sont recueillis par des personnes disposant d’une qualification, d’une formation ou d’une expertise reconnue. Ils sont transmis au président ou au directeur de l’établissement et font l’objet d’un traitement statistique.",
+        "« Tout membre du personnel ayant connaissance d’un fait d’antisémitisme, de racisme, de discrimination, de violence ou de haine survenu dans ou en dehors de l’établissement et ayant un lien avec la vie universitaire le signale sans délai auprès du dispositif mentionné au premier alinéa.",
+        "« Le président ou le directeur de l’établissement fait procéder dans les meilleurs délais au retrait des affichages, inscriptions, emblèmes et installations à caractère antisémite, raciste ou discriminatoire ou incitant à la haine ou à la violence qui sont manifestement visibles des personnels et des usagers de l’établissement.",
+        "« Chaque année, le Gouvernement transmet au Parlement le bilan quantitatif et qualitatif des signalements de faits d’antisémitisme et de racisme recueillis par le dispositif mentionné au même premier alinéa. Ce bilan, établi le cas échéant à partir du rapport prévu à l’article L. 712‑2, précise en particulier le nombre de signalements recueillis, la nature des faits signalés, les suites données et les mesures de prévention engagées.",
+        "« Art. L. 719‑11‑1. – Les établissements publics à caractère scientifique, culturel et professionnel assurent la diffusion à leurs usagers et personnels d’une information claire et accessible sur l’existence et le fonctionnement de la mission “égalité et diversité” mentionnée à l’article L. 719‑10 ainsi que du dispositif de signalement mentionné à l’article L. 719‑11. Cette information précise la possibilité pour les victimes et les témoins de bénéficier de l’anonymat.",
+        "« Art. L. 719‑11‑2. – Les modalités d’application de la présente section sont fixées par décret. » ;",
+        "3° Le chapitre II du titre III est complété par un article L. 732‑4 ainsi rédigé :",
+        "« Art. L. 732‑4. – La section 4 du chapitre IX du titre Ier du présent livre est applicable aux établissements d’enseignement supérieur privés d’intérêt général. » ;",
+        "4° L’article L. 771‑12 est ainsi modifié :",
+        "a) À la fin de la deuxième phrase, les mots : « entre les hommes et les femmes” » sont remplacés par les mots : « et diversité” prévue à l’article L. 719‑10 » ;",
+        "b) Après le mot : « universitaires », la fin de la troisième phrase est ainsi rédigée : « et sur l’activité de la mission “égalité et diversité”, qui rend notamment compte des actions menées par l’université en matière de lutte contre l’antisémitisme et le racisme et des signalements recueillis. » ;",
+        "c) Après la même troisième phrase, est insérée une phrase ainsi rédigée : « Il présente également un rapport sur l’évaluation de la situation professionnelle des personnes auxquelles l’université a délivré un diplôme national de doctorat au cours des cinq années précédentes. »"
+      ]
+    },
+    {
+      "reference": "Article 3",
+      "note": "Section disciplinaire des établissements publics à caractère scientifique, culturel et professionnel (articles L. 712‑6‑2, L. 811‑5, L. 811‑5‑1 et L. 811‑6 du code de l’éducation), telle que modifiée par l’article 3.",
+      "paragraphes": [
+        "Le code de l’éducation est ainsi modifié :",
+        "1° L’article L. 712‑6‑2 est ainsi modifié :",
+        "a) Après la troisième phrase du dernier alinéa, est insérée une phrase ainsi rédigée : « Il précise les modalités de formation des membres de la section disciplinaire à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+        "b) Il est ajouté un alinéa ainsi rédigé :",
+        "« En cas de violences ou de faits d’antisémitisme, de racisme, de discrimination ou d’incitation à la haine, toute personne s’estimant lésée par les agissements de l’enseignant‑chercheur ou de l’enseignant poursuivi et s’étant fait connaître est informée de l’engagement de poursuites disciplinaires, de leur déroulement et de leur issue, selon des modalités précisées par décret en Conseil d’État. » ;",
+        "2° Le second alinéa de l’article L. 811‑5 est complété par une phrase ainsi rédigée : « Il précise également les modalités de formation des membres à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine. » ;",
+        "3° Après le même article L. 811‑5, il est inséré un article L. 811‑5‑1 ainsi rédigé :",
+        "« Art. L. 811‑5‑1. – Dans chaque région académique, une section disciplinaire commune aux établissements publics à caractère scientifique, culturel et professionnel est créée par le recteur.",
+        "« Elle est présidée par un membre de la juridiction administrative. Elle comprend des représentants de l’administration des établissements, des représentants du personnel enseignant et des représentants des usagers.",
+        "« Elle peut être saisie par le président ou par le directeur de chaque établissement public à caractère scientifique, culturel et professionnel de la région académique. Elle exerce alors, en lieu et place de la section disciplinaire prévue à l’article L. 811‑5, le pouvoir disciplinaire à l’égard des usagers.",
+        "« Un décret en Conseil d’État détermine les modalités d’application du présent article. Il précise notamment la composition de la section disciplinaire commune, qui respecte la parité entre les hommes et les femmes, les modalités de désignation des membres et ses règles de fonctionnement. » ;",
+        "4° L’article L. 811‑6 est ainsi modifié :",
+        "a) Au début, sont ajoutés neuf alinéas ainsi rédigés :",
+        "« I. – Sont passibles d’une sanction disciplinaire tous faits constitutifs d’une faute disciplinaire, notamment :",
+        "« 1° La méconnaissance des dispositions législatives et réglementaires relatives à la vie universitaire ou du règlement intérieur de l’établissement ;",
+        "« 2° La fraude ou la tentative de fraude ;",
+        "« 3° Les faits de violence ou de harcèlement ;",
+        "« 4° Les faits d’antisémitisme, de racisme, de discrimination ou d’incitation à la haine ou à la violence ;",
+        "« 5° Les faits susceptibles de porter atteinte à l’ordre ou au bon fonctionnement de l’établissement.",
+        "« Les faits commis en dehors de l’établissement sont passibles d’une sanction disciplinaire lorsqu’ils présentent un lien suffisant avec l’établissement ou les activités qu’il organise.",
+        "« II. – Pour les faits mentionnés aux 3° à 5° du I, afin d’assurer la protection d’une ou de plusieurs personnes ou de l’établissement ou si les faits reprochés à l’usager sont constitutifs d’un trouble à l’ordre public au sein de l’établissement, le président ou le directeur de l’établissement peut décider d’interdire l’accès de l’usager à tout ou partie de l’enceinte et des locaux de l’établissement dont il a la charge, aux horaires qu’il détermine, jusqu’à l’issue de la procédure disciplinaire. Cette interdiction est assortie de mesures permettant d’assurer la continuité de la formation de l’usager.",
+        "« Pour les faits mentionnés aux 3° et 4° du même I, toute personne victime des agissements de l’usager poursuivi et s’étant fait connaître est informée de l’engagement de poursuites disciplinaires, de leur déroulement et de leur issue, selon des modalités précisées par décret en Conseil d’État. » ;",
+        "b) Il est ajouté un alinéa ainsi rédigé :",
+        "« Ce décret précise également les mesures d’interdiction d’accès à l’enceinte et aux locaux qui peuvent être décidées par le président ou le directeur de l’établissement à l’encontre des usagers faisant l’objet d’une procédure disciplinaire, ainsi que les pouvoirs d’investigation dont dispose le président ou le directeur pour l’établissement des faits susceptibles d’être portés à la connaissance du conseil académique constitué en section disciplinaire. »"
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "366",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "88",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "7",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "461",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "454",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel est le décompte du vote sur l’ensemble du texte, le 2 juillet 2025 ?",
+      "options": [
+        "366 pour, 88 contre, 7 abstentions",
+        "288 pour, 166 contre, 7 abstentions",
+        "416 pour, 38 contre, 4 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 2880 du 2 juillet 2025"
+    },
+    {
+      "question": "Quel dispositif l’article 2 impose-t-il aux établissements publics à caractère scientifique, culturel et professionnel ?",
+      "options": [
+        "Une mission “égalité et diversité” avec un référent chargé de l’antisémitisme et du racisme",
+        "Un conseil de discipline national présidé par le ministre",
+        "Une commission d’enquête parlementaire permanente"
+      ],
+      "bonne": 0,
+      "source": "Article 2 du texte adopté T.A. n° 156, article L. 719‑10 du code de l’éducation"
+    },
+    {
+      "question": "Quel article du texte crée une section disciplinaire commune dans chaque région académique ?",
+      "options": [
+        "L’article 3",
+        "L’article 1er",
+        "L’article 2"
+      ],
+      "bonne": 0,
+      "source": "Article 3 du texte adopté T.A. n° 156, article L. 811‑5‑1 du code de l’éducation, alinéa 8"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu du texte",
+    "texte": "Le texte impose une **formation à la lutte contre l’antisémitisme, le racisme, les discriminations, les violences et la haine** dans les établissements d’enseignement supérieur. La **mission “égalité et diversité”**, avec un référent spécialisé et un dispositif de signalement anonyme, est créée dans les établissements publics à caractère scientifique, culturel et professionnel (EPSCP) et étendue par l’article L. 732‑4 aux établissements d’enseignement supérieur privés d’intérêt général : elle ne s’applique pas indistinctement à tous les établissements.",
+    "points": [
+      "L’article 1er étend à tous les établissements d’enseignement supérieur l’obligation d’assurer cette **formation**, y compris pour les futurs enseignants.",
+      "L’article 2 impose un **référent qualifié** et un **dispositif de signalement** garantissant l’anonymat des victimes et des témoins dans les **EPSCP** ; l’article L. 732‑4 rend cette section applicable aux **établissements d’enseignement supérieur privés d’intérêt général**, et à eux seuls.",
+      "L’article 3 crée une **section disciplinaire commune par région académique** et permet d’interdire l’accès à l’établissement à un usager poursuivi."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2025-07-29",
+        "titre": "Le Conseil constitutionnel valide la loi visant à lutter contre l'antisémitisme à l'université",
+        "url": "https://www.lefigaro.fr/actualite-france/le-conseil-constitutionnel-valide-la-loi-visant-a-lutter-contre-l-antisemitisme-a-l-universite-20250729"
+      },
+      {
+        "media": "La Croix",
+        "date": "2025-05-29",
+        "titre": "Antisémitisme : les sanctions disciplinaires vont se renforcer à l’université",
+        "url": "https://www.la-croix.com/societe/antisemitisme-les-sanctions-disciplinaires-vont-se-renforcer-a-l-universite-20250529"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Mediapart",
+        "date": "2025-05-08",
+        "titre": "Antisémitisme à l’université : l’impossible débat à l’Assemblée",
+        "url": "https://www.mediapart.fr/journal/politique/080525/antisemitisme-l-universite-l-impossible-debat-l-assemblee"
+      },
+      {
+        "media": "Mediapart",
+        "date": "2025-05-08",
+        "titre": "« Un cheval de Troie pour réprimer les mobilisations étudiantes » : à l’université, de nouvelles commissions de discipline inquiètent",
+        "url": "https://www.mediapart.fr/journal/france/080525/un-cheval-de-troie-pour-reprimer-les-mobilisations-etudiantes-l-universite-de-nouvelles-commissions-de-dis"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l’hémicycle du 2 juillet 2025. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte",
+    "contre_titre": "Ils le refusent",
+    "pour": [
+      {
+        "nom": "Constance Le Grip",
+        "role": "Députée, rapporteure de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "La responsabilité nous incombe aujourd’hui de voter un texte visant à combattre l’antisémitisme mais aussi le racisme, les discriminations, les violences et la haine à l’université et dans les établissements d’enseignement supérieur.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003"
+      },
+      {
+        "nom": "Pierre Henriet",
+        "role": "Député, corapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le groupe Horizons & indépendants, fidèle à ses valeurs et à son engagement sur le sujet, votera bien sûr en faveur du texte parce que l’université doit rester un sanctuaire où nul ne doit craindre pour sa sécurité ou sa dignité en raison de ses origines, de sa foi ou de ses convictions et parce que la République ne tolère aucune forme de haine ou de discrimination.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Louis Boyard",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "La tâche me revient d’expliquer en quoi le texte que vous avez appelé « proposition de loi relative à la lutte contre l’antisémitisme dans l’enseignement supérieur » n’est pas un texte de lutte contre l’antisémitisme dans l’enseignement supérieur. Paradoxalement, en dépit de son titre, il tend à diminuer les budgets de lutte contre le racisme et l’antisémitisme.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003"
+      },
+      {
+        "nom": "Nicolas Sansu",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Nous sommes pourtant dubitatifs sur la pertinence de dissocier l’antisémitisme des autres formes de racisme. (Mme la rapporteure s’exclame.) S’il est incontestable que l’antisémitisme revêt une singularité historique, nous pouvons en dire autant de toutes les formes de discrimination, que leurs racines historiques rendent singulières.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de la séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit. Les interruptions du compte rendu sont conservées telles quelles : chez Nicolas Sansu, la mention « (Mme la rapporteure s’exclame.) » sépare les deux phrases, à l’identique dans cette fiche et dans le fragment verbatim."
+  },
+  "verifications": {
+    "chapeau": "Deux chiffres prononcés dans l’hémicycle ont été confrontés au rapport de la commission des affaires culturelles du Sénat. Les deux sont proches de la source, avec un écart de formulation signalé.",
+    "chiffres": [
+      {
+        "affirmation": "soixante-sept actes antisémites ont été recensés dans quatre-vingt-deux établissements",
+        "chiffre": "soixante-sept",
+        "nom": "Pierre Henriet",
+        "auteur": "Pierre Henriet",
+        "role": "Député, corapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Entre le 7 octobre 2023 et le 10 avril 2024, soixante-sept actes antisémites ont été recensés dans quatre-vingt-deux établissements, soit le double de l’année précédente.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003",
+        "verdict": "nuancé",
+        "explication": "Le rapport de la commission des affaires culturelles du Sénat (n° 335, 12 février 2025) écrit que 67 actes antisémites ont été recensés par France Universités entre le 7 octobre 2023 et le 10 avril 2024, soit le double de l’année universitaire 2022-2023. Le rapport ne cite pas le nombre de quatre-vingt-deux établissements avancé dans l’hémicycle : le total des actes et le doublement sont confirmés, ce dernier détail ne l’est pas.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 335 de la commission des affaires culturelles, 12 février 2025",
+            "url": "https://www.senat.fr/rap/l24-335/l24-335_mono.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "90 % des étudiants juifs interrogés déclarent avoir subi au moins un acte antisémite",
+        "chiffre": "90 %",
+        "nom": "Pierre Henriet",
+        "auteur": "Pierre Henriet",
+        "role": "Député, corapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Selon une enquête Ifop pour l’UEJF, 90 % des étudiants juifs interrogés déclarent avoir subi au moins un acte antisémite au cours de leur scolarité ou de leurs études supérieures.",
+        "seance": "CRSANR5L17S2025E1N003",
+        "date": "2025-07-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003",
+        "verdict": "nuancé",
+        "explication": "Le même rapport du Sénat cite une étude Ifop de septembre 2023 selon laquelle 9 étudiants juifs sur 10 ont déjà été confrontés à un acte antisémite. L’ordre de grandeur est donc confirmé, mais la formulation diffère : le rapport parle de 9 sur 10 et de faits vécus, là où l’orateur parle de 90 % et d’actes subis pendant la scolarité. Le rapport ne reproduit pas le questionnaire de l’enquête.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 335 de la commission des affaires culturelles, 12 février 2025",
+            "url": "https://www.senat.fr/rap/l24-335/l24-335_mono.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 65,
+      "pour": 0,
+      "contre": 65,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 15,
+      "pour": 3,
+      "contre": 12,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 35,
+      "pour": 35,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 22,
+      "pour": 4,
+      "contre": 11,
+      "abstention": 7,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 80,
+      "pour": 79,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 23,
+      "pour": 23,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 29,
+      "pour": 29,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 40,
+      "pour": 40,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 117,
+      "pour": 117,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 14,
+      "pour": 14,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 5,
+      "pour": 5,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

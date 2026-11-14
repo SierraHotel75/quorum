@@ -1,0 +1,517 @@
+{
+  "id": "fraudes-sociales-fiscales",
+  "titre": "Projet de loi relatif à la lutte contre les fraudes sociales et fiscales",
+  "theme": "budget",
+  "nb_phrases": 28,
+  "statut": "Adopté",
+  "resume": "Le 5 mai 2026, l’Assemblée nationale a adopté les conclusions de la commission mixte paritaire sur le projet de loi relatif à la lutte contre les fraudes sociales et fiscales, par 335 voix pour, 182 contre et 5 abstentions. Le Sénat a adopté à son tour le même texte le 11 mai 2026, par 244 voix pour et 99 contre, ce qui rend l’adoption définitive. Le Conseil constitutionnel a déclaré le texte partiellement conforme le 18 juin 2026 et la loi a été promulguée le 25 juin 2026.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0279_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 6319 du 5 mai 2026, vote sur l’ensemble du texte de la commission mixte paritaire. Texte adopté : n° 279. Texte de la commission mixte paritaire : n° 2701. Article 29 lu dans le jeu articles_textes du MCP Hémicycle, texte n° 2701. Le Sénat a adopté le 11 mai 2026 le même texte ; la section créée figure à l’article 114 de la loi n° 2026-534 du 25 juin 2026. L’imprimé AN (texte n° 279) et la loi imprimée l’article avec une rédaction normalisée (« chapitre IV ter », « assermentés et agréés », « à la seule fin ») distincte du texte n° 2701 cité."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V6319",
+    "date": "2026-05-05",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 6319",
+    "pour": 335,
+    "contre": 182,
+    "abstention": 5,
+    "non_votants": 1,
+    "votants": 522,
+    "suffrages_exprimes": 517,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble du projet de loi relatif à la lutte contre les fraudes sociales et fiscales (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 54,
+  "chronologie": [
+    {
+      "date": "2025-10-14",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2025-10-14",
+      "chambre": "SENAT",
+      "texte": "Dépôt du projet de loi au Sénat, première assemblée saisie (texte n° 24)."
+    },
+    {
+      "date": "2025-11-05",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat et du texte de la commission (n° 111 et n° 112)."
+    },
+    {
+      "date": "2025-11-18",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture (T.A. n° 21)."
+    },
+    {
+      "date": "2025-11-18",
+      "chambre": "AN",
+      "texte": "Dépôt du texte adopté par le Sénat à l’Assemblée nationale (texte n° 2115)."
+    },
+    {
+      "date": "2025-12-17",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission des affaires sociales (n° 2250)."
+    },
+    {
+      "date": "2026-02-25",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique à l’Assemblée nationale."
+    },
+    {
+      "date": "2026-04-07",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte en première lecture (T.A. n° 263)."
+    },
+    {
+      "date": "2026-04-08",
+      "chambre": "CMP",
+      "texte": "Convocation d’une commission mixte paritaire."
+    },
+    {
+      "date": "2026-04-28",
+      "chambre": "CMP",
+      "texte": "Dépôt du rapport de la commission mixte paritaire et du texte élaboré (n° 2701)."
+    },
+    {
+      "date": "2026-05-05",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte les conclusions de la commission mixte paritaire (T.A. n° 279)."
+    },
+    {
+      "date": "2026-05-11",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte définitivement le texte, par 244 voix pour et 99 contre."
+    },
+    {
+      "date": "2026-06-18",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Le Conseil constitutionnel déclare le texte partiellement conforme (décision n° 2026-904 DC)."
+    },
+    {
+      "date": "2026-06-25",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-534."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Le chapitre 4 ter du titre Ier du livre Ier du code de la sécurité sociale est complété par une section 4 ainsi rédigée :",
+      "article": "Article 29",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 114‑22‑5. – Pour l’accomplissement de leur mission de lutte contre la fraude, les agents de contrôle agréés et assermentés mentionnés à l’article L. 114‑10 peuvent interroger les services du ministre des affaires étrangères tenant le registre mentionné à l’article L. 12 du code électoral, aux seules fins de contrôler le respect de la condition de résidence en France pour l’attribution et le service des prestations de l’assurance maladie.",
+      "article": "Article 29",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 114‑22‑6. – En présence d’indices sérieux d’un manquement délibéré ou de manœuvres frauduleuses visant à obtenir indûment, pour soi ou pour autrui, l’attribution ou le versement d’une prestation de l’assurance maladie ou ayant conduit à un tel versement, les agents de contrôle agréés et assermentés mentionnés à l’article L. 114‑10 sont autorisés à traiter les données de connexion et de suivi dont l’organisme d’assurance maladie dispose dans son système d’information et qui sont nécessaires à la recherche ou à la constatation d’un tel manquement ou de telles manœuvres.",
+      "article": "Article 29",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 114‑22‑7. – Les modalités d’application des articles L. 114‑22‑5 et L. 114‑22‑6 sont déterminées par un décret en Conseil d’État pris après avis de la Commission nationale de l’informatique et des libertés.",
+      "article": "Article 29",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 114‑22‑8. – Lorsque les agents chargés du contrôle mentionnés aux articles L. 114‑10 et L. 243‑7 du présent code ou à l’article L. 724‑7 du code rural et de la pêche maritime réunissent plusieurs indices sérieux de manœuvres frauduleuses, de manquement délibéré à ses obligations ou de commission d’infractions de la part du bénéficiaire d’une aide, d’une prestation ou d’une allocation, le directeur de l’organisme peut procéder à la suspension conservatoire de tous paiements au titre de ladite aide, prestation ou allocation.",
+      "article": "Article 29",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Cette décision motivée est immédiatement notifiée à l’intéressé.",
+      "article": "Article 29",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La durée de la mesure de suspension ne peut excéder deux mois à compter de sa notification.",
+      "article": "Article 29",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Un décret en Conseil d’État détermine les modalités d’application du présent article, notamment les garanties de respect du contradictoire dont dispose le bénéficiaire dont le paiement de l’allocation est suspendu. »",
+      "article": "Article 29",
+      "alinea": "alinéa 8"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 29",
+      "note": "Section 4 du chapitre 4 ter du titre Ier du livre Ier du code de la sécurité sociale, créée par l’article 29 du texte de la commission mixte paritaire ; devenue l’article 114 de la loi n° 2026-534 du 25 juin 2026.",
+      "paragraphes": [
+        "Le chapitre 4 ter du titre Ier du livre Ier du code de la sécurité sociale est complété par une section 4 ainsi rédigée : « Section 4 « Moyens de lutte contre la fraude",
+        "« Art. L. 114‑22‑5. – Pour l’accomplissement de leur mission de lutte contre la fraude, les agents de contrôle agréés et assermentés mentionnés à l’article L. 114‑10 peuvent interroger les services du ministre des affaires étrangères tenant le registre mentionné à l’article L. 12 du code électoral, aux seules fins de contrôler le respect de la condition de résidence en France pour l’attribution et le service des prestations de l’assurance maladie.",
+        "« Art. L. 114‑22‑6. – En présence d’indices sérieux d’un manquement délibéré ou de manœuvres frauduleuses visant à obtenir indûment, pour soi ou pour autrui, l’attribution ou le versement d’une prestation de l’assurance maladie ou ayant conduit à un tel versement, les agents de contrôle agréés et assermentés mentionnés à l’article L. 114‑10 sont autorisés à traiter les données de connexion et de suivi dont l’organisme d’assurance maladie dispose dans son système d’information et qui sont nécessaires à la recherche ou à la constatation d’un tel manquement ou de telles manœuvres.",
+        "« Art. L. 114‑22‑7. – Les modalités d’application des articles L. 114‑22‑5 et L. 114‑22‑6 sont déterminées par un décret en Conseil d’État pris après avis de la Commission nationale de l’informatique et des libertés.",
+        "« Art. L. 114‑22‑8. – Lorsque les agents chargés du contrôle mentionnés aux articles L. 114‑10 et L. 243‑7 du présent code ou à l’article L. 724‑7 du code rural et de la pêche maritime réunissent plusieurs indices sérieux de manœuvres frauduleuses, de manquement délibéré à ses obligations ou de commission d’infractions de la part du bénéficiaire d’une aide, d’une prestation ou d’une allocation, le directeur de l’organisme peut procéder à la suspension conservatoire de tous paiements au titre de ladite aide, prestation ou allocation.",
+        "« Cette décision motivée est immédiatement notifiée à l’intéressé. Elle précise les voies et délais de recours, ainsi que la possibilité pour l’intéressé de présenter, lors d’un débat contradictoire tenu à sa demande, dans un délai de deux semaines à compter de ladite notification, des éléments de nature à permettre le rétablissement du versement de l’allocation.",
+        "« La durée de la mesure de suspension ne peut excéder deux mois à compter de sa notification.",
+        "« Un décret en Conseil d’État détermine les modalités d’application du présent article, notamment les garanties de respect du contradictoire dont dispose le bénéficiaire dont le paiement de l’allocation est suspendu. »"
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "335",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "182",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "5",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "522",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "517",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel décompte le scrutin public n° 6319 du 5 mai 2026 a-t-il donné sur l’ensemble du texte de la commission mixte paritaire ?",
+      "options": [
+        "335 pour, 182 contre, 5 abstentions",
+        "363 pour, 194 contre, 9 abstentions",
+        "258 pour, 84 contre, 10 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 6319 du 5 mai 2026, analyse du scrutin sur assemblee-nationale.fr"
+    },
+    {
+      "question": "Que permet l’article L. 114‑22‑8 créé par l’article 29 du texte de la commission mixte paritaire ?",
+      "options": [
+        "La radiation définitive du bénéficiaire de tout droit social",
+        "La suspension conservatoire de tous paiements au titre d’une aide, d’une prestation ou d’une allocation, sur indices sérieux",
+        "La saisine directe du juge pénal par le directeur de l’organisme"
+      ],
+      "bonne": 1,
+      "source": "Article 29 du texte de la commission mixte paritaire n° 2701, alinéa 5"
+    },
+    {
+      "question": "Dans quel délai le bénéficiaire dont les paiements sont suspendus peut-il demander un débat contradictoire ?",
+      "options": [
+        "Six mois à compter de la notification",
+        "Deux mois à compter de la notification",
+        "Deux semaines à compter de la notification"
+      ],
+      "bonne": 2,
+      "source": "Article 29 du texte de la commission mixte paritaire n° 2701, alinéa 6"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article 29",
+    "texte": "L’article 29 crée une section 4 du code de la sécurité sociale (articles L. 114‑22‑5 à L. 114‑22‑8) : elle donne aux agents de contrôle accès au **registre des Français établis hors de France** et aux **données de connexion**, et permet au directeur d’un organisme de **suspendre conservatoirement tous les paiements** au titre d’une aide, d’une prestation ou d’une allocation en cas d’indices sérieux de fraude, pour **deux mois au plus**.",
+    "points": [
+      "La suspension est notifiée avec ses voies et délais de recours ; le bénéficiaire peut demander un **débat contradictoire dans les deux semaines** pour obtenir le rétablissement du versement.",
+      "Les agents peuvent interroger le **registre des Français établis hors de France** pour vérifier la condition de résidence en assurance maladie.",
+      "Ils peuvent traiter les **données de connexion** détenues par l’organisme d’assurance maladie, dans un cadre fixé par décret en Conseil d’État après avis de la **CNIL**."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Monde",
+        "date": "2026-05-11",
+        "titre": "Le Parlement entérine l’adoption d’un texte de lutte contre les fraudes sociales et fiscales, 1,5 milliard d’euros attendu pour l’Etat",
+        "url": "https://www.lemonde.fr/politique/article/2026/05/11/le-parlement-enterine-l-adoption-d-un-texte-de-lutte-contre-les-fraudes-sociales-et-fiscales-1-5-milliard-d-euros-attendu-pour-l-etat_6688140_823448.html"
+      },
+      {
+        "media": "Le Figaro",
+        "date": "2026-05-11",
+        "titre": "Arrêts maladie, allocations chômage... Que contient le projet de loi contre les fraudes sociales et fiscales, adopté ce lundi ?",
+        "url": "https://www.lefigaro.fr/conjoncture/arrets-maladie-allocations-chomage-que-contient-le-projet-de-loi-contre-les-fraudes-sociales-et-fiscales-adopte-ce-lundi-20260511"
+      }
+    ],
+    "contre_titre": "Presse numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-02-27",
+        "titre": "Cette disposition éruptive sur les allocations chômage adoptée… grâce à 30 députés",
+        "url": "https://www.huffingtonpost.fr/politique/article/cette-disposition-eruptive-sur-les-allocations-chomage-adoptee-grace-a-30-deputes_260939.html"
+      },
+      {
+        "media": "Mediapart",
+        "date": "2026-05-11",
+        "titre": "Ultime feu vert du Parlement à un texte de lutte contre les fraudes sociales et fiscales",
+        "url": "https://www.mediapart.fr/journal/fil-dactualites/110526/ultime-feu-vert-du-parlement-un-texte-de-lutte-contre-les-fraudes-sociales-et-fiscales"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l’hémicycle du 5 mai 2026. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte de la commission mixte paritaire",
+    "contre_titre": "Ils votent contre son adoption",
+    "pour": [
+      {
+        "nom": "Patrick Hetzel",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Chaque euro fraudé, c’est un euro qui manque à nos services publics ; chaque abus, c’est une injustice supplémentaire pour celles et ceux qui respectent les règles.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220"
+      },
+      {
+        "nom": "Nathalie Colin-Oesterlé",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Tolérer la fraude n’a jamais protégé les faibles ; la combattre, oui !",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Emmanuel Maurel",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Voilà où nous en sommes : au lieu d’un texte robuste, complet, consacré aux gros fraudeurs, nous obtenons un projet de loi étriqué, perclus de clichés, qui risque de ne pénaliser que les pauvres, les chômeurs, les malades.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220"
+      },
+      {
+        "nom": "Sandrine Runel",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce projet de loi est une punition préventive, qui condamne sans preuve les assurés sociaux.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de la séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres prononcés le 5 mai 2026 ont été confrontés aux évaluations du Haut Conseil du financement de la protection sociale citées au compte rendu de la séance du 25 février 2026.",
+    "chiffres": [
+      {
+        "affirmation": "près de 14 milliards d’euros de préjudice estimé chaque année",
+        "chiffre": "14 milliards d’euros",
+        "auteur": "Nathalie Colin-Oesterlé",
+        "role": "Députée",
+        "citation": "Cet enjeu, je le rappelle, représente près de 14 milliards d’euros de préjudice estimé chaque année, auxquels s’ajoutent 3,5 milliards d’euros d’erreurs déclaratives.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220",
+        "verdict": "confirmé",
+        "explication": "La note annuelle de suivi du Haut Conseil du financement de la protection sociale, citée au compte rendu du 25 février 2026, retient 14 milliards d’euros de fraude sociale pour 2025, après 13 milliards pour 2024. L’ordre de grandeur est celui de la source. Les 3,5 milliards d’erreurs déclaratives qui s’y ajoutent ne figurent pas dans ce passage du compte rendu.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — compte rendu de la deuxième séance du 25 février 2026",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2025-2026/deuxieme-seance-du-mercredi-25-fevrier-2026"
+          }
+        ]
+      },
+      {
+        "affirmation": "Pour chaque euro frauduleusement soustrait à notre protection sociale, nous ne récupérons aujourd’hui que 7 centimes.",
+        "chiffre": "7 centimes",
+        "auteur": "Nathalie Colin-Oesterlé",
+        "role": "Députée",
+        "citation": "Pour chaque euro frauduleusement soustrait à notre protection sociale, nous ne récupérons aujourd’hui que 7 centimes.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220",
+        "verdict": "nuancé",
+        "explication": "Le Haut Conseil estime le manque à gagner à 13 milliards d’euros en 2024, avec 2,1 milliards détectés et redressés et 600 millions recouvrés, puis à 14 milliards pour 2025. La note citée ne publie pas de taux de recouvrement de 7 centimes par euro : elle ne permet donc pas d’établir ce chiffre, qui reste une estimation de l’oratrice.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — compte rendu de la deuxième séance du 25 février 2026",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2025-2026/deuxieme-seance-du-mercredi-25-fevrier-2026"
+          }
+        ]
+      },
+      {
+        "affirmation": "un manque à gagner annuel de 13 milliards d’euros au minimum",
+        "chiffre": "13 milliards d’euros",
+        "auteur": "Thibault Bazin",
+        "role": "Député",
+        "citation": "Pour la fraude sociale, le constat est connu grâce au Haut Conseil du financement de la protection sociale : elle représente un manque à gagner annuel de 13 milliards d’euros au minimum, chiffre qu’il faut mettre en perspective avec le déficit de la sécurité sociale, qui s’élevait à 21,6 milliards en 2025.",
+        "seance": "CRSANR5L17S2026O1N220",
+        "date": "2026-05-05",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220",
+        "verdict": "confirmé",
+        "explication": "Le Haut Conseil du financement de la protection sociale a estimé à 13 milliards d’euros en 2024 le manque à gagner imputable à la fraude, sur lesquels 2,1 milliards ont été détectés et redressés et 600 millions recouvrés. L’évaluation suivante, publiée en janvier, porte la fraude sociale à 14 milliards pour 2025 : le chiffre de 13 milliards correspond donc à l’exercice 2024.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — compte rendu de la deuxième séance du 25 février 2026",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2025-2026/deuxieme-seance-du-mercredi-25-fevrier-2026"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 60,
+      "pour": 0,
+      "contre": 60,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 16,
+      "pour": 0,
+      "contre": 16,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 65,
+      "pour": 0,
+      "contre": 64,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 34,
+      "pour": 0,
+      "contre": 34,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 21,
+      "pour": 10,
+      "contre": 7,
+      "abstention": 4,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 80,
+      "pour": 79,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 34,
+      "pour": 34,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 48,
+      "pour": 48,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 109,
+      "pour": 109,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 16,
+      "pour": 16,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 7,
+      "pour": 6,
+      "contre": 1,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

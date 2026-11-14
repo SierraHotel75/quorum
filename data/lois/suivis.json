@@ -1,0 +1,257 @@
+{
+  "genere_le": "2026-11-14",
+  "consulte_le": "2026-11-14T14:57:00.205Z",
+  "note": "Textes suivis marqués v2. Seuls les actes datés retournés par Hémicycle sont repris. Les conteneurs procéduraux sans date sont exclus. Débat, chiffres et vote : non documenté.",
+  "source": {
+    "nom": "Assemblée nationale",
+    "url": "https://data.assemblee-nationale.fr",
+    "licence": "Licence Ouverte (Etalab)",
+    "licence_url": "https://data.assemblee-nationale.fr/licence-ouverte-open-licence"
+  },
+  "textes": [
+    {
+      "id": "DLR5L17N55122",
+      "dossier": "DLR5L17N55122",
+      "version": "v2",
+      "theme": "energie",
+      "titre": "Projet de loi portant diverses dispositions relatives au secteur nucléaire",
+      "procedure": "Projet de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-14", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-10-14", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO516753" },
+        { "date": "2026-10-14", "code": "SN1-PROCACC", "libelle": "Le gouvernement déclare l'urgence / engage la procédure accélérée", "organe": "PO873634" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55208",
+      "dossier": "DLR5L17N55208",
+      "version": "v2",
+      "theme": "logement",
+      "titre": "Proposition de loi visant à adapter les obligations de production de logements sociaux aux capacités réelles des territoires",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-13", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-10-13", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO516753" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55180",
+      "dossier": "DLR5L17N55180",
+      "version": "v2",
+      "theme": "education",
+      "titre": "Abroger Parcoursup et restaurer un droit d’accès à l’enseignement supérieur pour tous les titulaires d’un baccalauréat ou diplôme équivalent",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-27", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-27", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO419604" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55196",
+      "dossier": "DLR5L17N55196",
+      "version": "v2",
+      "theme": "numerique",
+      "titre": "Proposition de loi visant à la création d'une délégation parlementaire au numérique",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-26", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-10-26", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO211495" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55188",
+      "dossier": "DLR5L17N55188",
+      "version": "v2",
+      "theme": "numerique",
+      "titre": "Adapter le code pénal aux enjeux du numérique",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-27", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-27", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO59051" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55015",
+      "dossier": "DLR5L17N55015",
+      "version": "v2",
+      "theme": "logement",
+      "titre": "Renforcer les obligations des bailleurs et garantir la protection des locataires",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-06", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-06", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO419610" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55016",
+      "dossier": "DLR5L17N55016",
+      "version": "v2",
+      "theme": "budget",
+      "titre": "Instaurer un barème progressif de l'impôt sur les sociétés",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-06", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-06", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO59048" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55012",
+      "dossier": "DLR5L17N55012",
+      "version": "v2",
+      "theme": "social",
+      "titre": "Revaloriser l’allocation de solidarité aux personnes âgées au niveau du seuil de pauvreté et instaurer l’automaticité du versement",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-06", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-06", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO420120" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55011",
+      "dossier": "DLR5L17N55011",
+      "version": "v2",
+      "theme": "immigration",
+      "titre": "Régulariser les étrangers travaillant dans un métier essentiel ou en tension",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-06", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-06", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO59051" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55001",
+      "dossier": "DLR5L17N55001",
+      "version": "v2",
+      "theme": "transport",
+      "titre": "Rendre obligatoire le port du casque pour les utilisateurs de trottinettes et autres engins de déplacement personnel motorisés",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-06", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-06", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO59051" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55091",
+      "dossier": "DLR5L17N55091",
+      "version": "v2",
+      "theme": "environnement",
+      "titre": "Abolir la chasse à courre, à cor et à cri",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-13", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-13", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO419865" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55141",
+      "dossier": "DLR5L17N55141",
+      "version": "v2",
+      "theme": "environnement",
+      "titre": "Protéger nos forêts en encadrant les coupes rases",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-20", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-20", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO419865" },
+        { "date": "2026-11-10", "code": "AN1-COM-FOND-REUNION", "libelle": "Réunion de commission", "organe": "PO419865" },
+        { "date": "2026-11-25", "code": "AN1-COM-FOND-REUNION", "libelle": "Réunion de commission", "organe": "PO419865" },
+        { "date": "2026-11-25", "code": "AN1-COM-FOND-REUNION", "libelle": "Réunion de commission", "organe": "PO419865" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55127",
+      "dossier": "DLR5L17N55127",
+      "version": "v2",
+      "theme": "education",
+      "titre": "Instaurer un plan décennal de rénovation du bâti scolaire",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-20", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-20", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO419604" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55225",
+      "dossier": "DLR5L17N55225",
+      "version": "v2",
+      "theme": "institutions",
+      "titre": "Proposition de loi visant à compenser la perte de salaire des maires des communes de moins de 3 500 habitants et à revaloriser les indemnités des maires de petites villes",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-11-02", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-11-02", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO211495" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55220",
+      "dossier": "DLR5L17N55220",
+      "version": "v2",
+      "theme": "institutions",
+      "titre": "Proposition de loi visant à moderniser les modalités de vote pour les scrutins électoraux et les opérations référendaires",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-30", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-10-30", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO211495" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55176",
+      "dossier": "DLR5L17N55176",
+      "version": "v2",
+      "theme": "travail",
+      "titre": "Renforcer la protection des salariés licenciés en cas de liquidation judiciaire de leur employeur",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-27", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-27", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO420120" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55125",
+      "dossier": "DLR5L17N55125",
+      "version": "v2",
+      "theme": "travail",
+      "titre": "Renforcer la reconnaissance de l’engagement des sapeurs-pompiers volontaires dans le calcul de leurs droits à la retraite",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-20", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-20", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO420120" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55072",
+      "dossier": "DLR5L17N55072",
+      "version": "v2",
+      "theme": "sante",
+      "titre": "Refonder le financement, l'organisation et les pratiques de la psychiatrie française",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-13", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-13", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO420120" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55078",
+      "dossier": "DLR5L17N55078",
+      "version": "v2",
+      "theme": "defense",
+      "titre": "Adapter les moyens de protection des zones de défense hautement sensibles aux menaces hybrides",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-13", "code": "AN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO838901" },
+        { "date": "2026-10-13", "code": "AN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO59046" }
+      ]
+    },
+    {
+      "id": "DLR5L17N55053",
+      "dossier": "DLR5L17N55053",
+      "version": "v2",
+      "theme": "sante",
+      "titre": "Proposition de loi visant à encadrer la production, la traçabilité, la distribution et certains usages des produits à base de cannabidiol",
+      "procedure": "Proposition de loi ordinaire",
+      "actes": [
+        { "date": "2026-10-08", "code": "SN1-DEPOT", "libelle": "1er dépôt d'une initiative.", "organe": "PO78718" },
+        { "date": "2026-10-08", "code": "SN1-COM-FOND-SAISIE", "libelle": "Renvoi en commission au fond", "organe": "PO211493" }
+      ]
+    }
+  ]
+}

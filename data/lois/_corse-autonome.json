@@ -1,0 +1,518 @@
+{
+  "id": "corse-autonome",
+  "titre": "Projet de loi constitutionnelle pour une Corse autonome au sein de la République",
+  "theme": "institutions",
+  "nb_phrases": 18,
+  "statut": "En discussion",
+  "resume": "L’Assemblée nationale a adopté en première lecture, le 23 juin 2026, le projet de loi constitutionnelle pour une Corse autonome au sein de la République : 271 voix pour, 202 contre et 64 abstentions. Le Sénat a rejeté le texte le 26 octobre 2026. Le texte a été déposé pour une deuxième lecture à l’Assemblée nationale le 28 octobre 2026 ; il n’est pas définitivement adopté.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_constitutionnelle_pour_Corse_autonome_au_sein_Republique",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0318_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 7454 du 23 juin 2026. Texte adopté : T.A. n° 318. Article unique lu dans le jeu articles_textes du MCP Hémicycle."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V7454",
+    "date": "2026-06-23",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 7454",
+    "pour": 271,
+    "contre": 202,
+    "abstention": 64,
+    "non_votants": 0,
+    "votants": 537,
+    "suffrages_exprimes": 473,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble du projet de loi constitutionnelle pour une Corse autonome au sein de la République (première lecture).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 40,
+  "chronologie": [
+    {
+      "date": "2026-04-27",
+      "chambre": "AN",
+      "texte": "Dépôt du projet de loi constitutionnelle à l’Assemblée nationale (n° 2697)."
+    },
+    {
+      "date": "2026-05-06",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d’un rapporteur."
+    },
+    {
+      "date": "2026-06-03",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission des lois (n° 2865)."
+    },
+    {
+      "date": "2026-06-16",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique."
+    },
+    {
+      "date": "2026-06-23",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte en première lecture : 271 pour, 202 contre, 64 abstentions."
+    },
+    {
+      "date": "2026-06-24",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté est transmis au Sénat (n° 782)."
+    },
+    {
+      "date": "2026-10-21",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat (n° 85)."
+    },
+    {
+      "date": "2026-10-26",
+      "chambre": "SENAT",
+      "texte": "Le Sénat rejette le texte (T.A. n° 18)."
+    },
+    {
+      "date": "2026-10-28",
+      "chambre": "AN",
+      "texte": "Le texte est déposé pour une deuxième lecture à l’Assemblée nationale (n° 3423)."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "La Corse est dotée d’un statut d’autonomie au sein de la République, qui tient compte de ses intérêts propres, liés à ses caractéristiques d’île méditerranéenne, au relief montagneux et à sa communauté insulaire, historique, linguistique, culturelle, ayant développé un lien singulier à la terre corse.",
+      "article": "Article unique",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Les lois et les règlements peuvent faire l’objet d’adaptations justifiées par les spécificités de ce statut.",
+      "article": "Article unique",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "La Collectivité de Corse peut être habilitée à décider de l’adaptation de ces normes dans les matières, dans les conditions et sous les réserves prévues par la loi organique.",
+      "article": "Article unique",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "La Collectivité de Corse peut également être habilitée à fixer les normes dans les matières où s’exercent ses compétences, dans les conditions et sous les réserves prévues par la loi organique.",
+      "article": "Article unique",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Les habilitations prévues aux deuxième et troisième alinéas ne peuvent porter sur la nationalité, les droits civiques, les garanties des libertés publiques, l’état et la capacité des personnes, l’organisation de la justice, le droit pénal, la procédure pénale, la politique étrangère, la défense, la sécurité et l’ordre publics, la monnaie, le crédit et les changes ainsi que le droit électoral.",
+      "article": "Article unique",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "La loi organique détermine le contrôle exercé par le Conseil d’État et le Conseil constitutionnel sur les normes prises en application des deuxième et troisième alinéas, en fonction de leur nature, ainsi que leurs modalités d’évaluation.",
+      "article": "Article unique",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Les normes prévues aux deuxième et troisième alinéas assurent l’égalité de tous sans distinction, conformément à l’article 1er.",
+      "article": "Article unique",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Le Gouvernement peut, par ordonnances, dans les matières qui ne relèvent pas de la compétence de la Collectivité de Corse, adapter les dispositions de nature législative en vigueur aux spécificités de la collectivité, sous réserve que la loi n’ait pas expressément exclu, pour les dispositions en cause, le recours à cette procédure.",
+      "article": "Article unique",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Les électeurs inscrits sur les listes électorales en Corse sont consultés sur le projet de statut, après avis de l’assemblée délibérante, dans les conditions prévues par un décret en Conseil d’État délibéré en conseil des ministres.",
+      "article": "Article unique",
+      "alinea": "alinéa 9"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article unique",
+      "note": "Insertion d’un article 72‑5 dans la Constitution, tel qu’adopté par l’Assemblée nationale en première lecture.",
+      "paragraphes": [
+        "Après l’article 72‑4 de la Constitution, il est inséré un article 72‑5 ainsi rédigé :",
+        "« Art. 72‑5. – La Corse est dotée d’un statut d’autonomie au sein de la République, qui tient compte de ses intérêts propres, liés à ses caractéristiques d’île méditerranéenne, au relief montagneux et à sa communauté insulaire, historique, linguistique, culturelle, ayant développé un lien singulier à la terre corse.",
+        "« Les lois et les règlements peuvent faire l’objet d’adaptations justifiées par les spécificités de ce statut. La Collectivité de Corse peut être habilitée à décider de l’adaptation de ces normes dans les matières, dans les conditions et sous les réserves prévues par la loi organique.",
+        "« La Collectivité de Corse peut également être habilitée à fixer les normes dans les matières où s’exercent ses compétences, dans les conditions et sous les réserves prévues par la loi organique.",
+        "« Les habilitations prévues aux deuxième et troisième alinéas ne peuvent porter sur la nationalité, les droits civiques, les garanties des libertés publiques, l’état et la capacité des personnes, l’organisation de la justice, le droit pénal, la procédure pénale, la politique étrangère, la défense, la sécurité et l’ordre publics, la monnaie, le crédit et les changes ainsi que le droit électoral. Cette énumération peut être précisée et complétée par une loi organique.",
+        "« La loi organique détermine le contrôle exercé par le Conseil d’État et le Conseil constitutionnel sur les normes prises en application des deuxième et troisième alinéas, en fonction de leur nature, ainsi que leurs modalités d’évaluation. Elle peut également porter sur les modalités de mise en œuvre, par les délibérations de la Collectivité de Corse, d’un principe de non‑régression par rapport aux normes nationales sociales et environnementales en vigueur. Les habilitations prévues par la loi organique aux deuxième et troisième alinéas ne peuvent intervenir lorsque sont en cause les conditions essentielles d’exercice d’une liberté publique ou d’un droit constitutionnellement garanti.",
+        "« Les normes prévues aux deuxième et troisième alinéas assurent l’égalité de tous sans distinction, conformément à l’article 1er.",
+        "« Le Gouvernement peut, par ordonnances, dans les matières qui ne relèvent pas de la compétence de la Collectivité de Corse, adapter les dispositions de nature législative en vigueur aux spécificités de la collectivité, sous réserve que la loi n’ait pas expressément exclu, pour les dispositions en cause, le recours à cette procédure. Les ordonnances sont prises en conseil des ministres après avis de l’assemblée délibérante et du Conseil d’État. Elles entrent en vigueur dès leur publication. Elles deviennent caduques en l’absence de ratification par le Parlement dans le délai de dix‑huit mois suivant cette publication.",
+        "« Les électeurs inscrits sur les listes électorales en Corse sont consultés sur le projet de statut, après avis de l’assemblée délibérante, dans les conditions prévues par un décret en Conseil d’État délibéré en conseil des ministres. »",
+        "Délibéré en séance publique, à Paris, le 23 juin 2026."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "271",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "202",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "64",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "537",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "473",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "0",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel est le décompte du scrutin public n° 7454 du 23 juin 2026 ?",
+      "options": [
+        "271 pour, 202 contre, 64 abstentions",
+        "271 pour, 202 contre, aucune abstention",
+        "237 pour, 202 contre, 64 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 7454 du 23 juin 2026"
+    },
+    {
+      "question": "Que prévoit l’article unique sur les normes adoptées en application des deuxième et troisième alinéas ?",
+      "options": [
+        "Elles assurent l’égalité de tous sans distinction",
+        "Elles peuvent déroger au principe d’égalité",
+        "Elles sont soumises à un référendum obligatoire"
+      ],
+      "bonne": 0,
+      "source": "Article unique, alinéa 7 du texte adopté n° 318"
+    },
+    {
+      "question": "Quel contrôle l’article unique confie-t-il à la loi organique ?",
+      "options": [
+        "Le contrôle du Conseil d’État et du Conseil constitutionnel sur les normes prises en application des deuxième et troisième alinéas",
+        "Le contrôle du Sénat sur chaque délibération de la Collectivité de Corse",
+        "Aucun contrôle : les normes adoptées sont définitives"
+      ],
+      "bonne": 0,
+      "source": "Article unique, alinéa 6 du texte adopté n° 318"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article unique",
+    "texte": "L’article unique insère un article 72‑5 dans la Constitution : **« La Corse est dotée d’un statut d’autonomie au sein de la République »**, dont les adaptations sont encadrées par la loi organique ; la révision suppose un vote au Congrès, qui n’est pas encore acquis.",
+    "points": [
+      "La Collectivité de Corse peut être habilitée à adapter les lois et les règlements, puis à fixer elle-même des normes dans ses matières de compétence.",
+      "Les habilitations ne peuvent porter sur les matières régaliennes énumérées, ni sur les conditions essentielles d’exercice d’une liberté publique.",
+      "Les électeurs inscrits en Corse sont consultés sur le projet de statut, après avis de l’assemblée délibérante."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-06-22",
+        "titre": "Autonomie de la Corse : l’Assemblée nationale se prononce sur un texte réécrit",
+        "url": "https://www.lefigaro.fr/politique/autonomie-de-la-corse-l-assemblee-nationale-se-prononce-sur-un-texte-reecrit-20260622"
+      },
+      {
+        "media": "Libération",
+        "date": "2026-06-15",
+        "titre": "Corse : d’opposant à partisan de l’autonomie, le virage à 180 degrés de Jean-Luc Mélenchon",
+        "url": "https://www.liberation.fr/politique/corse-dopposant-a-partisan-de-lautonomie-le-virage-a-180-degres-de-jean-luc-melenchon-20260615_RUEG3IYTRZCETFGJF2S5UQ2GTM/"
+      }
+    ],
+    "contre_titre": "Presse numérique et parlementaire",
+    "contre": [
+      {
+        "media": "LCP",
+        "date": "2026-06-23",
+        "titre": "L'Assemblée nationale vote en faveur de l'autonomie de la Corse",
+        "url": "https://lcp.fr/actualites/l-assemblee-nationale-vote-en-faveur-de-l-autonomie-de-la-corse-437977"
+      },
+      {
+        "media": "LCP",
+        "date": "2026-06-23",
+        "titre": "Scrutin indécis sur l'autonomie de la Corse: qui va voter quoi ce mardi à l'Assemblée?",
+        "url": "https://lcp.fr/actualites/scrutin-indecis-sur-l-autonomie-de-la-corse-qui-va-voter-quoi-ce-mardi-a-l-assemblee"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Trois voix de chaque côté, mot pour mot, dans l’hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte",
+    "contre_titre": "Ils le refusent ou s’en écartent",
+    "pour": [
+      {
+        "nom": "Jean-Paul Mattei",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce que nous allons voter dans quelques instants est bien plus qu’une réforme institutionnelle : c’est la reconnaissance du fait que la République est capable d’évoluer sans se renier.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      },
+      {
+        "nom": "Sandra Regol",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce texte historique propose une voie de sortie pacifiste et postule que la démocratie est plus forte que les armes.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      },
+      {
+        "nom": "Laurent Marcangeli",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le texte reconnaît la singularité de la Corse au sein de la République. Il est le fruit d’un compromis et, comme je le disais la semaine dernière, tout compromis a ses failles et ses imperfections. Il a néanmoins le mérite d’exister.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Olivier Fayssat",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Voilà pourquoi le groupe UDR votera contre ce texte : non par hostilité à la Corse, bien au contraire, mais par refus d’un texte qui ouvre des pouvoirs sans contre-pouvoirs, qui ressuscite une notion déjà censurée, qui se prive de ses propres leviers et qui écarte les Corses du seul choix qui comptait vraiment, celui du principe.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      },
+      {
+        "nom": "Stéphane Rambaud",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "C’est la raison pour laquelle le groupe Rassemblement national votera contre ce texte.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      },
+      {
+        "nom": "François-Xavier Ceccoli",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "C’est une occasion manquée historique car les Corses méritent mieux. Pour toutes ces raisons, notre groupe ne peut soutenir ce texte, le plus grand nombre s’apprêtant même à voter contre. À titre personnel, dans une logique constructive, je m’abstiendrai, afin de lui donner plus de chances de poursuivre son chemin au Sénat et, je le crois, de permettre à notre assemblée de reprendre ses travaux dans le cadre d’une deuxième lecture.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit. En séance, Elsa Faucillon et François-Xavier Ceccoli ont annoncé une abstention personnelle ; leurs suffrages comptent parmi les abstentions du scrutin, sans que ces annonces préjugent de leur opinion."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres du débat ont été confrontés à une source publiée : deux sont confirmés, le troisième s’écarte du chiffre publié et est signalé comme nuancé.",
+    "chiffres": [
+      {
+        "affirmation": "En 1991, le Conseil constitutionnel avait précisément censuré la notion de peuple corse au nom de l’unité du peuple français.",
+        "chiffre": "1991",
+        "auteur": "Olivier Fayssat",
+        "role": "Député",
+        "citation": "En 1991, le Conseil constitutionnel avait précisément censuré la notion de peuple corse au nom de l’unité du peuple français.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280",
+        "verdict": "confirmé",
+        "explication": "La décision n° 91-290 DC du 9 mai 1991 censure l’article 1er de la loi portant statut de la collectivité territoriale de Corse, qui mentionnait le « peuple corse, composante du peuple français ». Le Conseil constitutionnel la déclare contraire à la Constitution au nom de l’unité du peuple français.",
+        "sources": [
+          {
+            "nom": "Conseil constitutionnel — décision n° 91-290 DC du 9 mai 1991",
+            "url": "https://www.legifrance.gouv.fr/juri/id/CONSTEXT000017667837"
+          }
+        ]
+      },
+      {
+        "affirmation": "En Corse, 48 % des salariés perçoivent des bas salaires",
+        "chiffre": "48 %",
+        "auteur": "Elsa Faucillon",
+        "role": "Députée",
+        "citation": "En Corse, 48 % des salariés perçoivent des bas salaires, les prix sont supérieurs de 7 % à ceux du continent, le déficit de logements sociaux est abyssal et la spéculation immobilière chasse les habitants.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280",
+        "verdict": "nuancé",
+        "explication": "Le rapport d’activité 2025 de la Délégation interministérielle à la prévention et à la lutte contre la pauvreté, publié le 6 janvier 2026, retient que 40 % des salariés corses perçoivent un bas salaire. Le chiffre prononcé, 48 %, dépasse donc de 8 points le chiffre publié : le constat d’un surpoids des bas salaires en Corse est documenté, mais la valeur exacte ne l’est pas.",
+        "sources": [
+          {
+            "nom": "Vie-publique.fr — rapport d’activité 2025 de la Délégation interministérielle à la prévention et à la lutte contre la pauvreté, p. 71 (6 janvier 2026)",
+            "url": "https://www.vie-publique.fr/files/rapport/pdf/301944.pdf"
+          }
+        ]
+      },
+      {
+        "affirmation": "Les Corses paient ainsi 300 euros par habitant pour la gestion des déchets, soit le triple de la moyenne nationale.",
+        "chiffre": "300 euros",
+        "auteur": "François-Xavier Ceccoli",
+        "role": "Député",
+        "citation": "Les Corses paient ainsi 300 euros par habitant pour la gestion des déchets, soit le triple de la moyenne nationale.",
+        "seance": "CRSANR5L17S2026O1N280",
+        "date": "2026-06-23",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N280",
+        "verdict": "confirmé",
+        "explication": "Un amendement au projet de loi de finances pour 2025, déposé au Sénat le 22 novembre 2024, chiffre le coût de la gestion des déchets en Corse à 301 € TTC par habitant en 2021 et le dit trois fois supérieur à la moyenne nationale. La citation arrondit à 300 euros ; l’ordre de grandeur et le rapport de un à trois sont ceux de la source.",
+        "sources": [
+          {
+            "nom": "Sénat — amendement n° I-69 au projet de loi de finances pour 2025 (22 novembre 2024)",
+            "url": "https://www.senat.fr/amendements/2024-2025/143/Amdt_I-69.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 62,
+      "pour": 60,
+      "contre": 2,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 14,
+      "pour": 6,
+      "contre": 6,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 65,
+      "pour": 41,
+      "contre": 5,
+      "abstention": 19,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 36,
+      "pour": 27,
+      "contre": 5,
+      "abstention": 4,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 23,
+      "pour": 21,
+      "contre": 2,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 82,
+      "pour": 66,
+      "contre": 5,
+      "abstention": 11,
+      "non_votants": 0
+    },
+    {
+      "id": "DEM",
+      "sieges": 36,
+      "pour": 25,
+      "contre": 0,
+      "abstention": 11,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 28,
+      "pour": 22,
+      "contre": 0,
+      "abstention": 6,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 45,
+      "pour": 1,
+      "contre": 34,
+      "abstention": 10,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 120,
+      "pour": 0,
+      "contre": 120,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 0,
+      "contre": 17,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 9,
+      "pour": 2,
+      "contre": 6,
+      "abstention": 1,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "experts": [
+    {
+      "nom": "Jean-Pierre Vigier",
+      "role": "Député, rapporteur de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Michel Fournier",
+      "role": "Ministre délégué chargé de la ruralité",
+      "affiliation": "Gouvernement",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Sylvie Ferrer",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    },
+    {
+      "nom": "Marie Pochon",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+    }
+  ]
+}

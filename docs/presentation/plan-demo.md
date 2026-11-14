@@ -49,7 +49,8 @@ Loi : **projet de loi relatif à la protection des enfants**, scrutin **n° 8429
 
 - **Serveur éteint** : les captures de `docs/captures/` remplacent la démo ; `wp.html`
   reste un outil de pilotage, pas un écran du produit.
-- **Vote déjà fait** : navigation privée, ou `localStorage.removeItem("quorum.v1")`.
+- **Vote déjà fait** : bouton **Recommencer ce devoir** (résultat et carte), navigation
+  privée, ou `localStorage.removeItem("quorum.v1")`.
 - **Retard à 1:30** : sauter la diapo 8 (presse), garder la 10 et sa clôture.
 - **Question piège sur 8428** : « le sous-amendement a été adopté par 178 voix contre
   163, majorité requise 171 » — chiffres du scrutin, recopiés.

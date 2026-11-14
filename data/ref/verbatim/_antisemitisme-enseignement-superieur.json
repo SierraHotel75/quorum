@@ -1,0 +1,46 @@
+{
+  "seances": {
+    "CRSANR5L17S2025E1N003": {
+      "date": "2025-07-02",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2025E1N003"
+    }
+  },
+  "citations": [
+    {
+      "cle": "antisemitisme-enseignement-superieur-1",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Constance Le Grip",
+      "texte": "La responsabilité nous incombe aujourd’hui de voter un texte visant à combattre l’antisémitisme mais aussi le racisme, les discriminations, les violences et la haine à l’université et dans les établissements d’enseignement supérieur."
+    },
+    {
+      "cle": "antisemitisme-enseignement-superieur-2",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Pierre Henriet",
+      "texte": "Le groupe Horizons & indépendants, fidèle à ses valeurs et à son engagement sur le sujet, votera bien sûr en faveur du texte parce que l’université doit rester un sanctuaire où nul ne doit craindre pour sa sécurité ou sa dignité en raison de ses origines, de sa foi ou de ses convictions et parce que la République ne tolère aucune forme de haine ou de discrimination."
+    },
+    {
+      "cle": "antisemitisme-enseignement-superieur-3",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Louis Boyard",
+      "texte": "La tâche me revient d’expliquer en quoi le texte que vous avez appelé « proposition de loi relative à la lutte contre l’antisémitisme dans l’enseignement supérieur » n’est pas un texte de lutte contre l’antisémitisme dans l’enseignement supérieur. Paradoxalement, en dépit de son titre, il tend à diminuer les budgets de lutte contre le racisme et l’antisémitisme."
+    },
+    {
+      "cle": "antisemitisme-enseignement-superieur-4",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Nicolas Sansu",
+      "texte": "Nous sommes pourtant dubitatifs sur la pertinence de dissocier l’antisémitisme des autres formes de racisme. (Mme la rapporteure s’exclame.) S’il est incontestable que l’antisémitisme revêt une singularité historique, nous pouvons en dire autant de toutes les formes de discrimination, que leurs racines historiques rendent singulières."
+    },
+    {
+      "cle": "antisemitisme-enseignement-superieur-5",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Pierre Henriet",
+      "texte": "Entre le 7 octobre 2023 et le 10 avril 2024, soixante-sept actes antisémites ont été recensés dans quatre-vingt-deux établissements, soit le double de l’année précédente."
+    },
+    {
+      "cle": "antisemitisme-enseignement-superieur-6",
+      "seance": "CRSANR5L17S2025E1N003",
+      "auteur": "Pierre Henriet",
+      "texte": "Selon une enquête Ifop pour l’UEJF, 90 % des étudiants juifs interrogés déclarent avoir subi au moins un acte antisémite au cours de leur scolarité ou de leurs études supérieures."
+    }
+  ]
+}

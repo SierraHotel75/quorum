@@ -1,0 +1,32 @@
+{
+  "experts": [
+    {
+      "nom": "Elsa Faucillon",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+    },
+    {
+      "nom": "Alexandra Martin",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+    },
+    {
+      "nom": "Élise Leboucher",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+    },
+    {
+      "nom": "Florence Herouin-Léautey",
+      "role": "Députée",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2027O1N020"
+    }
+  ]
+}

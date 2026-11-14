@@ -1,0 +1,46 @@
+{
+  "experts": [
+    {
+      "nom": "Philippe Juvin",
+      "role": "Député, rapporteur de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    },
+    {
+      "nom": "Amélie de Montchalin",
+      "role": "Ministre de l’action et des comptes publics",
+      "affiliation": "Gouvernement",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    },
+    {
+      "nom": "Charles Sitzenstuhl",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    },
+    {
+      "nom": "Éric Coquerel",
+      "role": "Député, vice-président de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    },
+    {
+      "nom": "Aurélien Le Coq",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    },
+    {
+      "nom": "Philippe Brun",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+    }
+  ]
+}

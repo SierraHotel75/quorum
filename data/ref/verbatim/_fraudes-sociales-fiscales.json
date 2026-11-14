@@ -1,0 +1,52 @@
+{
+  "seances": {
+    "CRSANR5L17S2026O1N220": {
+      "date": "2026-05-05",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N220"
+    }
+  },
+  "citations": [
+    {
+      "cle": "fraudes-sociales-fiscales-1",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Patrick Hetzel",
+      "texte": "Chaque euro fraudé, c’est un euro qui manque à nos services publics ; chaque abus, c’est une injustice supplémentaire pour celles et ceux qui respectent les règles."
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-2",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Nathalie Colin-Oesterlé",
+      "texte": "Tolérer la fraude n’a jamais protégé les faibles ; la combattre, oui !"
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-3",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Emmanuel Maurel",
+      "texte": "Voilà où nous en sommes : au lieu d’un texte robuste, complet, consacré aux gros fraudeurs, nous obtenons un projet de loi étriqué, perclus de clichés, qui risque de ne pénaliser que les pauvres, les chômeurs, les malades."
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-4",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Sandrine Runel",
+      "texte": "Ce projet de loi est une punition préventive, qui condamne sans preuve les assurés sociaux."
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-5",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Nathalie Colin-Oesterlé",
+      "texte": "Cet enjeu, je le rappelle, représente près de 14 milliards d’euros de préjudice estimé chaque année, auxquels s’ajoutent 3,5 milliards d’euros d’erreurs déclaratives."
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-6",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Nathalie Colin-Oesterlé",
+      "texte": "Pour chaque euro frauduleusement soustrait à notre protection sociale, nous ne récupérons aujourd’hui que 7 centimes."
+    },
+    {
+      "cle": "fraudes-sociales-fiscales-7",
+      "seance": "CRSANR5L17S2026O1N220",
+      "auteur": "Thibault Bazin",
+      "texte": "Pour la fraude sociale, le constat est connu grâce au Haut Conseil du financement de la protection sociale : elle représente un manque à gagner annuel de 13 milliards d’euros au minimum, chiffre qu’il faut mettre en perspective avec le déficit de la sécurité sociale, qui s’élevait à 21,6 milliards en 2025."
+    }
+  ]
+}

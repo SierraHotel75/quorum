@@ -1,0 +1,64 @@
+{
+  "seances": {
+    "CRSANR5L17S2026O1N259": {
+      "date": "2026-06-02",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N259"
+    }
+  },
+  "citations": [
+    {
+      "cle": "assurance-chomage-avenant-3-1",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Jérôme End",
+      "texte": "La durée maximale d’indemnisation sera réduite pour les bénéficiaires d’une rupture conventionnelle, mais des protections spécifiques seront maintenues pour les seniors et les territoires ultramarins."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-2",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Nicolas Turquois",
+      "texte": "Le groupe Les Démocrates votera pour ce texte, parce qu’il est le fruit du dialogue social, qu’il est économiquement nécessaire et qu’il faut assumer de mener des réformes utiles même si elles sont difficiles."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-3",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Ségolène Amiot",
+      "texte": "Parce que des travailleurs et des travailleuses n’ont pas attendu d’être licenciés, le gouvernement va leur imposer la perte de trois mois de chômage s’ils sont âgés de moins de 55 ans et la perte de trois à six mois d’indemnisation au-delà de cet âge."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-4",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Sophie Taillé-Polian",
+      "texte": "Avec cette réforme, vous allez frapper beaucoup de monde. Les moins de 55 ans perdront trois mois d’indemnisation, mais on atteint un summum avec les salariés en fin de carrière : les plus de 55 ans s’apprêtent à perdre six mois et demi de droits, soit un quart du montant total de leurs allocations !"
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-5",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Jérôme End",
+      "texte": "Il s’agit d’une véritable dérive qui pèse sur les finances publiques puisque le coût pour l’assurance chômage s’élevait à 9,4 milliards d’euros en 2024 – c’est considérable."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-6",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Nicolas Turquois",
+      "texte": "L’Unedic en a besoin. Son déficit devrait atteindre 2,1 milliards d’euros en 2026."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-7",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Jérôme End",
+      "texte": "En 2024, 515 000 ruptures conventionnelles individuelles ont été signées et ce nombre augmente chaque année."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-8",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Christophe Mongardien",
+      "texte": "Rejeter le projet de loi reviendrait à empêcher l’application de l’accord conclu et donc à l’ignorer, alors qu’il vise à mieux encadrer les ruptures conventionnelles individuelles et à prévenir certaines utilisations abusives du dispositif qui, au bout du compte, nuisent aux intérêts des chômeurs victimes de licenciement."
+    },
+    {
+      "cle": "assurance-chomage-avenant-3-9",
+      "seance": "CRSANR5L17S2026O1N259",
+      "auteur": "Yannick Monnet",
+      "texte": "Il s’agit, cette fois-ci, de sanctionner le salarié qui userait de son droit de négocier une rupture conventionnelle, sans interroger les motifs qui peuvent le pousser à recourir à ce dispositif et sans bien sûr remettre en cause l’usage qu’en fait le patronat pour mettre en œuvre un licenciement déguisé sans cause réelle et sérieuse."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "seances": {
+    "CRSANR5L17S2026O1N282": {
+      "date": "2026-06-24",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N282"
+    }
+  },
+  "citations": [
+    {
+      "cle": "industrie-textile-1",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Anne-Cécile Violland",
+      "texte": "Chaque seconde, l’équivalent d’un camion de vêtements est enfoui ou brûlé quelque part dans le monde."
+    },
+    {
+      "cle": "industrie-textile-2",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Antoine Vermorel-Marques",
+      "texte": "Cette proposition de loi constitue notre réponse. Elle ne défend pas un protectionnisme aveugle ou la fermeture des frontières mais simplement la restauration de l’ordre ; l’ordre du travail bien fait, de la concurrence loyale et des règles égales pour tous."
+    },
+    {
+      "cle": "industrie-textile-3",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Alma Dufour",
+      "texte": "Je n’essaie même pas de vous convaincre et nous avons tous hâte de tourner la page. Comme d’habitude, vous êtes décevants et nous nous abstiendrons sur ce texte !"
+    },
+    {
+      "cle": "industrie-textile-4",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Stéphane Delautrette",
+      "texte": "Nous déplorons une nouvelle occasion manquée d’avancer de manière concrète et efficace vers une industrie textile vertueuse, socialement et environnementalement responsable. C’est la raison pour laquelle le groupe Socialistes et apparentés s’abstiendra sur ce texte."
+    },
+    {
+      "cle": "industrie-textile-5",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Charles Fournier",
+      "texte": "Nous nous retrouvons maintenant avec des pénalités plafonnées, si bien qu’en 2026, elles ne pourront dépasser 6 euros par produit."
+    },
+    {
+      "cle": "industrie-textile-6",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Charles Fournier",
+      "texte": "Sachant qu’elles ne peuvent par ailleurs excéder 50 % du prix, elles s’élèveront à 3,50 euros pour un jean à 7 euros : ce n’est pas à la hauteur."
+    },
+    {
+      "cle": "industrie-textile-7",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Anne-Cécile Violland",
+      "texte": "Le secteur textile représente près de 10 % des émissions mondiales de gaz à effet de serre (GES)."
+    },
+    {
+      "cle": "industrie-textile-8",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Véronique Riotton",
+      "texte": "Le groupe Ensemble Pour la République soutient pleinement ce texte et salue l’engagement de tous dans cette démarche."
+    },
+    {
+      "cle": "industrie-textile-9",
+      "seance": "CRSANR5L17S2026O1N282",
+      "auteur": "Charles Fournier",
+      "texte": "Après deux ans de travail, la déception est grande. Avant qu’il soit vidé de sa substance et donc rendu inefficace, nous avions adopté ce texte à l’unanimité."
+    }
+  ]
+}

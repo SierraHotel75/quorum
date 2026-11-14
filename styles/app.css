@@ -361,7 +361,97 @@ body {
 }
 
 .ligne--archive {
-  grid-template-columns: 6.5rem 1fr;
+  grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+}
+
+.archive-section,
+.suivi-section {
+  margin-top: var(--s5);
+}
+
+.section-en-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  margin-bottom: var(--s2);
+}
+
+.section-en-tete h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: 0;
+  font-size: var(--t-lg);
+}
+
+.v2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  background: var(--bordeaux);
+  color: #ede7dc;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  line-height: 1;
+  text-transform: none;
+}
+
+.champ-recherche {
+  display: grid;
+  gap: var(--s2);
+  margin-bottom: var(--s4);
+  color: var(--texte-doux);
+  font-size: var(--t-sm);
+}
+
+.champ-recherche input {
+  width: 100%;
+  min-height: 3rem;
+  box-sizing: border-box;
+  border: 1px solid var(--filet-fort);
+  border-radius: var(--rayon);
+  padding: var(--s2) var(--s3);
+  background: var(--fond-2);
+  color: var(--texte);
+  font: inherit;
+  font-size: var(--t-md);
+}
+
+.champ-recherche input:focus-visible {
+  outline-color: var(--bois-texte);
+}
+
+.ligne--suivi {
+  grid-template-columns: 10rem minmax(0, 1fr);
+}
+
+.suivi-acte__meta {
+  display: block;
+  margin-top: var(--s1);
+  color: var(--texte-doux);
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+}
+
+.lien {
+  color: var(--bois-texte);
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 30rem) {
+  .ligne--archive {
+    grid-template-columns: 5rem minmax(0, 1fr) auto;
+  }
+
+  .ligne--suivi {
+    grid-template-columns: 1fr;
+    gap: var(--s1);
+  }
 }
 
 .ligne__date {
@@ -1256,6 +1346,118 @@ body {
 
 /* ---------- Arbre de compétences ---------- */
 
+.pieuvre {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--s3) 0 var(--s1);
+  overflow: visible;
+}
+
+.pieuvre .lien {
+  fill: none;
+  stroke: var(--filet-fort);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 5;
+}
+
+.pieuvre .lien--ouvert {
+  stroke: var(--bois);
+  stroke-dasharray: none;
+}
+
+.pieuvre .bulle {
+  fill: var(--fond-2);
+  stroke: var(--filet);
+  stroke-width: 1.5;
+  transition: stroke var(--duree) var(--courbe);
+}
+
+.pieuvre .bulle--vide {
+  fill: none;
+  stroke-dasharray: 3 4;
+}
+
+.pieuvre .bulle--ouverte {
+  stroke: var(--bois);
+}
+
+.pieuvre .logo {
+  fill: none;
+  stroke: var(--texte);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pieuvre .logo--vide {
+  stroke: var(--texte-faible);
+  opacity: 0.55;
+}
+
+/* Le camembert passe sur le pictogramme, jamais sur le nom. */
+.pieuvre .part {
+  fill: var(--bois);
+  fill-opacity: 0.38;
+  stroke: none;
+}
+
+.pieuvre .nom {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.01em;
+  fill: var(--texte-faible);
+  text-anchor: middle;
+}
+
+.pieuvre .nom--ouverte {
+  fill: var(--texte);
+}
+
+.pieuvre .moyeu {
+  fill: var(--fond-3);
+  stroke: var(--filet-fort);
+  stroke-width: 1.5;
+}
+
+.pieuvre .moyeu__xp {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  fill: var(--texte);
+  text-anchor: middle;
+}
+
+.pieuvre .moyeu__legende {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  fill: var(--texte-faible);
+  text-anchor: middle;
+}
+
+.pieuvre__note {
+  margin: 0 0 var(--s3);
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: var(--texte-faible);
+}
+
+.essaim__logo {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: var(--texte-faible);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.essaim--ouvert .essaim__logo {
+  stroke: var(--bois);
+}
+
 .jauge {
   height: 3px;
   background: var(--filet);
@@ -1327,8 +1529,8 @@ body {
 
 .essaim__tete {
   display: flex;
-  align-items: baseline;
-  gap: var(--s2);
+  align-items: center;
+  gap: var(--s1);
 }
 
 .essaim__nom {
@@ -1537,12 +1739,15 @@ body {
 }
 
 @media (min-width: 40rem) {
+  /* La surcouche se cale sur la colonne de l'application, pas sur la fenêtre :
+     même largeur, même axe. Un seul mécanisme de centrage — left 50 % et
+     translateX(-50 %) — sans marges automatiques, qui s'ajoutaient au
+     décalage et poussaient le panneau de 120 px vers la droite. */
   .surcouche {
+    inset: var(--s4) auto auto 50%;
+    width: min(var(--largeur-app), calc(100vw - 2 * var(--s4)));
     max-width: var(--largeur-app);
-    margin: var(--s4) auto;
-    position: fixed;
-    inset: var(--s4) 0 auto;
-    left: 50%;
+    margin: 0;
     transform: translateX(-50%);
     border: 1px solid var(--filet);
     border-radius: var(--rayon-cadre);

@@ -1,0 +1,66 @@
+{
+  "verifie_le": "2026-11-14",
+  "note": "Passages exacts du compte rendu intégral de la première séance du mercredi 20 mai 2026, lus et copiés depuis le compte rendu publié par l'Assemblée nationale.",
+  "seances": {
+    "CRSANR5L17S2026O1N238": {
+      "date": "2026-05-20",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    }
+  },
+  "citations": [
+    {
+      "cle": "nouvelle-caledonie-natifs-1",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Philippe Vigier",
+      "texte": "Le vote conforme de cette proposition de loi organique constitue un petit pas, mais c’est le pas de la confiance."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-2",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Philippe Vigier",
+      "texte": "L’ouverture du corps électoral aux 10 569 natifs constitue un ajustement mesuré, qui n’est pas de nature à bouleverser les équilibres existants."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-3",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Patrick Hetzel",
+      "texte": "Face à l’immobilisme, nous faisons le choix de la responsabilité ; face au blocage, nous considérons qu’il faut faire le choix de la démocratie ; face à certaines fractures, il faut faire plus que jamais le choix de la République."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-4",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Bastien Lachaud",
+      "texte": "Voilà pourquoi nous voterons contre cette proposition de loi organique, alors que, tout comme les représentants du peuple premier, nous ne sommes nullement opposés à l’ouverture du corps électoral."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-5",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Sabrina Sebaihi",
+      "texte": "Le groupe Écologiste et social votera contre la proposition de loi organique parce que, depuis le début de ce débat, nous entendons une partie des députés qui siègent dans cet hémicycle nous expliquer qu’il n’y aura finalement pas de discussion autour d’un processus de décolonisation."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-6",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Philippe Gosselin",
+      "texte": "Le Sénat a adopté lundi soir cette proposition de loi organique par une très large majorité – 304 voix pour, 20 voix contre."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-7",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Bastien Lachaud",
+      "texte": "Ce sont 3 000 personnes au moins qui sont mal inscrites ou ont été radiées indûment de la liste électorale spéciale, tandis que des dizaines de bureaux de vote ont été regroupés lors des élections municipales, excluant de fait certains quartiers populaires, majoritairement kanaks, du scrutin."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-8",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Philippe Gosselin",
+      "texte": "Bien sûr, il ne répond pas à toutes les attentes ; bien sûr, il peut décevoir ; mais il constitue, permettez-moi d’y insister, le seul compromis possible dans les délais qui sont les nôtres."
+    },
+    {
+      "cle": "nouvelle-caledonie-natifs-9",
+      "seance": "CRSANR5L17S2026O1N238",
+      "auteur": "Jean-Victor Castor",
+      "texte": "Vous ne serez pas étonné que le groupe de la Gauche démocrate et républicaine vote contre la proposition de loi, pour une raison simple. Comme notre collègue Serva l’a rappelé et comme je l’ai moi-même souligné à plusieurs reprises lors des groupes de contact, où est la sincérité du gouvernement dans le processus, en particulier depuis les derniers événements ?"
+    }
+  ]
+}

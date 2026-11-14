@@ -1,0 +1,495 @@
+{
+  "id": "legitime-defense-forces-ordre",
+  "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre dans l'exercice de leurs fonctions",
+  "theme": "securite",
+  "nb_phrases": 22,
+  "statut": "En discussion",
+  "resume": "Le 7 juillet 2026, l'Assemblée nationale a adopté en première lecture, par 313 voix contre 199, la proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre. Le texte modifie l'article L. 435‑1 du code de la sécurité intérieure : il prévoit que les agents de la police nationale et les militaires de la gendarmerie nationale peuvent faire un usage absolument nécessaire et strictement proportionné de leur arme dans le but exclusif d'empêcher la réitération, dans un temps rapproché, d'un ou de plusieurs meurtres ou tentatives de meurtre venant d'être commis, et pose une présomption d'absolue nécessité et de stricte proportionnalité renversable par tout élément de preuve contraire. Transmis au Sénat le 7 juillet 2026, le texte n'est pas définitivement adopté.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/presomption_legitime_defense_forces_ordre",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0328_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 7987 du 7 juillet 2026 (313 pour, 199 contre, 5 abstentions, 1 non-votant ; 517 votants, 512 suffrages exprimés). Texte adopté : n° 328. Article unique lu dans le texte adopté publié en open data par l'Assemblée nationale."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V7987",
+    "date": "2026-07-07",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 7987",
+    "pour": 313,
+    "contre": 199,
+    "abstention": 5,
+    "non_votants": 1,
+    "votants": 517,
+    "suffrages_exprimes": 512,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble de la proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre, dans l'exercice de leurs fonctions (première lecture).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 59,
+  "chronologie": [
+    {
+      "date": "2024-12-03",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l'Assemblée nationale (texte n° 691)."
+    },
+    {
+      "date": "2024-12-03",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi à la commission des lois."
+    },
+    {
+      "date": "2026-01-07",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d'un rapporteur."
+    },
+    {
+      "date": "2026-01-14",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 2342. La commission saisie au fond rejette le texte."
+    },
+    {
+      "date": "2026-01-22",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique sur le texte de la proposition de loi rejeté par la commission."
+    },
+    {
+      "date": "2026-07-07",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte la proposition de loi en première lecture (scrutin public n° 7987 : 313 pour, 199 contre, 5 abstentions)."
+    },
+    {
+      "date": "2026-07-07",
+      "chambre": "SENAT",
+      "texte": "Transmission du texte adopté au Sénat (texte n° 866)."
+    },
+    {
+      "date": "2026-07-07",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi à la commission des lois du Sénat."
+    },
+    {
+      "date": "2026-11-10",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport n° 167 et du texte de la commission n° 168 au Sénat."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "supprime",
+      "texte": "I. – (Supprimé)",
+      "article": "Article unique",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "II (nouveau). – Le code de la sécurité intérieure est ainsi modifié :",
+      "article": "Article unique",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° L’article L. 435‑1 est ainsi modifié :",
+      "article": "Article unique",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "b) Le 5° est abrogé ;",
+      "article": "Article unique",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "c) Sont ajoutés des II et III ainsi rédigés :",
+      "article": "Article unique",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« II. – Dans l’exercice de leurs fonctions, les agents de la police nationale et les militaires de la gendarmerie nationale peuvent faire un usage absolument nécessaire et strictement proportionné de leur arme dans le but exclusif d’empêcher la réitération, dans un temps rapproché, d’un ou de plusieurs meurtres ou tentatives de meurtre venant d’être commis, lorsqu’ils ont des raisons réelles et objectives d’estimer que cette réitération est probable au regard des informations dont ils disposent au moment où ils font usage de leurs armes.",
+      "article": "Article unique",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« III. – Lorsqu’ils font usage de leurs armes, les agents de la police nationale et les militaires de la gendarmerie nationale sont présumés avoir agi dans l’un des cas autorisés par le présent article conformément aux conditions d’absolue nécessité et de stricte proportionnalité.",
+      "article": "Article unique",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Cette présomption peut, à tout moment, être renversée par tout élément de preuve contraire. » ;",
+      "article": "Article unique",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "4° L’article L. 511‑5‑1 est ainsi modifié :",
+      "article": "Article unique",
+      "alinea": "alinéa 11"
+    },
+    {
+      "tag": "adopte",
+      "texte": "III (nouveau). – Le code pénitentiaire est ainsi modifié :",
+      "article": "Article unique",
+      "alinea": "alinéa 14"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article unique",
+      "note": "Article unique du texte adopté n° 328. Le tableau du 2° du III (articles L. 753‑1, L. 763‑1 et L. 773‑1 du code pénitentiaire) n'est pas repris dans les paragraphes : c'est une mise en forme tabulaire, pas un alinéa.",
+      "paragraphes": [
+        "I. – (Supprimé)",
+        "II (nouveau). – Le code de la sécurité intérieure est ainsi modifié :",
+        "1° L’article L. 435‑1 est ainsi modifié :",
+        "a) Au début du premier alinéa, est ajoutée la mention : « I. – » ;",
+        "b) Le 5° est abrogé ;",
+        "c) Sont ajoutés des II et III ainsi rédigés :",
+        "« II. – Dans l’exercice de leurs fonctions, les agents de la police nationale et les militaires de la gendarmerie nationale peuvent faire un usage absolument nécessaire et strictement proportionné de leur arme dans le but exclusif d’empêcher la réitération, dans un temps rapproché, d’un ou de plusieurs meurtres ou tentatives de meurtre venant d’être commis, lorsqu’ils ont des raisons réelles et objectives d’estimer que cette réitération est probable au regard des informations dont ils disposent au moment où ils font usage de leurs armes.",
+        "« III. – Lorsqu’ils font usage de leurs armes, les agents de la police nationale et les militaires de la gendarmerie nationale sont présumés avoir agi dans l’un des cas autorisés par le présent article conformément aux conditions d’absolue nécessité et de stricte proportionnalité. Cette présomption peut, à tout moment, être renversée par tout élément de preuve contraire. » ;",
+        "2° Après le mot : « loi », la fin du premier alinéa des articles L. 445‑1, L. 446‑1 et L. 447‑1 est ainsi rédigée : « n° du visant à reconnaître une présomption de légitime défense pour les forces de l’ordre dans l’exercice de leurs fonctions, les dispositions du présent titre, sous réserve des adaptations suivantes : » ;",
+        "3° Après le mot : « loi », la fin de l’article L. 448‑1 est ainsi rédigée : « n° du visant à reconnaître une présomption de légitime défense pour les forces de l’ordre dans l’exercice de leurs fonctions. » ;",
+        "4° L’article L. 511‑5‑1 est ainsi modifié :",
+        "a) Après le mot : « alinéa », sont insérés les mots : « du I » ;",
+        "b) À la fin, la seconde occurrence des mots : « article L. 435‑1 » est remplacée par la référence : « I ».",
+        "III (nouveau). – Le code pénitentiaire est ainsi modifié :",
+        "1° Au dernier alinéa de l’article L. 227‑1, après la référence : « 2° », sont insérés les mots : « du I » ;",
+        "2° L’avant‑dernière ligne du tableau du second alinéa des articles L. 753‑1, L. 763‑1 et L. 773‑1 est remplacée par trois lignes ainsi rédigées :"
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "313",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "199",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "5",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "517",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "512",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Que prévoit le III inséré à l'article L. 435‑1 du code de la sécurité intérieure ?",
+      "options": [
+        "Une présomption d'absolue nécessité et de stricte proportionnalité, renversable par tout élément de preuve contraire",
+        "Une interdiction de faire usage de l'arme en dehors d'un flagrant délit",
+        "Une autorisation permanente de faire usage de l'arme en service"
+      ],
+      "bonne": 0,
+      "source": "Article unique, II, 1°, c), III inséré à l’article L. 435-1 du code de la sécurité intérieure, texte adopté n° 328"
+    },
+    {
+      "question": "Dans quel but exclusif le II autorise-t-il l'usage de l'arme ?",
+      "options": [
+        "Empêcher la réitération, dans un temps rapproché, d'un ou plusieurs meurtres ou tentatives de meurtre venant d'être commis",
+        "Empêcher tout refus d'obtempérer lors d'un contrôle routier",
+        "Protéger les biens lors d'une manifestation"
+      ],
+      "bonne": 0,
+      "source": "Article unique, II, 1°, c), II inséré à l’article L. 435-1 du code de la sécurité intérieure, texte adopté n° 328"
+    },
+    {
+      "question": "Quel est le résultat du scrutin public n° 7987 du 7 juillet 2026 ?",
+      "options": [
+        "313 pour, 199 contre, 5 abstentions",
+        "199 pour, 313 contre, 5 abstentions",
+        "313 pour, 199 contre, 1 abstention"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 7987 du 7 juillet 2026"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l'article unique",
+    "texte": "Le texte modifie l'article **L. 435‑1 du code de la sécurité intérieure** en ajoutant un II sur l'usage de l'arme et un III qui pose une **présomption d'absolue nécessité et de stricte proportionnalité**, renversable par tout élément de preuve contraire.",
+    "points": [
+      "L'usage de l'arme est prévu au **but exclusif** d'empêcher la réitération, dans un temps rapproché, d'un ou plusieurs meurtres ou tentatives de meurtre venant d'être commis.",
+      "La présomption joue lorsqu'un agent fait usage de ses armes ; elle **peut être renversée à tout moment** par tout élément de preuve contraire.",
+      "Le **5° de l'article L. 435‑1 est abrogé** ; le texte adapte aussi les renvois des codes de la sécurité intérieure et pénitentiaire."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-08",
+        "titre": "«L’Assemblée transformée en théâtre d’agitation» : les images d’Assa Traoré perturbant le vote de la présomption de légitime défense des forces de l’ordre",
+        "url": "https://www.lefigaro.fr/politique/l-assemblee-transformee-en-theatre-d-agitation-les-images-d-assa-traore-perturbant-le-vote-de-la-presomption-de-legitime-defense-des-forces-de-l-ordre-20260708"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-07",
+        "titre": "Que dit le texte sur la légitime défense des policiers qui inquiète la gauche et bien au-delà",
+        "url": "https://www.huffingtonpost.fr/politique/article/que-dit-le-texte-sur-la-legitime-defense-des-policiers-qui-inquiete-la-gauche-et-bien-au-dela_284429.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l'hémicycle, lors de la discussion du 22 janvier 2026. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent une présomption pour les forces de l'ordre",
+    "contre_titre": "Ils dénoncent une inversion de la charge de la preuve",
+    "pour": [
+      {
+        "nom": "Éric Pauget",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Comment l’État pourrait-il exercer le monopole de la force légitime si nos policiers et nos gendarmes ne bénéficient pas d’une véritable présomption de légitime défense pour l’appliquer ?",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+      },
+      {
+        "nom": "Pierre Cazeneuve",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le groupe Ensemble pour la République, fort de cette volonté d’encadrer et de mieux protéger nos forces de l’ordre, soutiendra la proposition gouvernementale.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Pouria Amirshahi",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "C’est une rupture assumée avec les principes les plus élémentaires de notre droit pénal. Pire encore, il reviendrait désormais au parquet de prouver que l’usage de l’arme était manifestement disproportionné.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+      },
+      {
+        "nom": "Elsa Faucillon",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Créer par la loi une présomption de légitimité, ou toute autre forme de protection automatique, c’est envoyer un signal terrible : celui que la force publique pourrait s’exercer sans contrepartie, sans exigence de contrôle et sans responsabilité.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122"
+      }
+    ],
+    "note": "Citations exactes : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d'entrées et un volume de parole comparable. Chaque citation est composée de phrases complètes, sans mot ajouté ni modifié."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres prononcés dans l'hémicycle ont été confrontés à des documents publiés. Deux trouvent une réponse dans le rapport d'information n° 2692 du 29 mai 2024 sur les refus d'obtempérer ; pour le troisième, aucun document de référence n'a été retrouvé : il reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "les chiffres ont été multipliés par cinq",
+        "chiffre": "cinq",
+        "auteur": "Elsa Faucillon",
+        "role": "Députée",
+        "citation": "Depuis la loi relative à la sécurité publique de 2017, dite loi Cazeneuve, le nombre de personnes abattues au cours de refus d’obtempérer a explosé –⁠ les chiffres ont été multipliés par cinq.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122",
+        "verdict": "non documenté",
+        "explication": "L'oratrice rapporte une multiplication par cinq du nombre de personnes abattues lors de refus d'obtempérer depuis la loi du 28 février 2017. Le rapport ou le décompte qui établirait ce chiffre n'a pas été retrouvé sur un site officiel : nous n'avons pas pu le lire ni le vérifier à sa source. Il n'est donc pas repris comme un fait.",
+        "sources": []
+      },
+      {
+        "affirmation": "les tirs contre les conducteurs ont été multipliés par six",
+        "chiffre": "six",
+        "auteur": "Pouria Amirshahi",
+        "role": "Député",
+        "citation": "Depuis la loi Cazeneuve de 2017, l’usage des armes à feu par les forces de l’ordre a explosé : les tirs contre les conducteurs ont été multipliés par six, tandis que le nombre de décès liés aux interventions policières a suivi la même trajectoire.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122",
+        "verdict": "nuancé",
+        "explication": "Le rapport d'information n° 2692 du 29 mai 2024 sur les refus d'obtempérer donne une autre mesure : la moyenne annuelle des tirs contre des véhicules en mouvement dans la police est de 122 pour 2012-2016 et de 156 pour 2018-2022, et le nombre de tirs baisse de 32 % entre 2017 et 2022. Le rapport ne documente pas une multiplication par six ; il décrit une hausse de la moyenne, suivie d'une baisse.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport d'information n° 2692 (29 mai 2024)",
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/RINFANR5L16B2692.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "l'obligation de participer trois fois par an",
+        "chiffre": "trois",
+        "auteur": "Elsa Faucillon",
+        "role": "Députée",
+        "citation": "Il faudrait par ailleurs faciliter l’accès aux formations de tir auxquelles les agents ont l’obligation de participer trois fois par an.",
+        "seance": "CRSANR5L17S2026O1N122",
+        "date": "2026-01-22",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N122",
+        "verdict": "confirmé",
+        "explication": "Le rapport d'information n° 2692 du 29 mai 2024 indique que les formations au tir des policiers doivent être réparties sur au moins trois séances par an, pour un tir minimum annuel de 90 cartouches, dans le cadre fixé par l'arrêté du 27 juillet 2015. L'obligation de trois séances annuelles est donc documentée.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — rapport d'information n° 2692 (29 mai 2024)",
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/RINFANR5L16B2692.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n'est publié ici que s'il a été prononcé dans l'hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 69,
+      "pour": 0,
+      "contre": 69,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 17,
+      "pour": 0,
+      "contre": 17,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 62,
+      "pour": 0,
+      "contre": 62,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 29,
+      "pour": 0,
+      "contre": 29,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 17,
+      "pour": 9,
+      "contre": 8,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 68,
+      "pour": 55,
+      "contre": 12,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 34,
+      "pour": 28,
+      "contre": 1,
+      "abstention": 5,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 31,
+      "pour": 31,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 48,
+      "pour": 48,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 122,
+      "pour": 122,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 14,
+      "pour": 14,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 7,
+      "pour": 6,
+      "contre": 1,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

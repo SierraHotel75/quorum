@@ -1,0 +1,543 @@
+{
+  "id": "ordre-public",
+  "titre": "Projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l’ordre public, la sécurité et la tranquillité de nos concitoyens",
+  "theme": "securite",
+  "nb_phrases": 50,
+  "statut": "Adopté",
+  "resume": "Le projet de loi dit « Ripost » a été adopté définitivement le 21 juillet 2026 : le Sénat a adopté le texte de la commission mixte paritaire, puis l’Assemblée nationale l’a adopté par 351 voix pour, 179 contre et 7 abstentions. Saisi le 24 juillet 2026, le Conseil constitutionnel a censuré plusieurs dispositions par sa décision n° 2026-915 DC du 14 août 2026, dont le paragraphe I de l’article 1er et les articles 10, 18 et 26. Les dispositions de l’article 3 relatives aux rassemblements festifs à caractère musical sont conformes, les mots « la location ne peut avoir lieu » de l’article L. 211‑7‑1 étant assortis de la réserve d’interprétation du paragraphe 67.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53980",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0340_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8433 du 21 juillet 2026, vote sur l’ensemble du texte de la commission mixte paritaire. Texte adopté : n° 340 (T.A. n° 340), après adoption du même texte par le Sénat (T.A. n° 164). Article 3 lu dans le texte adopté publié par l’Assemblée nationale. Décision du Conseil constitutionnel n° 2026-915 DC du 14 août 2026."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8433",
+    "date": "2026-07-21",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8433",
+    "pour": 351,
+    "contre": 179,
+    "abstention": 7,
+    "non_votants": 2,
+    "votants": 537,
+    "suffrages_exprimes": 530,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l’ensemble du projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l’ordre public, la sécurité et la tranquillité de nos concitoyens (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 38,
+  "chronologie": [
+    {
+      "date": "2026-03-25",
+      "chambre": "SENAT",
+      "texte": "Dépôt du projet de loi au Sénat, avec engagement immédiat de la procédure accélérée par le Gouvernement."
+    },
+    {
+      "date": "2026-05-06",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission des lois du Sénat."
+    },
+    {
+      "date": "2026-05-26",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture."
+    },
+    {
+      "date": "2026-05-28",
+      "chambre": "AN",
+      "texte": "Dépôt du texte adopté par le Sénat à l’Assemblée nationale."
+    },
+    {
+      "date": "2026-06-24",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission des lois de l’Assemblée nationale."
+    },
+    {
+      "date": "2026-07-06",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique."
+    },
+    {
+      "date": "2026-07-15",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte en première lecture."
+    },
+    {
+      "date": "2026-07-20",
+      "chambre": "CMP",
+      "texte": "Dépôt des rapports de la commission mixte paritaire et de son texte (n° 3070‑A0 à l’Assemblée nationale, n° 905 au Sénat)."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "CMP",
+      "texte": "Le Sénat adopte le texte de la commission mixte paritaire (T.A. n° 164), puis l’Assemblée nationale adopte définitivement le même jour le texte (T.A. n° 340, scrutin n° 8433)."
+    },
+    {
+      "date": "2026-07-24",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Saisine du Conseil constitutionnel par plus de soixante députés."
+    },
+    {
+      "date": "2026-08-14",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Décision n° 2026-915 DC : non-conformité partielle, avec une réserve d’interprétation."
+    },
+    {
+      "date": "2026-08-19",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Publication de la loi au Journal officiel (JORF n° 0192 du 19 août 2026)."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "I. – Le chapitre Ier du titre Ier du livre II du code de la sécurité intérieure est ainsi modifié :",
+      "article": "Article 3",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "a) Après le mot : « fin », sont insérés les mots : « , susceptibles de réunir plus de 250 personnes » ;",
+      "article": "Article 3",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "b) Les mots : « à leur importance, » sont supprimés ;",
+      "article": "Article 3",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 211‑7‑1. – Lorsqu’un contrat de louage mentionné à l’article 1709 du code civil a pour objet un matériel de diffusion de musique amplifiée, le loueur est tenu de conserver, pendant une durée de trois mois, les informations relatives à l’identité du locataire et aux caractéristiques du matériel loué. Ces informations sont accessibles dans le seul cadre d’une procédure administrative ou judiciaire.",
+      "article": "Article 3",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Le fait de ne pas respecter l’obligation mentionnée au deuxième alinéa est puni de deux mois d’emprisonnement et de 3 750 euros d’amende. » ;",
+      "article": "Article 3",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 211‑15. – Est puni de deux ans d’emprisonnement et de 30 000 euros d’amende le fait de contribuer, de manière directe ou indirecte, à la préparation, à la mise en place ou au déroulement d’un rassemblement mentionné à l’article L. 211‑5 :",
+      "article": "Article 3",
+      "alinea": "alinéa 11"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 1° La confiscation obligatoire du matériel ayant servi à commettre l’infraction si la personne en est le propriétaire ou, sous réserve des droits du propriétaire de bonne foi, si elle en a la libre disposition.",
+      "article": "Article 3",
+      "alinea": "alinéa 18"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 211‑15‑4. – Le fait de participer à un rassemblement mentionné à l’article L. 211‑15 dont le caractère illégal a été porté à la connaissance du public en application du dernier alinéa du même article L. 211‑15 est puni de six mois d’emprisonnement et de 7 500 euros d’amende.",
+      "article": "Article 3",
+      "alinea": "alinéa 25"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« L’action publique peut être éteinte, y compris en cas de récidive, dans les conditions prévues aux articles 495‑17 à 495‑25 du code de procédure pénale, par le versement d’une amende forfaitaire d’un montant de 500 euros. Le montant de l’amende forfaitaire minorée est de 400 euros et le montant de l’amende forfaitaire majorée est de 1 000 euros. »",
+      "article": "Article 3",
+      "alinea": "alinéa 26"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 5° bis Le délit de participation à un rassemblement festif à caractère musical prévu à l’article L 211‑15‑4 du même code ; ».",
+      "article": "Article 3",
+      "alinea": "alinéa 28"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 3",
+      "note": "Chapitre Ier du titre Ier du livre II du code de la sécurité intérieure, tel que modifié par l’article 3.",
+      "paragraphes": [
+        "I. – Le chapitre Ier du titre Ier du livre II du code de la sécurité intérieure est ainsi modifié :",
+        "1° La première phrase du premier alinéa de l’article L. 211‑5 est ainsi modifiée :",
+        "a) Après le mot : « fin », sont insérés les mots : « , susceptibles de réunir plus de 250 personnes » ;",
+        "b) Les mots : « à leur importance, » sont supprimés ;",
+        "2° Après l’article L. 211‑7, il est inséré un article L. 211‑7‑1 ainsi rédigé :",
+        "« Art. L. 211‑7‑1. – Lorsqu’un contrat de louage mentionné à l’article 1709 du code civil a pour objet un matériel de diffusion de musique amplifiée, le loueur est tenu de conserver, pendant une durée de trois mois, les informations relatives à l’identité du locataire et aux caractéristiques du matériel loué. Ces informations sont accessibles dans le seul cadre d’une procédure administrative ou judiciaire.",
+        "« Lorsque le contrat de louage a pour objet un matériel de diffusion de musique amplifiée d’une puissance supérieure à un seuil fixé par un arrêté conjoint du ministre de l’intérieur et des ministres chargés de l’économie et de la santé, le loueur est tenu de s’assurer que le rassemblement ou la manifestation envisagés ont fait l’objet de l’une des déclarations mentionnées à l’article L. 211‑5 du présent code et de conserver une copie de cette déclaration dans les conditions et aux fins mentionnées au premier alinéa du présent article. À défaut, la location ne peut avoir lieu et la tentative de transaction suspecte fait l’objet d’un signalement au représentant de l’État dans le département.",
+        "« Le fait de ne pas respecter l’obligation mentionnée au deuxième alinéa est puni de deux mois d’emprisonnement et de 3 750 euros d’amende. » ;",
+        "3° La sous‑section 2 de la section 5 est ainsi modifiée :",
+        "a) L’article L. 211‑15 est ainsi rédigé :",
+        "« Art. L. 211‑15. – Est puni de deux ans d’emprisonnement et de 30 000 euros d’amende le fait de contribuer, de manière directe ou indirecte, à la préparation, à la mise en place ou au déroulement d’un rassemblement mentionné à l’article L. 211‑5 :",
+        "« 1° Sans déclaration préalable ;",
+        "« 2° Ou après avoir établi une déclaration incomplète ou inexacte de nature à tromper volontairement sur l’objet ou sur les conditions du rassemblement projeté ;",
+        "« 3° Ou en violation d’une interdiction prononcée par le représentant de l’État dans le département ou, à Paris, par le préfet de police.",
+        "« L’autorité de police administrative porte à la connaissance du public par tous moyens appropriés le caractère illégal du rassemblement. » ;",
+        "b) Sont ajoutés des articles L. 211‑15‑1 à L. 211‑15‑4 ainsi rédigés :",
+        "« Art. L. 211‑15‑1. – Les personnes physiques coupables du délit prévu à l’article L. 211‑15 encourent également les peines complémentaires suivantes :",
+        "« 1° La confiscation obligatoire du matériel ayant servi à commettre l’infraction si la personne en est le propriétaire ou, sous réserve des droits du propriétaire de bonne foi, si elle en a la libre disposition. La juridiction peut toutefois, par une décision spécialement motivée, ne pas prononcer cette peine ;",
+        "« 2° La confiscation du véhicule ayant transporté du matériel qui a servi à commettre l’infraction si la personne en est le propriétaire ou, sous réserve des droits du propriétaire de bonne foi, si elle en a la libre disposition ;",
+        "« 3° La suspension pour une durée de trois ans au plus du permis de conduire, cette suspension pouvant être limitée à la conduite en dehors de l’activité professionnelle ;",
+        "« 4° L’annulation du permis de conduire avec l’interdiction de solliciter la délivrance d’un nouveau permis pendant trois ans au plus ;",
+        "« 5° L’interdiction d’organiser un rassemblement mentionné à l’article L. 211‑5.",
+        "« Art. L. 211‑15‑2. – En cas de condamnation pour le délit prévu à l’article L. 211‑15, le tribunal peut ordonner des mesures destinées à remettre en état les lieux auxquels il a été porté atteinte ou à réparer les dommages causés à l’environnement, dans un délai qu’il détermine. L’injonction peut être assortie d’une astreinte journalière au plus égale à 3 000 euros, pour une durée qui ne peut excéder un an.",
+        "« Art. L. 211‑15‑3. – Les personnes morales déclarées responsables pénalement, dans les conditions prévues à l’article 121‑2 du code pénal, de l’infraction définie à l’article L. 211‑15 du présent code encourent, outre l’amende suivant les modalités prévues à l’article 131‑38 du code pénal, les peines prévues aux 8° et 12° de l’article 131‑39 du même code.",
+        "« Art. L. 211‑15‑4. – Le fait de participer à un rassemblement mentionné à l’article L. 211‑15 dont le caractère illégal a été porté à la connaissance du public en application du dernier alinéa du même article L. 211‑15 est puni de six mois d’emprisonnement et de 7 500 euros d’amende.",
+        "« L’action publique peut être éteinte, y compris en cas de récidive, dans les conditions prévues aux articles 495‑17 à 495‑25 du code de procédure pénale, par le versement d’une amende forfaitaire d’un montant de 500 euros. Le montant de l’amende forfaitaire minorée est de 400 euros et le montant de l’amende forfaitaire majorée est de 1 000 euros. »",
+        "II. – Après le 5° de l’article 398‑1 du code de procédure pénale, il est inséré un 5° bis ainsi rédigé :",
+        "« 5° bis Le délit de participation à un rassemblement festif à caractère musical prévu à l’article L 211‑15‑4 du même code ; »."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "351",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "179",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "7",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "537",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "530",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "2",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel seuil de participants l’article 3 introduit-il dans le régime de déclaration ?",
+      "options": [
+        "Plus de 250 personnes",
+        "Plus de 500 personnes",
+        "Plus de 1 000 personnes"
+      ],
+      "bonne": 0,
+      "source": "Article 3, 1° a), du texte adopté n° 340"
+    },
+    {
+      "question": "Que doit vérifier le loueur de matériel de diffusion de musique amplifiée au-delà du seuil de puissance fixé par arrêté ?",
+      "options": [
+        "Que le rassemblement a fait l’objet d’une des déclarations prévues à l’article L. 211‑5",
+        "Que le locataire dispose d’une autorisation préfectorale individuelle",
+        "Que le matériel loué est couvert par une assurance"
+      ],
+      "bonne": 0,
+      "source": "Article 3, 2°, article L. 211‑7‑1 du code de la sécurité intérieure"
+    },
+    {
+      "question": "Quel décompte a obtenu le texte de la commission mixte paritaire le 21 juillet 2026 ?",
+      "options": [
+        "351 pour, 179 contre, 7 abstentions",
+        "351 pour, 179 contre, 2 abstentions",
+        "179 pour, 351 contre, 7 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8433 du 21 juillet 2026"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article",
+    "texte": "Cet article inscrit le seuil de **plus de 250 personnes** dans le régime de déclaration des rassemblements festifs à caractère musical, oblige les **loueurs de matériel de diffusion de musique amplifiée** à vérifier cette déclaration au-delà d’un seuil de puissance fixé par arrêté, et crée de **nouvelles peines** pour les organisateurs comme pour les participants.",
+    "points": [
+      "Le régime de déclaration vise les rassemblements **susceptibles de réunir plus de 250 personnes** (article 3, 1° a, article L. 211‑5 du code de la sécurité intérieure).",
+      "Le loueur qui ne vérifie pas la déclaration encourt **deux mois d’emprisonnement et 3 750 euros d’amende** (article 3, 2°, article L. 211‑7‑1).",
+      "Participer à un rassemblement dont le caractère illégal a été rendu public est puni de **six mois d’emprisonnement et 7 500 euros d’amende**, avec une amende forfaitaire de **500 euros** (article 3, 3° b, article L. 211‑15‑4)."
+    ]
+  },
+  "conseil_constitutionnel": {
+    "decision": "n° 2026-915 DC",
+    "date": "2026-08-14",
+    "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026915DC.htm",
+    "sens": "Non conformité partielle - réserve",
+    "texte": "Le Conseil constitutionnel a déclaré contraires à la Constitution, à l’article 1er de son dispositif, le paragraphe I de l’article 1er, le deuxième alinéa du 3° du paragraphe III de l’article 1er, les 1° et 13° du paragraphe I de l’article 7, l’article 10, le paragraphe II de l’article 14, les articles 18 et 26, le 4° de l’article 39, l’article 41, le paragraphe I de l’article 46, le paragraphe II de l’article 47 et l’article 65 de la loi.",
+    "article_3": "Sont conformes à la Constitution le premier alinéa de l’article L. 211‑15 et l’article L. 211‑15‑4 du code de la sécurité intérieure, dans leur rédaction issue de l’article 3. Les mots « la location ne peut avoir lieu » figurant à la seconde phrase du deuxième alinéa de l’article L. 211‑7‑1 sont conformes sous la réserve du paragraphe 67.",
+    "reserve": "Paragraphe 67 : l’interdiction de location ne s’applique qu’aux contrats de location de matériel ayant pour cause un ou plusieurs rassemblements ou manifestations déterminés, et ne fait pas obstacle à la location lorsque le rassemblement en cause ne relève pas d’une des obligations de déclaration mentionnées à l’article L. 211‑5."
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Monde",
+        "date": "2026-07-22",
+        "titre": "La loi Ripost, visant à lutter contre des phénomènes qui troublent l’ordre public, adoptée par le Parlement",
+        "url": "https://www.lemonde.fr/societe/article/2026/07/22/la-loi-ripost-visant-a-lutter-contre-des-phenomenes-qui-troublent-l-ordre-public-adoptee-par-le-parlement_6729380_3224.html"
+      },
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-21",
+        "titre": "Le Parlement adopte définitivement le projet de loi Ripost sur la tranquillité publique",
+        "url": "https://www.lefigaro.fr/politique/le-parlement-adopte-definitivement-le-projet-de-loi-ripost-sur-la-tranquillite-publique-20260721"
+      }
+    ],
+    "contre_titre": "Presse numérique et spécialisée",
+    "contre": [
+      {
+        "media": "L'Humanité",
+        "date": "2026-07-21",
+        "titre": "Répression des free parties, vente de protoxyde d’azote interdite… Que contient la loi Ripost définitivement adoptée par le Parlement ?",
+        "url": "https://www.humanite.fr/politique/assemblee-nationale/repression-des-free-parties-vente-de-protoxyde-dazote-interdite-que-contient-la-version-de-la-loi-ripost-soumise-au-vote-definitif-du-parlement"
+      },
+      {
+        "media": "LCP",
+        "date": "2026-07-22",
+        "titre": "Protoxyde d'azote, rodéos urbains, free parties... Le Parlement adopte définitivement le projet de loi Ripost de Laurent Nuñez",
+        "url": "https://lcp.fr/actualites/protoxyde-d-azote-rodeos-urbains-free-parties-le-parlement-adopte-definitivement-le"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l’hémicycle du 21 juillet 2026. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte",
+    "contre_titre": "Ils le refusent",
+    "pour": [
+      {
+        "nom": "Xavier Albertini",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Nous vous proposons donc d’entériner un texte équilibré, proportionné, et qui témoigne d’une vraie ambition d’efficacité pour les forces de l’ordre au service de nos concitoyens.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024"
+      },
+      {
+        "nom": "Christophe Marion",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Nous assumons de faire ce que les Français exigent de nous : assurer leur sécurité et répondre aux besoins opérationnels réels des forces de l’ordre.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Sacha Houlié",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Par conséquent, ce projet de loi ne recueillera ni le soutien ni les suffrages des députés du groupe Socialistes et apparentés.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024"
+      },
+      {
+        "nom": "Pouria Amirshahi",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "C’est oublier des décennies de politiques publiques appuyées sur les études de sociologues et les enquêtes de terrain.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "verifications": {
+    "chapeau": "Deux chiffres du débat ont pu être rattachés à un document publié, le rapport de la commission des lois du Sénat sur ce texte. Le troisième, le total d’amendements adoptés, n’a pas été retrouvé : il reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "plus de 300 amendements ont été adoptés à l’Assemblée et au Sénat",
+        "chiffre": "300",
+        "auteur": "Laurent Nuñez",
+        "role": "Ministre de l’intérieur",
+        "citation": "Au fil des débats, plus de 300 amendements ont été adoptés à l’Assemblée et au Sénat, en commission et en séance publique.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024",
+        "verdict": "non documenté",
+        "explication": "Le ministre avance un total d’amendements adoptés sans désigner de décompte publié. Aucun document consulté ne permet de vérifier ce total : le chiffre reste celui qui a été prononcé, sans confirmation extérieure.",
+        "sources": []
+      },
+      {
+        "affirmation": "Vous exposez ainsi 25 millions de personnes à l’arbitraire",
+        "chiffre": "25 millions",
+        "auteur": "Pouria Amirshahi",
+        "role": "Député",
+        "citation": "Vous exposez ainsi 25 millions de personnes à l’arbitraire.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024",
+        "verdict": "confirmé",
+        "explication": "Le rapport de la commission des lois du Sénat sur ce texte (n° 601, 2025-2026) estime que le dispositif de l’article 9 concerne « de l’ordre de 25 millions de personnes concernées environ ». Le chiffre prononcé correspond à cette estimation, qui reste un ordre de grandeur.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport de la commission des lois n° 601 (2025-2026)",
+            "url": "https://www.senat.fr/rap/l25-601/l25-601_mono.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "337 rave-parties illégales ont eu lieu en 2025",
+        "chiffre": "337",
+        "auteur": "Benoît Blanchard",
+        "role": "Député",
+        "citation": "Pourtant, les chiffres sont têtus : le nombre de rodéos motorisés a augmenté de 142 % entre 2019 et 2024 ; celui des refus d’obtempérer a crû de 24 % en un an ; 337 rave-parties illégales ont eu lieu en 2025.",
+        "seance": "CRSANR5L17S2026E1N024",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N024",
+        "verdict": "confirmé",
+        "explication": "Le même rapport indique que 337 rave-parties illégales se sont tenues en 2025, d’après les données de la direction générale de la police nationale et de la direction générale de la gendarmerie nationale. Le chiffre prononcé correspond à ce recensement, qui porte sur les rassemblements constatés.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport de la commission des lois n° 601 (2025-2026)",
+            "url": "https://www.senat.fr/rap/l25-601/l25-601_mono.html"
+          }
+        ]
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 71,
+      "pour": 0,
+      "contre": 71,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 15,
+      "pour": 0,
+      "contre": 15,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 57,
+      "pour": 0,
+      "contre": 56,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 36,
+      "pour": 0,
+      "contre": 36,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 23,
+      "pour": 18,
+      "contre": 1,
+      "abstention": 4,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 85,
+      "pour": 84,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 32,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DR",
+      "sieges": 47,
+      "pour": 46,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 114,
+      "pour": 114,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 8,
+      "pour": 7,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "id": "plfss-2026",
+  "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+  "theme": "budget",
+  "nb_phrases": 1,
+  "statut": "Adopté",
+  "resume": "Le projet de loi de financement de la sécurité sociale pour 2026 fixe l'objectif national de dépenses d'assurance maladie à 274,4 milliards d'euros. Il suspend la réforme des retraites de 2023 et modifie les recettes, avec une hausse de la CSG sur le capital et une taxe sur les complémentaires santé. L'Assemblée nationale l'a définitivement adopté le 16 décembre 2025 par 247 voix contre 232, après le rejet du texte par le Sénat ; le Conseil constitutionnel a rendu sa décision le 30 décembre 2025.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0199_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 4758 du 16 décembre 2025, lecture définitive du projet de loi de financement de la sécurité sociale pour 2026. Texte adopté : T.A. n° 199. Article 109 lu dans le jeu articles_textes du MCP Hémicycle ; l'article 2 du même texte maintient le total de l'ONDAM 2025 à 265,9 milliards d'euros et en rectifie les sous-objectifs. Débat cité d'après le compte rendu intégral de la première séance du 16 décembre 2025."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V4758",
+    "date": "2025-12-16",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 4758",
+    "pour": 247,
+    "contre": 232,
+    "abstention": 90,
+    "non_votants": 0,
+    "votants": 569,
+    "suffrages_exprimes": 479,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble du projet de loi de financement de la sécurité sociale pour 2026 (lecture définitive).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 8,
+  "chronologie": [
+    {
+      "date": "2025-10-14",
+      "chambre": "AN",
+      "texte": "Dépôt du projet de loi de financement de la sécurité sociale pour 2026 à l'Assemblée nationale (n° 1907)."
+    },
+    {
+      "date": "2025-10-23",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Dépôt d'une lettre rectificative (n° 1999)."
+    },
+    {
+      "date": "2025-10-29",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt de l'avis de la commission des finances (n° 2049)."
+    },
+    {
+      "date": "2025-11-01",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport de la commission des affaires sociales (n° 2057)."
+    },
+    {
+      "date": "2025-11-13",
+      "chambre": "SENAT",
+      "texte": "Transmission au Sénat du texte adopté par l'Assemblée nationale en première lecture (n° 122)."
+    },
+    {
+      "date": "2025-11-15",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat (n° 131)."
+    },
+    {
+      "date": "2025-11-26",
+      "chambre": "CMP",
+      "texte": "Le Sénat adopte le texte (n° 23) ; la commission mixte paritaire, réunie le même jour, constate son désaccord."
+    },
+    {
+      "date": "2025-12-09",
+      "chambre": "AN",
+      "texte": "Nouvelle lecture : l'Assemblée nationale adopte le texte (n° 188)."
+    },
+    {
+      "date": "2025-12-10",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat (n° 205)."
+    },
+    {
+      "date": "2025-12-12",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte une motion de rejet préalable (n° 28)."
+    },
+    {
+      "date": "2025-12-16",
+      "chambre": "AN",
+      "texte": "Lecture définitive : l'Assemblée nationale adopte définitivement le texte (n° 199)."
+    },
+    {
+      "date": "2025-12-18",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Saisine du Conseil constitutionnel."
+    },
+    {
+      "date": "2025-12-30",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Décision n° 2025-899 DC : non-conformité partielle, plusieurs dispositions étant déclarées contraires à la Constitution."
+    },
+    {
+      "date": "2025-12-31",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Publication au Journal officiel de la loi n° 2025-1403 du 30 décembre 2025 de financement de la sécurité sociale pour 2026."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Pour l'année 2026, l'objectif national de dépenses d'assurance maladie de l'ensemble des régimes obligatoires de base et ses sous-objectifs sont fixés comme suit :",
+      "article": "Article 109",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "(En milliards d'euros)",
+      "article": "Article 109",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Sous-objectif | Objectif de dépenses",
+      "article": "Article 109",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Dépenses de soins de ville | 117,5",
+      "article": "Article 109",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Dépenses relatives aux établissements de santé | 112,8",
+      "article": "Article 109",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Dépenses relatives aux établissements et services pour personnes âgées | 18,3",
+      "article": "Article 109",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Dépenses relatives aux établissements et services pour personnes handicapées | 16",
+      "article": "Article 109",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Dépenses relatives au fonds d'intervention régional et soutien national à l'investissement | 6,4",
+      "article": "Article 109",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Autres prises en charge | 3,3",
+      "article": "Article 109",
+      "alinea": "alinéa 9"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Total | 274,4",
+      "article": "Article 109",
+      "alinea": "alinéa 10"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 109",
+      "note": "Objectif national de dépenses d'assurance maladie pour 2026, tel qu'il figure dans le texte adopté n° 199. Le tableau est reproduit ligne par ligne, sous-objectif puis montant.",
+      "paragraphes": [
+        "Pour l'année 2026, l'objectif national de dépenses d'assurance maladie de l'ensemble des régimes obligatoires de base et ses sous-objectifs sont fixés comme suit :",
+        "(En milliards d'euros)",
+        "Sous-objectif | Objectif de dépenses",
+        "Dépenses de soins de ville | 117,5",
+        "Dépenses relatives aux établissements de santé | 112,8",
+        "Dépenses relatives aux établissements et services pour personnes âgées | 18,3",
+        "Dépenses relatives aux établissements et services pour personnes handicapées | 16",
+        "Dépenses relatives au fonds d'intervention régional et soutien national à l'investissement | 6,4",
+        "Autres prises en charge | 3,3",
+        "Total | 274,4"
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "247",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "232",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "90",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "569",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "479",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "0",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Que fixe l'article 109 du texte adopté le 16 décembre 2025 ?",
+      "options": [
+        "L'objectif national de dépenses d'assurance maladie pour 2026, à 274,4 milliards d'euros",
+        "Le montant de la dotation de l'ONDAM pour 2025",
+        "Le déficit prévisionnel de la branche Maladie pour 2026"
+      ],
+      "bonne": 0,
+      "source": "Article 109 du texte adopté n° 199 ; scrutin n° 4758 du 16 décembre 2025"
+    },
+    {
+      "question": "Par quel décompte le texte a-t-il été définitivement adopté ?",
+      "options": [
+        "247 pour, 232 contre, 90 abstentions",
+        "247 pour, 234 contre, 88 abstentions",
+        "240 pour, 232 contre, 97 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 4758 du 16 décembre 2025"
+    },
+    {
+      "question": "Que s'est-il passé au Sénat le 12 décembre 2025 ?",
+      "options": [
+        "Le Sénat a adopté une motion de rejet préalable, renvoyant le texte à l'Assemblée nationale",
+        "Le Sénat a adopté le texte conforme",
+        "Le Sénat a saisi le Conseil constitutionnel"
+      ],
+      "bonne": 0,
+      "source": "Dossier législatif ; texte du Sénat n° 28 du 12 décembre 2025"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l'article",
+    "texte": "Cet article fixe l'**objectif national de dépenses d'assurance maladie (ONDAM) pour 2026 à 274,4 milliards d'euros**, répartis entre six sous-objectifs.",
+    "points": [
+      "Les **soins de ville** représentent 117,5 milliards d'euros du total et les **établissements de santé** 112,8 milliards.",
+      "Le tableau couvre aussi les établissements pour personnes âgées (18,3), pour personnes handicapées (16), le fonds d'intervention régional (6,4) et les autres prises en charge (3,3).",
+      "L'article 2 du même texte maintient le montant total de l'ONDAM 2025 à 265,9 milliards d'euros et en rectifie les sous-objectifs : c'est le montant auquel le budget 2026 est comparé dans le débat."
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2025-12-16",
+        "titre": "Budget : le projet de loi de financement de la Sécurité sociale a été adopté par 247 voix contre 232",
+        "url": "https://www.lefigaro.fr/conjoncture/en-direct-budget-de-la-secu-ultime-vote-a-l-assemblee-ce-mardi-tractations-sous-tension-sur-celui-de-l-etat-20251216"
+      },
+      {
+        "media": "La Croix",
+        "date": "2025-12-16",
+        "titre": "Le budget 2026 de la Sécu définitivement adopté par l'Assemblée",
+        "url": "https://www.la-croix.com/economie/le-budget-2026-de-la-secu-definitivement-adopte-par-l-assemblee-20251216"
+      }
+    ],
+    "contre_titre": "Presse audiovisuelle et numérique",
+    "contre": [
+      {
+        "media": "LCP",
+        "date": "2025-12-16",
+        "titre": "Les principales mesures du budget de la Sécu, définitivement adopté par l'Assemblée",
+        "url": "https://lcp.fr/actualites/les-principales-mesures-du-budget-de-la-secu-definitivement-adopte-par-l-assemblee"
+      },
+      {
+        "media": "franceinfo",
+        "date": "2025-12-16",
+        "titre": "Budget 2026 : l'Assemblée nationale adopte définitivement le projet de loi de financement de la Sécurité sociale",
+        "url": "https://www.francetvinfo.fr/economie/budget/budget-2026-l-assemblee-nationale-adopte-definitivement-le-projet-de-loi-de-financement-de-la-securite-sociale_7683811.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Trois voix de chaque côté, mot pour mot, dans l'hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils votent pour le texte",
+    "contre_titre": "Ils votent contre",
+    "pour": [
+      {
+        "nom": "Thibault Bazin",
+        "role": "Député, rapporteur général",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce PLFSS pour 2026 n’est pas parfait, mais c’est un budget issu d’un travail parlementaire exigeant au service de l’intérêt général, et nécessaire pour offrir visibilité et stabilité à tous les acteurs.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      },
+      {
+        "nom": "Philippe Vigier",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le groupe Démocrates votera à l’unanimité en faveur de ce PLFSS : n’en déplaise à certains, il est le fruit du travail parlementaire.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      },
+      {
+        "nom": "Camille Galliard-Minier",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce PLFSS est un budget imparfait : un budget de compromis, un budget de transition et un budget de synthèse.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Joëlle Mélin",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Nous allons nous opposer fermement au dernier vote du projet de loi de financement de la sécurité sociale pour 2026.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      },
+      {
+        "nom": "Hadrien Clouet",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Le bilan, c’est un texte qui coupe plus de 3 milliards d’euros à l’hôpital et aux Ehpad, alors même que partout dans le pays, dans chaque établissement, des salariés se battent pour la survie de leur service.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      },
+      {
+        "nom": "Éric Michoux",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce budget de la sécurité sociale, c’est le budget de ceux qui n’aiment pas la France, de ceux qui n’aiment pas l’entreprise, de ceux qui n’aiment pas les retraités, de ceux qui n’aiment pas les Français !",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "verifications": {
+    "chapeau": "Trois chiffres prononcés dans l'hémicycle ont été confrontés à une source publiée. Deux se retrouvent dans le texte adopté ; le troisième renvoie à une évaluation que nous n'avons pas retrouvée.",
+    "chiffres": [
+      {
+        "affirmation": "il passera de 265,9 en 2025 à 274,4 milliards",
+        "chiffre": "274,4 milliards",
+        "auteur": "Cyrielle Chatelain",
+        "role": "Députée",
+        "citation": "Ce texte prévoit une augmentation du budget de la sécurité sociale : il passera de 265,9 en 2025 à 274,4 milliards. Compte tenu de l’inflation, le maintien des moyens à niveau constant supposait 275 milliards de dépenses : nous y sommes quasiment. Je le répète, nous voulions plus.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094",
+        "verdict": "confirmé",
+        "explication": "L'article 109 du texte adopté fixe le total de l'ONDAM 2026 à 274,4 milliards d'euros ; l'article 2 maintient le total de l'ONDAM 2025 à 265,9 milliards d'euros et n'en rectifie que les sous-objectifs. Les deux bornes de la phrase figurent donc dans le texte officiel. L'arrondi de 275 milliards pour un maintien des moyens à niveau constant est en revanche une estimation de l'oratrice, absente du texte.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte adopté n° 199, articles 2 et 109",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0199_texte-adopte-seance"
+          }
+        ]
+      },
+      {
+        "affirmation": "le déficit de la sécurité sociale approcherait les 29 milliards en 2026",
+        "chiffre": "29 milliards",
+        "auteur": "Camille Galliard-Minier",
+        "role": "Députée",
+        "citation": "En cas de rejet du PLFSS, le déficit de la sécurité sociale approcherait les 29 milliards en 2026.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094",
+        "verdict": "nuancé",
+        "explication": "Le rapport annexé au texte adopté retient un déficit de 19,4 milliards d'euros pour 2026 dans le scénario de l'adoption du PLFSS, et non 29 milliards. Le chiffre prononcé décrit l'hypothèse inverse, celle d'un rejet du texte : il ne se confond pas avec la prévision du texte voté, et aucune évaluation publiée de ce scénario n'a été retrouvée.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte adopté n° 199, rapport annexé",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0199_texte-adopte-seance"
+          }
+        ]
+      },
+      {
+        "affirmation": "un texte qui coupe plus de 3 milliards d’euros à l’hôpital et aux Ehpad",
+        "chiffre": "3 milliards",
+        "auteur": "Hadrien Clouet",
+        "role": "Député",
+        "citation": "Le bilan, c’est un texte qui coupe plus de 3 milliards d’euros à l’hôpital et aux Ehpad, alors même que partout dans le pays, dans chaque établissement, des salariés se battent pour la survie de leur service.",
+        "seance": "CRSANR5L17S2026O1N094",
+        "date": "2025-12-16",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N094",
+        "verdict": "non documenté",
+        "explication": "Aucun document officiel consulté ne permet d'isoler ce total de 3 milliards d'euros : le texte fixe un ONDAM en hausse, et la répartition des économies évoquée par l'orateur n'apparaît pas dans l'article 109. Le chiffre est donc repris comme une affirmation de séance, sans source vérifiable, et n'est pas présenté comme un fait.",
+        "sources": []
+      }
+    ],
+    "note": "Un chiffre n'est publié ici que s'il a été prononcé dans l'hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 69,
+      "pour": 0,
+      "contre": 69,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 13,
+      "pour": 1,
+      "contre": 10,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 69,
+      "pour": 64,
+      "contre": 0,
+      "abstention": 5,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 38,
+      "pour": 2,
+      "contre": 9,
+      "abstention": 27,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 22,
+      "pour": 20,
+      "contre": 0,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 91,
+      "pour": 91,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DEM",
+      "sieges": 36,
+      "pour": 36,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 34,
+      "pour": 9,
+      "contre": 0,
+      "abstention": 25,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 49,
+      "pour": 18,
+      "contre": 3,
+      "abstention": 28,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 123,
+      "pour": 0,
+      "contre": 123,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 16,
+      "pour": 0,
+      "contre": 16,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 9,
+      "pour": 6,
+      "contre": 2,
+      "abstention": 1,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

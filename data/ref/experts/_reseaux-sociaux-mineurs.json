@@ -1,0 +1,39 @@
+{
+  "experts": [
+    {
+      "nom": "Laure Miller",
+      "role": "Députée, rapporteure de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Alexandre Portier",
+      "role": "Député, vice-président de la commission mixte paritaire",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Anne Le Hénanff",
+      "role": "Ministre déléguée chargée de l’intelligence artificielle et du numérique",
+      "affiliation": "Gouvernement",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Louis Boyard",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Arnaud Saint-Martin",
+      "role": "Député",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    }
+  ]
+}

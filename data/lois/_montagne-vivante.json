@@ -1,0 +1,616 @@
+{
+  "id": "montagne-vivante",
+  "titre": "Proposition de loi pour une montagne vivante et souveraine",
+  "theme": "environnement",
+  "statut": "Adopté",
+  "nb_phrases": 16,
+  "resume": "La proposition de loi pour une montagne vivante et souveraine a été adoptée définitivement le 20 juillet 2026 par l'Assemblée nationale, qui a approuvé le texte de la commission mixte paritaire par 376 voix pour, 92 contre et 4 abstentions ; le Sénat a adopté le même texte le 21 juillet 2026. Le Conseil constitutionnel l'a déclarée conforme à la Constitution le 14 août 2026, et la loi n° 2026-797 du 18 août 2026 a été publiée au Journal officiel du 19 août 2026. Son article 2 confie au projet régional de santé l'objectif de garantir l'accès aux services de santé dans les zones de montagne, y compris par un transport sanitaire d'urgence par voie aérienne dans les zones très enclavées.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/montagne_vivante_souveraine_17e",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3068_texte-adopte-commission",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8421 du 20 juillet 2026, sur l'ensemble de la proposition de loi dans le texte de la commission mixte paritaire. Texte de la CMP : n° 3068 ; texte adopté : T.A. n° 336. Article 2 lu dans le texte de la CMP publié par l'Assemblée nationale. Décision du Conseil constitutionnel n° 2026-912 DC du 14 août 2026 ; loi n° 2026-797 du 18 août 2026."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8421",
+    "date": "2026-07-20",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8421",
+    "pour": 376,
+    "contre": 92,
+    "abstention": 4,
+    "non_votants": 1,
+    "votants": 472,
+    "suffrages_exprimes": 468,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'ensemble de la proposition de loi pour une montagne vivante et souveraine (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 104,
+  "contexte": "La proposition de loi a été déposée le 27 mars 2026 à l'Assemblée nationale (texte n° 2595) et renvoyée en commission. Après l'engagement de la procédure accélérée le 12 mai 2026, l'Assemblée l'a adoptée en première lecture le 13 mai 2026 (T.A. n° 286), puis le Sénat le 6 juillet 2026 (T.A. n° 155). La commission mixte paritaire est parvenue à un accord le 16 juillet 2026 ; l'Assemblée a adopté le texte de la CMP le 20 juillet 2026 par 376 voix pour, 92 contre et 4 abstentions, et le Sénat le 21 juillet 2026. Le Conseil constitutionnel a déclaré le texte conforme le 14 août 2026 et la loi a été promulguée le 18 août 2026.",
+  "chronologie": [
+    {
+      "date": "2026-03-27",
+      "chambre": "AN",
+      "texte": "Dépôt de la proposition de loi à l'Assemblée nationale (texte n° 2595) et renvoi en commission."
+    },
+    {
+      "date": "2026-04-28",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d'un rapporteur."
+    },
+    {
+      "date": "2026-05-06",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission (n° 2755)."
+    },
+    {
+      "date": "2026-05-12",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-05-13",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte en première lecture (T.A. n° 286)."
+    },
+    {
+      "date": "2026-05-15",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté est transmis au Sénat (texte n° 629)."
+    },
+    {
+      "date": "2026-07-01",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte du Sénat (n° 832 et n° 833)."
+    },
+    {
+      "date": "2026-07-06",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture (T.A. n° 155)."
+    },
+    {
+      "date": "2026-07-09",
+      "chambre": "CMP",
+      "texte": "Convocation d'une commission mixte paritaire."
+    },
+    {
+      "date": "2026-07-16",
+      "chambre": "CMP",
+      "texte": "La commission mixte paritaire parvient à un accord ; dépôt du rapport et du texte de la CMP (n° 3068)."
+    },
+    {
+      "date": "2026-07-20",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte de la commission mixte paritaire (scrutin public n° 8421, T.A. n° 336)."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte de la commission mixte paritaire (T.A. n° 165)."
+    },
+    {
+      "date": "2026-08-14",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Le Conseil constitutionnel déclare le texte conforme à la Constitution (décision n° 2026-912 DC)."
+    },
+    {
+      "date": "2026-08-18",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-797 du 18 août 2026, publiée au Journal officiel du 19 août 2026."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "I. – Le code de la santé publique est ainsi modifié :",
+      "article": "Article 2",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° Le 3° du I de l’article L. 1432‑3 est complété par les mots : « , dont un représentant des collectivités territoriales et des groupements de collectivités territoriales des zones de montagne au sens de l’article 3 de la loi n° 85‑30 du 9 janvier 1985 relative au développement et à la protection de la montagne, désigné par les comités de massif » ;",
+      "article": "Article 2",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° Après l’article L. 1434‑4, il est inséré un article L. 1434‑4‑1 ainsi rédigé :",
+      "article": "Article 2",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Art. L. 1434‑4‑1. – Dans les zones de montagne définies à l’article 3 de la loi n° 85‑30 du 9 janvier 1985 relative au développement et à la protection de la montagne, le projet régional de santé s’attache à garantir aux populations l’accès à des services de pharmacie et de médecine générale, à une structure de médecine d’urgence et d’urgence psychiatrique, à un service de réanimation ainsi qu’à une maternité dans des délais raisonnables, non susceptibles de mettre en danger l’intégrité physique du patient en raison d’un temps de transport manifestement trop long. Le projet régional de santé veille en particulier à la réduction des inégalités d’accès aux soins entre les femmes et les hommes dans ces territoires.",
+      "article": "Article 2",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Dans les zones de montagne très enclavées où l’accès à un service d’urgence ne peut être assuré dans un délai raisonnable par voie terrestre, le projet régional de santé prévoit un système de transport sanitaire d’urgence par voie aérienne. »",
+      "article": "Article 2",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "I bis. – À la première phrase du n du 2° du II de l’article L. 162‑31‑1 du code de la sécurité sociale, après la première occurrence du mot : « commune », sont insérés les mots : « ou d’une ancienne commune constitutive d’une commune nouvelle située dans une zone de montagne ».",
+      "article": "Article 2",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "II. – L’article 23 de la loi n° 2016‑1888 du 28 décembre 2016 de modernisation, de développement et de protection des territoires de montagne est abrogé.",
+      "article": "Article 2",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "supprime",
+      "texte": "III. – (Supprimé)",
+      "article": "Article 2",
+      "alinea": "alinéa 8"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 2",
+      "note": "Article L. 1434‑4‑1 du code de la santé publique, créé par l'article 2, et modifications des articles L. 1432‑3 et L. 162‑31‑1.",
+      "paragraphes": [
+        "I. – Le code de la santé publique est ainsi modifié :",
+        "1° Le 3° du I de l’article L. 1432‑3 est complété par les mots : « , dont un représentant des collectivités territoriales et des groupements de collectivités territoriales des zones de montagne au sens de l’article 3 de la loi n° 85‑30 du 9 janvier 1985 relative au développement et à la protection de la montagne, désigné par les comités de massif » ;",
+        "2° Après l’article L. 1434‑4, il est inséré un article L. 1434‑4‑1 ainsi rédigé :",
+        "« Art. L. 1434‑4‑1. – Dans les zones de montagne définies à l’article 3 de la loi n° 85‑30 du 9 janvier 1985 relative au développement et à la protection de la montagne, le projet régional de santé s’attache à garantir aux populations l’accès à des services de pharmacie et de médecine générale, à une structure de médecine d’urgence et d’urgence psychiatrique, à un service de réanimation ainsi qu’à une maternité dans des délais raisonnables, non susceptibles de mettre en danger l’intégrité physique du patient en raison d’un temps de transport manifestement trop long. Le projet régional de santé veille en particulier à la réduction des inégalités d’accès aux soins entre les femmes et les hommes dans ces territoires.",
+        "« Dans les zones de montagne très enclavées où l’accès à un service d’urgence ne peut être assuré dans un délai raisonnable par voie terrestre, le projet régional de santé prévoit un système de transport sanitaire d’urgence par voie aérienne. »",
+        "I bis. – À la première phrase du n du 2° du II de l’article L. 162‑31‑1 du code de la sécurité sociale, après la première occurrence du mot : « commune », sont insérés les mots : « ou d’une ancienne commune constitutive d’une commune nouvelle située dans une zone de montagne ».",
+        "II. – L’article 23 de la loi n° 2016‑1888 du 28 décembre 2016 de modernisation, de développement et de protection des territoires de montagne est abrogé.",
+        "III. – (Supprimé)"
+      ]
+    }
+  ],
+  "mecanisme": {
+    "titre": "Ce que l'article 2 change",
+    "points": [
+      "Il complète le 3° du I de l'article L. 1432‑3 du code de la santé publique par un représentant des collectivités territoriales et des groupements de collectivités territoriales des zones de montagne, désigné par les comités de massif.",
+      "Il crée l'article L. 1434‑4‑1, qui fixe au projet régional de santé l'objectif de garantir aux populations des zones de montagne l'accès à des services de pharmacie et de médecine générale, à une structure de médecine d'urgence et d'urgence psychiatrique, à un service de réanimation ainsi qu'à une maternité dans des délais raisonnables.",
+      "Il précise que ces délais ne doivent pas mettre en danger l'intégrité physique du patient en raison d'un temps de transport manifestement trop long, et que le projet régional de santé veille à la réduction des inégalités d'accès aux soins entre les femmes et les hommes dans ces territoires.",
+      "Dans les zones de montagne très enclavées où l'accès à un service d'urgence ne peut être assuré dans un délai raisonnable par voie terrestre, il prévoit un système de transport sanitaire d'urgence par voie aérienne.",
+      "Il complète l'article L. 162‑31‑1 du code de la sécurité sociale par les mots « ou d'une ancienne commune constitutive d'une commune nouvelle située dans une zone de montagne ».",
+      "Il abroge l'article 23 de la loi n° 2016‑1888 du 28 décembre 2016 de modernisation, de développement et de protection des territoires de montagne."
+    ]
+  },
+  "chiffres": [
+    {
+      "valeur": "376",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "92",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "4",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "472",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "468",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Quel décompte le scrutin public n° 8421 a-t-il enregistré le 20 juillet 2026 ?",
+      "options": [
+        "376 pour, 92 contre, 4 abstentions",
+        "258 pour, 84 contre, 10 abstentions",
+        "178 pour, 163 contre, 5 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8421 du 20 juillet 2026, analyse du scrutin"
+    },
+    {
+      "question": "Quel article du code de la santé publique l'article 2 crée-t-il ?",
+      "options": [
+        "L'article L. 1434‑4‑1",
+        "L'article L. 1432‑3",
+        "L'article L. 162‑31‑1"
+      ],
+      "bonne": 0,
+      "source": "Article 2 du texte de la commission mixte paritaire n° 3068, 2° du I"
+    },
+    {
+      "question": "Que prévoit l'article 2 pour les zones de montagne très enclavées ?",
+      "options": [
+        "Un système de transport sanitaire d'urgence par voie aérienne",
+        "Une dérogation à l'application du projet régional de santé",
+        "La suppression des comités de massif"
+      ],
+      "bonne": 0,
+      "source": "Article 2, article L. 1434‑4‑1 du code de la santé publique, second alinéa"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l'article 2",
+    "texte": "Cet article confie au **projet régional de santé** l'objectif de garantir l'accès aux soins dans les **zones de montagne**, et prévoit un **transport sanitaire d'urgence par voie aérienne** là où l'accès terrestre n'est pas assuré dans un délai raisonnable.",
+    "points": [
+      "Le projet régional de santé doit viser l'accès à des services de pharmacie et de médecine générale, à une structure de médecine d'urgence et d'urgence psychiatrique, à un service de réanimation et à une maternité dans des délais raisonnables.",
+      "Il veille à la réduction des inégalités d'accès aux soins entre les femmes et les hommes dans ces territoires.",
+      "Dans les zones très enclavées, il prévoit un système de transport sanitaire d'urgence par voie aérienne.",
+      "Un représentant des collectivités territoriales des zones de montagne, désigné par les comités de massif, est ajouté au 3° du I de l'article L. 1432‑3."
+    ]
+  },
+  "pedagogie": {
+    "titre": "Quatre termes du texte",
+    "notions": [
+      {
+        "terme": "Zone de montagne",
+        "definition": "Le texte renvoie à l'article 3 de la loi n° 85‑30 du 9 janvier 1985 relative au développement et à la protection de la montagne pour délimiter les territoires auxquels s'appliquent ses dispositions.",
+        "source": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3068_texte-adopte-commission"
+      },
+      {
+        "terme": "Projet régional de santé",
+        "definition": "L'article 2 lui confie l'objectif de garantir l'accès aux services de santé dans les zones de montagne et d'y réduire les inégalités d'accès aux soins entre les femmes et les hommes.",
+        "source": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3068_texte-adopte-commission"
+      },
+      {
+        "terme": "Comité de massif",
+        "definition": "Le texte prévoit que le représentant des collectivités territoriales des zones de montagne ajouté à l'article L. 1432‑3 est désigné par les comités de massif.",
+        "source": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3068_texte-adopte-commission"
+      },
+      {
+        "terme": "Commission mixte paritaire",
+        "definition": "Commission composée de 7 députés et de 7 sénateurs, chargée de proposer un texte commun sur les dispositions restant en discussion ; celle réunie le 16 juillet 2026 est parvenue à un accord.",
+        "source": "https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-une-montagne-vivante-et-souveraine.html"
+      }
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse spécialisée agricole",
+    "pour": [
+      {
+        "media": "Réussir",
+        "date": "2026-04-09",
+        "titre": "Proposition de loi Montagne : que dit le texte sur l’agriculture ?",
+        "url": "https://www.reussir.fr/articles/proposition-de-loi-montagne-que-dit-le-texte-sur-lagriculture"
+      }
+    ],
+    "contre_titre": "Presse quotidienne nationale",
+    "contre": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-21",
+        "titre": "Le Parlement adopte définitivement une loi sur la montagne et ses spécificités",
+        "url": "https://www.lefigaro.fr/actualite-france/le-parlement-adopte-definitivement-une-loi-sur-la-montagne-et-ses-specificites-20260721"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Deux voix de chaque côté, mot pour mot, dans l'hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils votent le texte",
+    "contre_titre": "Ils refusent de le voter",
+    "pour": [
+      {
+        "nom": "Jean-Pierre Vigier",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Quarante ans après la loi fondatrice de 1985, dix ans après la loi « montagne 2 », le constat était sans appel. La montagne est en première ligne face au dérèglement climatique, au recul des services publics et aux fragilités démographiques et économiques. Trop souvent, nos règles nationales continuaient de s’appliquer sans prendre en compte la réalité de nos pentes, de nos vallées et de nos hameaux. C’est précisément le sens de cet acte III : adapter notre droit aux réalités de la montagne.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Michel Fournier",
+        "role": "Ministre délégué chargé de la ruralité",
+        "affiliation": "Gouvernement",
+        "citation": "Le 13 mai, votre assemblée adoptait en première lecture la proposition de loi pour une montagne vivante et souveraine. Le 6 juillet, le Sénat la votait à son tour, enrichie. Jeudi dernier, la commission mixte paritaire est parvenue à un accord. Trois dates en deux mois pour un texte qui touche à l’école, à la santé, à l’urbanisme, à l’agriculture et à l’eau : c’est le signe que la montagne, quand elle est bien défendue –⁠ et je crois pouvoir affirmer qu’elle l’a été –, sait mettre tout le monde d’accord.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Sylvie Ferrer",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Derrière son titre angélique, cette proposition de loi « pour une montagne vivante et souveraine » prévoit tout le contraire dans ses articles les plus contraignants. Au lieu de favoriser une montagne vivante, elle poursuit la destruction de ce qu’il reste du cycle de la nature : elle assouplit les règles d’urbanisme dans les zones de montagne, elle encourage l’exploitation de la forêt sans cadre durable, elle autorise le stockage d’eau au principal bénéfice des acteurs économiques sans imposer aucune exigence de préservation écologique. Elle détricote les lois « montagne » qui ont instauré un cadre visant à protéger cet espace, notamment en imposant un principe de continuité de l’urbanisation afin d’éviter l’étalement urbain.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Marie Pochon",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "L’article 4 propose ainsi d’encourager les retenues d’eau sans hiérarchiser les usages, mettant sur le même plan la production de neige artificielle et la fourniture d’eau potable ou agricole. Comme la loi agricole, autre scandale du jour, il ne prévoit aucun objectif de sobriété. L’article 6 assouplit l’interprétation de la règle de la continuité de l’urbanisation, ce qui ouvre la porte à de nouvelles constructions et menace les protections instaurées par les lois « montagne » auxquelles nous tenons tant. L’article 6 bis permet de construire à tout va, même sur des ruines d’alpage. L’article 6 bis AA affaiblit les protections instaurées par la loi « littoral ». L’article 6 bis A détricote la loi « climat et résilience » en reportant les objectifs de lutte contre l’artificialisation des sols pour les communes corses soumises au règlement national d’urbanisme (RNU). Enfin, l’article 11 a été vidé de sa substance, alors qu’il comportait l’une des seules dispositions intéressantes de ce texte.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d'entrées. Une citation courte n'est pas rallongée, une longue n'est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "arguments": {
+    "pour": [
+      {
+        "titre": "Adapter le droit aux réalités de la montagne",
+        "texte": "Quarante ans après la loi fondatrice de 1985, dix ans après la loi « montagne 2 », le constat était sans appel. La montagne est en première ligne face au dérèglement climatique, au recul des services publics et aux fragilités démographiques et économiques. Trop souvent, nos règles nationales continuaient de s’appliquer sans prendre en compte la réalité de nos pentes, de nos vallées et de nos hameaux. C’est précisément le sens de cet acte III : adapter notre droit aux réalités de la montagne.",
+        "auteur": "Jean-Pierre Vigier",
+        "role": "Rapporteur de la commission mixte paritaire",
+        "source": "Assemblée nationale — compte rendu de la première séance du 20 juillet 2026",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "titre": "Trois dates en deux mois",
+        "texte": "Le 13 mai, votre assemblée adoptait en première lecture la proposition de loi pour une montagne vivante et souveraine. Le 6 juillet, le Sénat la votait à son tour, enrichie. Jeudi dernier, la commission mixte paritaire est parvenue à un accord. Trois dates en deux mois pour un texte qui touche à l’école, à la santé, à l’urbanisme, à l’agriculture et à l’eau : c’est le signe que la montagne, quand elle est bien défendue –⁠ et je crois pouvoir affirmer qu’elle l’a été –, sait mettre tout le monde d’accord.",
+        "auteur": "Michel Fournier",
+        "role": "Ministre délégué chargé de la ruralité",
+        "source": "Assemblée nationale — compte rendu de la première séance du 20 juillet 2026",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "contre": [
+      {
+        "titre": "Un titre qui ne décrit pas les articles",
+        "texte": "Derrière son titre angélique, cette proposition de loi « pour une montagne vivante et souveraine » prévoit tout le contraire dans ses articles les plus contraignants. Au lieu de favoriser une montagne vivante, elle poursuit la destruction de ce qu’il reste du cycle de la nature : elle assouplit les règles d’urbanisme dans les zones de montagne, elle encourage l’exploitation de la forêt sans cadre durable, elle autorise le stockage d’eau au principal bénéfice des acteurs économiques sans imposer aucune exigence de préservation écologique. Elle détricote les lois « montagne » qui ont instauré un cadre visant à protéger cet espace, notamment en imposant un principe de continuité de l’urbanisation afin d’éviter l’étalement urbain.",
+        "auteur": "Sylvie Ferrer",
+        "role": "Députée",
+        "source": "Assemblée nationale — compte rendu de la première séance du 20 juillet 2026",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "titre": "L'assouplissement de la continuité de l'urbanisation",
+        "texte": "L’article 4 propose ainsi d’encourager les retenues d’eau sans hiérarchiser les usages, mettant sur le même plan la production de neige artificielle et la fourniture d’eau potable ou agricole. Comme la loi agricole, autre scandale du jour, il ne prévoit aucun objectif de sobriété. L’article 6 assouplit l’interprétation de la règle de la continuité de l’urbanisation, ce qui ouvre la porte à de nouvelles constructions et menace les protections instaurées par les lois « montagne » auxquelles nous tenons tant. L’article 6 bis permet de construire à tout va, même sur des ruines d’alpage. L’article 6 bis AA affaiblit les protections instaurées par la loi « littoral ». L’article 6 bis A détricote la loi « climat et résilience » en reportant les objectifs de lutte contre l’artificialisation des sols pour les communes corses soumises au règlement national d’urbanisme (RNU). Enfin, l’article 11 a été vidé de sa substance, alors qu’il comportait l’une des seules dispositions intéressantes de ce texte.",
+        "auteur": "Marie Pochon",
+        "role": "Députée",
+        "source": "Assemblée nationale — compte rendu de la première séance du 20 juillet 2026",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "note": "Chaque argument est la citation intégrale de son auteur, reprise du compte rendu de la séance. Aucun argument n'est reformulé ni attribué sans qu'il ait été prononcé."
+  },
+  "experts": {
+    "pour_titre": "Les porteurs du texte",
+    "pour": [
+      {
+        "nom": "Jean-Pierre Vigier",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "argument": "Quarante ans après la loi fondatrice de 1985, dix ans après la loi « montagne 2 », le constat était sans appel. La montagne est en première ligne face au dérèglement climatique, au recul des services publics et aux fragilités démographiques et économiques. Trop souvent, nos règles nationales continuaient de s’appliquer sans prendre en compte la réalité de nos pentes, de nos vallées et de nos hameaux. C’est précisément le sens de cet acte III : adapter notre droit aux réalités de la montagne.",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Michel Fournier",
+        "role": "Ministre délégué chargé de la ruralité",
+        "affiliation": "Gouvernement",
+        "argument": "Le 13 mai, votre assemblée adoptait en première lecture la proposition de loi pour une montagne vivante et souveraine. Le 6 juillet, le Sénat la votait à son tour, enrichie. Jeudi dernier, la commission mixte paritaire est parvenue à un accord. Trois dates en deux mois pour un texte qui touche à l’école, à la santé, à l’urbanisme, à l’agriculture et à l’eau : c’est le signe que la montagne, quand elle est bien défendue –⁠ et je crois pouvoir affirmer qu’elle l’a été –, sait mettre tout le monde d’accord.",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "contre_titre": "Les oppositions",
+    "contre": [
+      {
+        "nom": "Sylvie Ferrer",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "Derrière son titre angélique, cette proposition de loi « pour une montagne vivante et souveraine » prévoit tout le contraire dans ses articles les plus contraignants. Au lieu de favoriser une montagne vivante, elle poursuit la destruction de ce qu’il reste du cycle de la nature : elle assouplit les règles d’urbanisme dans les zones de montagne, elle encourage l’exploitation de la forêt sans cadre durable, elle autorise le stockage d’eau au principal bénéfice des acteurs économiques sans imposer aucune exigence de préservation écologique. Elle détricote les lois « montagne » qui ont instauré un cadre visant à protéger cet espace, notamment en imposant un principe de continuité de l’urbanisation afin d’éviter l’étalement urbain.",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      },
+      {
+        "nom": "Marie Pochon",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "argument": "L’article 4 propose ainsi d’encourager les retenues d’eau sans hiérarchiser les usages, mettant sur le même plan la production de neige artificielle et la fourniture d’eau potable ou agricole. Comme la loi agricole, autre scandale du jour, il ne prévoit aucun objectif de sobriété. L’article 6 assouplit l’interprétation de la règle de la continuité de l’urbanisation, ce qui ouvre la porte à de nouvelles constructions et menace les protections instaurées par les lois « montagne » auxquelles nous tenons tant. L’article 6 bis permet de construire à tout va, même sur des ruines d’alpage. L’article 6 bis AA affaiblit les protections instaurées par la loi « littoral ». L’article 6 bis A détricote la loi « climat et résilience » en reportant les objectifs de lutte contre l’artificialisation des sols pour les communes corses soumises au règlement national d’urbanisme (RNU). Enfin, l’article 11 a été vidé de sa substance, alors qu’il comportait l’une des seules dispositions intéressantes de ce texte.",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021"
+      }
+    ],
+    "note": "Citations reprises telles quelles, avec leur source. Les personnes citées figurent dans la liste de référence vérifiée ; aucun nom n'est inventé."
+  },
+  "verifications": {
+    "chapeau": "Deux chiffres du débat ont pu être confrontés à une source publiée. Un troisième, prononcé dans l'hémicycle, n'a pas été retrouvé dans une source vérifiable : il reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "cosigné par 122 députés",
+        "chiffre": "122",
+        "auteur": "Jean-Pierre Vigier",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "citation": "Mesurons le chemin parcouru. Déposé en début d’année, cosigné par 122 députés issus de la quasi-totalité des groupes de cette assemblée, ce texte a été adopté ici même à la mi-mai, puis par le Sénat début juillet, avant d’aboutir en commission mixte paritaire : quelques mois seulement pour un texte d’une telle portée.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "nuancé",
+        "explication": "Le fichier officiel du texte n° 2595 recense 123 co-signataires, dont les signatures sont datées du 30 avril 2026, et l'auteur du texte y figure séparément. Le chiffre de 122 prononcé dans l'hémicycle diffère donc d'une unité du nombre de co-signataires inscrits au fichier.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — proposition de loi n° 2595 (données ouvertes)",
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PIONANR5L17B2595.json",
+            "consulte_le": "2026-11-14"
+          }
+        ]
+      },
+      {
+        "affirmation": "quatorze parlementaires",
+        "chiffre": "quatorze",
+        "auteur": "Michel Fournier",
+        "role": "Ministre délégué chargé de la ruralité",
+        "citation": "Celle de jeudi est arrivée au sommet : quatorze parlementaires, deux chambres, un texte commun. Je veux en remercier d’abord son auteur et son rapporteur, Jean-Pierre Vigier, qui défend cette proposition de loi depuis le premier jour, avec la constance qu’on lui connaît et la légitimité que lui donne la présidence de l’Association nationale des élus de la montagne.",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "confirmé",
+        "explication": "La commission mixte paritaire réunie le 16 juillet 2026 était composée de 7 députés et de 7 sénateurs, soit quatorze parlementaires, comme l'indique la page du Sénat consacrée à cette proposition de loi. Le chiffre prononcé correspond à cette composition.",
+        "sources": [
+          {
+            "nom": "Sénat — proposition de loi pour une montagne vivante et souveraine (la loi en clair)",
+            "url": "https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-une-montagne-vivante-et-souveraine.html",
+            "consulte_le": "2026-11-14"
+          }
+        ]
+      },
+      {
+        "affirmation": "ce sont 4 032 postes, dont 2 229 dans le premier degré",
+        "chiffre": "4 032",
+        "auteur": "Sylvie Ferrer",
+        "role": "Députée",
+        "citation": "Parmi ces mesures paravents, on trouve l’obligation de tenir compte des particularités des écoles de montagne –⁠ isolement, démographie, conditions d’accès et temps de transport – pour décider de l’ouverture ou de la fermeture de classes. Cette obligation repose sur une bonne intention, mais elle est irréalisable si on ne règle pas la question centrale des moyens alloués à l’éducation nationale, ce qui passe par une modification du projet de loi de finances (PLF). En l’absence de création de postes et de soutien de l’État au service public de l’éducation, cette mesure restera largement déclarative. Alors que La France insoumise dépose tous les ans des amendements au PLF pour obtenir des moyens supplémentaires pour l’éducation nationale, ce sont 4 032 postes, dont 2 229 dans le premier degré, qui ont été supprimés dans le budget 2026. Dès lors, comment donner force de loi à l’article visant à maintenir des classes en zone de montagne ?",
+        "seance": "CRSANR5L17S2026E1N021",
+        "date": "2026-07-20",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N021",
+        "verdict": "non documenté",
+        "explication": "Le chiffre est prononcé dans l'hémicycle, mais aucune source officielle accessible sur les domaines autorisés ne permet de le vérifier : le compte rendu le rapporte sans le documenter, et aucun document budgétaire publié que nous ayons pu lire ne le confirme. Faute de source, il n'est pas repris comme un fait.",
+        "sources": []
+      }
+    ],
+    "note": "Un chiffre n'est publié ici que s'il a été prononcé dans l'hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 63,
+      "pour": 0,
+      "contre": 63,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 14,
+      "pour": 14,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 43,
+      "pour": 42,
+      "contre": 0,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 30,
+      "pour": 0,
+      "contre": 29,
+      "abstention": 1,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 21,
+      "pour": 19,
+      "contre": 0,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 67,
+      "pour": 66,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 35,
+      "pour": 35,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 33,
+      "pour": 33,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 48,
+      "pour": 48,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 97,
+      "pour": 97,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 17,
+      "pour": 17,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 5,
+      "pour": 5,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

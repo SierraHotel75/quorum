@@ -1,0 +1,590 @@
+{
+  "id": "fin-de-gestion-2025",
+  "titre": "Projet de loi de finances de fin de gestion pour 2025",
+  "theme": "budget",
+  "nb_phrases": 13,
+  "statut": "Adopté",
+  "resume": "Le projet de loi de finances de fin de gestion pour 2025 ajuste les crédits de l’État pour terminer l’exercice : il ouvre des crédits supplémentaires et annule des crédits non consommés, sans modifier les recettes ni la politique fiscale. Rejeté par l’Assemblée nationale en première lecture le 18 novembre 2025, adopté par le Sénat le 25 novembre, il a fait l’objet d’un accord en commission mixte paritaire le 27 novembre. L’Assemblée nationale a adopté le texte de la CMP le 2 décembre 2025 par 217 voix contre 213 et 84 abstentions ; après le vote du Sénat le 3 décembre, la loi n° 2025-1173 a été promulguée le 8 décembre 2025.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b2146_texte-adopte-commission",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 4442, première séance du 2 décembre 2025, vote sur l’ensemble du projet de loi de finances de fin de gestion pour 2025 dans le texte de la commission mixte paritaire. Le vote porte sur le texte de la CMP n° 2146 (2146-A0), adopté par l’Assemblée nationale sous le numéro T.A. 185 ; les articles 5, 6 et 7 sont lus dans ce texte de la CMP (jeu articles_textes, uid PRJLANR5L17BTC2146). Débat cité d’après le compte rendu de la séance CRSANR5L17S2026O1N075."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V4442",
+    "date": "2025-12-02",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 4442",
+    "pour": 217,
+    "contre": 213,
+    "abstention": 84,
+    "non_votants": 1,
+    "votants": 514,
+    "suffrages_exprimes": 430,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l’ensemble du projet de loi de fin de gestion pour 2025 (texte de la commission mixte paritaire).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 62,
+  "chronologie": [
+    {
+      "date": "2025-11-10",
+      "chambre": "AN",
+      "texte": "Dépôt à l’Assemblée nationale du projet de loi n° 2068 ; le Gouvernement engage la procédure accélérée et le texte est renvoyé à la commission des finances."
+    },
+    {
+      "date": "2025-11-13",
+      "chambre": "COMMISSION",
+      "texte": "La commission des finances dépose son rapport sur le projet de loi n° 2078."
+    },
+    {
+      "date": "2025-11-17",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique sur le texte n° 2068."
+    },
+    {
+      "date": "2025-11-18",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale rejette le texte en première lecture (T.A. n° 179)."
+    },
+    {
+      "date": "2025-11-19",
+      "chambre": "SENAT",
+      "texte": "Le texte rejeté est transmis au Sénat (texte n° 132) et renvoyé à la commission des finances, qui dépose son rapport n° 136 le même jour."
+    },
+    {
+      "date": "2025-11-25",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte modifié (T.A. n° 22)."
+    },
+    {
+      "date": "2025-11-26",
+      "chambre": "CMP",
+      "texte": "Convocation de la commission mixte paritaire ; dépôt à l’Assemblée nationale du texte adopté par le Sénat (n° 2135)."
+    },
+    {
+      "date": "2025-11-27",
+      "chambre": "CMP",
+      "texte": "La CMP conclut à un accord : rapport n° 2146 et texte de la CMP n° 2146-A0 à l’Assemblée nationale (rapport n° 164 et texte n° 165 au Sénat)."
+    },
+    {
+      "date": "2025-12-02",
+      "chambre": "AN",
+      "texte": "L’Assemblée nationale adopte le texte de la CMP (T.A. n° 185), dans les conditions prévues à l’article 45, alinéa 3, de la Constitution, par 217 voix contre 213 et 84 abstentions."
+    },
+    {
+      "date": "2025-12-03",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte de la CMP (T.A. n° 24) : la loi est définitivement adoptée."
+    },
+    {
+      "date": "2025-12-08",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2025-1173, publiée au Journal officiel du 9 décembre 2025."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "I. – Il est ouvert aux ministres, pour 2025, au titre du budget général, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 3 035 128 860 € et de 3 187 353 413 €, conformément à la répartition par mission donnée à l’état B annexé à la présente loi.",
+      "article": "Article 5",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "II. – Il est annulé pour 2025, au titre du budget général, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 9 895 561 722 € et de 10 365 547 714 €, conformément à la répartition par mission donnée à l’état B annexé à la présente loi.",
+      "article": "Article 5",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "Il est annulé pour 2025, au titre des budgets annexes, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 4 874 463 € et de 15 436 927 €, conformément à la répartition par mission donnée à l’état C annexé à la présente loi.",
+      "article": "Article 6",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "I. – Il est ouvert aux ministres, pour 2025, au titre des comptes d’affectation spéciale, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 44 258 953 € et de 44 258 953 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+      "article": "Article 7",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "II. – Il est annulé pour 2025, au titre des comptes d’affectation spéciale, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 4 750 920 € et de 4 750 920 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+      "article": "Article 7",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "III. – Il est ouvert aux ministres, pour 2025, au titre des comptes de concours financiers, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 318 374 384 € et de 234 674 384 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+      "article": "Article 7",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "adopte",
+      "texte": "IV. – Il est annulé pour 2025, au titre des comptes de concours financiers, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 2 696 466 377 € et de 3 465 965 952 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+      "article": "Article 7",
+      "alinea": "alinéa 4"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 5",
+      "note": "Ouvertures et annulations de crédits du budget général pour 2025 ; la répartition par mission figure à l’état B annexé. C’est l’article qui porte le solde du texte.",
+      "paragraphes": [
+        "I. – Il est ouvert aux ministres, pour 2025, au titre du budget général, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 3 035 128 860 € et de 3 187 353 413 €, conformément à la répartition par mission donnée à l’état B annexé à la présente loi.",
+        "II. – Il est annulé pour 2025, au titre du budget général, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 9 895 561 722 € et de 10 365 547 714 €, conformément à la répartition par mission donnée à l’état B annexé à la présente loi."
+      ]
+    },
+    {
+      "reference": "Article 6",
+      "note": "Annulations de crédits des budgets annexes pour 2025 ; la répartition figure à l’état C annexé.",
+      "paragraphes": [
+        "Il est annulé pour 2025, au titre des budgets annexes, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 4 874 463 € et de 15 436 927 €, conformément à la répartition par mission donnée à l’état C annexé à la présente loi."
+      ]
+    },
+    {
+      "reference": "Article 7",
+      "note": "Comptes d’affectation spéciale (I et II) et comptes de concours financiers (III et IV) pour 2025 ; la répartition figure à l’état D annexé.",
+      "paragraphes": [
+        "I. – Il est ouvert aux ministres, pour 2025, au titre des comptes d’affectation spéciale, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 44 258 953 € et de 44 258 953 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+        "II. – Il est annulé pour 2025, au titre des comptes d’affectation spéciale, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 4 750 920 € et de 4 750 920 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+        "III. – Il est ouvert aux ministres, pour 2025, au titre des comptes de concours financiers, des autorisations d’engagement et des crédits de paiement supplémentaires s’élevant respectivement aux montants de 318 374 384 € et de 234 674 384 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi.",
+        "IV. – Il est annulé pour 2025, au titre des comptes de concours financiers, des autorisations d’engagement et des crédits de paiement s’élevant respectivement aux montants de 2 696 466 377 € et de 3 465 965 952 €, conformément à la répartition par mission donnée à l’état D annexé à la présente loi."
+      ]
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "217",
+      "libelle": "Pour"
+    },
+    {
+      "valeur": "213",
+      "libelle": "Contre"
+    },
+    {
+      "valeur": "84",
+      "libelle": "Abstentions"
+    },
+    {
+      "valeur": "514",
+      "libelle": "Votants"
+    },
+    {
+      "valeur": "430",
+      "libelle": "Exprimés"
+    },
+    {
+      "valeur": "1",
+      "libelle": "Non-votants"
+    }
+  ],
+  "ce_qui_est_vote": {
+    "titre": "Ce que fait le texte",
+    "texte": "Le texte ajuste, pour 2025, les crédits ouverts en loi de finances initiale : il ouvre des crédits supplémentaires et annule des crédits non consommés sur le **budget général**, les **budgets annexes**, les **comptes d’affectation spéciale** et les **comptes de concours financiers**, sans modifier les recettes ni la politique fiscale, selon le rapporteur.",
+    "points": [
+      "Budget général (article 5) : **3 187 353 413 €** de crédits de paiement ouverts et **10 365 547 714 €** annulés ; en autorisations d’engagement, 3 035 128 860 € ouverts et 9 895 561 722 € annulés.",
+      "Budgets annexes (article 6) : **15 436 927 €** de crédits de paiement annulés. Comptes d’affectation spéciale (article 7) : **44 258 953 €** ouverts et **4 750 920 €** annulés. Comptes de concours financiers (article 7) : **234 674 384 €** ouverts et **3 465 965 952 €** annulés.",
+      "Le vote du 2 décembre porte sur l’ensemble du texte de la CMP, pas sur un article isolé ; la répartition par mission figure aux états B, C et D annexés."
+    ]
+  },
+  "arguments": {
+    "chapeau": "Ce que chaque orateur défend, résumé sans jugement et rattaché à la citation prononcée en séance. Les chiffres cités sont ceux des orateurs.",
+    "pour_titre": "Ils défendent le texte de la CMP",
+    "contre_titre": "Ils le rejettent",
+    "pour": [
+      {
+        "titre": "Un texte de gestion, sans mesure fiscale nouvelle",
+        "texte": "La ministre présente le texte comme un ajustement technique de fin d’année : il garantit, selon elle, le versement en décembre de l’allocation aux adultes handicapés et de la prime d’activité et le maintien des 203 000 places d’hébergement d’urgence ouvertes.",
+        "auteur": "Amélie de Montchalin",
+        "role": "Ministre de l’action et des comptes publics",
+        "citation": "C’est donc un texte qui nous permet de terminer l’année sereinement, en garantissant entre autres le paiement pour le mois de décembre de l’allocation aux adultes handicapés (AAH) et de la prime d’activité, en permettant de maintenir ouvertes les 203 000 places d’hébergement d’urgence",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "titre": "Un compromis trouvé en commission mixte paritaire",
+        "texte": "Le rapporteur présente la CMP comme conclusive : le texte ajuste les crédits votés aux besoins et évite, s’il était rejeté, des prestations sociales non versées en décembre et des engagements de défense reportés.",
+        "auteur": "Philippe Juvin",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "citation": "Rejeter le PLFG élaboré l’an dernier par Michel Barnier puis par François Bayrou aurait des conséquences concrètes : des prestations sociales non versées en décembre, des engagements de défense et de sécurité civile reportés, des universités fragilisées et des collectivités qui, pour certaines, seraient plongées dans l’incertitude.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "titre": "Un signal de crédibilité budgétaire",
+        "texte": "Ce député estime que l’adoption du texte enverrait un signal positif dans la période budgétaire actuelle et que, faute de majorité, la voie suivie est celle du compromis entre les groupes du socle gouvernemental et les groupes d’opposition.",
+        "auteur": "Charles Sitzenstuhl",
+        "role": "Député",
+        "citation": "L’adoption de ce PLFG enverrait un signal positif dans la période budgétaire actuelle. Face à l’éclatement de l’Assemblée nationale et à l’absence de majorité, nous ne pouvons avancer que par compromis entre les groupes du socle gouvernemental et les groupes d’opposition.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      }
+    ],
+    "contre": [
+      {
+        "titre": "Des coupes que les reculs de la CMP ne compensent pas",
+        "texte": "Le président de la commission des finances juge que la CMP n’a concédé que de maigres reculs, de quelques dizaines de millions d’euros, sans commune mesure avec les coupes budgétaires ; dans la même intervention, il chiffre les annulations supplémentaires à 10,3 milliards d’euros pour 2025.",
+        "auteur": "Éric Coquerel",
+        "role": "Député, vice-président de la commission mixte paritaire",
+        "citation": "La commission mixte paritaire a concédé de maigres reculs sur certains points. Il ne s’agit là que de quelques dizaines de millions d’euros, qui sont sans commune mesure avec vos coupes budgétaires et ne changent rien à la dynamique générale de baisse des budgets, laquelle représente des centaines de millions voire des milliards d’euros. Autrement dit, le compte n’est pas bon.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "titre": "Un vote qui validerait une saignée budgétaire",
+        "texte": "Pour ce député, voter le texte ou s’abstenir revient à valider une saignée totale de 36,5 milliards d’euros en 2025.",
+        "auteur": "Aurélien Le Coq",
+        "role": "Député",
+        "citation": "Voter pour ce projet de loi, ou s’abstenir, c’est valider une saignée totale de 36,5 milliards en 2025 : une folie !",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "titre": "Un refus au nom des socialistes",
+        "texte": "Le député annonce que les socialistes ne voteront pas pour le texte : il estime qu’il ajoute 4,2 milliards d’euros d’annulations de crédits supplémentaires, dont 1,3 milliard d’investissements pour l’avenir.",
+        "auteur": "Philippe Brun",
+        "role": "Député",
+        "citation": "Les socialistes ne pourront donc pas voter pour ce projet de loi de finances de fin de gestion.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      }
+    ],
+    "note": "Chaque argument est attribué à son auteur et renvoie à la citation prononcée en séance ; aucun argument n’est prêté à un orateur qui ne l’a pas exprimé."
+  },
+  "quiz": [
+    {
+      "question": "Que fait l’article 5 du texte adopté pour le budget général de 2025 ?",
+      "options": [
+        "Il ouvre 3 187 353 413 € de crédits de paiement et annule 10 365 547 714 €",
+        "Il annule 3 187 353 413 € de crédits de paiement et ouvre 10 365 547 714 €",
+        "Il supprime les crédits de la mission Défense pour 2025"
+      ],
+      "bonne": 0,
+      "source": "Article 5 du texte de la commission mixte paritaire n° 2146, alinéas I et II (texte adopté T.A. n° 185)"
+    },
+    {
+      "question": "Comment l’Assemblée nationale a-t-elle adopté le texte le 2 décembre 2025 ?",
+      "options": [
+        "Sur le texte de la commission mixte paritaire, dans les conditions prévues à l’article 45, alinéa 3, de la Constitution",
+        "En nouvelle lecture, après un second rejet du texte par le Sénat",
+        "Par un vote sur une motion de censure déposée par un groupe d’opposition"
+      ],
+      "bonne": 0,
+      "source": "Dossier législatif de l’Assemblée nationale, étape « Lecture à l’Assemblée nationale » du 2 décembre 2025 (T.A. n° 185)"
+    },
+    {
+      "question": "Quel groupe a réuni le plus grand nombre des 84 abstentions ?",
+      "options": [
+        "Les Socialistes et apparentés, avec 59 abstentions",
+        "Écologiste et Social, avec 59 abstentions",
+        "Libertés, Indépendants, Outre-mer et Territoires, avec 59 abstentions"
+      ],
+      "bonne": 0,
+      "source": "Décompte par groupe du scrutin public n° 4442 du 2 décembre 2025"
+    }
+  ],
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2025-11-25",
+        "titre": "Le Sénat adopte le budget de «fin de gestion» pour 2025",
+        "url": "https://www.lefigaro.fr/flash-eco/le-senat-adopte-le-budget-de-fin-de-gestion-pour-2025-20251125"
+      },
+      {
+        "media": "La Croix",
+        "date": "2025-12-02",
+        "titre": "Budget : l’Assemblée adopte sur le fil le projet de loi de fin de gestion 2025",
+        "url": "https://www.la-croix.com/politique/budget-l-assemblee-adopte-sur-le-fil-le-projet-de-loi-de-fin-de-gestion-2025-20251202"
+      }
+    ],
+    "contre_titre": "Presse audiovisuelle et numérique",
+    "contre": [
+      {
+        "media": "CNews",
+        "date": "2025-12-02",
+        "titre": "Fin de gestion 2025 : l’Assemblée nationale adopte le projet de loi de justesse",
+        "url": "https://www.cnews.fr/france/2025-12-02/fin-de-gestion-2025-lassemblee-national-adopte-le-projet-de-loi-de-justesse"
+      },
+      {
+        "media": "CNews",
+        "date": "2025-12-03",
+        "titre": "Fin de gestion 2025 : le Parlement adopte définitivement le texte",
+        "url": "https://www.cnews.fr/france/2025-12-03/fin-de-gestion-2025-le-parlement-adopte-definitivement-le-texte-1780003"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "debat": {
+    "chapeau": "Trois voix de chaque côté, mot pour mot, dans l’hémicycle du 2 décembre 2025. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent le texte de la CMP",
+    "contre_titre": "Ils le rejettent",
+    "pour": [
+      {
+        "nom": "Philippe Juvin",
+        "role": "Député, rapporteur de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "Rejeter le PLFG élaboré l’an dernier par Michel Barnier puis par François Bayrou aurait des conséquences concrètes : des prestations sociales non versées en décembre, des engagements de défense et de sécurité civile reportés, des universités fragilisées et des collectivités qui, pour certaines, seraient plongées dans l’incertitude.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "nom": "Amélie de Montchalin",
+        "role": "Ministre de l’action et des comptes publics",
+        "affiliation": "Gouvernement",
+        "citation": "C’est donc un texte qui nous permet de terminer l’année sereinement, en garantissant entre autres le paiement pour le mois de décembre de l’allocation aux adultes handicapés (AAH) et de la prime d’activité, en permettant de maintenir ouvertes les 203 000 places d’hébergement d’urgence",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "nom": "Charles Sitzenstuhl",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "L’adoption de ce PLFG enverrait un signal positif dans la période budgétaire actuelle. Face à l’éclatement de l’Assemblée nationale et à l’absence de majorité, nous ne pouvons avancer que par compromis entre les groupes du socle gouvernemental et les groupes d’opposition.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Éric Coquerel",
+        "role": "Député, vice-président de la commission mixte paritaire",
+        "affiliation": "Assemblée nationale",
+        "citation": "La commission mixte paritaire a concédé de maigres reculs sur certains points. Il ne s’agit là que de quelques dizaines de millions d’euros, qui sont sans commune mesure avec vos coupes budgétaires et ne changent rien à la dynamique générale de baisse des budgets, laquelle représente des centaines de millions voire des milliards d’euros. Autrement dit, le compte n’est pas bon.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "nom": "Aurélien Le Coq",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Voter pour ce projet de loi, ou s’abstenir, c’est valider une saignée totale de 36,5 milliards en 2025 : une folie !",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      },
+      {
+        "nom": "Philippe Brun",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Les socialistes ne pourront donc pas voter pour ce projet de loi de finances de fin de gestion.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable."
+  },
+  "verifications": {
+    "chapeau": "Deux des trois chiffres prononcés en séance ont pu être confrontés à un document publié ; le troisième n’a été retrouvé dans aucune source consultée et reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "vous projetez d’en annuler 10,3 milliards",
+        "chiffre": "10,3 milliards",
+        "auteur": "Éric Coquerel",
+        "role": "Député, vice-président de la commission mixte paritaire",
+        "citation": "L’an dernier, la loi de fin de gestion avait annulé 6,4 milliards d’euros de crédits de paiement. Cette année, vous projetez d’en annuler 10,3 milliards, qui s’ajoutent aux 23,5 milliards d’euros de coupes du budget Bayrou et aux 2,7 milliards annulés par décret en avril, soit un total de 36,5 milliards d’euros de coupes effectives pour l’année 2025.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075",
+        "verdict": "confirmé",
+        "explication": "L’article 5 du texte de la commission mixte paritaire annule 10 365 547 714 € de crédits de paiement au titre du budget général pour 2025, soit 10,3 milliards d’euros, et ouvre 3 187 353 413 € de crédits de paiement supplémentaires. Le chiffre prononcé correspond à l’ordre de grandeur des crédits de paiement annulés sur ce seul article.",
+        "sources": [
+          {
+            "nom": "Assemblée nationale — texte de la commission mixte paritaire n° 2146",
+            "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b2146_texte-adopte-commission"
+          }
+        ]
+      },
+      {
+        "affirmation": "établi à moins de 5,4 % du PIB",
+        "chiffre": "5,4 %",
+        "auteur": "Charles Sitzenstuhl",
+        "role": "Député",
+        "citation": "Ce PLFG témoigne également de l’amélioration de nos comptes publics en 2025. Le déficit, établi à moins de 5,4 % du PIB conformément aux prévisions du début d’année, est en baisse.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075",
+        "verdict": "nuancé",
+        "explication": "Le rapport du Sénat sur le projet de loi de finances de fin de gestion pour 2025 retient un déficit public à 5,4 % du PIB, identique à la prévision initiale, et non « moins de 5,4 % ». L’ordre de grandeur prononcé correspond à la prévision écrite ; la formulation est plus favorable qu’elle.",
+        "sources": [
+          {
+            "nom": "Sénat — rapport n° 136 (2025-2026) sur le projet de loi de finances de fin de gestion pour 2025",
+            "url": "https://www.senat.fr/rap/l25-136/l25-136.html"
+          }
+        ]
+      },
+      {
+        "affirmation": "4,2 milliards d’annulations de crédits supplémentaires",
+        "chiffre": "4,2 milliards",
+        "auteur": "Philippe Brun",
+        "role": "Député",
+        "citation": "…et avaliser 4,2 milliards d’annulations de crédits supplémentaires, dont 1,3 d’investissements pour l’avenir.",
+        "seance": "CRSANR5L17S2026O1N075",
+        "date": "2025-12-02",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N075",
+        "verdict": "non documenté",
+        "explication": "Ce montant n’a pas pu être rattaché à un document publié : les annulations prévues par les articles 5 à 7 du texte de la CMP ne forment pas un total de 4,2 milliards d’euros, et la synthèse du rapport du Sénat n° 136 consultée ne le mentionne pas. Le chiffre reste celui prononcé par l’orateur, sans vérification possible.",
+        "sources": []
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
+  "votes_par_groupe": [
+    {
+      "id": "LFI",
+      "sieges": 67,
+      "pour": 0,
+      "contre": 67,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "GDR",
+      "sieges": 15,
+      "pour": 0,
+      "contre": 15,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "SOC",
+      "sieges": 61,
+      "pour": 1,
+      "contre": 1,
+      "abstention": 59,
+      "non_votants": 0
+    },
+    {
+      "id": "EcoS",
+      "sieges": 23,
+      "pour": 0,
+      "contre": 3,
+      "abstention": 20,
+      "non_votants": 0
+    },
+    {
+      "id": "LIOT",
+      "sieges": 21,
+      "pour": 18,
+      "contre": 0,
+      "abstention": 3,
+      "non_votants": 0
+    },
+    {
+      "id": "EPR",
+      "sieges": 83,
+      "pour": 82,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 1
+    },
+    {
+      "id": "DEM",
+      "sieges": 35,
+      "pour": 35,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "HOR",
+      "sieges": 32,
+      "pour": 32,
+      "contre": 0,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "DR",
+      "sieges": 45,
+      "pour": 43,
+      "contre": 0,
+      "abstention": 2,
+      "non_votants": 0
+    },
+    {
+      "id": "RN",
+      "sieges": 118,
+      "pour": 0,
+      "contre": 118,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "UDR",
+      "sieges": 8,
+      "pour": 0,
+      "contre": 8,
+      "abstention": 0,
+      "non_votants": 0
+    },
+    {
+      "id": "NI",
+      "sieges": 7,
+      "pour": 6,
+      "contre": 1,
+      "abstention": 0,
+      "non_votants": 0
+    }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "5",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      {
+        "nom": "Schéma du fichier",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres cohérents avec le scrutin",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sièges attribués = 577",
+        "etat": "ok"
+      },
+      {
+        "nom": "Extraits verbatim",
+        "etat": "ok"
+      },
+      {
+        "nom": "Symétrie des bords",
+        "etat": "ok"
+      },
+      {
+        "nom": "Sources des médias",
+        "etat": "ok"
+      },
+      {
+        "nom": "Ressources citées vérifiées",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
+        "etat": "ok"
+      }
+    ]
+  }
+}

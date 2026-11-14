@@ -1,0 +1,48 @@
+{
+  "verifie_le": "2026-11-14",
+  "note": "Orateurs cités dans la fiche nouvelle-caledonie-natifs, tous intervenus dans la première séance du mercredi 20 mai 2026.",
+  "experts": [
+    {
+      "nom": "Philippe Vigier",
+      "role": "Député, intervenu dans les explications de vote",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    },
+    {
+      "nom": "Patrick Hetzel",
+      "role": "Député, intervenu dans les explications de vote",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    },
+    {
+      "nom": "Bastien Lachaud",
+      "role": "Député, intervenu dans la discussion générale",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    },
+    {
+      "nom": "Sabrina Sebaihi",
+      "role": "Députée, intervenue dans les explications de vote",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    },
+    {
+      "nom": "Philippe Gosselin",
+      "role": "Député, rapporteur de la commission des lois",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    },
+    {
+      "nom": "Jean-Victor Castor",
+      "role": "Député, intervenu dans la discussion générale",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026O1N238"
+    }
+  ]
+}
