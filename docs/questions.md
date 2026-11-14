@@ -12,7 +12,7 @@ Non. C'est le décompte du scrutin n° 8428, recopié tel quel, avec son identif
 Chaque chiffre porte l'identifiant du scrutin et la source amont, l'Assemblée nationale sous Licence Ouverte. Les contrôles vérifient l'arithmétique interne : votants = pour + contre + abstentions, exprimés = pour + contre, sièges attribués + sièges vides = 577. Une incohérence bloque la publication.
 
 **4. « Vous dites “aucune IA dans l'app”, mais le contenu est produit par une IA. »**
-Le contenu est produit hors ligne, puis jugé par des contrôles automatiques qui acceptent ou refusent le fichier. À l'exécution, l'app ne fait aucun appel : elle lit des JSON statiques. Les nombres, les dates et les citations ne sont jamais générés, ils sont recopiés.
+Le contenu est produit hors ligne, puis jugé par des contrôles automatiques qui acceptent ou refusent le fichier. À l'exécution, l'app ne fait aucun appel : elle lit des JSON statiques. Les nombres, les dates, les extraits du texte et les titres de presse sont recopiés tels quels ; les arguments pour et contre sont reformulés, et chaque reformulation garde l'exposé sommaire dont elle vient.
 
 **5. « Le vote est privé, mais il est écrit sur le téléphone. »**
 Il est dans `localStorage`, jamais transmis, et effaçable en un geste. Quelqu'un qui tient l'appareil déverrouillé peut le lire : c'est la limite, elle est assumée. Il n'y a ni compte, ni serveur, ni identifiant.

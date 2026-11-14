@@ -696,12 +696,41 @@ body {
   border-radius: 1px;
 }
 
+.bord--pour .bord__titre {
+  color: var(--pour);
+}
+
+.bord--contre .bord__titre {
+  color: var(--contre);
+}
+
 .bord--pour .bord__titre::after {
   background: var(--pour);
 }
 
 .bord--contre .bord__titre::after {
   background: var(--contre);
+}
+
+.bord--neutre .bord__titre::after {
+  background: var(--filet-fort);
+}
+
+/* Le bord d'une colonne d'arguments se lit d'un coup d'œil : vert pour la
+   peine plus lourde, rouge pour la peine plus légère. Les colonnes de presse
+   sont neutres : elles sont classées par type de source, pas par bord. */
+.bord--pour,
+.bord--contre {
+  padding-left: var(--s2);
+  border-left: 2px solid;
+}
+
+.bord--pour {
+  border-left-color: var(--pour);
+}
+
+.bord--contre {
+  border-left-color: var(--contre);
 }
 
 .entree {

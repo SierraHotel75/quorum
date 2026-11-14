@@ -107,6 +107,7 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 ## Ce qui est vrai, ce qui ne l'est pas
 
 - **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
+- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les deux bords ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les citations exactes restent dans « Les voix citées ».
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
 - **Règle** : aucun contenu de démonstration ne doit être présenté comme vérifié dans une slide. Les images de `assets/mockups/` sont des maquettes.
 

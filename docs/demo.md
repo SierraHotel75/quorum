@@ -11,7 +11,7 @@ Avant de commencer : navigation privée, ou `localStorage.removeItem("quorum.v1"
 | 3 | Le fait | défiler la chronologie | « Du dépôt au 5 novembre : le texte n'est pas encore définitif, une commission mixte paritaire est convoquée. » | 30 s |
 | 4 | Les extraits | défiler, ouvrir **L'article entier** | « L'article 11, mot pour mot. La peine passe à la perpétuité quand la victime a moins de quinze ans. Une seule mention est marquée “supprimé” : b). » | 30 s |
 | 5 | **Ce qui a changé** | montrer le bloc sous l'article | « Le même jour, un sous-amendement a supprimé une phrase : la cour d'assises pouvait porter la période de sûreté à trente ans. 178 pour, 163 contre. Le texte adopté porte “b) (Supprimé)”. » | 40 s |
-| 6 | Les chiffres | répondre au quiz | « 258 pour, 84 contre. Large, vu comme ça. Sept voix séparaient l'autre vote. » | 25 s |
+| 6 | Les chiffres | répondre au quiz | « 258 pour, 84 contre : ça mesure le rétablissement de l'article 11. La clause de sûreté, elle, est tombée par 178 contre 163, le même jour. Quinze voix d'écart. » | 25 s |
 | 7 | La presse | survoler les deux colonnes | « Des titres réels, datés, liés. Aucun commentaire, aucun classement politique. » | 25 s |
 | 8 | Votre vote final | cliquer **Contre**, lire le résultat | « Deuxième vote, après avoir lu. Changer d'avis ne rapporte rien : les points ne récompensent que le parcours. » | 25 s |
 | 9 | La carte | basculer **Avec vous** | « 577 sièges, 224 non occupés, jamais attribués à un groupe. Voilà où est votre voix. » | 25 s |

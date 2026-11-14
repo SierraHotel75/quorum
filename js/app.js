@@ -639,7 +639,7 @@
         loi.presse.pour.map(function (a) {
           return { titre: a.titre, meta: a.media + " \u2014 " + dateLongue(a.date), url: a.url };
         }),
-        "pour"
+        "neutre"
       ) +
       bord(
         "contre",
@@ -647,7 +647,7 @@
         loi.presse.contre.map(function (a) {
           return { titre: a.titre, meta: a.media + " \u2014 " + dateLongue(a.date), url: a.url };
         }),
-        "contre"
+        "neutre"
       ) +
       '<p class="mono">' + esc(loi.presse.note) + "</p>" +
       '<a class="bouton" href="#/devoir/' + loi.id + '/experts">Voir les ressources</a>' +
@@ -898,7 +898,7 @@
       '<h2 class="ecran__titre">Comment ce devoir est fabriqué</h2>' +
       "</div>" +
       '<div class="pile">' +
-      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Les chiffres viennent du scrutin. Les titres de presse sont repris tels quels. Quand une information manque, l\u2019application écrit « non documenté ».</p>' +
+      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Les arguments pour et contre sont reformulés en clair à partir des exposés sommaires, avec leur source ; les citations exactes sont dans « Les voix citées ». Les chiffres viennent du scrutin. Les titres de presse sont repris tels quels. Quand une information manque, l\u2019application écrit « non documenté ».</p>' +
       "</div>" +
       '<p class="etiquette">Journal des contrôles</p>' +
       '<ul class="liste">' +
