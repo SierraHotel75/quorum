@@ -93,6 +93,7 @@
 
   /* Formes */
   --rayon: 4px;
+  --rayon-cadre: 8px;
   --largeur-texte: 34rem;
   --largeur-app: 30rem;
 
@@ -168,6 +169,18 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overscroll-behavior-y: contain;
+}
+
+/* Surfaces du navigateur : elles font partie du dessin. */
+
+::selection {
+  background: var(--bois-profond);
+  color: var(--texte);
+}
+
+html {
+  scrollbar-color: var(--filet-fort) var(--fond);
+  caret-color: var(--bois);
 }
 
 /* Le serif porte la parole officielle */

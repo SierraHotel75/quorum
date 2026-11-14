@@ -66,6 +66,7 @@ body {
 /* ---------- Barre de retour ---------- */
 
 .barre {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--s2);
@@ -94,10 +95,30 @@ body {
 
 .barre__etape {
   margin-left: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--mono);
   font-size: var(--t-xs);
-  color: var(--texte-faible);
+  color: var(--texte-doux);
   font-variant-numeric: tabular-nums;
+}
+
+/* La position dans le parcours : un filet de 2 px, sans animation. */
+.barre__progression {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--filet);
+}
+
+.barre__progression > span {
+  display: block;
+  height: 100%;
+  background: var(--bois);
 }
 
 /* ---------- Écran ---------- */
@@ -118,13 +139,24 @@ body {
 }
 
 .ecran__titre {
-  font-size: var(--t-2xl);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 1.75rem);
 }
 
 .ecran__chapeau {
   color: var(--texte-doux);
   font-size: var(--t-md);
-  max-width: 32rem;
+  line-height: 1.5;
+  max-width: var(--largeur-texte);
+}
+
+/* Ligne de contexte factuelle : date, chambre, statut. */
+.meta-ligne {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.06em;
+  color: var(--texte-doux);
+  font-variant-numeric: tabular-nums;
 }
 
 .theme {
@@ -187,7 +219,25 @@ body {
 }
 
 .ligne--etroit {
-  grid-template-columns: 2rem 1fr;
+  grid-template-columns: 2rem 1fr auto;
+  padding: 0.9rem 0;
+}
+
+.ligne__etat {
+  align-self: center;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--bois);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bois);
+  white-space: nowrap;
+}
+
+.ligne--suivante .ligne__texte {
+  color: var(--texte);
 }
 
 .ligne__date {
@@ -203,6 +253,10 @@ body {
 
 .ligne--lien:hover .ligne__texte {
   color: var(--bois);
+}
+
+.ligne--lien:active {
+  background: var(--fond-2);
 }
 
 /* ---------- Boutons ---------- */
@@ -223,16 +277,26 @@ body {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--duree) var(--courbe);
+  transition:
+    background var(--duree) var(--courbe),
+    transform 120ms var(--courbe);
 }
 
 .bouton:hover {
   background: var(--bordeaux-haut);
 }
 
+.bouton:active {
+  transform: scale(0.985);
+}
+
+.bouton:focus-visible {
+  outline-color: var(--texte);
+}
+
 .bouton:disabled {
   background: var(--fond-3);
-  color: var(--texte-faible);
+  color: var(--texte-doux);
   cursor: not-allowed;
 }
 
@@ -246,12 +310,16 @@ body {
   background: var(--fond-2);
 }
 
+.bouton--secondaire:active {
+  background: var(--fond-3);
+}
+
 .bouton--discret {
   background: transparent;
   color: var(--texte-doux);
   border: 0;
   font-weight: 400;
-  min-height: 2.5rem;
+  min-height: 2.75rem;
 }
 
 .bouton--discret:hover {
@@ -308,6 +376,26 @@ body {
   color: var(--abstention);
 }
 
+/* ---------- Vote : ce qui est voté, puis la question ---------- */
+
+.ce-vote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  padding-top: var(--s2);
+  border-top: 1px solid var(--filet-fort);
+}
+
+.ce-vote .etiquette {
+  margin: 0;
+}
+
+.ce-vote__texte {
+  font-size: var(--t-md);
+  line-height: 1.55;
+  max-width: var(--largeur-texte);
+}
+
 /* ---------- Vote : carte à balayer ---------- */
 
 .vote {
@@ -318,7 +406,7 @@ body {
 
 .vote__zone {
   position: relative;
-  min-height: 15rem;
+  min-height: 13rem;
   touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
@@ -331,7 +419,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: var(--s2);
-  padding: var(--s4) var(--s3);
+  padding: var(--s3);
   border: 1px solid var(--filet-fort);
   border-radius: var(--rayon);
   background: var(--fond-2);
@@ -345,7 +433,7 @@ body {
 
 .vote__question {
   font-family: var(--serif);
-  font-size: var(--t-xl);
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.375rem);
   line-height: 1.3;
   text-wrap: balance;
 }
@@ -370,7 +458,14 @@ body {
   color: var(--texte);
   font-size: var(--t-sm);
   cursor: pointer;
-  transition: border-color var(--duree) var(--courbe), color var(--duree) var(--courbe);
+  transition:
+    border-color var(--duree) var(--courbe),
+    color var(--duree) var(--courbe),
+    transform 120ms var(--courbe);
+}
+
+.vote__bouton:active {
+  transform: scale(0.97);
 }
 
 .vote__bouton:hover {
@@ -411,10 +506,10 @@ body {
 
 .timeline__marqueur {
   position: absolute;
-  left: calc(var(--s3) * -1 - 1.5px);
-  top: 0.35rem;
-  width: 3px;
-  height: 1.1rem;
+  left: calc(var(--s3) * -1 - 3.5px);
+  top: 0.45rem;
+  width: 7px;
+  height: 7px;
   border-radius: 1px;
   background: var(--commission);
 }
@@ -468,6 +563,9 @@ body {
   align-items: flex-start;
   gap: var(--s1);
   padding: var(--s3) 0;
+}
+
+.extrait + .extrait {
   border-top: 1px solid var(--filet);
 }
 
@@ -476,20 +574,17 @@ body {
   max-width: 100%;
 }
 
-.extrait:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
 .extrait__citation {
   font-family: var(--serif);
   font-size: var(--t-lg);
   line-height: 1.45;
   border-left: 1px solid var(--filet-fort);
   padding-left: var(--s2);
+  text-wrap: pretty;
 }
 
 .extrait__source {
+  padding-left: var(--s2);
   font-family: var(--mono);
   font-size: var(--t-xs);
   color: var(--texte-faible);
@@ -616,7 +711,7 @@ body {
 
 .chiffre {
   background: var(--fond);
-  padding: var(--s2);
+  padding: var(--s2) 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
@@ -631,7 +726,7 @@ body {
 .chiffre__libelle {
   font-family: var(--mono);
   font-size: 0.6875rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--texte-doux);
 }
@@ -649,25 +744,40 @@ body {
   background: transparent;
   color: var(--texte);
   font-size: var(--t-sm);
+  line-height: 1.45;
   cursor: pointer;
+  transition:
+    border-color var(--duree) var(--courbe),
+    background var(--duree) var(--courbe),
+    transform 120ms var(--courbe);
 }
 
 .quiz__option:hover {
   border-color: var(--texte-doux);
 }
 
-.quiz__option[data-etat="juste"] {
-  border-color: var(--pour);
-  color: var(--pour);
-}
-
-.quiz__option[data-etat="faux"] {
-  border-color: var(--contre);
-  color: var(--contre);
+.quiz__option:active {
+  transform: scale(0.99);
 }
 
 .quiz__option:disabled {
   cursor: default;
+  color: var(--texte-faible);
+  border-color: var(--filet);
+}
+
+/* Après la réponse, les deux états gardent un contraste lisible : le vert et
+   le rouge restent des bords, jamais un jugement sur la loi. */
+.quiz__option[data-etat="juste"] {
+  border-color: var(--pour);
+  background: var(--pour-fond);
+  color: var(--pour-texte);
+}
+
+.quiz__option[data-etat="faux"] {
+  border-color: var(--contre);
+  background: var(--contre-fond);
+  color: var(--contre-texte);
 }
 
 /* ---------- Débat cité ---------- */
@@ -684,53 +794,45 @@ body {
   overflow: hidden;
 }
 
-.bande-debat {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-}
-
-.bande-debat__cote {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0 var(--s2);
-  font-family: var(--mono);
-  font-size: var(--t-xs);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.bande-debat__cote--pour {
-  background: var(--pour-fond);
-  color: var(--pour-texte);
-}
-
-.bande-debat__cote--contre {
-  background: var(--contre-fond);
-  color: var(--contre-texte);
-}
-
-.bande-debat__titre {
-  position: relative;
-  z-index: 1;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid var(--filet-fort);
-  border-radius: var(--rayon);
-  background: var(--fond);
-  font-size: var(--t-sm);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
 .debat {
   display: flex;
   flex-direction: column;
   gap: var(--s2);
   padding: var(--s3);
   border-left: 3px solid;
+}
+
+.debat__tete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s2);
+}
+
+.debat__cote {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.debat__compte {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--texte-doux);
+  white-space: nowrap;
+}
+
+.debat__titre {
+  margin: calc(var(--s1) * -1) 0 0;
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--texte);
 }
 
 .debat--pour {
@@ -743,6 +845,14 @@ body {
   border-left-color: var(--contre);
 }
 
+.debat--pour .debat__cote {
+  color: var(--pour-texte);
+}
+
+.debat--contre .debat__cote {
+  color: var(--contre-texte);
+}
+
 /* ---------- Débat cité et chiffres vérifiés ---------- */
 
 .citation {
@@ -750,20 +860,19 @@ body {
   flex-direction: column;
   gap: var(--s1);
   margin: 0;
-  padding-bottom: var(--s2);
-  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
 }
 
-.citation:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
+.citation + .citation {
+  padding-top: var(--s3);
+  border-top: 1px solid rgba(127, 127, 127, 0.18);
 }
 
 .citation__texte {
   margin: 0;
   font-size: var(--t-md);
-  line-height: 1.6;
+  line-height: 1.62;
   color: var(--texte);
+  text-wrap: pretty;
 }
 
 .citation__auteur {
@@ -782,9 +891,19 @@ body {
 }
 
 .citation__source {
+  align-self: flex-start;
+  padding-block: 0.35rem;
   font-family: var(--mono);
   font-size: var(--t-xs);
+  line-height: 1.5;
   text-decoration-color: var(--filet-fort);
+  text-decoration-thickness: 1px;
+}
+
+/* Un groupe insécable : la date ne laisse jamais un point orphelin en fin de
+   ligne sur un écran de 360 px. */
+.nw {
+  white-space: nowrap;
 }
 
 .verif {
@@ -828,8 +947,8 @@ body {
 
 .verif__auteur,
 .verif__sources {
-  font-size: var(--t-xs);
-  line-height: 1.7;
+  font-size: 0.8125rem;
+  line-height: 1.65;
   color: var(--texte-doux);
 }
 
@@ -868,21 +987,26 @@ body {
 }
 
 .bord__titre {
-  display: flex;
-  align-items: center;
-  gap: var(--s1);
+  margin: 0;
   font-family: var(--mono);
   font-size: var(--t-xs);
+  font-weight: 400;
   letter-spacing: 0.14em;
+  line-height: 1.4;
   text-transform: uppercase;
   color: var(--texte-doux);
 }
 
+/* Le filet passe sous le libellé : un titre qui tient sur deux lignes ne
+   laisse pas un trait flotter au milieu. */
 .bord__titre::after {
   content: "";
+  display: block;
   width: 2.5rem;
   height: 3px;
+  margin-top: var(--s1);
   border-radius: 1px;
+  background: var(--filet-fort);
 }
 
 .bord--pour .bord__titre {
@@ -903,9 +1027,7 @@ body {
 
 .bord--neutre .bord__titre::after {
   background: var(--filet-fort);
-}
-
-/* Le bord d'une colonne d'arguments se lit d'un coup d'œil : vert pour la
+}/* Le bord d'une colonne d'arguments se lit d'un coup d'œil : vert pour la
    peine plus lourde, rouge pour la peine plus légère. Les colonnes de presse
    sont neutres : elles sont classées par type de source, pas par bord. */
 .bord--pour,
@@ -942,6 +1064,11 @@ body {
   line-height: 1.35;
 }
 
+.entree__titre a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 .entree__texte {
   color: var(--texte-doux);
   font-size: var(--t-sm);
@@ -972,12 +1099,17 @@ body {
 
 .bascule button {
   padding: var(--s1) var(--s2);
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   background: transparent;
   border: 0;
   color: var(--texte-doux);
   font-size: var(--t-sm);
   cursor: pointer;
+  transition: color var(--duree) var(--courbe);
+}
+
+.bascule button:hover {
+  color: var(--texte);
 }
 
 .bascule button[aria-pressed="true"] {
@@ -1213,15 +1345,20 @@ body {
   padding: var(--s1) 0 var(--s2);
   font-size: 0.6875rem;
   letter-spacing: 0.04em;
-  color: var(--texte-faible);
+  color: var(--texte-doux);
   text-decoration: none;
   border-top: 2px solid transparent;
   margin-top: -1px;
+  transition: color var(--duree) var(--courbe);
 }
 
 .navbas a[aria-current="page"] {
   color: var(--texte);
   border-top-color: var(--bois);
+}
+
+.navbas a:active {
+  color: var(--texte);
 }
 
 .navbas span {
@@ -1271,7 +1408,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid var(--filet);
-    border-radius: 8px;
+    border-radius: var(--rayon-cadre);
     min-height: 32rem;
   }
 }
@@ -1360,7 +1497,7 @@ body {
   .app {
     min-height: auto;
     border: 1px solid var(--filet);
-    border-radius: 8px;
+    border-radius: var(--rayon-cadre);
     overflow: hidden;
     box-shadow: 0 24px 60px rgb(0 0 0 / 55%);
   }
