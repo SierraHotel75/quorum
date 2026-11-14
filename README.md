@@ -1,19 +1,28 @@
 # Quorum
 
-**Ce qui s'est dit. Ce qui s'est voté.**
+**Lire, voter, vérifier, revoter.**
 
-L'Assemblée vote des textes que personne n'a le temps de lire. Quorum prend une loi,
-la documente de bout en bout, et la rend lisible : la chronologie, le texte exact, les
-mots des deux bords, les titres de presse, le décompte.
+> Ce qui s'est dit. Ce qui s'est voté.
 
-Puis vous votez. Pour vous. Sans compte, sans avis de l'application, sans classement public.
+L'Assemblée vote des textes que personne n'a le temps de lire. Quorum ouvre le dossier
+d'une loi : ce qui s'est passé, ce que change le texte, ce qui s'est dit des deux bords,
+ce que la presse en a écrit, et le décompte, siège par siège. Puis vous tranchez —
+et l'application ne vous dit jamais quoi penser.
+
+- **Lire** — un dossier complet en dix écrans : chronologie, texte exact, débat mot pour
+  mot. Chaque phrase a sa source, chaque chiffre vient du scrutin.
+- **Voter** — après avoir lu, pas avant. Sans compte, sans inscription : votre vote reste
+  sur votre appareil.
+- **Vérifier** — les affirmations des députés confrontées à une source, les titres de
+  presse tels quels, les deux bords à égalité de place.
+- **Revotez** — le même vote ou un autre. L'application ne commente ni l'un ni l'autre.
 
 <p align="center">
   <img src="docs/captures/desktop-accueil.png" width="390" alt="Accueil de Quorum, le devoir du jour">
   <img src="docs/captures/desktop-carte.png" width="390" alt="La carte de l'hémicycle, un point par siège">
 </p>
 
-## Le parcours
+## Ce que vous obtenez
 
 Un devoir se lit dans l'ordre où une loi se fait, pas dans l'ordre où un fil
 d'actualité la raconte. Dix étapes, en trois temps.
@@ -37,6 +46,32 @@ d'actualité la raconte. Dix étapes, en trois temps.
 8. **La presse** — les titres des journaux, tels quels, avec leur date et leur lien.
 9. **Votre vote final** — le même vote ou un autre ; l'application ne commente ni l'un ni l'autre.
 10. **La carte** — l'hémicycle, un point par siège, pour situer le scrutin et votre position.
+
+## Pourquoi vous pouvez y faire confiance
+
+Quorum ne vous persuade pas : il vous équipe. Cinq règles non négociables.
+
+- **Source ou silence.** Chaque phrase publiée vient d'un fichier source : compte rendu,
+  texte officiel, décompte de l'Assemblée, titre de presse. Sans source, l'écran écrit
+  « non documenté ».
+- **Les deux bords, à égalité de place.** Le débat cite des interventions des deux côtés,
+  sans trancher. Vous voyez les arguments, pas leur emballage.
+- **Les chiffres ont un verdict, pas une opinion.** « confirmé », « nuancé » ou
+  « non documenté » disent ce que la source établit, jamais si le texte est bon.
+- **Rien n'est relu à la main.** La publication dépend de contrôles automatiques
+  bloquants : un fichier qui échoue n'est pas publié, et le passage refuse plus qu'il
+  ne corrige.
+- **Votre vote est privé.** Il n'est ni collecté, ni monétisable, ni visible par quiconque.
+  L'arbre de progression récompense ce que vous avez lu, jamais ce que vous avez choisi.
+
+## Ce que Quorum ne fait pas
+
+- **Aucun avis sur la loi.** Pas de « pour / contre » déguisé, pas de score, pas de
+  recommandation de vote. Les seules phrases qui qualifient sont des citations.
+- **Aucun chatbot.** L'application ne génère pas de texte : elle affiche des fichiers
+  préparés à l'avance. Aucun modèle, aucune clé, aucun appel réseau hors fichiers locaux.
+- **Aucun compte.** Pas de profil, pas de commentaire, pas de classement public des opinions.
+- **Aucun pistage.** Le vote reste dans le navigateur, sur l'appareil. Rien n'est transmis.
 
 ## Les évolutions possibles
 
@@ -107,31 +142,6 @@ Les maquettes, elles, sont dans `assets/mockups/`.
 | **Le débat, mot pour mot**<br>![Le débat](docs/captures/desktop-debat.png) | **Les chiffres vérifiés**<br>![Chiffres vérifiés](docs/captures/desktop-verif.png) |
 | **La presse**<br>![La presse](docs/captures/desktop-presse.png) | **Votre vote final**<br>![Vote final](docs/captures/desktop-resultat.png) |
 | **L'arbre de progression**<br>![L'arbre](docs/captures/desktop-arbre.png) | **La méthode**<br>![La méthode](docs/captures/desktop-methode.png) |
-
-## Ce que Quorum ne fait pas
-
-- **Aucun avis sur la loi.** Pas de « pour / contre » déguisé, pas de score, pas de
-  recommandation de vote. Les seules phrases qui qualifient sont des citations.
-- **Aucun chatbot.** L'application ne génère pas de texte : elle affiche des fichiers
-  préparés à l'avance. Aucun modèle, aucune clé, aucun appel réseau hors fichiers locaux.
-- **Aucun compte.** Pas de profil, pas de commentaire, pas de classement public des opinions.
-- **Aucun pistage.** Le vote reste dans le navigateur, sur l'appareil. Rien n'est transmis.
-- **Aucun point pour le contenu du vote.** L'arbre récompense ce que vous avez lu et
-  exploré, jamais ce que vous avez choisi.
-
-## Pourquoi vous pouvez vérifier
-
-- **Source ou silence.** Chaque phrase publiée vient d'un fichier source : compte rendu,
-  texte officiel, décompte de l'Assemblée, titre de presse. Sans source, l'écran écrit
-  « non documenté ».
-- **Les deux bords, à égalité de place.** Le débat cite des interventions des deux côtés,
-  sans trancher. Le lecteur voit les arguments, pas leur emballage.
-- **Les chiffres ont un verdict, pas une opinion.** « confirmé », « nuancé » ou
-  « non documenté » disent ce que la source établit, jamais si le texte est bon.
-- **Rien n'est relu à la main.** La publication dépend de contrôles automatiques
-  bloquants : un fichier qui échoue n'est pas publié, et le passage refuse plus qu'il
-  ne corrige.
-- **Le vote est privé.** Il n'est ni collecté, ni monétisable, ni visible par quiconque.
 
 ## Essayer
 
@@ -224,6 +234,8 @@ est vraie ; il prouve que la publication refuse ce qui n'est pas vérifiable.
 - **Application** : `index.html`, `styles/`, `js/`, `service-worker.js`, `manifest.json`.
   Aucun CDN, aucune police distante.
 - **Lois** : `data/lois/index.json` liste les lois ; `data/lois/<id>.json` porte le contenu.
+- **Textes suivis** : `data/lois/suivis.json`, corpus distinct de textes suivis `v2` :
+  actes datés sourcés, sans vote ; il n'entre ni dans `index.json` ni dans le gate des lois.
 - **Référentiels fermés** : `data/ref/medias.json` (13 médias),
   `data/ref/experts.json` (14 fiches), `data/ref/verbatim.json` (4 séances, 9 passages).
   Une source absente de ces listes est refusée.
@@ -243,7 +255,7 @@ est vraie ; il prouve que la publication refuse ce qui n'est pas vérifiable.
 ├── service-worker.js       hors ligne, réseau d'abord
 ├── styles/                 jetons, mise en page
 ├── js/                     hémicycle SVG, routage et écrans
-├── data/lois/              fiches publiées, index, brouillons _
+├── data/lois/              fiches publiées, index, textes suivis, brouillons _
 ├── data/ref/               référentiels fermés et arbre
 ├── docs/                   méthode, pipeline, technique, roadmap, captures
 ├── assets/                 icônes et maquettes
