@@ -235,7 +235,7 @@
       "</div>" +
       '<div class="pile">' +
       '<p class="etiquette">Ce qui vient ensuite</p>' +
-      '<p class="petit">Une loi, un parcours : le fait, les extraits, l\u2019article entier, puis votre vote. Ensuite les chiffres, les arguments, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres, la presse et les ressources, avant votre vote final.</p>' +
+      '<p class="petit">Une loi, un parcours : le fait, les extraits, l\u2019article entier, puis votre vote. Ensuite les chiffres, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres et la presse, avant votre vote final.</p>' +
       "</div>" +
       '<p class="mention-independance">Projet indépendant, non affilié à l\u2019Assemblée nationale ni au Sénat. Le vote reste sur cet appareil.</p>' +
       "</main>" +
@@ -252,11 +252,9 @@
       { cle: "article", nom: "L\u2019article entier", fait: p.lu, href: "#/devoir/" + loi.id + "/article" },
       { cle: "vote", nom: "Votre vote", fait: !!v, href: "#/devoir/" + loi.id + "/vote" },
       { cle: "chiffres", nom: "Les chiffres", fait: p.quiz, href: "#/devoir/" + loi.id + "/chiffres" },
-      { cle: "arguments", nom: "Les arguments", fait: p.oppose, href: "#/devoir/" + loi.id + "/arguments" },
-      { cle: "debat", nom: "Le débat, mot pour mot", fait: false, href: "#/devoir/" + loi.id + "/debat" },
+      { cle: "debat", nom: "Le débat, mot pour mot", fait: p.oppose, href: "#/devoir/" + loi.id + "/debat" },
       { cle: "verif", nom: "Les chiffres vérifiés", fait: false, href: "#/devoir/" + loi.id + "/verif" },
       { cle: "presse", nom: "La presse", fait: p.source, href: "#/devoir/" + loi.id + "/presse" },
-      { cle: "experts", nom: "Les ressources", fait: false, href: "#/devoir/" + loi.id + "/experts" },
       { cle: "resultat", nom: "Votre vote final", fait: v && v.v2, href: "#/devoir/" + loi.id + "/resultat" },
       { cle: "carte", nom: "La carte", fait: false, href: "#/devoir/" + loi.id + "/carte" }
     ];
@@ -310,7 +308,7 @@
       '<p class="etiquette">Ce qui est voté</p>' +
       '<p class="petit">' +
       gras(
-        (loi.arguments && loi.arguments.contenu && loi.arguments.contenu.texte) ||
+        (loi.ce_qui_est_vote && loi.ce_qui_est_vote.texte) ||
           "Le texte soumis au vote."
       ) +
       "</p>" +
@@ -574,7 +572,7 @@
         })
         .join("") +
       "</div>" +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/arguments">Voir les arguments</a>' +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/debat">Le débat, mot pour mot</a>' +
       "</main>" +
       navbas("#/")
     );
@@ -608,90 +606,6 @@
         })
         .join("") +
       "</div>"
-    );
-  }
-
-  function ecranArguments(loi) {
-    var a = loi.arguments || {};
-    var contenu = a.contenu || {};
-    var pour = a.pour || [];
-    var contre = a.contre || [];
-
-    function blocDebat(cote, titre, liste) {
-      if (!liste.length) {
-        return (
-          '<section class="debat debat--' + cote + '">' +
-          vide(
-            "Rien pour ce bord",
-            "Aucune position publiée pour ce bord. La sélection ne remplace jamais un manque par une invention.",
-            ""
-          ) +
-          "</section>"
-        );
-      }
-      return (
-        '<section class="debat debat--' + cote + '" aria-label="' + esc(titre) + '">' +
-        liste
-          .map(function (x) {
-            return '<p class="debat__texte">' + gras(x.texte) + "</p>";
-          })
-          .join("") +
-        "</section>"
-      );
-    }
-
-    var sources = pour.concat(contre).filter(function (x) {
-      return x.url;
-    });
-
-    return (
-      barre("#/devoir/" + loi.id, "Les arguments") +
-      '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Les arguments</span>' +
-      '<h2 class="ecran__titre">Comprendre en une minute</h2>' +
-      (a.chapeau ? '<p class="ecran__chapeau">' + esc(a.chapeau) + "</p>" : "") +
-      "</div>" +
-      '<section class="contenu">' +
-      '<p class="contenu__titre">' + esc(contenu.titre || "Contenu de l’article") + " :</p>" +
-      (contenu.texte ? '<p class="contenu__texte">' + gras(contenu.texte) + "</p>" : "") +
-      (contenu.points && contenu.points.length
-        ? '<ul class="contenu__points">' +
-          contenu.points
-            .map(function (p) {
-              return "<li>" + gras(p) + "</li>";
-            })
-            .join("") +
-          "</ul>"
-        : "") +
-      "</section>" +
-      '<div class="debat-ensemble">' +
-      '<div class="bande-debat">' +
-      '<span class="bande-debat__cote bande-debat__cote--pour">Pour</span>' +
-      '<span class="bande-debat__titre">Le débat, en bref :</span>' +
-      '<span class="bande-debat__cote bande-debat__cote--contre">Contre</span>' +
-      "</div>" +
-      blocDebat("pour", a.pour_titre || "Pour", pour) +
-      blocDebat("contre", a.contre_titre || "Contre", contre) +
-      "</div>" +
-      (sources.length
-        ? '<p class="sources">' +
-          '<span class="sources__titre">Sources :</span> ' +
-          sources
-            .map(function (x) {
-              return (
-                '<a href="' + esc(x.url) + '" rel="noopener" target="_blank">' +
-                esc(x.court || x.source || x.titre) +
-                "</a>"
-              );
-            })
-            .join(" · ") +
-          "</p>"
-        : "") +
-      (a.note ? '<p class="mono">' + esc(a.note) + "</p>" : "") +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/debat" data-action="oppose">Le débat, mot pour mot</a>' +
-      "</main>" +
-      navbas("#/")
     );
   }
 
@@ -732,11 +646,12 @@
   }
 
   function ecranDebat(loi) {
+    marquer(loi.id, "oppose");
     var d = loi.debat || {};
     var pour = d.pour || [];
     var contre = d.contre || [];
     return (
-      barre("#/devoir/" + loi.id + "/arguments", "Le débat") +
+      barre("#/devoir/" + loi.id + "/chiffres", "Le débat") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Le débat</span>' +
@@ -836,37 +751,6 @@
         "neutre"
       ) +
       '<p class="mono">' + esc(loi.presse.note) + "</p>" +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/experts">Voir les ressources</a>' +
-      "</main>" +
-      navbas("#/")
-    );
-  }
-
-  function ecranExperts(loi) {
-    return (
-      barre("#/devoir/" + loi.id, "Les ressources") +
-      '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Les ressources</span>' +
-      '<h2 class="ecran__titre">Les personnes cit\u00e9es</h2>' +
-      "</div>" +
-      bord(
-        "pour",
-        loi.experts.pour_titre || "Pour",
-        loi.experts.pour.map(function (a) {
-          return { titre: a.nom + " \u2014 " + a.role, meta: a.affiliation, texte: a.argument, url: a.url };
-        }),
-        "pour"
-      ) +
-      bord(
-        "contre",
-        loi.experts.contre_titre || "Contre",
-        loi.experts.contre.map(function (a) {
-          return { titre: a.nom + " \u2014 " + a.role, meta: a.affiliation, texte: a.argument, url: a.url };
-        }),
-        "contre"
-      ) +
-      '<p class="mono">' + esc(loi.experts.note) + "</p>" +
       '<a class="bouton" href="#/devoir/' + loi.id + '/resultat">Votre vote final</a>' +
       "</main>" +
       navbas("#/")
@@ -1158,7 +1042,7 @@
       '<h2 class="ecran__titre">Comment ce devoir est fabriqué</h2>' +
       "</div>" +
       '<div class="pile">' +
-      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Les arguments pour et contre sont reformulés en clair à partir des exposés sommaires, avec leur source ; les citations exactes sont dans « Le débat, mot pour mot », recopiées des comptes rendus. Les chiffres du scrutin viennent du décompte ; ceux du débat sont confrontés à une source, et rendus « non documentés » quand il n\u2019y en a pas. Les titres de presse sont repris tels quels.</p>' +
+      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Le débat est cité mot pour mot depuis les comptes rendus, sans coupe. Les chiffres du scrutin viennent du décompte ; ceux du débat sont confrontés à une source, et rendus « non documentés » quand il n\u2019y en a pas. Les titres de presse sont repris tels quels.</p>' +
       "</div>" +
       '<p class="etiquette">Journal des contrôles</p>' +
       '<ul class="liste">' +
@@ -1250,11 +1134,17 @@
       if (sous === "texte") return rendre(ecranTexte(loi));
       if (sous === "article") return rendre(ecranArticle(loi));
       if (sous === "chiffres") return rendre(ecranChiffres(loi));
-      if (sous === "arguments") return rendre(ecranArguments(loi));
+      if (sous === "arguments") {
+        location.hash = "#/devoir/" + loi.id + "/debat";
+        return;
+      }
       if (sous === "debat") return rendre(ecranDebat(loi));
       if (sous === "verif") return rendre(ecranVerif(loi));
       if (sous === "presse") return rendre(ecranPresse(loi));
-      if (sous === "experts") return rendre(ecranExperts(loi));
+      if (sous === "experts") {
+        location.hash = "#/devoir/" + loi.id + "/presse";
+        return;
+      }
       if (sous === "resultat") return rendre(ecranResultat(loi));
       if (sous === "carte") return rendre(ecranCarte(loi));
       return rendre(ecranDevoir(loi));
@@ -1394,11 +1284,7 @@
     }
   });
 
-  /* Le passage par les arguments vaut lecture du camp opposé. */
   window.addEventListener("hashchange", function () {
-    if (etat.pret && /\/arguments/.test(location.hash)) {
-      marquer(etat.loi.id, "oppose");
-    }
     route();
   });
 

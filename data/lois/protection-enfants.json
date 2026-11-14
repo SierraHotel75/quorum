@@ -227,6 +227,14 @@
       "source": "Scrutin public n° 8429 du 21 juillet 2026"
     }
   ],
+  "ce_qui_est_vote": {
+    "titre": "Contenu de l’article",
+    "texte": "Cet article porte à la **réclusion criminelle à perpétuité** la peine du viol commis sur un **mineur de quinze ans**.",
+    "points": [
+      "La perpétuité s’applique aussi au viol d’un mineur de quinze ans commis **avec d’autres viols** sur d’autres victimes.",
+      "La possibilité de porter la **période de sûreté à trente ans** a été retirée du texte."
+    ]
+  },
   "arguments": {
     "chapeau": "Ce vote porte sur l’article 11 du projet de loi relatif à la protection des enfants.",
     "contenu": {
