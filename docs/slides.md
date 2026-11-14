@@ -22,7 +22,7 @@ Ce qui s'est dit. Ce qui s'est voté.
 
 ## 3. Un devoir, de bout en bout
 
-Le fait → les extraits → l'article entier → premier vote → les chiffres → les arguments → le débat mot pour mot → les chiffres vérifiés → la presse → les ressources → vote final → la carte.
+Le fait → les extraits → l'article entier → premier vote → les chiffres → le débat mot pour mot → les chiffres vérifiés → la presse → vote final → la carte.
 
 - Le premier vote arrive après le texte, pas avant : on sait ce qu'on vote.
 - Le second arrive après le débat et la vérification des chiffres.
@@ -46,7 +46,7 @@ Le fait → les extraits → l'article entier → premier vote → les chiffres 
 
 ## 6. La neutralité par construction
 
-- Quatre listes à deux bords, de poids comparable : arguments, presse, ressources, débat.
+- Deux listes à deux bords, de poids comparable : la presse et le débat.
 - Trois listes fermées : médias suivis par flux RSS, personnes citables, verbatim des comptes rendus.
 - Les citations du débat sont recopiées : une seule au mot près et le fichier est refusé.
 - Les verdicts sur les chiffres sont typographiques, jamais verts ou rouges.

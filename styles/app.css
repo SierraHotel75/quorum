@@ -670,45 +670,8 @@ body {
   cursor: default;
 }
 
-/* ---------- Arguments : la carte « comprendre en une minute » ---------- */
+/* ---------- Débat cité ---------- */
 
-.contenu {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s2);
-  padding: var(--s3);
-  border: 1px solid var(--filet-fort);
-  border-left: 3px solid var(--bois);
-  border-radius: var(--rayon);
-  background: var(--fond-2);
-}
-
-.contenu__titre {
-  font-family: var(--serif);
-  font-size: var(--t-lg);
-  font-weight: 600;
-}
-
-.contenu__texte,
-.contenu__points {
-  color: var(--texte-doux);
-  font-size: var(--t-md);
-  line-height: 1.55;
-}
-
-.contenu__points {
-  margin: 0;
-  padding-left: 1.15rem;
-  display: flex;
-  flex-direction: column;
-  gap: var(--s1);
-}
-
-.contenu__points li::marker {
-  color: var(--bois);
-}
-
-.contenu strong,
 .debat strong {
   color: var(--texte);
   font-weight: 600;
@@ -778,11 +741,6 @@ body {
 .debat--contre {
   background: var(--contre-fond);
   border-left-color: var(--contre);
-}
-
-.debat__texte {
-  font-size: var(--t-md);
-  line-height: 1.6;
 }
 
 /* ---------- Débat cité et chiffres vérifiés ---------- */

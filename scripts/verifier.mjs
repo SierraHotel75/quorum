@@ -28,7 +28,7 @@ const FICHIER_VERBATIM = process.env.QUORUM_VERBATIM || join(RACINE, "data", "re
 
 /* Version du passage obligé. Un fichier produit par une version antérieure
    des contrôles est refusé : les règles ont changé, la preuve ne vaut plus. */
-const GATE = "4";
+const GATE = "5";
 
 /* Domaines autorisés pour une source. Volontairement court : une source hors
    de cette liste est refusée, pas signalée. */
@@ -154,7 +154,7 @@ function verifierSchema(loi, r) {
   const obligatoires = [
     "id", "titre", "theme", "statut", "resume", "nb_phrases",
     "source", "scrutin", "chronologie", "extraits",
-    "chiffres", "quiz", "arguments", "presse", "experts",
+    "chiffres", "quiz", "ce_qui_est_vote", "presse",
     "debat", "verifications",
     "votes_par_groupe", "meta"
   ];
@@ -167,6 +167,9 @@ function verifierSchema(loi, r) {
   if (loi.articles == null && loi.article == null) {
     r.ajouter("WP1.1", "texte absent : ni article ni articles");
     return false;
+  }
+  if (!normaliser(loi.ce_qui_est_vote && loi.ce_qui_est_vote.texte)) {
+    r.ajouter("WP1.1", "ce_qui_est_vote : texte absent, l'écran de vote n'aurait rien à montrer");
   }
   if (loi.articles != null && (!Array.isArray(loi.articles) || !loi.articles.length)) {
     r.ajouter("WP1.1", "articles présent mais vide");
@@ -695,15 +698,7 @@ function verifierBord(nom, pour, contre, r, code, options) {
 }
 
 function verifierSymetrie(loi, r) {
-  verifierBord("arguments", loi.arguments?.pour, loi.arguments?.contre, r, "WP1.4");
   verifierBord("presse", loi.presse?.pour, loi.presse?.contre, r, "WP1.4");
-  verifierBord("experts", loi.experts?.pour, loi.experts?.contre, r, "WP1.4");
-
-  for (const a of [...(loi.arguments?.pour || []), ...(loi.arguments?.contre || [])]) {
-    if (!normaliser(a.titre)) r.ajouter("WP1.4", "argument sans titre");
-    if (!normaliser(a.source)) r.ajouter("WP1.4", `argument sans source : « ${String(a.titre).slice(0, 40)} »`);
-    if (!normaliser(a.url)) r.ajouter("WP1.5", `argument sans URL de source : « ${String(a.titre).slice(0, 40)} »`);
-  }
 
   for (const q of loi.quiz || []) {
     if (!Array.isArray(q.options) || q.options.length < 2) {
@@ -721,14 +716,8 @@ function verifierSources(loi, r, domainesAutorises) {
   const urls = [];
   if (loi.source?.url) urls.push({ quoi: "source de la loi", url: loi.source.url });
   if (loi.source?.texte_url) urls.push({ quoi: "texte officiel", url: loi.source.texte_url });
-  for (const a of [...(loi.arguments?.pour || []), ...(loi.arguments?.contre || [])]) {
-    if (a.url) urls.push({ quoi: `argument « ${String(a.titre).slice(0, 30)} »`, url: a.url });
-  }
   for (const x of [...(loi.presse?.pour || []), ...(loi.presse?.contre || [])]) {
     if (x.url) urls.push({ quoi: `presse « ${x.media} »`, url: x.url });
-  }
-  for (const x of [...(loi.experts?.pour || []), ...(loi.experts?.contre || [])]) {
-    if (x.url) urls.push({ quoi: `expert « ${x.nom} »`, url: x.url });
   }
 
   for (const { quoi, url } of urls) {

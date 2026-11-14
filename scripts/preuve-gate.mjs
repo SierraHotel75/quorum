@@ -29,6 +29,8 @@ const CITATION_CHIFFRE = "Le plafonnement s'applique à 12 % des logements conce
 function fichierComplet() {
   const loi = JSON.parse(readFileSync(DEMO, "utf8"));
   delete loi.demo;
+  delete loi.arguments;
+  delete loi.experts;
 
   loi.titre = "Encadrement des loyers dans les zones tendues";
   loi.resume =
@@ -71,35 +73,9 @@ function fichierComplet() {
     paragraphes: [e.texte]
   }));
 
-  loi.arguments = {
-    pour: [
-      {
-        titre: "Plafonner les loyers dans les zones tendues",
-        texte: "Le plafonnement vise à limiter la hausse des loyers là où la demande dépasse l'offre.",
-        source: "Rapport de la commission des affaires économiques",
-        url: RAPPORT
-      },
-      {
-        titre: "Sécuriser les nouveaux contrats",
-        texte: "Le dispositif s'applique aux baux signés après l'entrée en vigueur, avec un délai annoncé.",
-        source: "Compte rendu de la séance publique",
-        url: SEANCE
-      }
-    ],
-    contre: [
-      {
-        titre: "Un calendrier d'application jugé court",
-        texte: "Des élus estiment que le délai entre la publication et l'application est trop resserré.",
-        source: "Compte rendu de la séance publique",
-        url: SEANCE
-      },
-      {
-        titre: "Un risque de baisse de l'offre",
-        texte: "Des intervenants craignent que le plafonnement réduise la mise en location de logements.",
-        source: "Rapport de la commission des affaires économiques",
-        url: RAPPORT
-      }
-    ]
+  loi.ce_qui_est_vote = {
+    titre: "Contenu de l'article",
+    texte: "Le plafonnement des loyers s'applique aux nouveaux contrats dans les zones tendues."
   };
 
   loi.presse = {
@@ -139,30 +115,10 @@ function fichierComplet() {
     affiliation: "Centre de recherche sur le logement",
     url: "https://www.vie-publique.fr/rapport/1-exemple"
   };
-  loi.experts = {
-    pour: [
-      {
-        nom: fiche.nom,
-        role: fiche.role,
-        affiliation: fiche.affiliation,
-        argument: "Le plafonnement agit surtout sur les nouveaux contrats, pas sur les baux en cours.",
-        url: fiche.url
-      }
-    ],
-    contre: [
-      {
-        nom: fiche.nom,
-        role: fiche.role,
-        affiliation: fiche.affiliation,
-        argument: "Le contrôle du dispositif supposera des moyens que les services n'ont pas aujourd'hui.",
-        url: fiche.url
-      }
-    ]
-  };
 
   loi.meta = {
     genere_le: "2026-11-14",
-    gate: "4",
+    gate: "5",
     modele: "génération hors ligne",
     controles: [
       { nom: "Schéma du fichier", etat: "ok" },

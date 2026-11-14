@@ -57,7 +57,7 @@ node scripts/preuve-gate.mjs         # prouve que le passage accepte et refuse
 
 Le script refuse, il ne corrige pas. Code de sortie 1 dès qu'un fichier est refusé.
 Il vérifie le schéma, les dates, les décomptes (577 sièges, sièges attribués, votants,
-exprimés), le verbatim des extraits, la symétrie des quatre bords, les citations du débat,
+exprimés), le verbatim des extraits, la symétrie de la presse et du débat, les citations du débat,
 les chiffres vérifiés, les sources, et l'absence de contenu de démonstration. Un fichier
 dont le nom commence par `_` est ignoré : c'est un jeu de travail, pas une publication.
 
@@ -88,7 +88,7 @@ Trois listes ferment la publication : `data/ref/medias.json`, `data/ref/experts.
 `data/ref/verbatim.json` doivent contenir le média, la personne ou l'organisation citée,
 avec son domaine, son affiliation, son rôle ou son passage. Une entrée absente est refusée,
 avec ou sans drapeau. Le champ `meta.gate` doit valoir la version courante du passage de
-contrôles (`4` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
+contrôles (`5` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
 `source.texte_url` est obligatoire : c'est le lien vers le texte officiel, affiché
 en bas de l'écran « article entier » pour un fichier publié.
 
@@ -131,18 +131,18 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 
 `#/` accueil · `#/devoir/<id>` sommaire · `/fait` chronologie · `/texte` extraits ·
 `/article` texte entier · `/vote` premier vote · `/chiffres` décompte et quiz ·
-`/arguments` carte « Comprendre en une minute » · `/debat` le débat mot pour mot ·
-`/verif` les chiffres vérifiés · `/presse` · `/experts` · `/resultat` vote final ·
-`/carte` hémicycle · `#/arbre` progression · `#/methode` contrôles · `#/archive` ·
-`#/recherche`
+`/debat` le débat mot pour mot · `/verif` les chiffres vérifiés · `/presse` ·
+`/resultat` vote final · `/carte` hémicycle · `#/arbre` progression ·
+`#/methode` contrôles · `#/archive` · `#/recherche`
 
 L'ordre est linéaire : le fait, les extraits et l'article entier viennent **avant** le
-premier vote. Le vote est demandé après avoir lu le texte, pas avant.
+premier vote. Le vote est demandé après avoir lu le texte, pas avant. Les anciennes
+adresses `/arguments` et `/experts` renvoient vers `/debat` et `/presse`.
 
 ## Ce qui est vrai, ce qui ne l'est pas
 
 - **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
-- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les arguments », présentés comme une carte « Comprendre en une minute ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les phrases exactes des députés sont dans « Le débat, mot pour mot », recopiées des comptes rendus et contrôlées une à une.
+- **Reformulé, source à l'appui** : les rares textes de synthèse (résumé, fait, points de l'article). Les prises de position ne sont plus reformulées : l'écran « Le débat, mot pour mot » donne les phrases des députés telles quelles, recopiées des comptes rendus et contrôlées une à une. Aucune position n'est qualifiée de meilleure.
 - **Vérifié, avec sa limite** : les trois chiffres de l'écran « Les chiffres, vérifiés ». Le 3 % et le 1 % sont confirmés par la CIIVISE (rapport public de novembre 2023, bilan du 15 juin 2026) : ce sont des ordres de grandeur calculés à partir des plaintes, pas des comptages exhaustifs. Le 70 % reste « non documenté » : le rapport inter-inspections de juillet 2022 qui le porte n'est publié sur aucun site officiel, donc il n'est pas repris comme un fait.
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
 - **Maquette, assumé** : l'arbre de `data/ref/arbre.json`. Les 4 jalons, 8 thèmes et 24 branches sont une nomenclature de démonstration ; seuls les points gagnés sont réels, ils ne comptent que des actions du parcours, jamais le contenu d'un vote.

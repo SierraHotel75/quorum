@@ -235,52 +235,6 @@
       "La possibilité de porter la **période de sûreté à trente ans** a été retirée du texte."
     ]
   },
-  "arguments": {
-    "chapeau": "Ce vote porte sur l’article 11 du projet de loi relatif à la protection des enfants.",
-    "contenu": {
-      "titre": "Contenu de l’article",
-      "texte": "Cet article porte à la **réclusion criminelle à perpétuité** la peine du viol commis sur un **mineur de quinze ans**.",
-      "points": [
-        "La perpétuité s’applique aussi au viol d’un mineur de quinze ans commis **avec d’autres viols** sur d’autres victimes.",
-        "La possibilité de porter la **période de sûreté à trente ans** a été retirée du texte."
-      ]
-    },
-    "pour_titre": "Peine plus lourde",
-    "pour": [
-      {
-        "titre": "La perpétuité dès le premier viol",
-        "texte": "La peine maximale doit pouvoir tomber dès le premier viol. Un premier viol sur un enfant révèle déjà une dangerosité exceptionnelle : attendre qu’il y ait d’autres victimes pour prononcer la perpétuité, c’est instaurer un seuil dans l’horreur. La sévérité dissuade, et elle met l’agresseur hors d’état de nuire.",
-        "court": "Amendement n° 661 (rejeté)",
-        "source": "Assemblée nationale — amendement n° 661 (rejeté), exposé sommaire",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/661"
-      },
-      {
-        "titre": "Punir la série de viols sur un même enfant",
-        "texte": "Une série de viols sur le même enfant ne peut pas être punie comme un viol unique. Aujourd’hui, plusieurs viols commis par la même personne sur la même victime relèvent de la même peine qu’un seul. La souffrance, elle, est répétée : la loi doit la reconnaître en appliquant la peine la plus lourde.",
-        "court": "Amendement n° 605 (rejeté)",
-        "source": "Assemblée nationale — amendement n° 605 (rejeté), exposé sommaire",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/605"
-      }
-    ],
-    "contre_titre": "Peine plus légère ou suppression",
-    "contre": [
-      {
-        "titre": "Garder une échelle des peines cohérente",
-        "texte": "Une peine doit rester proportionnée, sinon elle perd sa force. La loi gradue déjà : quinze ans pour un viol, vingt ans s’il est aggravé, trente ans s’il a entraîné la mort, perpétuité pour la torture. Sauter à la perpétuité pour un viol sériel rompt cette échelle, et une peine disproportionnée risque d’être censurée, donc de ne servir à rien.",
-        "court": "Amendement n° 56 (rejeté)",
-        "source": "Assemblée nationale — amendement n° 56 (rejeté), exposé sommaire",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/56"
-      },
-      {
-        "titre": "Retirer la période de sûreté de trente ans",
-        "texte": "Une période de sûreté de trente ans n’a plus de sens ici. Elle avait été prévue pour le viol ayant entraîné la mort. Dès lors que la perpétuité ne vise que le viol d’un mineur de quinze ans, la mesure ne correspond plus au texte : la retirer évite une incohérence.",
-        "court": "Sous-amendement n° 2 (adopté)",
-        "source": "Assemblée nationale — sous-amendement n° 2 (adopté), exposé sommaire",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/2"
-      }
-    ],
-    "note": "Reformulations sourcées depuis les exposés sommaires ; les mots exacts sont dans « Les voix citées ». Aucune position n’est qualifiée de meilleure."
-  },
   "presse": {
     "pour_titre": "Presse quotidienne nationale",
     "pour": [
@@ -313,43 +267,6 @@
       }
     ],
     "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
-  },
-  "experts": {
-    "pour_titre": "Députés porteurs d'une peine plus lourde",
-    "pour": [
-      {
-        "nom": "Alexandra Martin (Alpes-Maritimes)",
-        "role": "Députée, première signataire de l'amendement n° 661",
-        "affiliation": "Assemblée nationale",
-        "argument": "« Une telle condition est incompréhensible. Elle revient à instaurer une forme de seuil dans l'horreur, comme si un premier viol commis sur un enfant de moins de 15 ans ne révélait pas, à lui seul, une dangerosité criminelle exceptionnelle justifiant la sanction la plus sévère prévue par notre droit. »",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/661"
-      },
-      {
-        "nom": "Constance de Pélichy",
-        "role": "Députée, première signataire de l'amendement n° 605",
-        "affiliation": "Assemblée nationale",
-        "argument": "« Cet amendement vise donc à la compléter et à renforcer la répression des « viols en série ». Il prévoit la réclusion criminelle à perpétuité dans le cas où plusieurs viols seraient commis par un seul individu à l'encontre d'un même enfant. »",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/605"
-      }
-    ],
-    "contre_titre": "Députés demandant une peine moindre ou une suppression",
-    "contre": [
-      {
-        "nom": "Pauline Cestrières",
-        "role": "Députée, première signataire de l'amendement n° 738 (adopté)",
-        "affiliation": "Assemblée nationale",
-        "argument": "« Le présent amendement vise à supprimer la disposition relative à la période de sûreté, au profit de la disposition plus large prévue à l'article 11 ter. Le quatrième alinéa prévoit en effet, en cas de viol ayant entraîné la mort de la victime, que la cour d'assises puisse, par décision spéciale, porter la période de sûreté jusqu'à trente ans. »",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/738"
-      },
-      {
-        "nom": "Perrine Goulet",
-        "role": "Députée, auteure du sous-amendement n° 2 (adopté le 21 juillet 2026)",
-        "affiliation": "Assemblée nationale",
-        "argument": "« Ce sous-amendement vise à supprimer la possibilité de porter la période de sûreté à trente ans en cas de viol ayant entraîné la mort, puisque la peine est portée à la réclusion criminelle à perpétuité uniquement si la victime est un mineur de quinze ans. »",
-        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/2"
-      }
-    ],
-    "note": "Citations des exposés sommaires, reprises entre guillemets. Les personnes citées figurent dans data/ref/experts.json ; aucun nom n'est inventé."
   },
   "debat": {
     "chapeau": "Trois voix de chaque côté, mot pour mot, dans l’hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
@@ -601,7 +518,7 @@
   },
   "meta": {
     "genere_le": "2026-11-14",
-    "gate": "4",
+    "gate": "5",
     "modele": "génération hors ligne, MCP Hémicycle",
     "controles": [
       {
