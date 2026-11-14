@@ -31,6 +31,7 @@
   var etat = {
     groupes: [],
     arbre: null,
+    index: [],
     loin: null,
     pret: false
   };
@@ -68,7 +69,16 @@
 
   function progresDe(id) {
     if (!memoire.progres[id]) {
-      memoire.progres[id] = { lu: false, source: false, oppose: false, chiffres: false };
+      memoire.progres[id] = {
+        fait: false,
+        lu: false,
+        article: false,
+        source: false,
+        oppose: false,
+        chiffres: false,
+        verif: false,
+        carte: false
+      };
     }
     return memoire.progres[id];
   }
@@ -131,6 +141,10 @@
     return d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   }
 
+  function pluriel(n, mot) {
+    return n + " " + mot + (n > 1 ? "s" : "");
+  }
+
   function themeNom(id) {
     var t = THEMES.filter(function (x) {
       return x.id === id;
@@ -191,6 +205,9 @@
     return i < 0 ? 0 : i + 1;
   }
 
+  /* La barre haute porte deux sorties : l'étape précédente à gauche et le
+     sommaire du devoir à droite. Depuis n'importe quelle étape, le sommaire
+     est donc à un seul geste au lieu de deux. */
   function barre(retour, etape) {
     var n = numeroEtape();
     var total = PARCOURS.length;
@@ -199,10 +216,20 @@
         '<span style="width:' + Math.round((n * 100) / total) + '%"></span></span>' +
         '<span class="sr">Étape ' + n + " sur " + total + "</span>"
       : "";
+    var devoir = "#/devoir/" + (etat.loi ? etat.loi.id : "");
+    var sous = (location.hash || "").replace(/^#\/?/, "").split("/")[2] || "";
+    var droite = "";
+    if (sous || n) {
+      droite =
+        '<a class="barre__etape barre__etape--lien" href="' + devoir + '">Sommaire' +
+        '<span class="sr"> du devoir</span></a>';
+    } else if (etape) {
+      droite = '<span class="barre__etape">' + esc(etape) + "</span>";
+    }
     return (
       '<div class="barre">' +
       '<a class="barre__retour" href="' + retour + '">\u2190 Retour</a>' +
-      (etape ? '<span class="barre__etape">' + esc(etape) + "</span>" : "") +
+      droite +
       progression +
       "</div>"
     );
@@ -248,11 +275,29 @@
     );
   }
 
+  /* Un écran d'étape suit une règle unique : le thème en étiquette, le nom de
+     l'étape en h1, le titre de la loi en une ligne de contexte. Le titre de la
+     loi n'est un h1 que là où il est le sujet : l'accueil et le sommaire. */
+  function enteteEtape(loi, titre, chapeau) {
+    return (
+      '<header class="ecran__entete">' +
+      '<span class="theme">' + esc(themeNom(loi.theme)) + "</span>" +
+      '<h1 class="ecran__titre">' + esc(titre) + "</h1>" +
+      '<p class="ecran__loi">' + esc(loi.titre) + "</p>" +
+      (chapeau ? '<p class="ecran__chapeau">' + chapeau + "</p>" : "") +
+      "</header>"
+    );
+  }
+
   /* ---------- Écrans ---------- */
 
   function ecranAccueil() {
     var loi = etat.loi;
     var v = voteDe(loi.id);
+    var etapes = etapesDe(loi);
+    var faites = etapes.filter(function (e) {
+      return e.fait;
+    }).length;
 
     return (
       masthead() +
@@ -274,31 +319,59 @@
         ? '<a class="bouton" href="#/devoir/' + loi.id + '">Reprendre le devoir</a>'
         : '<a class="bouton" href="#/devoir/' + loi.id + '/chronologie">Commencer</a>') +
       "</div>" +
-      '<div class="pile">' +
-      '<p class="etiquette">Ce qui vient ensuite</p>' +
-      '<p class="petit">Une loi, un parcours : la chronologie, le r\u00e9sum\u00e9, l\u2019article entier, puis votre vote. Ensuite les chiffres, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres et la presse, avant votre vote final.</p>' +
-      "</div>" +
-      '<p class="mention-independance">Projet indépendant, non affilié à l\u2019Assemblée nationale ni au Sénat. Le vote reste sur cet appareil.</p>' +
+      '<section class="pile" aria-labelledby="parcours-titre">' +
+      '<h2 class="etiquette" id="parcours-titre">Le parcours</h2>' +
+      '<ul class="etapes">' +
+      PHASES.map(function (ph, i) {
+        var nombre = etapes.filter(function (e) {
+          return e.phase === ph.id;
+        }).length;
+        return (
+          '<li><div class="etape">' +
+          '<span class="etape__num" aria-hidden="true">' + (i + 1) + "</span>" +
+          '<span class="etape__nom">' + esc(ph.nom) + "</span>" +
+          '<span class="etape__compte">' + pluriel(nombre, "étape") + "</span>" +
+          "</div></li>"
+        );
+      }).join("") +
+      "</ul>" +
+      (faites
+        ? '<p class="compteur">' + faites + " étapes faites sur " + etapes.length + "</p>"
+        : "") +
+      "</section>" +
       "</main>" +
       navbas("#/")
     );
   }
 
+  /* Les trois temps du parcours. La coupure n'est pas décorative : elle dit ce
+     qu'on lit avant de voter, le vote lui-même, puis ce qu'on comprend après.
+     Chaque écran a son propre état : ouvrir le résumé ne coche plus l'article. */
+  var PHASES = [
+    { id: "avant", nom: "Avant votre vote" },
+    { id: "vote", nom: "Votre premier vote" },
+    { id: "apres", nom: "Après votre vote" }
+  ];
+
   function etapesDe(loi) {
     var p = progresDe(loi.id);
     var v = voteDe(loi.id);
+    var base = "#/devoir/" + loi.id;
     return [
-      { cle: "chronologie", nom: "La chronologie", fait: p.lu, href: "#/devoir/" + loi.id + "/chronologie" },
-      { cle: "resume", nom: "Le r\u00e9sum\u00e9", fait: p.lu, href: "#/devoir/" + loi.id + "/resume" },
-      { cle: "article", nom: "L\u2019article entier", fait: p.lu, href: "#/devoir/" + loi.id + "/article" },
-      { cle: "vote", nom: "Votre vote", fait: !!v, href: "#/devoir/" + loi.id + "/vote" },
-      { cle: "chiffres", nom: "Les chiffres", fait: p.chiffres, href: "#/devoir/" + loi.id + "/chiffres" },
-      { cle: "debat", nom: "Le débat, mot pour mot", fait: p.oppose, href: "#/devoir/" + loi.id + "/debat" },
-      { cle: "verif", nom: "Les chiffres vérifiés", fait: false, href: "#/devoir/" + loi.id + "/verif" },
-      { cle: "presse", nom: "La presse", fait: p.source, href: "#/devoir/" + loi.id + "/presse" },
-      { cle: "resultat", nom: "Votre vote final", fait: v && v.v2, href: "#/devoir/" + loi.id + "/resultat" },
-      { cle: "carte", nom: "La carte", fait: false, href: "#/devoir/" + loi.id + "/carte" }
-    ];
+      { phase: "avant", nom: "La chronologie", fait: p.fait, href: base + "/chronologie" },
+      { phase: "avant", nom: "Le résumé", fait: p.lu, href: base + "/resume" },
+      { phase: "avant", nom: "L’article entier", fait: p.article, href: base + "/article" },
+      { phase: "vote", nom: "Votre vote", fait: !!v, href: base + "/vote" },
+      { phase: "apres", nom: "Les chiffres", fait: p.chiffres, href: base + "/chiffres" },
+      { phase: "apres", nom: "Le débat, mot pour mot", fait: p.oppose, href: base + "/debat" },
+      { phase: "apres", nom: "Les chiffres vérifiés", fait: p.verif, href: base + "/verif" },
+      { phase: "apres", nom: "La presse", fait: p.source, href: base + "/presse" },
+      { phase: "apres", nom: "Votre vote final", fait: !!(v && v.v2), href: base + "/resultat" },
+      { phase: "apres", nom: "La carte", fait: p.carte, href: base + "/carte" }
+    ].map(function (e, i) {
+      e.rang = i + 1;
+      return e;
+    });
   }
 
   function ecranDevoir(loi) {
@@ -310,31 +383,63 @@
       etapes.filter(function (e) {
         return !e.fait;
       })[0] || null;
+    var pourcent = Math.round((faites * 100) / etapes.length);
+
+    var phases = PHASES.map(function (ph) {
+      var liste = etapes.filter(function (e) {
+        return e.phase === ph.id;
+      });
+      var faitesPhase = liste.filter(function (e) {
+        return e.fait;
+      }).length;
+      return (
+        '<section class="phase" aria-labelledby="phase-' + ph.id + '">' +
+        '<h2 class="phase__tete" id="phase-' + ph.id + '">' +
+        '<span class="phase__nom">' + esc(ph.nom) + "</span>" +
+        '<span class="phase__compte">' + faitesPhase + " / " + liste.length + "</span>" +
+        "</h2>" +
+        '<ol class="etapes">' +
+        liste
+          .map(function (e) {
+            var suite = suivante && e.href === suivante.href;
+            var etat = e.fait
+              ? '<span class="etape__fait" aria-hidden="true">\u2713</span><span class="sr">fait</span>'
+              : suite
+                ? '<span class="etape__etat">à suivre</span>'
+                : '<span class="sr">à faire</span>';
+            return (
+              '<li><a class="etape' + (e.fait ? " etape--faite" : "") +
+              (suite ? " etape--suivante" : "") + '" href="' + e.href + '">' +
+              '<span class="etape__num" aria-hidden="true">' +
+              (e.rang < 10 ? "0" : "") + e.rang + "</span>" +
+              '<span class="etape__nom">' + esc(e.nom) + "</span>" +
+              etat +
+              "</a></li>"
+            );
+          })
+          .join("") +
+        "</ol></section>"
+      );
+    }).join("");
+
     return (
-      barre("#/", "Devoir") +
+      barre("#/", "") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">' + esc(themeNom(loi.theme)) + "</span>" +
       '<h1 class="ecran__titre">' + esc(loi.titre) + "</h1>" +
-      '<p class="ecran__chapeau">' + esc(loi.resume) + "</p>" +
-      '<p class="compteur">' + faites + " étapes faites sur " + etapes.length + "</p>" +
       "</div>" +
-      '<ul class="liste">' +
-      etapes
-        .map(function (e) {
-          var suite = suivante && e.href === suivante.href;
-          return (
-            '<li><a class="ligne ligne--lien ligne--etroit' + (suite ? " ligne--suivante" : "") +
-            '" href="' + e.href + '">' +
-            '<span class="ligne__date" aria-hidden="true">' + (e.fait ? "\u2713" : "\u00b7") + "</span>" +
-            '<span class="ligne__texte">' + esc(e.nom) + "</span>" +
-            (suite ? '<span class="ligne__etat">à suivre</span>' : "") +
-            '<span class="sr">' + (e.fait ? "fait" : "à faire") + "</span>" +
-            "</a></li>"
-          );
-        })
-        .join("") +
-      "</ul>" +
+      '<div class="avancement">' +
+      '<p class="compteur">' + faites + " étapes faites sur " + etapes.length + "</p>" +
+      '<div class="jauge" role="progressbar" aria-valuemin="0" aria-valuemax="' + etapes.length +
+      '" aria-valuenow="' + faites + '" aria-label="Étapes faites">' +
+      '<span class="jauge__part" style="width:' + pourcent + '%"></span></div>' +
+      "</div>" +
+      (suivante
+        ? '<a class="bouton" href="' + suivante.href + '">' +
+          (faites ? "Continuer" : "Commencer") + " : " + esc(suivante.nom) + "</a>"
+        : '<a class="bouton" href="#/devoir/' + loi.id + '/resultat">Revoir le résultat</a>') +
+      phases +
       "</main>" +
       navbas("#/")
     );
@@ -353,10 +458,7 @@
     return (
       barre("#/devoir/" + loi.id, final ? "Vote final" : "Vote") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">' + (final ? "Vote final" : "Votre vote") + "</span>" +
-      '<h1 class="ecran__titre">' + esc(loi.titre) + "</h1>" +
-      "</div>" +
+      enteteEtape(loi, final ? "Votre vote final" : "Votre vote") +
       '<section class="ce-vote" aria-labelledby="ce-vote-titre">' +
       '<h2 class="etiquette" id="ce-vote-titre">Ce qui est voté</h2>' +
       '<p class="ce-vote__texte">' +
@@ -373,16 +475,19 @@
             '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + (final ? '/resultat' : '/chiffres') + '">Continuer</a>'
           )
         : '<div class="vote">' +
-          '<div class="vote__zone" id="zone-vote" role="group" aria-label="Carte de vote : glissez à droite pour Pour, à gauche pour Contre, vers le bas pour Abstention">' +
+          '<div class="vote__zone" id="zone-vote" role="group" tabindex="0" aria-label="Carte de vote : glissez à gauche pour Contre, vers le bas pour Abstention, à droite pour Pour">' +
           '<div class="vote__carte" id="carte-vote">' +
           '<p class="vote__question">' + esc(question) + "</p>" +
           '<p class="vote__aide">' + esc(aide) + "</p>" +
           "</div>" +
           "</div>" +
+          '<p class="vote__sens" aria-hidden="true">' +
+          '<span>\u2190 Contre</span><span>\u2193 Abstention</span><span>Pour \u2192</span>' +
+          "</p>" +
           '<div class="vote__actions" role="group" aria-label="Votre vote">' +
-          '<button class="vote__bouton" type="button" data-choix="pour">Pour</button>' +
-          '<button class="vote__bouton" type="button" data-choix="abstention">Abstention</button>' +
           '<button class="vote__bouton" type="button" data-choix="contre">Contre</button>' +
+          '<button class="vote__bouton" type="button" data-choix="abstention">Abstention</button>' +
+          '<button class="vote__bouton" type="button" data-choix="pour">Pour</button>' +
           "</div>" +
           "</div>") +
       "</main>" +
@@ -395,10 +500,7 @@
     return (
       barre("#/devoir/" + loi.id, "La chronologie") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">La chronologie</span>' +
-      '<h1 class="ecran__titre">Du dépôt au vote</h1>' +
-      "</div>" +
+      enteteEtape(loi, "Du dépôt au vote") +
       '<ol class="timeline">' +
       loi.chronologie
         .map(function (e) {
@@ -441,11 +543,7 @@
     return (
       barre("#/devoir/" + loi.id, "Le résumé") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Le résumé</span>' +
-      '<h1 class="ecran__titre">Le résumé</h1>' +
-      '<p class="ecran__chapeau">' + esc(loi.resume) + "</p>" +
-      "</div>" +
+      enteteEtape(loi, "Le résumé", esc(loi.resume)) +
       '<section class="ce-vote" aria-labelledby="ce-change-titre">' +
       '<h2 class="etiquette" id="ce-change-titre">Ce que change le texte</h2>' +
       '<p class="ce-vote__texte">' + gras(contenu.texte || "Non documenté") + "</p>" +
@@ -482,6 +580,7 @@
   }
 
   function ecranArticle(loi) {
+    marquer(loi.id, "article");
     var articles =
       Array.isArray(loi.articles) && loi.articles.length ? loi.articles : [loi.article];
     var multiple = articles.length > 1;
@@ -527,15 +626,10 @@
     return (
       barre("#/devoir/" + loi.id + "/resume", "Article entier") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Texte</span>' +
-      '<h1 class="ecran__titre">' +
-      esc(multiple ? "Le texte, article par article" : (articles[0] && articles[0].titre) || "Le texte adopté") +
-      "</h1>" +
+      enteteEtape(loi, "Le texte adopté") +
       (multiple
         ? '<p class="compteur">' + articles.length + " articles cités, passages reproduits" + "</p>"
         : "") +
-      "</div>" +
       '<div class="article">' +
       corps +
       "</div>" +
@@ -598,11 +692,8 @@
     return (
       barre("#/devoir/" + loi.id, "Les chiffres") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Les chiffres</span>' +
-      '<h1 class="ecran__titre">Le scrutin</h1>' +
+      enteteEtape(loi, "Le scrutin") +
       '<p class="compteur">' + esc(dateLongue(loi.scrutin.date)) + " \u00b7 " + esc(loi.scrutin.chambre) + "</p>" +
-      "</div>" +
       '<div class="chiffres">' +
       loi.chiffres
         .map(function (c) {
@@ -694,8 +785,8 @@
             '<span class="citation__role">' + esc(x.role) + "</span>" +
             "</figcaption>" +
             '<a class="citation__source" href="' + esc(x.url) + '" rel="noopener" target="_blank">' +
-            '<span class="nw">Compte rendu du ' + esc(dateLongue(x.date)) + "</span>" +
-            ' <span class="nw">\u00b7 Assemblée nationale</span>' +
+            '<span class="citation__date">Compte rendu du ' + esc(dateLongue(x.date)) + "</span>" +
+            '<span class="citation__chambre">' + esc(x.affiliation) + "</span>" +
             '<span class="sr"> (nouvel onglet)</span>' +
             "</a>" +
             "</figure>"
@@ -714,11 +805,7 @@
     return (
       barre("#/devoir/" + loi.id + "/chiffres", "Le débat") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Le débat</span>' +
-      '<h1 class="ecran__titre">Le débat, mot pour mot</h1>' +
-      (d.chapeau ? '<p class="ecran__chapeau">' + esc(d.chapeau) + "</p>" : "") +
-      "</div>" +
+      enteteEtape(loi, "Le débat, mot pour mot", d.chapeau ? esc(d.chapeau) : "") +
       '<div class="debat-ensemble">' +
       blocCitations("pour", d.pour_titre || "Pour", pour) +
       blocCitations("contre", d.contre_titre || "Contre", contre) +
@@ -737,16 +824,13 @@
   }
 
   function ecranVerif(loi) {
+    marquer(loi.id, "verif");
     var v = loi.verifications || {};
     var liste = v.chiffres || [];
     return (
       barre("#/devoir/" + loi.id + "/debat", "Vérification") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Vérification</span>' +
-      '<h1 class="ecran__titre">Les chiffres, vérifiés</h1>' +
-      (v.chapeau ? '<p class="ecran__chapeau">' + esc(v.chapeau) + "</p>" : "") +
-      "</div>" +
+      enteteEtape(loi, "Les chiffres, vérifiés", v.chapeau ? esc(v.chapeau) : "") +
       liste
         .map(function (x) {
           var sources = x.sources || [];
@@ -786,10 +870,7 @@
     return (
       barre("#/devoir/" + loi.id, "La presse") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">La presse</span>' +
-      '<h1 class="ecran__titre">Ce qu\u2019en disent les journaux</h1>' +
-      "</div>" +
+      enteteEtape(loi, "Ce qu\u2019en disent les journaux") +
       bord(
         loi.presse.pour_titre || "Pour",
         loi.presse.pour.map(function (a) {
@@ -874,12 +955,8 @@
     return (
       barre("#/devoir/" + loi.id, "Votre vote final") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Votre vote final</span>' +
-      '<h1 class="ecran__titre">Le résultat</h1>' +
+      enteteEtape(loi, "Le résultat", texte ? esc(texte) : "") +
       '<p class="compteur">' + esc(dateLongue(s.date)) + " \u00b7 " + esc(s.chambre) + " \u00b7 " + esc(loi.statut) + "</p>" +
-      (texte ? '<p class="ecran__chapeau">' + esc(texte) + "</p>" : "") +
-      "</div>" +
       '<div class="chiffres">' +
       '<div class="chiffre"><span class="chiffre__valeur">' + s.pour + '</span><span class="chiffre__libelle">Pour</span></div>' +
       '<div class="chiffre"><span class="chiffre__valeur">' + s.contre + '</span><span class="chiffre__libelle">Contre</span></div>' +
@@ -912,24 +989,21 @@
     return (
       barre("#/devoir/" + loi.id, "La carte") +
       '<main class="ecran">' +
-      '<div class="ecran__entete">' +
-      '<span class="theme">Le vote</span>' +
-      '<h1 class="ecran__titre">Le scrutin</h1>' +
+      enteteEtape(loi, "L\u2019hémicycle") +
       '<p class="compteur">' + esc(dateLongue(loi.scrutin.date)) + " \u00b7 " + esc(loi.scrutin.chambre) + "</p>" +
-      "</div>" +
       '<div class="bascule" role="group" aria-label="Lecture de la carte">' +
       '<button type="button" data-action="mode-carte" data-mode="groupe" aria-pressed="' + (mode === "groupe") + '">Par groupe</button>' +
       '<button type="button" data-action="mode-carte" data-mode="accord" aria-pressed="' + (mode === "accord") + '">Avec vous</button>' +
       "</div>" +
       '<div class="carte-sieges">' + svg + "</div>" +
       (mode === "groupe"
-        ? '<div class="legende">' +
+        ? '<div class="legende legende--groupes">' +
           groupes
             .map(function (g) {
               return (
-                '<span class="legende__item"><span class="legende__pastille" style="background:' +
+                '<span class="legende__item"><span class="legende__pastille" aria-hidden="true" style="background:' +
                 g.couleur_sombre + '"></span>' +
-                esc(g.id === "vides" ? "Non occupés" : g.id) + "</span>"
+                '<span class="legende__nom">' + esc(g.nom) + "</span></span>"
               );
             })
             .join("") +
@@ -1130,26 +1204,46 @@
         .join("") +
       "</ul>" +
       '<p class="mono">\u2713 vérifié \u00b7 \u2717 échec</p>' +
-      '<p class="mention-independance">Projet indépendant, non affilié à l\u2019Assemblée nationale ni au Sénat.</p>' +
       "</main>" +
       navbas("#/methode")
     );
   }
 
+  /* L'archive montre ce qui est publié, pas un état vide. Le lien de recherche
+     n'apparaît qu'à partir de dix lois : en dessous, il menait à un cul-de-sac. */
   function ecranArchive() {
+    var lois = etat.index || [];
     return (
       masthead() +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Archive</span>' +
       '<h1 class="ecran__titre">Les devoirs</h1>' +
+      '<p class="ecran__chapeau">Chaque devoir est une loi publiée après les contrôles. Rien n\u2019est listé ici qui n\u2019ait passé le gate.</p>' +
       "</div>" +
-      vide(
-        "1 loi publiée",
-        "Une seule loi est publiée dans cette version. Le devoir du jour est ouvert.",
-        '<a class="bouton bouton--secondaire" href="#/devoir/' + etat.loi.id + '">Ouvrir le devoir</a>'
-      ) +
-      '<a class="bouton bouton--discret" href="#/recherche">Chercher un devoir</a>' +
+      (lois.length
+        ? '<ul class="liste">' +
+          lois
+            .map(function (l) {
+              return (
+                '<li><a class="ligne ligne--lien ligne--archive" href="#/devoir/' + esc(l.id) + '">' +
+                '<span class="ligne__date">' + esc(themeNom(l.theme)) + "</span>" +
+                '<span class="ligne__texte">' + esc(l.titre) + "</span>" +
+                "</a></li>"
+              );
+            })
+            .join("") +
+          "</ul>" +
+          '<p class="compteur">' + lois.length +
+          (lois.length > 1 ? " devoirs publiés" : " devoir publié") + "</p>"
+        : vide(
+            "Aucun devoir publié",
+            "L\u2019index des lois est vide. Aucun devoir n\u2019est inventé pour remplir la page.",
+            ""
+          )) +
+      (lois.length >= 10
+        ? '<a class="bouton bouton--discret" href="#/recherche">Chercher un devoir</a>'
+        : "") +
       "</main>" +
       navbas("#/archive")
     );
@@ -1176,6 +1270,11 @@
   /* ---------- Routage ---------- */
 
   function rendre(html) {
+    /* La mention d'indépendance est obligatoire sur chaque page : elle est
+       ajoutée une seule fois, ici, au lieu d'être recopiée dans les écrans. */
+    if (html.indexOf('class="pied"') < 0) {
+      html = html.replace("</main>", "</main>" + pied());
+    }
     app.innerHTML = html;
     if (!memoire.intro) app.innerHTML += surcoucheIntro();
     app.scrollTop = 0;
@@ -1196,7 +1295,10 @@
     var p = h.split("/").filter(Boolean);
 
     if (!etat.pret) {
-      rendre(masthead() + '<main class="ecran"><p class="petit">Chargement…</p></main>');
+      rendre(
+        masthead() +
+          '<main class="ecran"><p class="petit" role="status">Chargement…</p></main>'
+      );
       return;
     }
 
@@ -1322,10 +1424,12 @@
     var loi = etat.loi;
     var final = /vote-final/.test(location.hash);
     enregistrerVote(loi, choix, final);
+    /* Le premier vote mène à la suite du parcours, pas en arrière : les chiffres
+       du scrutin, puis le débat. Le vote final mène au résultat. */
     if (final) {
       location.hash = "#/devoir/" + loi.id + "/resultat";
     } else {
-      location.hash = "#/devoir/" + loi.id + "/chronologie";
+      location.hash = "#/devoir/" + loi.id + "/chiffres";
     }
   }
 
@@ -1355,13 +1459,25 @@
     route();
   });
 
-  /* Clavier : flèches sur l'écran de vote, indépendamment du rendu. */
+  /* Clavier : les flèches ne votent que si le focus est sur la carte de vote.
+     Ailleurs — sur un lien de la barre, par exemple — elles doivent continuer
+     à faire défiler la page au lieu d'enregistrer un vote. */
   document.addEventListener("keydown", function (e) {
     if (!etat.pret) return;
     if (!document.getElementById("carte-vote")) return;
-    if (e.key === "ArrowRight") voter("pour");
-    else if (e.key === "ArrowLeft") voter("contre");
-    else if (e.key === "ArrowDown" || e.key === "ArrowUp") voter("abstention");
+    var actif = document.activeElement;
+    var dansVote = !actif || actif === document.body || actif.closest(".vote");
+    if (!dansVote) return;
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      voter("pour");
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      voter("contre");
+    } else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      voter("abstention");
+    }
   });
 
   /* ---------- Démarrage ---------- */
@@ -1391,6 +1507,7 @@
       if (!index || !Array.isArray(index.lois) || !index.lois.length) {
         throw new Error("index des lois vide");
       }
+      etat.index = index.lois;
       return chargerJson(index.lois[0].fichier);
     })
     .then(function (loi) {

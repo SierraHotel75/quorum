@@ -21,7 +21,8 @@
   /* Textes */
   --texte: #ede7dc;
   --texte-doux: #9a8f82;
-  --texte-faible: #877d70;
+  /* 4,8:1 sur le fond élevé : le plus petit texte de l'app reste lisible. */
+  --texte-faible: #8f8577;
 
   /* Filets */
   --filet: #3a322c;
@@ -29,6 +30,9 @@
 
   /* Bois */
   --bois: #a9744b;
+  /* Variante texte du bois : 5,3:1 sur le fond élevé, pour les étiquettes
+     de 12 px. Le bois reste la couleur des filets et des marques. */
+  --bois-texte: #b5825a;
   --bois-profond: #6b4227;
 
   /* Bordeaux — action principale, jamais une donnée */
@@ -116,6 +120,7 @@
   --filet: #d9d3c7;
   --filet-fort: #b8b0a0;
   --bois: #8a5a34;
+  --bois-texte: #8a5a34;
   --bois-profond: #6b4227;
   --bordeaux: #8e1b22;
   --bordeaux-haut: #6f141a;

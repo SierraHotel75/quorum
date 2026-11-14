@@ -105,6 +105,20 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* Le sommaire du devoir, à un seul geste depuis n'importe quelle étape. */
+.barre__etape--lien {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.barre__etape--lien:hover {
+  color: var(--texte);
+  border-bottom-color: var(--filet-fort);
+}
+
 /* La position dans le parcours : un filet de 2 px, sans animation. */
 .barre__progression {
   position: absolute;
@@ -147,6 +161,129 @@ body {
   font-size: var(--t-md);
   line-height: 1.5;
   max-width: var(--largeur-texte);
+}
+
+/* Ligne de contexte : le titre de la loi, une fois, en petit sous le h1.
+   Il n'est un h1 que sur l'accueil et le sommaire. */
+.ecran__loi {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  color: var(--texte-doux);
+  max-width: var(--largeur-texte);
+}
+
+/* Progression d'un devoir : un compteur, puis un filet de 3 px. */
+.avancement {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+/* ---------- Phases et étapes du devoir ---------- */
+
+.phase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.phase__tete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s2);
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+
+.phase__compte {
+  color: var(--texte-faible);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.etapes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.etape {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr auto;
+  gap: var(--s2);
+  align-items: baseline;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--filet);
+  text-decoration: none;
+  color: inherit;
+}
+
+.etapes li:last-child .etape {
+  border-bottom: 1px solid var(--filet);
+}
+
+.etape:hover .etape__nom {
+  color: var(--bois-texte);
+}
+
+.etape:active {
+  background: var(--fond-2);
+}
+
+.etape__num {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--texte-faible);
+  font-variant-numeric: tabular-nums;
+}
+
+.etape__nom {
+  font-size: var(--t-md);
+  color: var(--texte-doux);
+}
+
+.etape--faite .etape__nom {
+  color: var(--texte);
+}
+
+.etape--faite .etape__num,
+.etape__fait {
+  color: var(--bois-texte);
+}
+
+.etape--suivante .etape__nom {
+  color: var(--texte);
+  font-weight: 500;
+}
+
+.etape__etat {
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--bois);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bois-texte);
+  white-space: nowrap;
+}
+
+.etape__compte {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--texte-faible);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* Ligne de contexte factuelle : date, chambre, statut. */
@@ -223,21 +360,8 @@ body {
   padding: 0.9rem 0;
 }
 
-.ligne__etat {
-  align-self: center;
-  padding: 0.1rem 0.4rem;
-  border: 1px solid var(--bois);
-  border-radius: 2px;
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bois);
-  white-space: nowrap;
-}
-
-.ligne--suivante .ligne__texte {
-  color: var(--texte);
+.ligne--archive {
+  grid-template-columns: 6.5rem 1fr;
 }
 
 .ligne__date {
@@ -252,7 +376,7 @@ body {
 }
 
 .ligne--lien:hover .ligne__texte {
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 .ligne--lien:active {
@@ -350,7 +474,7 @@ body {
   border: 1px solid var(--filet-fort);
   border-radius: 2px;
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--texte-doux);
@@ -358,7 +482,7 @@ body {
 
 .puce--bois {
   border-color: var(--bois);
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 .puce--pour {
@@ -439,6 +563,18 @@ body {
 }
 
 .vote__aide {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  color: var(--texte-faible);
+}
+
+/* Le sens du geste, sous la carte, dans le même ordre que les boutons :
+   contre à gauche, abstention au centre, pour à droite. */
+.vote__sens {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s1);
+  margin: calc(var(--s2) * -1) 0 0;
   font-family: var(--mono);
   font-size: var(--t-xs);
   color: var(--texte-faible);
@@ -553,7 +689,38 @@ body {
   height: 8px;
   border-radius: 1px;
   background: var(--commission);
+  flex: none;
 }
+
+/* La légende de l'hémicycle : un groupe par ligne, son nom entier et son
+   effectif. Un sigle seul ne dit rien à qui n'a pas la table des groupes. */
+.legende--groupes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.legende--groupes .legende__item {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--filet);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.legende--groupes .legende__item:first-child {
+  border-top: 1px solid var(--filet);
+}
+
+.legende__nom {
+  color: var(--texte-doux);
+  line-height: 1.4;
+}
+
+
 
 /* ---------- Extraits ---------- */
 
@@ -628,7 +795,7 @@ body {
   font-size: var(--t-xs);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 .article__titre {
@@ -645,7 +812,7 @@ body {
 }
 
 .article__note a {
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 /* ---------- Variante : ce qui a changé ---------- */
@@ -667,7 +834,7 @@ body {
   font-family: var(--mono);
   font-size: var(--t-xs);
   letter-spacing: 0.04em;
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 .variante__citation {
@@ -693,7 +860,7 @@ body {
 
 .variante__lien {
   font-size: var(--t-sm);
-  color: var(--bois);
+  color: var(--bois-texte);
   word-break: break-word;
 }
 
@@ -745,12 +912,19 @@ body {
   overflow: hidden;
 }
 
+/* Le camp se lit à la teinte du fond et à la couleur du libellé. Un filet
+   neutre sépare les deux panneaux sans le liseré épais qui signe une interface
+   générée. */
 .debat {
   display: flex;
   flex-direction: column;
   gap: var(--s2);
   padding: var(--s3);
-  border-left: 3px solid;
+  border: 1px solid var(--filet);
+}
+
+.debat + .debat {
+  border-top: 0;
 }
 
 .debat__tete {
@@ -771,7 +945,7 @@ body {
 
 .debat__compte {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.04em;
   color: var(--texte-doux);
   white-space: nowrap;
@@ -788,12 +962,10 @@ body {
 
 .debat--pour {
   background: var(--pour-fond);
-  border-left-color: var(--pour);
 }
 
 .debat--contre {
   background: var(--contre-fond);
-  border-left-color: var(--contre);
 }
 
 .debat--pour .debat__cote {
@@ -843,18 +1015,32 @@ body {
 
 .citation__source {
   align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
   padding-block: 0.35rem;
   font-family: var(--mono);
   font-size: var(--t-xs);
   line-height: 1.5;
-  text-decoration-color: var(--filet-fort);
-  text-decoration-thickness: 1px;
+  text-decoration: none;
 }
 
-/* Un groupe insécable : la date ne laisse jamais un point orphelin en fin de
-   ligne sur un écran de 360 px. */
-.nw {
-  white-space: nowrap;
+.citation__date {
+  text-decoration: underline;
+  text-decoration-color: var(--filet-fort);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.citation__source:hover .citation__date,
+.citation__source:focus-visible .citation__date {
+  text-decoration-color: currentColor;
+}
+
+/* La chambre passe sous la date plutôt que derrière un point orphelin
+   lorsqu'il ne reste plus assez de place sur 360 px. */
+.citation__chambre {
+  color: var(--texte-doux);
 }
 
 .verif {
@@ -926,7 +1112,7 @@ body {
 }
 
 .sources a:hover {
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 /* ---------- Arguments, presse, experts ---------- */
@@ -1162,10 +1348,10 @@ body {
   border: 1px solid var(--bois);
   border-radius: 2px;
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 .essaim__etat {
@@ -1247,7 +1433,7 @@ body {
 }
 
 .action--faite .action__marque {
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 /* ---------- États vides ---------- */
@@ -1294,7 +1480,7 @@ body {
   gap: 0.15rem;
   min-height: 2.75rem;
   padding: var(--s1) 0 var(--s2);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.04em;
   color: var(--texte-doux);
   text-decoration: none;
@@ -1369,22 +1555,24 @@ body {
 .bandeau-demo {
   margin: 0;
   font-family: var(--mono);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--bois);
+  color: var(--bois-texte);
 }
 
 /* ---------- Pied ---------- */
 
 .pied {
-  padding: var(--s3);
+  /* La barre du bas reste collée au bas de la fenêtre : le pied réserve sa
+     hauteur pour que la mention ne finisse jamais dessous. */
+  padding: var(--s3) var(--s3) calc(var(--s3) + 3.5rem);
   border-top: 1px solid var(--filet);
 }
 
 .mention-independance {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--texte-faible);
   line-height: 1.5;
   max-width: var(--largeur-texte);

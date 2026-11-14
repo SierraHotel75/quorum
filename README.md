@@ -150,7 +150,10 @@ Routes principales :
 - `#/devoir/protection-enfants/verif` les chiffres vérifiés
 - `#/devoir/protection-enfants/presse` titres de presse
 - `#/devoir/protection-enfants/resultat` vote final
+- `#/devoir/protection-enfants/vote-final` second vote
 - `#/devoir/protection-enfants/carte` hémicycle
+- `#/archive` archive des lois publiées
+- `#/recherche` recherche (désactivée sous 10 lois)
 - `#/arbre` progression
 - `#/methode` journal des contrôles
 
