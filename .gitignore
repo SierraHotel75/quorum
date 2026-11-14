@@ -13,3 +13,8 @@ dist/
 # Système
 .DS_Store
 Thumbs.db
+
+# Outils d'agent et skills locales (non publiées)
+.claude/
+.agents/
+.superpowers/
