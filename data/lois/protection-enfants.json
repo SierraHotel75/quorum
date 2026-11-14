@@ -343,6 +343,133 @@
     ],
     "note": "Citations des exposés sommaires, reprises entre guillemets. Les personnes citées figurent dans data/ref/experts.json ; aucun nom n'est inventé."
   },
+  "debat": {
+    "chapeau": "Trois voix de chaque côté, mot pour mot, dans l’hémicycle. Chaque citation renvoie au compte rendu de la séance où elle a été prononcée.",
+    "pour_titre": "Ils défendent la perpétuité",
+    "contre_titre": "Ils la refusent",
+    "pour": [
+      {
+        "nom": "Christophe Mongardien",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "En effet, face à la gravité de ces faits, seule une peine de réclusion criminelle à perpétuité peut, d’une part, avoir un effet dissuasif et, d’autre part, prévenir toute récidive.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      },
+      {
+        "nom": "Gabriel Tomatis",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "Lorsqu’il s’agit de pédocriminalité, le moindre risque de récidive est déjà un risque de trop.",
+        "seance": "CRSANR5L17S2026E1N020",
+        "date": "2026-07-17",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020"
+      },
+      {
+        "nom": "Alexandra Martin (Alpes-Maritimes)",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "La protection de l’enfance passe aussi par la sévérité et la certitude de la sanction.",
+        "seance": "CRSANR5L17S2026E1N015",
+        "date": "2026-07-15",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N015"
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Gabrielle Cathala",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "Ce qui dissuade les potentiels auteurs de passer à l’acte, ce n’est pas la lourdeur de la peine, mais la certitude d’être pris et de faire l’objet de poursuites.",
+        "seance": "CRSANR5L17S2026E1N020",
+        "date": "2026-07-17",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020"
+      },
+      {
+        "nom": "Mathilde Panot",
+        "role": "Députée",
+        "affiliation": "Assemblée nationale",
+        "citation": "La perpétuité, comme la peine de mort, fait peser une telle responsabilité sur l’enfant qu’elle le silencie encore davantage.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+      },
+      {
+        "nom": "Arnaud Bonnet",
+        "role": "Député",
+        "affiliation": "Assemblée nationale",
+        "citation": "De notre côté, nous craignons que la perpétuité puisse avoir pour effet de dissuader le dépôt de plainte. Les plaintes sont déjà peu nombreuses lorsque les faits ont été commis dans le cadre familial, et ce n’est pas un hasard, car porter plainte à l’encontre d’une personne de sa famille est une cause de désaffiliation. Si l’auteur des faits encourt la perpétuité, nous avons peur que les victimes soient encore plus dissuadées de porter plainte.",
+        "seance": "CRSANR5L17S2026E1N019",
+        "date": "2026-07-17",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N019"
+      }
+    ],
+    "note": "Citations exactes, sans coupe : chacune se retrouve au compte rendu de sa séance. Les deux bords ont le même nombre d’entrées et un volume de parole comparable. Une citation courte n’est pas rallongée, une longue n’est pas tronquée : couper pour équilibrer reviendrait à modifier ce qui a été dit."
+  },
+  "verifications": {
+    "chapeau": "Deux chiffres du débat ont pu être confrontés à une source officielle. Pour le troisième, la source primaire n’est pas publiée : il reste « non documenté ».",
+    "chiffres": [
+      {
+        "affirmation": "Moins de 3 % des auteurs sont condamnés.",
+        "chiffre": "3 %",
+        "auteur": "Marianne Maximi",
+        "role": "Députée, rapporteure",
+        "citation": "Cela a été dit, moins de 3 % des auteurs sont condamnés.",
+        "seance": "CRSANR5L17S2026E1N019",
+        "date": "2026-07-17",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N019",
+        "verdict": "confirmé",
+        "explication": "La CIIVISE reprend ce chiffre dans son rapport public de novembre 2023 et dans son bilan du 15 juin 2026. Ce n’est pas un comptage direct des condamnations : le taux croise la part des victimes qui portent plainte (19 %, et 12 % en cas d’inceste) avec la part des plaintes qui aboutissent à une condamnation (une sur six, une sur dix en inceste). C’est donc un ordre de grandeur calculé sur les 160 000 victimes estimées chaque année, pas une statistique exhaustive.",
+        "sources": [
+          {
+            "nom": "CIIVISE — rapport public, novembre 2023",
+            "url": "https://www.ciivise.fr/le-rapport-public-de-2023"
+          },
+          {
+            "nom": "CIIVISE — bilan de mise en œuvre, 15 juin 2026",
+            "url": "https://www.ciivise.fr/le-bilan-de-mise-en-oeuvre-des-82-recommandations"
+          }
+        ]
+      },
+      {
+        "affirmation": "Moins de 1 % des agresseurs incestueux sont condamnés.",
+        "chiffre": "1 %",
+        "auteur": "Mathilde Panot",
+        "role": "Députée",
+        "citation": "Moins de 1 % des agresseurs incestueux sont condamnés.",
+        "seance": "CRSANR5L17S2026E1N023",
+        "date": "2026-07-21",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023",
+        "verdict": "confirmé",
+        "explication": "La CIIVISE donne 1 % pour les violences incestueuses : une plainte sur dix aboutit à une condamnation. Dire « moins de 1 % » est donc cohérent avec la source, qui parle d’environ 1 %. Comme pour les 3 %, il s’agit d’une estimation calculée à partir des plaintes déposées, et non d’un comptage des faits commis.",
+        "sources": [
+          {
+            "nom": "CIIVISE — rapport public, novembre 2023",
+            "url": "https://www.ciivise.fr/le-rapport-public-de-2023"
+          },
+          {
+            "nom": "CIIVISE — bilan de mise en œuvre, 15 juin 2026",
+            "url": "https://www.ciivise.fr/le-bilan-de-mise-en-oeuvre-des-82-recommandations"
+          }
+        ]
+      },
+      {
+        "affirmation": "Dans 70 % des affaires de viol, aucun acte d’enquête n’est réalisé.",
+        "chiffre": "70 %",
+        "auteur": "Gabrielle Cathala",
+        "role": "Députée",
+        "citation": "Notre rapporteure, Mme Maximi, a eu raison de rappeler que seuls 3 % des auteurs de viol sont condamnés ; en cas d’inceste, ce n’est même que 1 %. Le problème – que tout le monde semble découvrir avec l’affaire dite Lyhanna, alors que ce n’est pas nouveau –, c’est que dans 70 % des affaires de viol, aucun acte d’enquête n’est réalisé : pas une seule audition du mis en cause, pas une seule analyse médico-judiciaire, etc.",
+        "seance": "CRSANR5L17S2026E1N020",
+        "date": "2026-07-17",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020",
+        "verdict": "non documenté",
+        "explication": "Le chiffre est attribué à un rapport inter-inspections de juillet 2022 sur les violences sexuelles faites aux enfants. Ce rapport n’est publié sur aucun site officiel : nous n’avons pas pu le lire, ni vérifier le chiffre à la source. Il n’est donc pas repris comme un fait. La règle s’applique : sans source vérifiable, « non documenté ».",
+        "sources": []
+      }
+    ],
+    "note": "Un chiffre n’est publié ici que s’il a été prononcé dans l’hémicycle et rattaché à son compte rendu. Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit."
+  },
   "votes_par_groupe": [
     {
       "id": "LFI",
@@ -466,7 +593,7 @@
   },
   "meta": {
     "genere_le": "2026-11-14",
-    "gate": "3",
+    "gate": "4",
     "modele": "génération hors ligne, MCP Hémicycle",
     "controles": [
       {
@@ -499,6 +626,14 @@
       },
       {
         "nom": "Variante contrôlée",
+        "etat": "ok"
+      },
+      {
+        "nom": "Débat cité",
+        "etat": "ok"
+      },
+      {
+        "nom": "Chiffres vérifiés",
         "etat": "ok"
       }
     ]

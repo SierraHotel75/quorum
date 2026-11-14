@@ -25,3 +25,12 @@ Quorum ne prend pas position et je ne parle pas à sa place. L'app publie le tex
 
 **8. « Le Sénat a voté, pourquoi n'est-il pas dans l'app ? »**
 Parce que la composition du Sénat n'est pas encore dans le référentiel : le contrôle refuse explicitement un scrutin sénatorial plutôt que d'inventer une répartition. C'est une lacune déclarée, pas un oubli.
+
+**9. « Les citations du débat, c'est vous qui les avez choisies ? »**
+Oui, et c'est justement pourquoi elles sont contrôlées : chaque phrase est recopiée d'un compte rendu, et le script refuse le fichier si elle n'est pas dans `data/ref/verbatim.json`, mot pour mot, avec la même séance et le même auteur. La symétrie se juge sur le total de caractères par bord : une citation courte n'est pas rallongée, une longue n'est pas coupée.
+
+**10. « Pourquoi le 70 % reste “non documenté” alors que le chiffre circule ? »**
+Parce que le rapport inter-inspections de juillet 2022 qui le porte n'est publié sur aucun site officiel : nous ne l'avons pas lu, donc nous ne le reprenons pas comme un fait. Le verdict ne dit pas que la députée a tort ; il dit que la source primaire manque. Un chiffre sans source vérifiable reste « non documenté », même s'il arrange un bord.
+
+**11. « Vos verdicts sont en vert et rouge, donc vous dites qui a raison ? »**
+Non : ils sont typographiques — Confirmé, Nuancé, Non documenté — sans couleur de camp. La couleur verte et la couleur rouge sont réservées aux bords pour et contre, jamais au vrai et au faux, pour que « confirmé » ne puisse pas se lire comme « pour ».

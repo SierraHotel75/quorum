@@ -1,0 +1,82 @@
+{
+  "verifie_le": "2026-11-14",
+  "note": "Passages exacts extraits des comptes rendus intégraux de l'Assemblée nationale. Une citation publiée dans une loi doit se retrouver ici, mot pour mot, avec la même séance et le même auteur : le contrôle refuse tout le reste.",
+  "seances": {
+    "CRSANR5L17S2026E1N015": {
+      "date": "2026-07-15",
+      "heure": "19 h 30",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N015"
+    },
+    "CRSANR5L17S2026E1N019": {
+      "date": "2026-07-17",
+      "heure": "7 h",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N019"
+    },
+    "CRSANR5L17S2026E1N020": {
+      "date": "2026-07-17",
+      "heure": "13 h",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020"
+    },
+    "CRSANR5L17S2026E1N023": {
+      "date": "2026-07-21",
+      "heure": "13 h",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    }
+  },
+  "citations": [
+    {
+      "cle": "martin-severite",
+      "seance": "CRSANR5L17S2026E1N015",
+      "auteur": "Alexandra Martin (Alpes-Maritimes)",
+      "texte": "La protection de l’enfance passe aussi par la sévérité et la certitude de la sanction."
+    },
+    {
+      "cle": "tomatis-recidive",
+      "seance": "CRSANR5L17S2026E1N020",
+      "auteur": "Gabriel Tomatis",
+      "texte": "Lorsqu’il s’agit de pédocriminalité, le moindre risque de récidive est déjà un risque de trop."
+    },
+    {
+      "cle": "mongardien-dissuasion",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Christophe Mongardien",
+      "texte": "En effet, face à la gravité de ces faits, seule une peine de réclusion criminelle à perpétuité peut, d’une part, avoir un effet dissuasif et, d’autre part, prévenir toute récidive."
+    },
+    {
+      "cle": "panot-silence",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Mathilde Panot",
+      "texte": "La perpétuité, comme la peine de mort, fait peser une telle responsabilité sur l’enfant qu’elle le silencie encore davantage."
+    },
+    {
+      "cle": "cathala-dissuasion",
+      "seance": "CRSANR5L17S2026E1N020",
+      "auteur": "Gabrielle Cathala",
+      "texte": "Ce qui dissuade les potentiels auteurs de passer à l’acte, ce n’est pas la lourdeur de la peine, mais la certitude d’être pris et de faire l’objet de poursuites."
+    },
+    {
+      "cle": "cathala-enquete",
+      "seance": "CRSANR5L17S2026E1N020",
+      "auteur": "Gabrielle Cathala",
+      "texte": "Notre rapporteure, Mme Maximi, a eu raison de rappeler que seuls 3 % des auteurs de viol sont condamnés ; en cas d’inceste, ce n’est même que 1 %. Le problème – que tout le monde semble découvrir avec l’affaire dite Lyhanna, alors que ce n’est pas nouveau –, c’est que dans 70 % des affaires de viol, aucun acte d’enquête n’est réalisé : pas une seule audition du mis en cause, pas une seule analyse médico-judiciaire, etc."
+    },
+    {
+      "cle": "bonnet-plainte",
+      "seance": "CRSANR5L17S2026E1N019",
+      "auteur": "Arnaud Bonnet",
+      "texte": "De notre côté, nous craignons que la perpétuité puisse avoir pour effet de dissuader le dépôt de plainte. Les plaintes sont déjà peu nombreuses lorsque les faits ont été commis dans le cadre familial, et ce n’est pas un hasard, car porter plainte à l’encontre d’une personne de sa famille est une cause de désaffiliation. Si l’auteur des faits encourt la perpétuité, nous avons peur que les victimes soient encore plus dissuadées de porter plainte."
+    },
+    {
+      "cle": "maximi-trois-pour-cent",
+      "seance": "CRSANR5L17S2026E1N019",
+      "auteur": "Marianne Maximi",
+      "texte": "Cela a été dit, moins de 3 % des auteurs sont condamnés."
+    },
+    {
+      "cle": "panot-un-pour-cent",
+      "seance": "CRSANR5L17S2026E1N023",
+      "auteur": "Mathilde Panot",
+      "texte": "Moins de 1 % des agresseurs incestueux sont condamnés."
+    }
+  ]
+}

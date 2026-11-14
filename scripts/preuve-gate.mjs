@@ -6,7 +6,7 @@
    data/lois : rien de faux ne doit traîner dans le dossier publié.
 
    Usage : node scripts/preuve-gate.mjs
-   Code de sortie 0 si les huit attentes sont tenues. */
+   Code de sortie 0 si les onze attentes sont tenues. */
 
 import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
@@ -20,6 +20,11 @@ const DEMO = join(RACINE, "data", "lois", "_demo.json");
 
 const RAPPORT = "https://www.assemblee-nationale.fr/dyn/17/rapports/exemple";
 const SEANCE = "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/exemple";
+const SEANCE_REF = "CRSANR5L17S2026E1N099";
+const SEANCE_URL = "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N099";
+const CITATION_POUR = "Le plafonnement agit surtout sur les nouveaux contrats, pas sur les baux en cours.";
+const CITATION_CONTRE = "Le contrôle du dispositif supposera des moyens que les services n'ont pas aujourd'hui.";
+const CITATION_CHIFFRE = "Le plafonnement s'applique à 12 % des logements concernés, selon le rapport.";
 
 function fichierComplet() {
   const loi = JSON.parse(readFileSync(DEMO, "utf8"));
@@ -157,7 +162,7 @@ function fichierComplet() {
 
   loi.meta = {
     genere_le: "2026-11-14",
-    gate: "3",
+    gate: "4",
     modele: "génération hors ligne",
     controles: [
       { nom: "Schéma du fichier", etat: "ok" },
@@ -167,11 +172,58 @@ function fichierComplet() {
       { nom: "Symétrie des bords", etat: "ok" },
       { nom: "Sources des médias", etat: "ok" },
       { nom: "Ressources citées vérifiées", etat: "ok" },
-      { nom: "Variante contrôlée", etat: "ok" }
+      { nom: "Variante contrôlée", etat: "ok" },
+      { nom: "Débat cité", etat: "ok" },
+      { nom: "Chiffres vérifiés", etat: "ok" }
     ]
   };
 
-  return { loi, fiche };
+  const debat = (citation) => ({
+    nom: fiche.nom,
+    role: fiche.role,
+    affiliation: fiche.affiliation,
+    citation,
+    seance: SEANCE_REF,
+    date: "2026-03-12",
+    url: SEANCE_URL
+  });
+  loi.debat = {
+    pour: [debat(CITATION_POUR)],
+    contre: [debat(CITATION_CONTRE)]
+  };
+
+  loi.verifications = {
+    chiffres: [
+      {
+        affirmation: "12 % des logements sont concernés.",
+        chiffre: "12 %",
+        auteur: fiche.nom,
+        role: fiche.role,
+        citation: CITATION_CHIFFRE,
+        seance: SEANCE_REF,
+        date: "2026-03-12",
+        url: SEANCE_URL,
+        verdict: "confirmé",
+        explication:
+          "Le rapport de la commission retient ce taux pour les zones tendues, sur le parc locatif privé. Le chiffre est repris tel quel, sans extrapolation.",
+        sources: [{ nom: "Rapport de la commission", url: RAPPORT }]
+      }
+    ]
+  };
+
+  const verbatim = {
+    verifie_le: "2026-11-14",
+    seances: {
+      [SEANCE_REF]: { date: "2026-03-12", url: SEANCE_URL }
+    },
+    citations: [
+      { seance: SEANCE_REF, auteur: fiche.nom, texte: CITATION_POUR },
+      { seance: SEANCE_REF, auteur: fiche.nom, texte: CITATION_CONTRE },
+      { seance: SEANCE_REF, auteur: fiche.nom, texte: CITATION_CHIFFRE }
+    ]
+  };
+
+  return { loi, fiche, verbatim };
 }
 
 function lancer(fichier, dossier) {
@@ -181,7 +233,8 @@ function lancer(fichier, dossier) {
     env: {
       ...process.env,
       QUORUM_MEDIAS: join(dossier, "medias.json"),
-      QUORUM_EXPERTS: join(dossier, "experts.json")
+      QUORUM_EXPERTS: join(dossier, "experts.json"),
+      QUORUM_VERBATIM: join(dossier, "verbatim.json")
     }
   });
   return { code: r.status, sortie: (r.stdout || "") + (r.stderr || "") };
@@ -191,7 +244,7 @@ const dossier = mkdtempSync(join(tmpdir(), "quorum-gate-"));
 const resultats = [];
 
 try {
-  const { loi, fiche } = fichierComplet();
+  const { loi, fiche, verbatim } = fichierComplet();
 
   writeFileSync(
     join(dossier, "medias.json"),
@@ -213,6 +266,7 @@ try {
     JSON.stringify({ verifie_le: "2026-11-14", experts: [fiche] }, null, 2),
     "utf8"
   );
+  writeFileSync(join(dossier, "verbatim.json"), JSON.stringify(verbatim, null, 2), "utf8");
 
   const complet = join(dossier, "complet.json");
   writeFileSync(complet, JSON.stringify(loi, null, 2), "utf8");
@@ -314,6 +368,45 @@ try {
     attendu: "code 1 et contrôle WP1.3",
     tenu: casEtiquette.code === 1 && /WP1\.3/.test(casEtiquette.sortie),
     sortie: casEtiquette.sortie
+  });
+  /* WP1.8 — une citation retouchée n'est plus la citation prononcée. */
+  const citationFausse = JSON.parse(JSON.stringify(loi));
+  citationFausse.debat.pour[0].citation = CITATION_POUR.replace("nouveaux", "anciens");
+  const fauxCitation = join(dossier, "faux-citation.json");
+  writeFileSync(fauxCitation, JSON.stringify(citationFausse, null, 2), "utf8");
+  const casCitation = lancer(fauxCitation, dossier);
+  resultats.push({
+    nom: "citation retouchée refusée",
+    attendu: "code 1 et citation absente du verbatim",
+    tenu: casCitation.code === 1 && /citation absente du verbatim/.test(casCitation.sortie),
+    sortie: casCitation.sortie
+  });
+
+  /* WP1.9 — un verdict favorable sans source n'est pas une vérification. */
+  const sansSource = JSON.parse(JSON.stringify(loi));
+  sansSource.verifications.chiffres[0].sources = [];
+  const fauxSansSource = join(dossier, "faux-sans-source.json");
+  writeFileSync(fauxSansSource, JSON.stringify(sansSource, null, 2), "utf8");
+  const casSansSource = lancer(fauxSansSource, dossier);
+  resultats.push({
+    nom: "verdict « confirmé » sans source refusé",
+    attendu: "code 1 et verdict sans source",
+    tenu: casSansSource.code === 1 && /sans source/.test(casSansSource.sortie),
+    sortie: casSansSource.sortie
+  });
+
+  /* WP1.9 — « non documenté » ne peut pas porter une source : ce serait
+     un verdict qui se contredit. */
+  const contradiction = JSON.parse(JSON.stringify(loi));
+  contradiction.verifications.chiffres[0].verdict = "non documenté";
+  const fauxContradiction = join(dossier, "faux-contradiction.json");
+  writeFileSync(fauxContradiction, JSON.stringify(contradiction, null, 2), "utf8");
+  const casContradiction = lancer(fauxContradiction, dossier);
+  resultats.push({
+    nom: "« non documenté » avec source refusé",
+    attendu: "code 1 et contradiction",
+    tenu: casContradiction.code === 1 && /contradiction/.test(casContradiction.sortie),
+    sortie: casContradiction.sortie
   });
 } finally {
   rmSync(dossier, { recursive: true, force: true });

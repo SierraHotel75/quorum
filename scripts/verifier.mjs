@@ -24,10 +24,11 @@ const DOSSIER_LOIS = join(RACINE, "data", "lois");
 const FICHIER_GROUPES = join(RACINE, "data", "ref", "groupes.json");
 const FICHIER_MEDIAS = process.env.QUORUM_MEDIAS || join(RACINE, "data", "ref", "medias.json");
 const FICHIER_EXPERTS = process.env.QUORUM_EXPERTS || join(RACINE, "data", "ref", "experts.json");
+const FICHIER_VERBATIM = process.env.QUORUM_VERBATIM || join(RACINE, "data", "ref", "verbatim.json");
 
 /* Version du passage obligé. Un fichier produit par une version antérieure
    des contrôles est refusé : les règles ont changé, la preuve ne vaut plus. */
-const GATE = "3";
+const GATE = "4";
 
 /* Domaines autorisés pour une source. Volontairement court : une source hors
    de cette liste est refusée, pas signalée. */
@@ -37,7 +38,9 @@ const DOMAINES = [
   "legifrance.gouv.fr",
   "vie-publique.fr",
   "data.gouv.fr",
-  "hemicycle.ai"
+  "hemicycle.ai",
+  "ciivise.fr",
+  "justice.gouv.fr"
 ];
 
 /* Valeurs fermées. Une valeur hors liste est refusée : elle vient d'une
@@ -71,7 +74,9 @@ const CONTROLES = {
   "Symétrie des bords": "WP1.4",
   "Sources des médias": "WP1.5",
   "Ressources citées vérifiées": "WP1.6",
-  "Variante contrôlée": "WP1.7"
+  "Variante contrôlée": "WP1.7",
+  "Débat cité": "WP1.8",
+  "Chiffres vérifiés": "WP1.9"
 };
 
 /* ---------- Outils ---------- */
@@ -83,6 +88,7 @@ function lireJson(chemin) {
 
 function normaliser(s) {
   return String(s == null ? "" : s)
+    .replace(/[\u200b-\u200d\u2060\ufeff]/g, "")
     .replace(/\u00a0/g, " ")
     .replace(/[\u2018\u2019\u201a\u201b]/g, "'")
     .replace(/[\u201c\u201d]/g, '"')
@@ -149,6 +155,7 @@ function verifierSchema(loi, r) {
     "id", "titre", "theme", "statut", "resume", "nb_phrases",
     "source", "scrutin", "chronologie", "extraits",
     "chiffres", "quiz", "arguments", "presse", "experts",
+    "debat", "verifications",
     "votes_par_groupe", "meta"
   ];
   const manquants = obligatoires.filter((c) => loi[c] == null);
@@ -524,10 +531,136 @@ function verifierVariante(loi, r, domainesAutorises) {
 }
 
 function longueurEntree(e) {
-  return normaliser(e.texte || e.titre || e.argument || "").length;
+  return normaliser(e.texte || e.titre || e.argument || e.citation || "").length;
 }
 
-function verifierBord(nom, pour, contre, r, code) {
+/* Un débat n'est publiable que si chaque citation se retrouve dans le
+   verbatim officiel, avec la même séance et le même auteur. Le contrôle ne
+   croit pas la fiche : il compare. */
+function verifierCitation(quoi, x, refs, r, code) {
+  const citation = normaliser(x.citation);
+  if (!citation) {
+    r.ajouter(code, `${quoi} : citation vide`);
+    return;
+  }
+  if (citation.length < 40) {
+    r.ajouter(code, `${quoi} : citation trop courte pour être vérifiable`);
+    return;
+  }
+
+  const nom = normaliser(x.nom || x.auteur);
+  if (!nom) {
+    r.ajouter(code, `${quoi} : auteur absent`);
+    return;
+  }
+  if (!normaliser(x.role)) r.ajouter(code, `${quoi} : rôle absent`);
+
+  const seance = normaliser(x.seance);
+  const s = refs.seances.get(seance);
+  if (!s) {
+    r.ajouter(code, `${quoi} : séance inconnue (${seance || "vide"})`);
+    return;
+  }
+  if (x.date !== s.date) r.ajouter(code, `${quoi} : date ${x.date}, séance du ${s.date}`);
+  if (x.url !== s.url) r.ajouter(code, `${quoi} : URL différente de celle du compte rendu`);
+
+  if (refs.experts.size && !refs.experts.has(nom.toLowerCase())) {
+    r.ajouter(code, `${quoi} : nom hors liste (${nom})`);
+  }
+
+  const trouvee = refs.verbatim.some(
+    (c) => c.seance === seance && c.auteur === nom && c.texte.includes(citation)
+  );
+  if (!trouvee) r.ajouter(code, `${quoi} : citation absente du verbatim officiel`);
+}
+
+function verifierDebat(loi, r, refs) {
+  const d = loi.debat || {};
+  if (!refs.verbatim.length || !refs.seances.size) {
+    r.ajouter("WP1.8", "verbatim officiel absent ou vide (data/ref/verbatim.json) : débat non publiable");
+  }
+  if (!Array.isArray(d.pour) || !Array.isArray(d.contre)) {
+    r.ajouter("WP1.8", "debat : les deux bords doivent être des listes");
+    return;
+  }
+  verifierBord("debat", d.pour, d.contre, r, "WP1.8", { total: true });
+
+  for (const x of [...d.pour, ...d.contre]) {
+    const quoi = `débat « ${String(x.nom).slice(0, 30)} »`;
+    if (!normaliser(x.affiliation)) {
+      r.ajouter("WP1.8", `${quoi} : affiliation absente`);
+    } else {
+      const fiche = refs.experts.get(normaliser(x.nom).toLowerCase());
+      if (fiche && normaliser(fiche.affiliation).toLowerCase() !== normaliser(x.affiliation).toLowerCase()) {
+        r.ajouter("WP1.8", `${quoi} : affiliation divergente (${x.affiliation}), liste « ${fiche.affiliation} »`);
+      }
+    }
+    verifierCitation(quoi, x, refs, r, "WP1.8");
+  }
+}
+
+const VERDICTS = ["confirmé", "nuancé", "non documenté"];
+
+/* Un chiffre n'est repris que s'il a été prononcé dans l'hémicycle, que la
+   citation est authentique, et qu'une source autorisée soutient le verdict.
+   « Non documenté » est un verdict, pas un trou : il interdit d'avoir une
+   source, puisque aucune n'a été trouvée. */
+function verifierVerifications(loi, r, refs) {
+  const v = loi.verifications || {};
+  const liste = Array.isArray(v.chiffres) ? v.chiffres : null;
+  if (!liste || !liste.length) {
+    r.ajouter("WP1.9", "aucun chiffre vérifié : la page n'a rien à prouver");
+    return;
+  }
+
+  for (const x of liste) {
+    const quoi = `chiffre « ${String(x.chiffre || x.affirmation || "").slice(0, 30)} »`;
+    if (!normaliser(x.affirmation)) r.ajouter("WP1.9", `${quoi} : affirmation vide`);
+    if (!normaliser(x.chiffre)) r.ajouter("WP1.9", `${quoi} : chiffre vide`);
+    if (!VERDICTS.includes(x.verdict)) {
+      r.ajouter("WP1.9", `${quoi} : verdict hors liste (${x.verdict})`);
+      continue;
+    }
+    if (normaliser(x.explication).length < 80) {
+      r.ajouter("WP1.9", `${quoi} : explication absente ou trop courte`);
+    }
+
+    verifierCitation(quoi, x, refs, r, "WP1.9");
+
+    const sources = Array.isArray(x.sources) ? x.sources : [];
+    if (x.verdict === "non documenté") {
+      if (sources.length) {
+        r.ajouter("WP1.9", `${quoi} : « non documenté » avec une source, contradiction`);
+      }
+    } else {
+      if (!sources.length) {
+        r.ajouter("WP1.9", `${quoi} : verdict « ${x.verdict} » sans source`);
+      }
+      for (const s of sources) {
+        if (!normaliser(s.nom)) r.ajouter("WP1.9", `${quoi} : source sans nom`);
+        let u;
+        try {
+          u = new URL(s.url);
+        } catch {
+          r.ajouter("WP1.9", `${quoi} : source sans URL valide`);
+          continue;
+        }
+        if (u.protocol !== "https:") r.ajouter("WP1.9", `${quoi} : source non HTTPS`);
+        const d = domaineDe(s.url);
+        const connu = refs.domaines.some((a) => d === a || d?.endsWith("." + a));
+        if (!connu) r.ajouter("WP1.9", `${quoi} : source hors domaines autorisés (${d})`);
+      }
+    }
+
+    /* Le chiffre vérifié doit être celui que l'orateur a prononcé : un chiffre
+       ajouté à côté de la citation n'est pas vérifiable. */
+    if (normaliser(x.chiffre) && !normaliser(x.citation).includes(normaliser(x.chiffre))) {
+      r.ajouter("WP1.9", `${quoi} : le chiffre n'apparaît pas dans la citation`);
+    }
+  }
+}
+
+function verifierBord(nom, pour, contre, r, code, options) {
   if (!Array.isArray(pour) || !Array.isArray(contre)) {
     r.ajouter(code, `${nom} : les deux bords doivent être des listes`);
     return;
@@ -537,6 +670,18 @@ function verifierBord(nom, pour, contre, r, code) {
   }
   if (pour.length === 0) {
     r.ajouter(code, `${nom} : aucun contenu, la page doit rester vide et le dire`);
+  }
+
+  /* Des citations authentiques n'ont pas la même longueur : pour le débat,
+     l'équilibre se juge sur le total de chaque bord, pas sur chaque extrait. */
+  if (options && options.total) {
+    const total = (liste) => liste.reduce((a, e) => a + longueurEntree(e), 0);
+    const tp = total(pour);
+    const tc = total(contre);
+    if (tp > 0 && tc > 0 && Math.max(tp, tc) / Math.min(tp, tc) > 2.5) {
+      r.ajouter(code, `${nom} : total trop inégal (${tp} contre ${tc} caractères)`);
+    }
+    return;
   }
 
   const longueurs = [...pour, ...contre].map(longueurEntree).filter((n) => n > 0);
@@ -747,7 +892,7 @@ async function main() {
   }
 
   let domainesAutorises = [...DOMAINES];
-  const refs = { medias: new Map(), experts: new Map() };
+  const refs = { medias: new Map(), experts: new Map(), seances: new Map(), verbatim: [], domaines: [] };
 
   if (existsSync(FICHIER_MEDIAS)) {
     try {
@@ -774,6 +919,25 @@ async function main() {
       console.error("Note : data/ref/experts.json illisible, liste des spécialistes vide.");
     }
   }
+
+  if (existsSync(FICHIER_VERBATIM)) {
+    try {
+      const v = lireJson(FICHIER_VERBATIM);
+      for (const [ref, s] of Object.entries(v.seances || {})) {
+        refs.seances.set(normaliser(ref), { date: s.date, url: s.url });
+      }
+      for (const c of v.citations || []) {
+        refs.verbatim.push({
+          seance: normaliser(c.seance),
+          auteur: normaliser(c.auteur),
+          texte: normaliser(c.texte)
+        });
+      }
+    } catch {
+      console.error("Note : data/ref/verbatim.json illisible, débat non publiable.");
+    }
+  }
+  refs.domaines = domainesAutorises;
 
   let fichiers;
   if (chemins.length) {
@@ -814,6 +978,8 @@ async function main() {
       /* Bloc facultatif : sans variante, les contrôles 1 à 6 ne s'exécutent pas. */
       if (loi.variante != null) verifierVariante(loi, r, domainesAutorises);
       verifierSymetrie(loi, r);
+      verifierDebat(loi, r, refs);
+      verifierVerifications(loi, r, refs);
       verifierSources(loi, r, domainesAutorises);
       verifierMarqueurs(loi, r, refs);
     }
@@ -825,7 +991,10 @@ async function main() {
         ...(loi.arguments?.pour || []).map((x) => x.url),
         ...(loi.arguments?.contre || []).map((x) => x.url),
         ...(loi.presse?.pour || []).map((x) => x.url),
-        ...(loi.presse?.contre || []).map((x) => x.url)
+        ...(loi.presse?.contre || []).map((x) => x.url),
+        ...(loi.debat?.pour || []).map((x) => x.url),
+        ...(loi.debat?.contre || []).map((x) => x.url),
+        ...(loi.verifications?.chiffres || []).flatMap((x) => (x.sources || []).map((s) => s.url))
       ].filter(Boolean);
       for (const u of urls) {
         const ok = await verifierReponse(u);

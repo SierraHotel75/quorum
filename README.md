@@ -35,6 +35,7 @@ scripts/preuve-gate.mjs preuve : accepte un fichier complet, refuse le reste
 data/ref/groupes.json   composition de l'Assemblée, datée et sourcée
 data/ref/medias.json    médias suivis par flux RSS, liste fermée
 data/ref/experts.json   personnes et organisations citables, liste fermée
+data/ref/verbatim.json  passages exacts des comptes rendus, source unique des citations
 data/ref/arbre.json     arbre de compétences : 4 jalons, 8 thèmes, 3 branches
 data/lois/index.json    les lois publiées, une entrée par fichier
 data/lois/protection-enfants.json
@@ -56,9 +57,9 @@ node scripts/preuve-gate.mjs         # prouve que le passage accepte et refuse
 
 Le script refuse, il ne corrige pas. Code de sortie 1 dès qu'un fichier est refusé.
 Il vérifie le schéma, les dates, les décomptes (577 sièges, sièges attribués, votants,
-exprimés), le verbatim des extraits, la symétrie des trois bords, les sources, et
-l'absence de contenu de démonstration. Un fichier dont le nom commence par `_` est
-ignoré : c'est un jeu de travail, pas une publication.
+exprimés), le verbatim des extraits, la symétrie des quatre bords, les citations du débat,
+les chiffres vérifiés, les sources, et l'absence de contenu de démonstration. Un fichier
+dont le nom commence par `_` est ignoré : c'est un jeu de travail, pas une publication.
 
 Un extrait ne porte que ce que le texte déclare lui-même : l'étiquette `supprime`
 n'est acceptée que sur un passage qui écrit « (Supprimé) », `adopte` sur tout le
@@ -83,13 +84,41 @@ pour + contre + abstentions`, `exprimés = pour + contre`) et doit venir d'un au
 scrutin que celui de la loi. Le bloc n'apparaît dans l'écran « article entier » que
 s'il est présent et validé.
 
-Trois listes ferment la publication : `data/ref/medias.json` et
-`data/ref/experts.json` doivent contenir le média, la personne ou l'organisation citée,
-avec son domaine, son affiliation ou son rôle. Une entrée absente est refusée, avec ou
-sans drapeau. Le champ `meta.gate` doit valoir la version courante du passage de
-contrôles (`3` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
+Trois listes ferment la publication : `data/ref/medias.json`, `data/ref/experts.json` et
+`data/ref/verbatim.json` doivent contenir le média, la personne ou l'organisation citée,
+avec son domaine, son affiliation, son rôle ou son passage. Une entrée absente est refusée,
+avec ou sans drapeau. Le champ `meta.gate` doit valoir la version courante du passage de
+contrôles (`4` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
 `source.texte_url` est obligatoire : c'est le lien vers le texte officiel, affiché
 en bas de l'écran « article entier » pour un fichier publié.
+
+### Le débat cité (`WP1.8`)
+
+Le bloc `debat` ne contient pas de reformulation : chaque entrée est une citation
+recopiée d'un compte rendu. Le contrôle exige que la citation soit **mot pour mot**
+dans `data/ref/verbatim.json`, avec la **même séance** et le **même auteur**, que la
+date et l'URL correspondent à celles de la séance, et que le nom figure dans
+`data/ref/experts.json`. Une citation retouchée d'un seul mot est refusée.
+
+La symétrie se juge ici sur le **total de caractères par bord** (rapport maximal 2,5),
+pas sur chaque extrait : des citations authentiques n'ont pas la même longueur, et
+tronquer la plus longue pour équilibrer reviendrait à falsifier.
+
+### Les chiffres vérifiés (`WP1.9`)
+
+Le bloc `verifications` ne retient que des chiffres **prononcés dans l'hémicycle**.
+Chaque entrée porte sa citation (contrôlée comme ci-dessus), un verdict parmi
+`confirmé`, `nuancé`, `non documenté`, une explication d'au moins 80 caractères, et
+ses sources. Le chiffre doit apparaître littéralement dans la citation qu'il commente.
+
+Un verdict `confirmé` ou `nuancé` sans source est refusé ; un verdict
+`non documenté` **avec** une source est refusé aussi, puisque c'est une contradiction :
+« non documenté » veut dire qu'aucune source n'a été trouvée. Les domaines des sources
+sont restreints à la liste `DOMAINES` de `scripts/verifier.mjs`.
+
+Le verdict ne dit jamais si la loi est bonne : il dit seulement ce que la source établit.
+Il est rendu en typographie (Confirmé / Nuancé / Non documenté), jamais en vert ni en
+rouge, pour que « vrai » ne puisse pas se lire comme « pour ».
 
 ## Cache et versions
 
@@ -100,15 +129,21 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 
 ## Écrans
 
-`#/` accueil · `#/devoir/<id>` sommaire · `/vote` vote initial · `/fait` chronologie ·
-`/texte` extraits · `/article` texte entier · `/chiffres` décompte et quiz ·
-`/arguments` · `/presse` · `/experts` · `/resultat` vote final · `/carte` hémicycle ·
-`#/arbre` progression · `#/methode` contrôles · `#/archive` · `#/recherche`
+`#/` accueil · `#/devoir/<id>` sommaire · `/fait` chronologie · `/texte` extraits ·
+`/article` texte entier · `/vote` premier vote · `/chiffres` décompte et quiz ·
+`/arguments` carte « Comprendre en une minute » · `/debat` le débat mot pour mot ·
+`/verif` les chiffres vérifiés · `/presse` · `/experts` · `/resultat` vote final ·
+`/carte` hémicycle · `#/arbre` progression · `#/methode` contrôles · `#/archive` ·
+`#/recherche`
+
+L'ordre est linéaire : le fait, les extraits et l'article entier viennent **avant** le
+premier vote. Le vote est demandé après avoir lu le texte, pas avant.
 
 ## Ce qui est vrai, ce qui ne l'est pas
 
 - **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
-- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les arguments », présentés comme une carte « Comprendre en une minute ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les citations exactes restent dans « Les voix citées ».
+- **Reformulé, source à l'appui** : les arguments pour et contre de l'écran « Les arguments », présentés comme une carte « Comprendre en une minute ». Chacun reprend une position exprimée sur l'article 11, avec l'exposé sommaire dont il vient. Les phrases exactes des députés sont dans « Le débat, mot pour mot », recopiées des comptes rendus et contrôlées une à une.
+- **Vérifié, avec sa limite** : les trois chiffres de l'écran « Les chiffres, vérifiés ». Le 3 % et le 1 % sont confirmés par la CIIVISE (rapport public de novembre 2023, bilan du 15 juin 2026) : ce sont des ordres de grandeur calculés à partir des plaintes, pas des comptages exhaustifs. Le 70 % reste « non documenté » : le rapport inter-inspections de juillet 2022 qui le porte n'est publié sur aucun site officiel, donc il n'est pas repris comme un fait.
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
 - **Maquette, assumé** : l'arbre de `data/ref/arbre.json`. Les 4 jalons, 8 thèmes et 24 branches sont une nomenclature de démonstration ; seuls les points gagnés sont réels, ils ne comptent que des actions du parcours, jamais le contenu d'un vote.
 - **Règle** : aucun contenu de démonstration ne doit être présenté comme vérifié dans une slide. Les images de `assets/mockups/` sont des maquettes.

@@ -785,6 +785,101 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- Débat cité et chiffres vérifiés ---------- */
+
+.citation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  margin: 0;
+  padding-bottom: var(--s2);
+  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+}
+
+.citation:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.citation__texte {
+  margin: 0;
+  font-size: var(--t-md);
+  line-height: 1.6;
+  color: var(--texte);
+}
+
+.citation__auteur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: var(--t-sm);
+}
+
+.citation__nom {
+  font-weight: 600;
+}
+
+.citation__role {
+  color: var(--texte-doux);
+}
+
+.citation__source {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  text-decoration-color: var(--filet-fort);
+}
+
+.verif {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  padding: var(--s3);
+  border: 1px solid var(--filet-fort);
+  border-radius: var(--rayon);
+  background: var(--fond-2);
+}
+
+.verif__verdict {
+  align-self: flex-start;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--filet-fort);
+  border-radius: var(--rayon);
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+
+.verif[data-verdict="confirmé"] .verif__verdict {
+  color: var(--texte);
+}
+
+.verif[data-verdict="non documenté"] .verif__verdict {
+  border-style: dashed;
+  color: var(--texte-faible);
+}
+
+.verif__phrase {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  line-height: 1.4;
+}
+
+.verif__auteur,
+.verif__sources {
+  font-size: var(--t-xs);
+  line-height: 1.7;
+  color: var(--texte-doux);
+}
+
+.verif__texte {
+  font-size: var(--t-md);
+  line-height: 1.6;
+}
+
 .sources {
   font-size: var(--t-xs);
   line-height: 1.8;

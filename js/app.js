@@ -148,7 +148,7 @@
       '<h2 class="ecran__titre" id="intro-titre">Trois choses à savoir</h2>' +
       '<div class="pile">' +
       '<p><strong>Le vote reste ici.</strong> Aucun vote n\u2019est envoyé, aucun compte n\u2019est créé.</p>' +
-      '<p><strong>Chaque phrase a sa source.</strong> Les extraits sont copiés du texte, les chiffres viennent du scrutin.</p>' +
+      '<p><strong>Chaque phrase a sa source.</strong> Les extraits et les citations sont recopiés des textes officiels, les chiffres viennent du scrutin et de leurs sources.</p>' +
       '<p><strong>Aucun avis.</strong> Quorum montre ce qui a été dit et voté. Il ne dit pas quoi penser.</p>' +
       "</div>" +
       "</div>" +
@@ -231,11 +231,11 @@
       "</div>" +
       (v
         ? '<a class="bouton" href="#/devoir/' + loi.id + '">Reprendre le devoir</a>'
-        : '<a class="bouton" href="#/devoir/' + loi.id + '/vote">Commencer</a>') +
+        : '<a class="bouton" href="#/devoir/' + loi.id + '/fait">Commencer</a>') +
       "</div>" +
       '<div class="pile">' +
       '<p class="etiquette">Ce qui vient ensuite</p>' +
-      '<p class="petit">Une loi, un parcours : voter, lire le fait, les extraits, les chiffres, les arguments, la presse, les ressources, puis voir où se situe votre voix.</p>' +
+      '<p class="petit">Une loi, un parcours : le fait, les extraits, l\u2019article entier, puis votre vote. Ensuite les chiffres, les arguments, le d\u00e9bat mot pour mot, la v\u00e9rification des chiffres, la presse et les ressources, avant votre vote final.</p>' +
       "</div>" +
       '<p class="mention-independance">Projet indépendant, non affilié à l\u2019Assemblée nationale ni au Sénat. Le vote reste sur cet appareil.</p>' +
       "</main>" +
@@ -247,12 +247,14 @@
     var p = progresDe(loi.id);
     var v = voteDe(loi.id);
     return [
-      { cle: "vote", nom: "Votre vote", fait: !!v, href: "#/devoir/" + loi.id + "/vote" },
       { cle: "fait", nom: "Le fait", fait: p.lu, href: "#/devoir/" + loi.id + "/fait" },
       { cle: "texte", nom: "Les extraits", fait: p.lu, href: "#/devoir/" + loi.id + "/texte" },
       { cle: "article", nom: "L\u2019article entier", fait: p.lu, href: "#/devoir/" + loi.id + "/article" },
+      { cle: "vote", nom: "Votre vote", fait: !!v, href: "#/devoir/" + loi.id + "/vote" },
       { cle: "chiffres", nom: "Les chiffres", fait: p.quiz, href: "#/devoir/" + loi.id + "/chiffres" },
       { cle: "arguments", nom: "Les arguments", fait: p.oppose, href: "#/devoir/" + loi.id + "/arguments" },
+      { cle: "debat", nom: "Le débat, mot pour mot", fait: false, href: "#/devoir/" + loi.id + "/debat" },
+      { cle: "verif", nom: "Les chiffres vérifiés", fait: false, href: "#/devoir/" + loi.id + "/verif" },
       { cle: "presse", nom: "La presse", fait: p.source, href: "#/devoir/" + loi.id + "/presse" },
       { cle: "experts", nom: "Les ressources", fait: false, href: "#/devoir/" + loi.id + "/experts" },
       { cle: "resultat", nom: "Votre vote final", fait: v && v.v2, href: "#/devoir/" + loi.id + "/resultat" },
@@ -291,24 +293,33 @@
     var v = voteDe(loi.id);
     var deja = final ? v && v.v2 : v && v.v1;
     var question = final
-      ? "Après avoir lu, que pensez-vous de ce texte ?"
-      : "Avant de lire, que pensez-vous de ce texte ?";
+      ? "Après le débat et la presse, que pensez-vous de ce texte ?"
+      : "Après avoir lu le texte, que pensez-vous de ce dispositif ?";
     var aide = final
       ? "Votre premier vote est conservé. Un changement d\u2019avis n\u2019ajoute rien."
-      : "Glissez la carte, ou utilisez les boutons.";
+      : "Glissez la carte, ou utilisez les boutons. Vous pourrez revoter \u00e0 la fin du parcours.";
 
     return (
       barre("#/devoir/" + loi.id, final ? "Vote final" : "Vote") +
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
-      '<span class="theme">' + (final ? "Vote final" : "Vote initial") + "</span>" +
+      '<span class="theme">' + (final ? "Vote final" : "Votre vote") + "</span>" +
       '<h2 class="ecran__titre">' + esc(loi.titre) + "</h2>" +
+      "</div>" +
+      '<div class="pile">' +
+      '<p class="etiquette">Ce qui est voté</p>' +
+      '<p class="petit">' +
+      gras(
+        (loi.arguments && loi.arguments.contenu && loi.arguments.contenu.texte) ||
+          "Le texte soumis au vote."
+      ) +
+      "</p>" +
       "</div>" +
       (deja
         ? vide(
             "Vote enregistré",
             "Vous avez déjà voté. Le vote est définitif et reste sur cet appareil.",
-            '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + '/fait">Continuer</a>'
+            '<a class="bouton bouton--secondaire" href="#/devoir/' + loi.id + (final ? '/resultat' : '/chiffres') + '">Continuer</a>'
           )
         : '<div class="vote">' +
           '<div class="vote__zone" id="zone-vote">' +
@@ -458,7 +469,7 @@
       "</div>" +
       blocVariante(loi) +
       lienOfficiel +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/chiffres">Passer aux chiffres</a>' +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/vote">Voter sur ce texte</a>' +
       "</main>" +
       navbas("#/")
     );
@@ -678,7 +689,122 @@
           "</p>"
         : "") +
       (a.note ? '<p class="mono">' + esc(a.note) + "</p>" : "") +
-      '<a class="bouton" href="#/devoir/' + loi.id + '/presse" data-action="oppose">Voir la presse</a>' +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/debat" data-action="oppose">Le débat, mot pour mot</a>' +
+      "</main>" +
+      navbas("#/")
+    );
+  }
+
+  /* Les citations du débat ne sont pas reformulées : elles sont recopiées du
+     compte rendu, et le contrôle refuse celles qui ne s'y trouvent pas. */
+  function blocCitations(cote, titre, liste) {
+    if (!liste.length) {
+      return (
+        '<section class="debat debat--' + cote + '">' +
+        vide(
+          "Rien pour ce bord",
+          "Aucune intervention publiée pour ce bord. La sélection ne remplace jamais un manque par une invention.",
+          ""
+        ) +
+        "</section>"
+      );
+    }
+    return (
+      '<section class="debat debat--' + cote + '" aria-label="' + esc(titre) + '">' +
+      liste
+        .map(function (x) {
+          return (
+            '<figure class="citation">' +
+            '<blockquote class="citation__texte">\u00ab\u00a0' + esc(x.citation) + '\u00a0\u00bb</blockquote>' +
+            '<figcaption class="citation__auteur">' +
+            '<span class="citation__nom">' + esc(x.nom) + "</span>" +
+            '<span class="citation__role">' + esc(x.role) + "</span>" +
+            "</figcaption>" +
+            '<a class="citation__source" href="' + esc(x.url) + '" rel="noopener" target="_blank">' +
+            "Compte rendu du " + esc(dateLongue(x.date)) + " \u00b7 Assemblée nationale" +
+            "</a>" +
+            "</figure>"
+          );
+        })
+        .join("") +
+      "</section>"
+    );
+  }
+
+  function ecranDebat(loi) {
+    var d = loi.debat || {};
+    var pour = d.pour || [];
+    var contre = d.contre || [];
+    return (
+      barre("#/devoir/" + loi.id + "/arguments", "Le débat") +
+      '<main class="ecran">' +
+      '<div class="ecran__entete">' +
+      '<span class="theme">Le débat</span>' +
+      '<h2 class="ecran__titre">Le débat, mot pour mot</h2>' +
+      (d.chapeau ? '<p class="ecran__chapeau">' + esc(d.chapeau) + "</p>" : "") +
+      "</div>" +
+      '<div class="debat-ensemble">' +
+      '<div class="bande-debat">' +
+      '<span class="bande-debat__cote bande-debat__cote--pour">Pour</span>' +
+      '<span class="bande-debat__titre">Ce qu\u2019ils ont dit :</span>' +
+      '<span class="bande-debat__cote bande-debat__cote--contre">Contre</span>' +
+      "</div>" +
+      blocCitations("pour", d.pour_titre || "Pour", pour) +
+      blocCitations("contre", d.contre_titre || "Contre", contre) +
+      "</div>" +
+      (d.note ? '<p class="mono">' + esc(d.note) + "</p>" : "") +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/verif">Vérifier les chiffres</a>' +
+      "</main>" +
+      navbas("#/")
+    );
+  }
+
+  function libelleVerdict(v) {
+    if (v === "confirmé") return "Confirmé";
+    if (v === "nuancé") return "Nuancé";
+    return "Non documenté";
+  }
+
+  function ecranVerif(loi) {
+    var v = loi.verifications || {};
+    var liste = v.chiffres || [];
+    return (
+      barre("#/devoir/" + loi.id + "/debat", "Vérification") +
+      '<main class="ecran">' +
+      '<div class="ecran__entete">' +
+      '<span class="theme">Vérification</span>' +
+      '<h2 class="ecran__titre">Les chiffres, vérifiés</h2>' +
+      (v.chapeau ? '<p class="ecran__chapeau">' + esc(v.chapeau) + "</p>" : "") +
+      "</div>" +
+      liste
+        .map(function (x) {
+          var sources = x.sources || [];
+          return (
+            '<article class="verif" data-verdict="' + esc(x.verdict) + '">' +
+            '<p class="verif__verdict">' + esc(libelleVerdict(x.verdict)) + "</p>" +
+            '<blockquote class="verif__phrase">\u00ab\u00a0' + esc(x.affirmation) + "\u00a0\u00bb</blockquote>" +
+            '<p class="verif__auteur">' +
+            esc(x.auteur) + " \u2014 " + esc(x.role) + " \u00b7 " +
+            '<a href="' + esc(x.url) + '" rel="noopener" target="_blank">compte rendu du ' +
+            esc(dateLongue(x.date)) + "</a>" +
+            "</p>" +
+            '<p class="verif__texte">' + esc(x.explication) + "</p>" +
+            (sources.length
+              ? '<p class="verif__sources"><span class="sources__titre">Source' +
+                (sources.length > 1 ? "s" : "") + " :</span> " +
+                sources
+                  .map(function (s) {
+                    return '<a href="' + esc(s.url) + '" rel="noopener" target="_blank">' + esc(s.nom) + "</a>";
+                  })
+                  .join(" \u00b7 ") +
+                "</p>"
+              : '<p class="verif__sources"><span class="sources__titre">Source :</span> aucune source primaire publiée</p>') +
+            "</article>"
+          );
+        })
+        .join("") +
+      (v.note ? '<p class="mono">' + esc(v.note) + "</p>" : "") +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/presse">Voir la presse</a>' +
       "</main>" +
       navbas("#/")
     );
@@ -722,7 +848,7 @@
       '<main class="ecran">' +
       '<div class="ecran__entete">' +
       '<span class="theme">Les ressources</span>' +
-      '<h2 class="ecran__titre">Les voix cit\u00e9es</h2>' +
+      '<h2 class="ecran__titre">Les personnes cit\u00e9es</h2>' +
       "</div>" +
       bord(
         "pour",
@@ -1032,7 +1158,7 @@
       '<h2 class="ecran__titre">Comment ce devoir est fabriqué</h2>' +
       "</div>" +
       '<div class="pile">' +
-      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Les arguments pour et contre sont reformulés en clair à partir des exposés sommaires, avec leur source ; les citations exactes sont dans « Les voix citées ». Les chiffres viennent du scrutin. Les titres de presse sont repris tels quels. Quand une information manque, l\u2019application écrit « non documenté ».</p>' +
+      '<p class="petit">Les phrases des extraits sont copiées du texte, sans reformulation. Les arguments pour et contre sont reformulés en clair à partir des exposés sommaires, avec leur source ; les citations exactes sont dans « Le débat, mot pour mot », recopiées des comptes rendus. Les chiffres du scrutin viennent du décompte ; ceux du débat sont confrontés à une source, et rendus « non documentés » quand il n\u2019y en a pas. Les titres de presse sont repris tels quels.</p>' +
       "</div>" +
       '<p class="etiquette">Journal des contrôles</p>' +
       '<ul class="liste">' +
@@ -1125,6 +1251,8 @@
       if (sous === "article") return rendre(ecranArticle(loi));
       if (sous === "chiffres") return rendre(ecranChiffres(loi));
       if (sous === "arguments") return rendre(ecranArguments(loi));
+      if (sous === "debat") return rendre(ecranDebat(loi));
+      if (sous === "verif") return rendre(ecranVerif(loi));
       if (sous === "presse") return rendre(ecranPresse(loi));
       if (sous === "experts") return rendre(ecranExperts(loi));
       if (sous === "resultat") return rendre(ecranResultat(loi));

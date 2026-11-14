@@ -2,7 +2,7 @@
    L'application doit fonctionner sans lui : il ne fait qu'accélérer et
    permettre le mode avion. Toute erreur ici est rattrapable en le désactivant. */
 
-var CACHE = "quorum-v20";
+var CACHE = "quorum-v21";
 
 var FICHIERS = [
   "./",

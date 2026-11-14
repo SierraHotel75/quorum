@@ -22,10 +22,10 @@ Ce qui s'est dit. Ce qui s'est voté.
 
 ## 3. Un devoir, de bout en bout
 
-Vote à froid → le fait → les extraits → les chiffres → les arguments → la presse → les ressources → vote final → la carte.
+Le fait → les extraits → l'article entier → premier vote → les chiffres → les arguments → le débat mot pour mot → les chiffres vérifiés → la presse → les ressources → vote final → la carte.
 
-- Le premier vote garde la trace de ce qu'on pensait avant.
-- Le second, de ce qu'on pense après.
+- Le premier vote arrive après le texte, pas avant : on sait ce qu'on vote.
+- Le second arrive après le débat et la vérification des chiffres.
 - Aucun des deux n'est publié.
 
 ## 4. Ce qui s'est dit
@@ -46,9 +46,10 @@ Vote à froid → le fait → les extraits → les chiffres → les arguments �
 
 ## 6. La neutralité par construction
 
-- Trois bords, symétriques : pour, contre, et le fait.
-- Deux listes fermées : médias suivis par flux RSS, personnes citables.
-- Des contrôles automatiques refusent le fichier. Pas de relecture humaine.
+- Quatre listes à deux bords, de poids comparable : arguments, presse, ressources, débat.
+- Trois listes fermées : médias suivis par flux RSS, personnes citables, verbatim des comptes rendus.
+- Les citations du débat sont recopiées : une seule au mot près et le fichier est refusé.
+- Les verdicts sur les chiffres sont typographiques, jamais verts ou rouges.
 
 *À l'oral :* « La phrase supprimée est citée mot pour mot, et le contrôle vérifie qu'elle n'est plus dans le texte adopté. Ce n'est pas une promesse d'équilibre, c'est un passage obligé. »
 

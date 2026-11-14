@@ -57,6 +57,48 @@
       "affiliation": "Assemblée nationale",
       "bord": "contre",
       "url": "https://www.assemblee-nationale.fr/dyn/deputes/PA720560"
+    },
+    {
+      "nom": "Christophe Mongardien",
+      "role": "Député, intervenu dans la discussion de l'article 11",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Gabriel Tomatis",
+      "role": "Député, intervenu dans la discussion de l'article 11",
+      "affiliation": "Assemblée nationale",
+      "bord": "pour",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020"
+    },
+    {
+      "nom": "Mathilde Panot",
+      "role": "Députée, intervenue dans la discussion de l'article 11",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
+    },
+    {
+      "nom": "Gabrielle Cathala",
+      "role": "Députée, intervenue dans la discussion de l'article 11",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N020"
+    },
+    {
+      "nom": "Arnaud Bonnet",
+      "role": "Député, intervenu pour soutenir l'amendement n° 1114",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N019"
+    },
+    {
+      "nom": "Marianne Maximi",
+      "role": "Députée, rapporteure",
+      "affiliation": "Assemblée nationale",
+      "bord": "contre",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/CRSANR5L17S2026E1N023"
     }
   ]
 }
