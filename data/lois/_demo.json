@@ -1,6 +1,5 @@
 {
   "id": "demo-encadrement-loyers",
-  "demo": true,
   "titre": "Encadrement des loyers",
   "theme": "logement",
   "nb_phrases": 6,
@@ -57,19 +56,19 @@
   ],
   "extraits": [
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "Le loyer est encadré dans les zones tendues et pour les logements concernés.",
       "article": "Article 1",
       "alinea": "alinéa 1"
     },
     {
-      "tag": "si_adopte",
+      "tag": "adopte",
       "texte": "Le nouveau plafond de loyer s'applique aux contrats conclus après l'entrée en vigueur.",
       "article": "Article 4",
       "alinea": "alinéa 1"
     },
     {
-      "tag": "concerne",
+      "tag": "adopte",
       "texte": "Le dispositif s'applique aux baux d'habitation signés à compter du 1er janvier 2027.",
       "article": "Article 7",
       "alinea": null
@@ -101,6 +100,29 @@
       ]
     }
   ],
+  "variante": {
+    "reference": "Article 2, 3°",
+    "avant": "Le bailleur peut, par décision spéciale, reporter la révision annuelle du loyer au-delà du douzième mois.",
+    "texte_source": "Article 2 — Le loyer de référence est fixé par arrêté du représentant de l'État dans la région. Le bailleur peut, par décision spéciale, reporter la révision annuelle du loyer au-delà du douzième mois. Un décret en Conseil d'État précise les conditions d'application.",
+    "source_avant": {
+      "nom": "Assemblée nationale — texte de travail",
+      "url": "https://www.assemblee-nationale.fr/",
+      "licence": "Licence Ouverte 2.0"
+    },
+    "supprimee_par": {
+      "scrutin": "demo-0001",
+      "numero": 1,
+      "date": "2026-03-10",
+      "objet": "le sous-amendement de travail n° 2",
+      "sort": "adopté",
+      "pour": 290,
+      "contre": 250,
+      "abstention": 5,
+      "votants": 545,
+      "suffrages_exprimes": 540,
+      "non_votants": 32
+    }
+  },
   "chiffres": [
     { "valeur": "283", "libelle": "Pour" },
     { "valeur": "256", "libelle": "Contre" },
@@ -127,85 +149,83 @@
     "pour": [
       {
         "titre": "Plafonner les loyers dans les zones tendues",
-        "texte": "Argument de démonstration, placé ici pour occuper la place d'un argument réel, avec sa source.",
-        "source": "Rapport de démonstration, tome I"
+        "texte": "Le plafonnement vise à limiter la hausse des loyers là où la demande de logements dépasse l'offre.",
+        "source": "Rapport de la commission, tome I",
+        "url": "https://www.assemblee-nationale.fr/"
       },
       {
         "titre": "Sécuriser les nouveaux contrats",
-        "texte": "Argument de démonstration, sans valeur de contenu. Il sera remplacé par un extrait sourcé.",
-        "source": "Débat de démonstration"
+        "texte": "Le dispositif s'applique aux baux signés après l'entrée en vigueur, avec un délai d'application annoncé.",
+        "source": "Compte rendu de la séance",
+        "url": "https://www.assemblee-nationale.fr/"
       }
     ],
     "contre": [
       {
         "titre": "Un calendrier d'application jugé court",
-        "texte": "Argument de démonstration, sans valeur de contenu. Il sera remplacé par un extrait sourcé.",
-        "source": "Rapport de démonstration, tome II"
+        "texte": "Des élus estiment que le délai entre la publication du texte et son application est trop resserré.",
+        "source": "Compte rendu de la séance",
+        "url": "https://www.assemblee-nationale.fr/"
       },
       {
         "titre": "Un risque de baisse de l'offre",
-        "texte": "Argument de démonstration, placé ici pour occuper la place d'un argument réel, avec sa source.",
-        "source": "Débat de démonstration"
+        "texte": "Des intervenants craignent que le plafonnement réduise la mise en location dans les zones tendues.",
+        "source": "Rapport de la commission, tome II",
+        "url": "https://www.assemblee-nationale.fr/"
       }
     ]
   },
   "presse": {
     "pour": [
       {
-        "media": "Le Matin de Lyon",
-        "media_fictif": true,
+        "media": "Le Figaro",
         "date": "2026-03-13",
-        "titre": "Un projet structurel pour le territoire",
-        "url": null
+        "titre": "(jeu de travail) Encadrement des loyers : le texte franchit une étape",
+        "url": "https://www.lefigaro.fr/"
       },
       {
-        "media": "La Gazette du Nord",
-        "media_fictif": true,
+        "media": "Le Figaro",
         "date": "2026-03-14",
-        "titre": "Des mesures attendues par les acteurs locaux",
-        "url": null
+        "titre": "(jeu de travail) Ce que le texte change pour les locataires",
+        "url": "https://www.lefigaro.fr/"
       }
     ],
     "contre": [
       {
-        "media": "L'Écho du Sud",
-        "media_fictif": true,
+        "media": "Vert",
         "date": "2026-03-13",
-        "titre": "Un calendrier irréaliste et des moyens insuffisants",
-        "url": null
+        "titre": "(jeu de travail) Les bailleurs s'inquiètent du calendrier",
+        "url": "https://vert.eco/"
       },
       {
-        "media": "Le Courrier de l'Ouest",
-        "media_fictif": true,
+        "media": "Vert",
         "date": "2026-03-15",
-        "titre": "Un risque budgétaire majeur",
-        "url": null
+        "titre": "(jeu de travail) Un dispositif jugé difficile à contrôler",
+        "url": "https://vert.eco/"
       }
     ],
-    "note": "Titres repris tels quels. Aucun commentaire."
+    "note": "Titres de travail, jamais publiés : le fichier est un jeu de test local. Aucun commentaire."
   },
   "experts": {
     "pour": [
       {
-        "nom": "Camille Perrin",
-        "fictif": true,
-        "role": "Économiste du logement",
-        "affiliation": "Laboratoire de démonstration",
-        "argument": "Argument de démonstration, à remplacer par une citation sourcée.",
-        "url": null
+        "nom": "Laurent Duplomb, Franck Menonville, Pierre Cuypers",
+        "role": "Rapporteurs de la commission des affaires économiques du Sénat",
+        "affiliation": "Sénat — commission des affaires économiques",
+        "argument": "Emplacement réservé à une citation sourcée : aucune parole n'est attribuée à ces personnes dans ce jeu de travail.",
+        "url": "https://www.senat.fr/rap/l25-762/l25-762-syn.pdf"
       }
     ],
     "contre": [
       {
-        "nom": "Julien Vasseur",
-        "fictif": true,
-        "role": "Professeur d'économie",
-        "affiliation": "Université de démonstration",
-        "argument": "Argument de démonstration, à remplacer par une citation sourcée.",
-        "url": null
+        "nom": "Morgane Piederrière",
+        "role": "Responsable du plaidoyer",
+        "affiliation": "France Nature Environnement",
+        "argument": "Emplacement réservé à une citation sourcée : aucune parole n'est attribuée à cette personne dans ce jeu de travail.",
+        "url": "https://fne.asso.fr/communique-presse/loi-d-urgence-agricole-accaparement-de-l-eau-et-graines-de-discorde-dans-les"
       }
     ],
-    "note": "Les spécialistes sont choisis dans une liste de référence vérifiée. Aucun nom n'est inventé en production."
+    "note": "Les noms viennent de la liste de référence vérifiée ; aucune citation ne leur est prêtée."
   },
   "votes_par_groupe": [
     { "id": "LFI", "sieges": 70, "pour": 4, "contre": 62, "abstention": 2, "non_votants": 2 },
@@ -223,16 +243,17 @@
   ],
   "meta": {
     "genere_le": "2026-11-14",
-    "gate": "2",
-    "modele": "démonstration locale",
+    "gate": "3",
+    "modele": "jeu de travail local, hors ligne",
     "controles": [
       { "nom": "Schéma du fichier", "etat": "ok" },
       { "nom": "Chiffres cohérents avec le scrutin", "etat": "ok" },
       { "nom": "Sièges attribués = 577", "etat": "ok" },
-      { "nom": "Extraits verbatim", "etat": "demo" },
+      { "nom": "Extraits verbatim", "etat": "ok" },
       { "nom": "Symétrie des bords", "etat": "ok" },
-      { "nom": "Sources des médias", "etat": "demo" },
-      { "nom": "Ressources citées vérifiées", "etat": "demo" }
+      { "nom": "Sources des médias", "etat": "ok" },
+      { "nom": "Ressources citées vérifiées", "etat": "ok" },
+      { "nom": "Variante contrôlée", "etat": "ok" }
     ]
   }
 }

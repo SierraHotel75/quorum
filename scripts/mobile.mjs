@@ -29,10 +29,10 @@ const ROUTES = process.argv.slice(2).length
   ? process.argv.slice(2)
   : [
       "",
-      "devoir/protection-souverainete-agricoles/vote",
-      "devoir/protection-souverainete-agricoles/carte",
-      "devoir/protection-souverainete-agricoles/fait",
-      "devoir/protection-souverainete-agricoles/presse"
+      "devoir/protection-enfants/vote",
+      "devoir/protection-enfants/carte",
+      "devoir/protection-enfants/article",
+      "devoir/protection-enfants/presse"
     ];
 const LARGEURS = [390, 360];
 const profil = join(tmpdir(), "quorum-chrome-" + process.pid);

@@ -1,15 +1,15 @@
 # Deck Quorum — 9 diapos, 2 minutes de récit
 
 Chaque diapo tient sans commentaire. Une idée par diapo, trois lignes au maximum.
-Les chiffres sont ceux du fichier publié `data/lois/protection-souverainete-agricoles.json` (scrutin n° 8427 du 20 juillet 2026).
+Chiffres issus de `data/lois/protection-enfants.json` (scrutins n° 8429 et n° 8428 du 21 juillet 2026).
 
 ## 1. Voter sans avoir lu
 
 - Un devoir civique se décide souvent sur un titre.
-- Le texte fait 55 articles ; le scrutin, une ligne.
-- Personne ne lit 55 articles avant de voter.
+- Le texte voté fait 51 articles ; le scrutin, une ligne.
+- Personne ne lit 51 articles avant de voter.
 
-*À l'oral :* « On ne demande pas aux gens de lire 55 articles. On leur demande de comprendre ce qui s'est dit et ce qui s'est voté. »
+*À l'oral :* « On ne demande pas aux gens de lire 51 articles. On leur demande de comprendre ce qui s'est dit et ce qui s'est voté. »
 
 ## 2. Quorum
 
@@ -30,19 +30,19 @@ Vote à froid → le fait → les extraits → les chiffres → les arguments �
 
 ## 4. Ce qui s'est dit
 
-- Presse généraliste et agricole : Le Figaro, Réussir.
-- Presse environnementale : Vert, altermidi.
-- Quatre titres, quatre dates, quatre liens. Aucun commentaire.
+- Presse quotidienne nationale et presse hebdomadaire ou numérique.
+- Des titres réels, datés, liés à leur source.
+- Aucun commentaire, aucun classement politique.
 
 *À l'oral :* « Les colonnes sont triées par catégorie de source, pas par bord politique. On ne dit pas qui a raison. »
 
 ## 5. Ce qui s'est voté
 
-- 296 pour · 224 contre · 41 abstentions · 561 votants · 520 exprimés.
-- 577 sièges dessinés, dont 15 non occupés.
-- Les absents ne sont attribués à aucun groupe.
+- 258 pour · 84 contre · 10 abstentions · 352 votants · 342 exprimés.
+- Le même jour, un sous-amendement : 178 pour · 163 contre.
+- Texte adopté : « b) (Supprimé) ».
 
-*À l'oral :* « Le chiffre qui compte n'est pas 296 : c'est 577 moins 15. Un siège vide reste vide. »
+*À l'oral :* « 258 contre 84, ça paraît large. 178 contre 163 sur la même clause, le même jour, ça ne l'est pas. Les chiffres du scrutin principal ne le disent jamais. »
 
 ## 6. La neutralité par construction
 
@@ -50,7 +50,7 @@ Vote à froid → le fait → les extraits → les chiffres → les arguments �
 - Deux listes fermées : médias suivis par flux RSS, personnes citables.
 - Des contrôles automatiques refusent le fichier. Pas de relecture humaine.
 
-*À l'oral :* « Ce n'est pas une promesse d'équilibre. C'est un passage obligé : un siège de trop, un média hors liste, et le fichier ne sort pas. »
+*À l'oral :* « La phrase supprimée est citée mot pour mot, et le contrôle vérifie qu'elle n'est plus dans le texte adopté. Ce n'est pas une promesse d'équilibre, c'est un passage obligé. »
 
 ## 7. Le vote reste à vous
 

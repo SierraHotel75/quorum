@@ -36,9 +36,11 @@ data/ref/groupes.json   composition de l'Assemblée, datée et sourcée
 data/ref/medias.json    médias suivis par flux RSS, liste fermée
 data/ref/experts.json   personnes et organisations citables, liste fermée
 data/lois/index.json    les lois publiées, une entrée par fichier
-data/lois/protection-souverainete-agricoles.json
-                        la loi du 18 août 2026, publiée
+data/lois/protection-enfants.json
+                        le projet de loi « protection des enfants »,
+                        scrutin n° 8429 du 21 juillet 2026
 data/lois/_demo.json    jeu de travail, jamais publié (les fichiers en _ sont ignorés)
+data/lois/_archive-…json  lois retirées de la publication, gardées pour mémoire
 data/plan.json          les sept lots de la journée
 assets/mockups/         rendus photo
 ```
@@ -57,16 +59,34 @@ exprimés), le verbatim des extraits, la symétrie des trois bords, les sources,
 l'absence de contenu de démonstration. Un fichier dont le nom commence par `_` est
 ignoré : c'est un jeu de travail, pas une publication.
 
+Un extrait ne porte que ce que le texte déclare lui-même : l'étiquette `supprime`
+n'est acceptée que sur un passage qui écrit « (Supprimé) », `adopte` sur tout le
+reste, et aucune autre. Une étiquette qui qualifierait le passage — « aujourd'hui »,
+« si adopté », « qui est concerné » — est refusée : elle ajouterait une lecture que
+la source ne porte pas.
+
 Les sièges non occupés ne sont attribués à aucun groupe. Chaque ligne
 `votes_par_groupe` porte son nombre de `sieges` présents (pour + contre + abstention +
 non-votants volontaires), et le fichier déclare à part `sieges_vides`. Le contrôle
-exige `somme(sieges) + sieges_vides = 577` : les absents restent des absents.
+exige `somme(sieges) + sieges_vides = 577` : les absents restent des absents. Ils sont
+répartis sur l'arc et peints d'une teinte neutre, jamais empilés d'un côté.
+
+### Le bloc facultatif `variante`
+
+Quand un vote adopté a supprimé une phrase du texte, le fichier peut porter un bloc
+`variante` : la citation exacte (`avant`), le texte d'où elle vient (`texte_source`),
+et le scrutin qui l'a retirée (`supprimee_par`). Le contrôle `WP1.7` exige que la
+phrase soit **mot pour mot** dans `texte_source` et **absente** du texte adopté : si
+elle y est encore, le fichier est refusé. Le même décompte est vérifié (`votants =
+pour + contre + abstentions`, `exprimés = pour + contre`) et doit venir d'un autre
+scrutin que celui de la loi. Le bloc n'apparaît dans l'écran « article entier » que
+s'il est présent et validé.
 
 Trois listes ferment la publication : `data/ref/medias.json` et
 `data/ref/experts.json` doivent contenir le média, la personne ou l'organisation citée,
 avec son domaine, son affiliation ou son rôle. Une entrée absente est refusée, avec ou
 sans drapeau. Le champ `meta.gate` doit valoir la version courante du passage de
-contrôles (`2` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
+contrôles (`3` aujourd'hui) : un fichier produit par une règle plus ancienne est refusé.
 `source.texte_url` est obligatoire : c'est le lien vers le texte officiel, affiché
 en bas de l'écran « article entier » pour un fichier publié.
 
@@ -86,7 +106,7 @@ code, sinon le navigateur peut servir une ancienne version. Les JSON sont lus av
 
 ## Ce qui est vrai, ce qui ne l'est pas
 
-- **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin, la chronologie et les passages reproduits de `data/lois/protection-souverainete-agricoles.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
+- **Vrai** : la composition de l'Assemblée dans `data/ref/groupes.json`, avec sa source et sa date ; le scrutin n° 8429, le scrutin n° 8428 cité dans `variante`, la chronologie et les passages reproduits de `data/lois/protection-enfants.json`, tirés du MCP Hémicycle ; les titres de presse et les citations, avec leur lien.
 - **Faux, assumé** : le contenu de `data/lois/_demo.json`. Il n'est pas publié ; l'index ne le cite pas.
 - **Règle** : aucun contenu de démonstration ne doit être présenté comme vérifié dans une slide. Les images de `assets/mockups/` sont des maquettes.
 

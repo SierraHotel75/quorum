@@ -27,7 +27,7 @@ const FICHIER_EXPERTS = process.env.QUORUM_EXPERTS || join(RACINE, "data", "ref"
 
 /* Version du passage obligé. Un fichier produit par une version antérieure
    des contrôles est refusé : les règles ont changé, la preuve ne vaut plus. */
-const GATE = "2";
+const GATE = "3";
 
 /* Domaines autorisés pour une source. Volontairement court : une source hors
    de cette liste est refusée, pas signalée. */
@@ -70,7 +70,8 @@ const CONTROLES = {
   "Extraits verbatim": "WP1.3",
   "Symétrie des bords": "WP1.4",
   "Sources des médias": "WP1.5",
-  "Ressources citées vérifiées": "WP1.6"
+  "Ressources citées vérifiées": "WP1.6",
+  "Variante contrôlée": "WP1.7"
 };
 
 /* ---------- Outils ---------- */
@@ -415,9 +416,110 @@ function verifierVerbatim(loi, r) {
     } else if (multiple && !references.includes(cleArticle(e.article))) {
       r.ajouter("WP1.3", `extrait rattaché à un article inconnu : ${e.article}`);
     }
-    if (!["aujourdhui", "si_adopte", "concerne"].includes(e.tag)) {
+    /* L'étiquette ne dit que ce que le texte porte lui-même : « supprime »
+       n'est admise que sur un passage qui déclare la suppression, « adopte »
+       sur tout le reste. Aucune autre appréciation n'est acceptée. */
+    if (!["adopte", "supprime"].includes(e.tag)) {
       r.ajouter("WP1.3", `étiquette inconnue : ${e.tag}`);
+    } else if (e.tag === "supprime" && !/\(supprim/i.test(e.texte)) {
+      r.ajouter("WP1.3", `étiquette « supprime » sur un passage qui ne déclare aucune suppression : « ${String(e.texte).slice(0, 40)}… »`);
+    } else if (e.tag === "adopte" && /\(supprim/i.test(e.texte)) {
+      r.ajouter("WP1.3", `passage déclaré supprimé étiqueté « adopte » : « ${String(e.texte).slice(0, 40)}… »`);
     }
+  }
+}
+
+/* Bloc facultatif : la clause qu'un autre scrutin a supprimée. Il n'existe
+   que si le fichier le porte. Présent, il doit tenir les six règles ; absent,
+   rien n'est exécuté et le fichier reste valide. */
+function verifierVariante(loi, r, domainesAutorises) {
+  const v = loi.variante || {};
+
+  /* 1. La clause révélée est rattachée à une référence : sans elle, la
+     citation ne désigne aucun article. */
+  if (!normaliser(v.reference)) {
+    r.ajouter("WP1.7", "variante.reference vide : la clause n'est rattachée à aucun article");
+  }
+
+  const avant = normaliser(v.avant);
+  const source = normaliser(v.texte_source);
+
+  /* 2. La citation doit figurer mot pour mot dans le texte d'où elle vient,
+     avec la même normalisation que le contrôle des extraits. */
+  if (!avant) {
+    r.ajouter("WP1.7", "variante.avant vide : aucune clause à révéler");
+  } else if (!source) {
+    r.ajouter("WP1.7", "variante.texte_source vide : la citation ne peut pas être vérifiée");
+  } else if (!source.includes(avant)) {
+    r.ajouter("WP1.7", `clause absente du texte source : « ${String(v.avant).slice(0, 60)}… »`);
+  }
+
+  /* 3. Ce qu'un vote a supprimé ne peut pas figurer dans le texte adopté. */
+  if (avant) {
+    const adopte = normaliser(
+      articlesDe(loi).map((a) => (a.paragraphes || []).join(" ")).join(" ")
+    );
+    if (adopte.includes(avant)) {
+      r.ajouter("WP1.7", `clause encore présente dans le texte adopté : « ${String(v.avant).slice(0, 60)}… »`);
+    }
+  }
+
+  /* 4. Le décompte de la suppression doit tomber juste et être un vote adopté. */
+  const s = v.supprimee_par || {};
+  const entiers = ["pour", "contre", "abstention", "votants", "suffrages_exprimes", "non_votants"];
+  const invalides = entiers.filter((c) => !Number.isInteger(s[c]) || s[c] < 0);
+  if (invalides.length) {
+    r.ajouter("WP1.7", `supprimee_par : entier positif ou nul attendu pour ${invalides.join(", ")}`);
+  } else {
+    if (s.pour + s.contre + s.abstention !== s.votants) {
+      r.ajouter("WP1.7", `supprimee_par : votants = ${s.votants}, attendu ${s.pour + s.contre + s.abstention}`);
+    }
+    if (s.pour + s.contre !== s.suffrages_exprimes) {
+      r.ajouter("WP1.7", `supprimee_par : suffrages exprimés = ${s.suffrages_exprimes}, attendu ${s.pour + s.contre}`);
+    }
+    if (s.pour <= s.contre) {
+      r.ajouter("WP1.7", `supprimee_par : pour = ${s.pour}, contre = ${s.contre}, un scrutin adopté exige pour > contre`);
+    }
+  }
+  if (s.sort !== "adopté") {
+    r.ajouter("WP1.7", `supprimee_par.sort = ${s.sort}, attendu « adopté »`);
+  }
+
+  /* 5. La source de la citation est jugée comme toutes les autres sources. */
+  const sa = v.source_avant || {};
+  const url = normaliser(sa.url);
+  if (!url) {
+    r.ajouter("WP1.7", "source_avant.url absente : la citation n'a pas de source");
+  } else {
+    let u = null;
+    try {
+      u = new URL(url);
+    } catch {
+      u = null;
+    }
+    if (!u) {
+      r.ajouter("WP1.7", `source_avant.url invalide : ${sa.url}`);
+    } else {
+      if (u.protocol !== "https:") {
+        r.ajouter("WP1.7", "source_avant.url : HTTPS attendu");
+      }
+      const d = domaineDe(url);
+      const connu = domainesAutorises.some((a) => d === a || d?.endsWith("." + a));
+      if (!connu) {
+        r.ajouter("WP1.7", `source_avant.url : domaine hors liste (${d})`);
+      }
+    }
+  }
+
+  /* 6. Une clause ne peut pas avoir été supprimée par le vote qui la rétablit. */
+  const scrutin = normaliser(s.scrutin);
+  if (!scrutin) {
+    r.ajouter("WP1.7", "supprimee_par.scrutin absent");
+  } else if (scrutin === normaliser(loi.scrutin?.id)) {
+    r.ajouter(
+      "WP1.7",
+      `supprimee_par.scrutin = ${scrutin} : identique au scrutin de la loi, qui ne peut pas avoir supprimé la clause`
+    );
   }
 }
 
@@ -572,13 +674,20 @@ function verifierMarqueurs(loi, r, refs) {
   }
 
   /* Journal des contrôles : il ne peut citer qu'un contrôle réellement
-     exécuté, et il doit les citer tous. */
+     exécuté, et il doit les citer tous. « Variante contrôlée » n'est exigé
+     que si le fichier porte un bloc variante ; le déclarer sans bloc serait
+     une preuve sans objet. */
+  const avecVariante = loi.variante != null;
   const noms = (loi.meta?.controles || []).map((c) => c.nom);
   for (const n of noms) {
     if (!CONTROLES[n]) r.ajouter("WP1.6", `contrôle inconnu au journal : ${n}`);
   }
   for (const n of Object.keys(CONTROLES)) {
+    if (n === "Variante contrôlée" && !avecVariante) continue;
     if (!noms.includes(n)) r.ajouter("WP1.6", `contrôle absent du journal : ${n}`);
+  }
+  if (!avecVariante && noms.includes("Variante contrôlée")) {
+    r.ajouter("WP1.6", "contrôle « Variante contrôlée » déclaré sans bloc variante dans le fichier");
   }
   for (const c of loi.meta?.controles || []) {
     if (c.etat !== "ok") {
@@ -702,6 +811,8 @@ async function main() {
       verifierNombres(loi, groupes, r);
       verifierGroupes(loi, groupes, r);
       verifierVerbatim(loi, r);
+      /* Bloc facultatif : sans variante, les contrôles 1 à 6 ne s'exécutent pas. */
+      if (loi.variante != null) verifierVariante(loi, r, domainesAutorises);
       verifierSymetrie(loi, r);
       verifierSources(loi, r, domainesAutorises);
       verifierMarqueurs(loi, r, refs);

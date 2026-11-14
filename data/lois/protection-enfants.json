@@ -1,0 +1,357 @@
+{
+  "id": "protection-enfants",
+  "titre": "Projet de loi relatif à la protection des enfants",
+  "theme": "social",
+  "nb_phrases": 3,
+  "statut": "En discussion",
+  "resume": "L’Assemblée nationale a adopté le texte en première lecture le 21 juillet 2026, après une seconde délibération sur l’article 11. Le Sénat a adopté à son tour un texte le 3 novembre 2026. Une commission mixte paritaire a été convoquée le 5 novembre 2026 : le texte n’est pas définitivement adopté.",
+  "source": {
+    "nom": "Assemblée nationale — dossier législatif",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_relatif_a_la_protection_des_enfants",
+    "texte_url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17t0338_texte-adopte-seance",
+    "licence": "Licence Ouverte (Etalab)",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8429 du 21 juillet 2026, seconde délibération sur l'article 11. Texte adopté : n° 338. Texte de la commission : n° 3018. Article 11 lu dans le jeu articles_textes du MCP Hémicycle."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8429",
+    "date": "2026-07-21",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8429",
+    "pour": 258,
+    "contre": 84,
+    "abstention": 10,
+    "non_votants": 1,
+    "votants": 352,
+    "suffrages_exprimes": 342,
+    "regle": "majorité absolue des suffrages exprimés",
+    "objet": "l'amendement n° 1 du Gouvernement de rétablissement de l'article 11 (supprimé) du projet de loi relatif à la protection des enfants (seconde délibération) (première lecture).",
+    "sort": "adopté"
+  },
+  "sieges_vides": 224,
+  "chronologie": [
+    {
+      "date": "2026-05-27",
+      "chambre": "AN",
+      "texte": "Dépôt du projet de loi à l'Assemblée nationale (texte n° 2841)."
+    },
+    {
+      "date": "2026-05-27",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-05-27",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi en commission au fond."
+    },
+    {
+      "date": "2026-06-23",
+      "chambre": "COMMISSION",
+      "texte": "Nomination d'un rapporteur."
+    },
+    {
+      "date": "2026-07-01",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Dépôt d'une lettre rectificative (texte n° 3000)."
+    },
+    {
+      "date": "2026-07-07",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport et du texte de la commission (n° 3018)."
+    },
+    {
+      "date": "2026-07-15",
+      "chambre": "AN",
+      "texte": "Discussion en séance publique."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte en première lecture, après une seconde délibération sur l'article 11."
+    },
+    {
+      "date": "2026-07-22",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté est transmis au Sénat (texte n° 911)."
+    },
+    {
+      "date": "2026-07-22",
+      "chambre": "COMMISSION",
+      "texte": "Renvoi en commission au fond au Sénat."
+    },
+    {
+      "date": "2026-10-21",
+      "chambre": "COMMISSION",
+      "texte": "Dépôt du rapport du Sénat et de son texte (n° 89)."
+    },
+    {
+      "date": "2026-11-03",
+      "chambre": "SENAT",
+      "texte": "Discussion en séance publique et adoption du texte par le Sénat."
+    },
+    {
+      "date": "2026-11-05",
+      "chambre": "CMP",
+      "texte": "Convocation d'une commission mixte paritaire."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "adopte",
+      "texte": "Le code pénal est ainsi modifié :",
+      "article": "Article 11",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "adopte",
+      "texte": "1° (nouveau) L’article 222‑25 est ainsi modifié :",
+      "article": "Article 11",
+      "alinea": "alinéa 2"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« La peine est portée à la réclusion criminelle à perpétuité lorsque la victime est un mineur de quinze ans. »",
+      "article": "Article 11",
+      "alinea": "alinéa 3"
+    },
+    {
+      "tag": "supprime",
+      "texte": "b) (Supprimé)",
+      "article": "Article 11",
+      "alinea": "alinéa 4"
+    },
+    {
+      "tag": "adopte",
+      "texte": "2° Le premier alinéa de l’article 222‑26 est remplacé par quatre alinéas ainsi rédigés :",
+      "article": "Article 11",
+      "alinea": "alinéa 5"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Le viol défini aux articles 222‑23, 222‑23‑1 et 222‑23‑2 est puni de la réclusion criminelle à perpétuité lorsqu’il est :",
+      "article": "Article 11",
+      "alinea": "alinéa 6"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 1° Précédé, accompagné ou suivi de tortures ou d’actes de barbarie ;",
+      "article": "Article 11",
+      "alinea": "alinéa 7"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« 2° Commis sur un mineur de quinze ans et en concours avec un ou plusieurs autres viols commis sur d’autres victimes.",
+      "article": "Article 11",
+      "alinea": "alinéa 8"
+    },
+    {
+      "tag": "adopte",
+      "texte": "« Les victimes sont informées, dès le début de la procédure, des dispositifs spécialisés de prise en charge du psycho‑traumatisme et des associations d’aide aux victimes. »",
+      "article": "Article 11",
+      "alinea": "alinéa 9"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 11",
+      "note": "Articles 222‑25 et 222‑26 du code pénal, tels que modifiés par l'article 11.",
+      "paragraphes": [
+        "Le code pénal est ainsi modifié :",
+        "1° (nouveau) L’article 222‑25 est ainsi modifié :",
+        "a) Le premier alinéa est complété par une phrase ainsi rédigée : « La peine est portée à la réclusion criminelle à perpétuité lorsque la victime est un mineur de quinze ans. » ;",
+        "b) (Supprimé)",
+        "2° Le premier alinéa de l’article 222‑26 est remplacé par quatre alinéas ainsi rédigés :",
+        "« Le viol défini aux articles 222‑23, 222‑23‑1 et 222‑23‑2 est puni de la réclusion criminelle à perpétuité lorsqu’il est :",
+        "« 1° Précédé, accompagné ou suivi de tortures ou d’actes de barbarie ;",
+        "« 2° Commis sur un mineur de quinze ans et en concours avec un ou plusieurs autres viols commis sur d’autres victimes.",
+        "« Les victimes sont informées, dès le début de la procédure, des dispositifs spécialisés de prise en charge du psycho‑traumatisme et des associations d’aide aux victimes. »"
+      ]
+    }
+  ],
+  "chiffres": [
+    { "valeur": "258", "libelle": "Pour" },
+    { "valeur": "84", "libelle": "Contre" },
+    { "valeur": "10", "libelle": "Abstentions" },
+    { "valeur": "352", "libelle": "Votants" },
+    { "valeur": "342", "libelle": "Exprimés" },
+    { "valeur": "1", "libelle": "Non-votants" }
+  ],
+  "quiz": [
+    {
+      "question": "Le 21 juillet 2026, quel a été le résultat du scrutin n° 8428 sur le sous-amendement n° 2 à l'amendement n° 1 ?",
+      "options": [
+        "178 pour et 163 contre",
+        "258 pour et 84 contre",
+        "163 pour et 178 contre"
+      ],
+      "bonne": 0,
+      "source": "Scrutin public n° 8428 du 21 juillet 2026"
+    },
+    {
+      "question": "Dans le texte adopté, que devient le paragraphe b) de l'article 11, qui portait la période de sûreté à trente ans dans le texte de la commission ?",
+      "options": [
+        "Il est conservé sans changement",
+        "Il est supprimé : la mention est « b) (Supprimé) »",
+        "Il est renvoyé à un décret d'application"
+      ],
+      "bonne": 1,
+      "source": "Article 11 du texte adopté n° 338, alinéa 4"
+    }
+  ],
+  "arguments": {
+    "pour_titre": "Peine plus lourde que le texte adopté",
+    "pour": [
+      {
+        "titre": "Étendre la perpétuité au premier viol sur un mineur",
+        "texte": "« Le viol d'un mineur de moins de 15 ans est l'un des crimes les plus odieux que puisse connaître notre société. Il s'attaque à ceux qui sont les plus vulnérables et détruit durablement des vies. »",
+        "source": "Assemblée nationale — amendement n° 661 (rejeté), exposé sommaire",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/661"
+      },
+      {
+        "titre": "Punir les viols répétés sur un même enfant",
+        "texte": "« En l'état de notre droit, un individu qui commettrait seul une série de viols à l'encontre d'un même enfant serait condamné à la même peine qu'un individu ayant commis un seul viol. »",
+        "source": "Assemblée nationale — amendement n° 605 (rejeté), exposé sommaire",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/605"
+      }
+    ],
+    "contre_titre": "Peine plus légère ou suppression d'une disposition",
+    "contre": [
+      {
+        "titre": "Ramener la peine à trente ans de réclusion",
+        "texte": "« Cet amendement des députés socialistes et apparentés vise à ramener la peine pour viol sériel commis sur mineur de moins de 15 ans de la perpétuité à 30 ans d'emprisonnement. »",
+        "source": "Assemblée nationale — amendement n° 56 (rejeté), exposé sommaire",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/56"
+      },
+      {
+        "titre": "Supprimer la période de sûreté de trente ans",
+        "texte": "« Ce sous-amendement vise à supprimer la possibilité de porter la période de sûreté à trente ans en cas de viol ayant entraîné la mort, puisque la peine est portée à la réclusion criminelle à perpétuité uniquement si la victime est un mineur de quinze ans. »",
+        "source": "Assemblée nationale — sous-amendement n° 2 (adopté), exposé sommaire",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/2"
+      }
+    ],
+    "note": "Citations des exposés sommaires d'amendements déposés sur l'article 11, reprises entre guillemets. Chaque colonne décrit une position exprimée pendant le débat ; aucune n'est qualifiée de meilleure. Aucun jugement n'est porté."
+  },
+  "presse": {
+    "pour_titre": "Presse quotidienne nationale",
+    "pour": [
+      {
+        "media": "Le Monde",
+        "date": "2026-07-18",
+        "titre": "Imprescriptibilité des crimes sur mineurs, refus de la perpétuité pour les viols sériels… Les députés modifient le projet de loi de protection des enfants",
+        "url": "https://www.lemonde.fr/societe/article/2026/07/18/imprescriptibilite-des-crimes-sur-mineurs-refus-de-la-perpetuite-pour-les-viols-seriels-les-deputes-modifient-le-projet-de-loi-de-protection-des-enfants_6724395_3224.html"
+      },
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-21",
+        "titre": "Lors d’un nouveau vote, les députés approuvent la perpétuité pour les viols en série sur les moins de 15 ans",
+        "url": "https://www.lefigaro.fr/politique/lors-d-un-nouveau-vote-les-deputes-approuvent-la-perpetuite-pour-les-viols-en-serie-sur-les-moins-de-15-ans-20260721"
+      }
+    ],
+    "contre_titre": "Presse hebdomadaire et numérique",
+    "contre": [
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-21",
+        "titre": "L’Assemblée adopte la perpétuité pour les viols en série sur mineur, avec le projet de loi sur la protection de l’enfance",
+        "url": "https://www.huffingtonpost.fr/politique/article/l-assemblee-adopte-la-perpetuite-pour-les-viols-en-serie-sur-mineur-avec-le-projet-de-loi-sur-la-protection-de-l-enfance_292382.html"
+      },
+      {
+        "media": "Le HuffPost",
+        "date": "2026-07-18",
+        "titre": "Pourquoi la gauche a refusé de voter la perpétuité pour les viols en série sur mineur",
+        "url": "https://www.huffingtonpost.fr/politique/article/pourquoi-la-gauche-a-refuse-de-voter-la-perpetuite-pour-les-viols-en-serie-sur-mineur_290699.html"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date de publication et leur lien. Les colonnes sont classées par type de publication, jamais par bord politique. Aucun commentaire."
+  },
+  "experts": {
+    "pour_titre": "Députés porteurs d'une peine plus lourde",
+    "pour": [
+      {
+        "nom": "Alexandra Martin (Alpes-Maritimes)",
+        "role": "Députée, première signataire de l'amendement n° 661",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Une telle condition est incompréhensible. Elle revient à instaurer une forme de seuil dans l'horreur, comme si un premier viol commis sur un enfant de moins de 15 ans ne révélait pas, à lui seul, une dangerosité criminelle exceptionnelle justifiant la sanction la plus sévère prévue par notre droit. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/661"
+      },
+      {
+        "nom": "Constance de Pélichy",
+        "role": "Députée, première signataire de l'amendement n° 605",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Cet amendement vise donc à la compléter et à renforcer la répression des « viols en série ». Il prévoit la réclusion criminelle à perpétuité dans le cas où plusieurs viols seraient commis par un seul individu à l'encontre d'un même enfant. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/605"
+      }
+    ],
+    "contre_titre": "Députés demandant une peine moindre ou une suppression",
+    "contre": [
+      {
+        "nom": "Pauline Cestrières",
+        "role": "Députée, première signataire de l'amendement n° 738 (adopté)",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Le présent amendement vise à supprimer la disposition relative à la période de sûreté, au profit de la disposition plus large prévue à l'article 11 ter. Le quatrième alinéa prévoit en effet, en cas de viol ayant entraîné la mort de la victime, que la cour d'assises puisse, par décision spéciale, porter la période de sûreté jusqu'à trente ans. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/738"
+      },
+      {
+        "nom": "Perrine Goulet",
+        "role": "Députée, auteure du sous-amendement n° 2 (adopté le 21 juillet 2026)",
+        "affiliation": "Assemblée nationale",
+        "argument": "« Ce sous-amendement vise à supprimer la possibilité de porter la période de sûreté à trente ans en cas de viol ayant entraîné la mort, puisque la peine est portée à la réclusion criminelle à perpétuité uniquement si la victime est un mineur de quinze ans. »",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/amendements/3018/AN/2"
+      }
+    ],
+    "note": "Citations des exposés sommaires, reprises entre guillemets. Les personnes citées figurent dans data/ref/experts.json ; aucun nom n'est inventé."
+  },
+  "votes_par_groupe": [
+    { "id": "LFI", "sieges": 44, "pour": 0, "contre": 43, "abstention": 1, "non_votants": 0 },
+    { "id": "GDR", "sieges": 5, "pour": 3, "contre": 2, "abstention": 0, "non_votants": 0 },
+    { "id": "SOC", "sieges": 33, "pour": 9, "contre": 20, "abstention": 4, "non_votants": 0 },
+    { "id": "EcoS", "sieges": 22, "pour": 1, "contre": 16, "abstention": 5, "non_votants": 0 },
+    { "id": "LIOT", "sieges": 10, "pour": 9, "contre": 1, "abstention": 0, "non_votants": 0 },
+    { "id": "EPR", "sieges": 55, "pour": 53, "contre": 1, "abstention": 0, "non_votants": 1 },
+    { "id": "DEM", "sieges": 22, "pour": 21, "contre": 1, "abstention": 0, "non_votants": 0 },
+    { "id": "HOR", "sieges": 22, "pour": 22, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "DR", "sieges": 37, "pour": 37, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "RN", "sieges": 89, "pour": 89, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "UDR", "sieges": 8, "pour": 8, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "NI", "sieges": 6, "pour": 6, "contre": 0, "abstention": 0, "non_votants": 0 }
+  ],
+  "variante": {
+    "reference": "Article 11, 1° b)",
+    "avant": "La cour d’assises peut toutefois, par décision spéciale, porter la période de sûreté jusqu’à trente ans.",
+    "texte_source": "Le code pénal est ainsi modifié :\n1° (nouveau) L’article 222‑25 est ainsi modifié :\na) Le premier alinéa est complété par une phrase ainsi rédigée : « La peine est portée à la réclusion criminelle à perpétuité lorsque la victime est un mineur de quinze ans. » ;\nb) Le deuxième alinéa est complété par une phrase ainsi rédigée : « La cour d’assises peut toutefois, par décision spéciale, porter la période de sûreté jusqu’à trente ans. » ;\n2° Le premier alinéa de l’article 222‑26 est remplacé par quatre alinéas ainsi rédigés :\n« Le viol défini aux articles 222‑23, 222‑23‑1 et 222‑23‑2 est puni de la réclusion criminelle à perpétuité lorsqu’il est :\n« 1° Précédé, accompagné ou suivi de tortures ou d’actes de barbarie ;\n« 2° Commis sur un mineur de quinze ans et en concours avec un ou plusieurs autres viols commis sur d’autres victimes.\n« Les victimes sont informées, dès le début de la procédure, des dispositifs spécialisés de prise en charge du psychotraumatisme et des associations d’aide aux victimes. »",
+    "source_avant": {
+      "nom": "Assemblée nationale — texte de la commission n° 3018",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3018_texte-adopte-commission",
+      "licence": "Licence Ouverte (Etalab)"
+    },
+    "supprimee_par": {
+      "scrutin": "VTANR5L17V8428",
+      "numero": 8428,
+      "date": "2026-07-21",
+      "objet": "le sous-amendement n° 2 de Mme Perrine Goulet à l’amendement n° 1 du Gouvernement",
+      "sort": "adopté",
+      "pour": 178,
+      "contre": 163,
+      "abstention": 5,
+      "votants": 346,
+      "suffrages_exprimes": 341,
+      "non_votants": 1
+    }
+  },
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "3",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      { "nom": "Schéma du fichier", "etat": "ok" },
+      { "nom": "Chiffres cohérents avec le scrutin", "etat": "ok" },
+      { "nom": "Sièges attribués = 577", "etat": "ok" },
+      { "nom": "Extraits verbatim", "etat": "ok" },
+      { "nom": "Symétrie des bords", "etat": "ok" },
+      { "nom": "Sources des médias", "etat": "ok" },
+      { "nom": "Ressources citées vérifiées", "etat": "ok" },
+      { "nom": "Variante contrôlée", "etat": "ok" }
+    ]
+  }
+}

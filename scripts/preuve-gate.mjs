@@ -6,7 +6,7 @@
    data/lois : rien de faux ne doit traîner dans le dossier publié.
 
    Usage : node scripts/preuve-gate.mjs
-   Code de sortie 0 si les trois attentes sont tenues. */
+   Code de sortie 0 si les huit attentes sont tenues. */
 
 import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
@@ -41,19 +41,19 @@ function fichierComplet() {
 
   const extraits = [
     {
-      tag: "aujourdhui",
+      tag: "adopte",
       texte: "Le loyer est encadré dans les zones tendues et pour les logements concernés.",
       article: "Article 1",
       alinea: "alinéa 1"
     },
     {
-      tag: "si_adopte",
+      tag: "adopte",
       texte: "Le nouveau plafond de loyer s'applique aux contrats conclus après l'entrée en vigueur.",
       article: "Article 2",
       alinea: "alinéa 1"
     },
     {
-      tag: "concerne",
+      tag: "adopte",
       texte: "Le dispositif s'applique aux baux d'habitation signés à compter du 1er janvier 2027.",
       article: "Article 3",
       alinea: null
@@ -157,7 +157,7 @@ function fichierComplet() {
 
   loi.meta = {
     genere_le: "2026-11-14",
-    gate: "2",
+    gate: "3",
     modele: "génération hors ligne",
     controles: [
       { nom: "Schéma du fichier", etat: "ok" },
@@ -166,7 +166,8 @@ function fichierComplet() {
       { nom: "Extraits verbatim", etat: "ok" },
       { nom: "Symétrie des bords", etat: "ok" },
       { nom: "Sources des médias", etat: "ok" },
-      { nom: "Ressources citées vérifiées", etat: "ok" }
+      { nom: "Ressources citées vérifiées", etat: "ok" },
+      { nom: "Variante contrôlée", etat: "ok" }
     ]
   };
 
@@ -269,6 +270,50 @@ try {
     attendu: "code 1 et média hors liste",
     tenu: cas3.code === 1 && /média hors liste/.test(cas3.sortie),
     sortie: cas3.sortie
+  });
+
+  /* WP1.7 — la clause révélée doit figurer mot pour mot dans son texte source. */
+  const horsSource = JSON.parse(JSON.stringify(loi));
+  horsSource.variante.avant =
+    "Le bailleur peut, sans décision spéciale, supprimer la révision annuelle du loyer.";
+  const fauxHorsSource = join(dossier, "faux-variante-hors-source.json");
+  writeFileSync(fauxHorsSource, JSON.stringify(horsSource, null, 2), "utf8");
+  const casVarianteSource = lancer(fauxHorsSource, dossier);
+  resultats.push({
+    nom: "variante absente de son texte source refusée",
+    attendu: "code 1 et contrôle WP1.7",
+    tenu: casVarianteSource.code === 1 && /clause absente du texte source/.test(casVarianteSource.sortie),
+    sortie: casVarianteSource.sortie
+  });
+
+  /* WP1.7 — une clause encore dans le texte adopté n'a pas été supprimée. */
+  const encoreAdoptee = JSON.parse(JSON.stringify(loi));
+  const clauseAdoptee = encoreAdoptee.articles[0].paragraphes[0];
+  encoreAdoptee.variante.avant = clauseAdoptee;
+  encoreAdoptee.variante.texte_source = `Article 1 — ${clauseAdoptee}`;
+  const fauxEncoreAdoptee = join(dossier, "faux-variante-encore-adoptee.json");
+  writeFileSync(fauxEncoreAdoptee, JSON.stringify(encoreAdoptee, null, 2), "utf8");
+  const casVarianteAdoptee = lancer(fauxEncoreAdoptee, dossier);
+  resultats.push({
+    nom: "variante encore présente dans le texte adopté refusée",
+    attendu: "code 1 et contrôle WP1.7",
+    tenu:
+      casVarianteAdoptee.code === 1 &&
+      /encore présente dans le texte adopté/.test(casVarianteAdoptee.sortie),
+    sortie: casVarianteAdoptee.sortie
+  });
+
+  /* WP1.3 — une étiquette ne peut pas qualifier un passage qu'il ne déclare pas. */
+  const malEtiquete = JSON.parse(JSON.stringify(loi));
+  malEtiquete.extraits[0].tag = "supprime";
+  const fauxEtiquette = join(dossier, "faux-etiquette.json");
+  writeFileSync(fauxEtiquette, JSON.stringify(malEtiquete, null, 2), "utf8");
+  const casEtiquette = lancer(fauxEtiquette, dossier);
+  resultats.push({
+    nom: "étiquette « supprime » sur un passage ordinaire refusée",
+    attendu: "code 1 et contrôle WP1.3",
+    tenu: casEtiquette.code === 1 && /WP1\.3/.test(casEtiquette.sortie),
+    sortie: casEtiquette.sortie
   });
 } finally {
   rmSync(dossier, { recursive: true, force: true });

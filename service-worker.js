@@ -2,7 +2,7 @@
    L'application doit fonctionner sans lui : il ne fait qu'accélérer et
    permettre le mode avion. Toute erreur ici est rattrapable en le désactivant. */
 
-var CACHE = "quorum-v9";
+var CACHE = "quorum-v12";
 
 var FICHIERS = [
   "./",
@@ -13,7 +13,7 @@ var FICHIERS = [
   "./js/app.js",
   "./data/ref/groupes.json",
   "./data/lois/index.json",
-  "./data/lois/protection-souverainete-agricoles.json",
+  "./data/lois/protection-enfants.json",
   "./manifest.json",
   "./assets/icone.svg",
   "./assets/icone-maskable.svg"

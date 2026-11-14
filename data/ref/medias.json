@@ -1,6 +1,6 @@
 {
   "verifie_le": "2026-11-14",
-  "note": "Liste fermée des médias suivis. Chaque entrée porte un flux RSS public dont la réponse a été vérifiée le 2026-11-14, et le domaine exact auquel ses articles doivent appartenir. Un titre dont le média n'est pas dans cette liste est refusé, même s'il a l'air crédible. Le bord est une convention de ligne éditoriale, documentée par l'adresse du média : ce n'est pas un jugement sur un article.",
+  "note": "Liste fermée des médias suivis. Chaque entrée porte un flux RSS public dont la réponse a été testée le 2026-11-14, et le domaine exact auquel ses articles doivent appartenir. Un titre dont le média n'est pas dans cette liste est refusé, même s'il a l'air crédible. Le bord est une convention de ligne éditoriale, documentée par l'adresse du média : ce n'est pas un jugement sur un article. Seuls les médias dont le flux a répondu sont listés avec flux_verifie à true.",
   "domaines": [
     "fne.asso.fr",
     "lpo.fr",
@@ -8,12 +8,94 @@
   ],
   "medias": [
     {
+      "nom": "Le Monde",
+      "domaine": "lemonde.fr",
+      "bord": "centre",
+      "reference": "https://www.lemonde.fr/",
+      "flux": "https://www.lemonde.fr/rss/une.xml",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
       "nom": "Le Figaro",
       "domaine": "lefigaro.fr",
       "bord": "droite",
       "reference": "https://www.lefigaro.fr/",
       "flux": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
-      "consulte_le": "2026-11-14"
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "Libération",
+      "domaine": "liberation.fr",
+      "bord": "gauche",
+      "reference": "https://www.liberation.fr/",
+      "flux": "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "La Croix",
+      "domaine": "la-croix.com",
+      "bord": "centre",
+      "reference": "https://www.la-croix.com/",
+      "flux": "https://www.la-croix.com/rss",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "L'Humanité",
+      "domaine": "humanite.fr",
+      "bord": "gauche",
+      "reference": "https://www.humanite.fr/",
+      "flux": "https://www.humanite.fr/rss",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "Mediapart",
+      "domaine": "mediapart.fr",
+      "bord": "gauche",
+      "reference": "https://www.mediapart.fr/",
+      "flux": "https://www.mediapart.fr/articles/feed",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "Le HuffPost",
+      "domaine": "huffingtonpost.fr",
+      "bord": "gauche",
+      "reference": "https://www.huffingtonpost.fr/",
+      "flux": "https://www.huffingtonpost.fr/feeds/index.xml",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "franceinfo",
+      "domaine": "francetvinfo.fr",
+      "bord": "service public",
+      "reference": "https://www.francetvinfo.fr/",
+      "flux": "https://www.francetvinfo.fr/titres.rss",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "CNews",
+      "domaine": "cnews.fr",
+      "bord": "droite",
+      "reference": "https://www.cnews.fr/",
+      "flux": "https://www.cnews.fr/rss.xml",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
+    },
+    {
+      "nom": "LCP",
+      "domaine": "lcp.fr",
+      "bord": "parlementaire",
+      "reference": "https://www.lcp.fr/",
+      "flux": "https://www.lcp.fr/rss.xml",
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
     },
     {
       "nom": "Réussir",
@@ -21,7 +103,8 @@
       "bord": "agricole",
       "reference": "https://www.reussir.fr/",
       "flux": "https://www.reussir.fr/rss.xml",
-      "consulte_le": "2026-11-14"
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
     },
     {
       "nom": "Vert",
@@ -29,7 +112,8 @@
       "bord": "gauche",
       "reference": "https://vert.eco/",
       "flux": "https://vert.eco/feed/",
-      "consulte_le": "2026-11-14"
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
     },
     {
       "nom": "altermidi",
@@ -37,7 +121,8 @@
       "bord": "gauche",
       "reference": "https://altermidi.org/",
       "flux": "https://altermidi.org/feed/",
-      "consulte_le": "2026-11-14"
+      "consulte_le": "2026-11-14",
+      "flux_verifie": true
     }
   ]
 }

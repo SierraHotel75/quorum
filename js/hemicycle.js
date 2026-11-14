@@ -110,6 +110,12 @@
   }
 
   function construire(groupes) {
+    var idxVides = -1;
+    groupes.forEach(function (g, i) {
+      if (g.id === "vides") idxVides = i;
+    });
+    var vides = idxVides >= 0 ? groupes[idxVides].sieges : 0;
+
     var total = groupes.reduce(function (s, g) {
       return s + g.sieges;
     }, 0);
@@ -120,25 +126,62 @@
     }
     var counts = repartir(total, rayons);
     var restants = groupes.map(function (g) {
-      return g.sieges;
+      return g.id === "vides" ? 0 : g.sieges;
     });
+
+    /* Les sièges vides sont répartis régulièrement sur l'arc : ils ne sont
+       attribués à aucun groupe, et les entasser d'un côté ferait croire à un
+       bloc politique qui n'existe pas. */
+    var videsParRangee = counts.map(function (n) {
+      return vides > 0 ? Math.round((vides * n) / total) : 0;
+    });
+    var ecart = vides - videsParRangee.reduce(function (a, b) { return a + b; }, 0);
+    var g = 0;
+    var gardeV = 0;
+    while (ecart !== 0 && gardeV < 10000) {
+      gardeV++;
+      var pasV = ecart > 0 ? 1 : -1;
+      if (videsParRangee[g] + pasV >= 0) {
+        videsParRangee[g] += pasV;
+        ecart -= pasV;
+      }
+      g = g === videsParRangee.length - 1 ? 0 : g + 1;
+    }
 
     var sieges = [];
 
     counts.forEach(function (count, ri) {
-      var alloc = allouer(restants, count);
+      var nVides = videsParRangee[ri];
+      var alloc = allouer(restants, count - nVides);
       restants = restants.map(function (v, i) {
         return v - alloc[i];
       });
 
       /* suite des groupes dans la rangée, de gauche à droite */
-      var suite = [];
+      var suiteReelle = [];
       alloc.forEach(function (n, gi) {
-        for (var q = 0; q < n; q++) suite.push(gi);
+        for (var q = 0; q < n; q++) suiteReelle.push(gi);
       });
 
+      /* insertion régulière des sièges vides dans la suite */
+      var suite = [];
+      var k = 0;
+      var vus = 0;
+      for (var j = 0; j < count; j++) {
+        var vide = false;
+        while (vus < nVides && Math.floor(((vus + 0.5) * count) / nVides) <= j) {
+          vide = true;
+          vus++;
+        }
+        if (vide || k >= suiteReelle.length) {
+          suite.push(idxVides >= 0 ? idxVides : 0);
+        } else {
+          suite.push(suiteReelle[k++]);
+        }
+      }
+
       var frontieres = 0;
-      for (var j = 1; j < suite.length; j++) if (suite[j] !== suite[j - 1]) frontieres++;
+      for (var f = 1; f < suite.length; f++) if (suite[f] !== suite[f - 1]) frontieres++;
 
       var r = rayons[ri];
       var arc = Math.PI * r;
@@ -148,9 +191,9 @@
       /* bornes de chaque groupe dans la rangée, pour situer le vote */
       var debut = {};
       var longueur = {};
-      for (var k = 0; k < suite.length; k++) {
-        if (debut[suite[k]] === undefined) debut[suite[k]] = k;
-        longueur[suite[k]] = (longueur[suite[k]] || 0) + 1;
+      for (var kk = 0; kk < suite.length; kk++) {
+        if (debut[suite[kk]] === undefined) debut[suite[kk]] = kk;
+        longueur[suite[kk]] = (longueur[suite[kk]] || 0) + 1;
       }
 
       for (var m = 0; m < suite.length; m++) {
@@ -172,7 +215,7 @@
       }
     });
 
-    return { sieges: sieges, largeur: LARGEUR, hauteur: HAUTEUR };
+    return { sieges: sieges, largeur: LARGEUR, hauteur: HAUTEUR, idxVides: idxVides };
   }
 
   function voteDuSiege(decompte, u) {
@@ -207,7 +250,11 @@
       var couleur;
       var opacite = 1;
 
-      if (mode === "accord" && choix) {
+      if (d.idxVides >= 0 && s.groupe === d.idxVides) {
+        /* siège non occupé : jamais coloré comme un vote */
+        couleur = "#3a322c";
+        opacite = 1;
+      } else if (mode === "accord" && choix) {
         var v = voteDuSiege(decomptes[g.id], s.u);
         couleur = couleurVote(v);
         opacite = v === choix ? 1 : 0.12;

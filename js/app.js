@@ -39,7 +39,7 @@
   /* ---------- Mémoire locale ---------- */
 
   function memoireVierge() {
-    return { version: 1, votes: {}, progres: {}, intro: false };
+    return { version: 1, votes: {}, progres: {}, reponses: {}, intro: false };
   }
 
   function charger() {
@@ -50,6 +50,7 @@
       if (!objet || typeof objet !== "object" || objet.version !== 1) return memoireVierge();
       if (!objet.votes || typeof objet.votes !== "object") objet.votes = {};
       if (!objet.progres || typeof objet.progres !== "object") objet.progres = {};
+      if (!objet.reponses || typeof objet.reponses !== "object") objet.reponses = {};
       return objet;
     } catch (e) {
       return memoireVierge();
@@ -76,6 +77,13 @@
     if (p[cle]) return;
     p[cle] = true;
     sauver();
+  }
+
+  /* Les réponses au quiz sont gardées pour que l'état « juste / faux » survive
+     à un changement d'écran. Elles ne quittent pas l'appareil. */
+  function reponsesDe(id) {
+    if (!memoire.reponses[id]) memoire.reponses[id] = {};
+    return memoire.reponses[id];
   }
 
   function voteDe(id) {
@@ -346,11 +354,11 @@
     );
   }
 
-  function libelleTag(tag) {
-    if (tag === "aujourdhui") return "Aujourd\u2019hui";
-    if (tag === "si_adopte") return "Si adopté";
-    if (tag === "concerne") return "Qui est concerné";
-    return "Non documenté";
+  /* L'étiquette ne qualifie pas le passage : elle ne reprend que ce que le
+     texte adopté déclare lui-même. Un passage ordinaire n'en porte aucune. */
+  function badgeExtrait(e) {
+    if (e.tag === "supprime") return '<span class="puce puce--bois">Supprimé</span>';
+    return "";
   }
 
   function ecranTexte(loi) {
@@ -363,14 +371,15 @@
       '<div class="ecran__entete">' +
       '<span class="theme">Les extraits</span>' +
       '<h2 class="ecran__titre">Ce que dit le texte</h2>' +
-      '<p class="compteur">' + loi.extraits.length + " phrases retenues sur " + (loi.nb_phrases || loi.extraits.length) + "</p>" +
+      '<p class="compteur">' + loi.extraits.length + " passages retenus" +
+      (loi.nb_phrases > loi.extraits.length ? " sur " + loi.nb_phrases + " phrases" : "") + "</p>" +
       "</div>" +
       loi.extraits
         .map(function (e) {
           return (
             '<article class="extrait">' +
-            '<span class="puce puce--bois">' + esc(libelleTag(e.tag)) + "</span>" +
-            '<p class="extrait__citation">\u00ab\u00a0' + esc(e.texte) + "\u00a0\u00bb</p>" +
+            badgeExtrait(e) +
+            '<p class="extrait__citation">' + esc(e.texte) + "</p>" +
             '<span class="extrait__source">' + esc(e.article) + (e.alinea ? " \u00b7 " + esc(e.alinea) : "") + "</span>" +
             "</article>"
           );
@@ -431,7 +440,7 @@
       '<div class="ecran__entete">' +
       '<span class="theme">Texte</span>' +
       '<h2 class="ecran__titre">' +
-      esc(multiple ? "Le texte, article par article" : (articles[0] && articles[0].titre) || "Le texte") +
+      esc(multiple ? "Le texte, article par article" : (articles[0] && articles[0].titre) || "Le texte adopté") +
       "</h2>" +
       (multiple
         ? '<p class="compteur">' + articles.length + " articles cités, passages reproduits" + "</p>"
@@ -440,9 +449,82 @@
       '<div class="article">' +
       corps +
       "</div>" +
+      blocVariante(loi) +
       lienOfficiel +
+      '<a class="bouton" href="#/devoir/' + loi.id + '/chiffres">Passer aux chiffres</a>' +
       "</main>" +
       navbas("#/")
+    );
+  }
+
+  /* Le bloc « Ce qui a changé » n'apparaît que si le fichier porte `variante`.
+     Il ne dit que ce que les contrôles ont prouvé : la phrase citée est dans le
+     texte source, elle n'est plus dans le texte adopté, et le scrutin qui l'a
+     retirée est nommé. */
+  function blocVariante(loi) {
+    var v = loi.variante;
+    if (!v || !v.avant) return "";
+    var s = v.supprimee_par || {};
+
+    var compte = "";
+    if (s.numero != null) {
+      compte = "Scrutin n° " + esc(s.numero);
+      if (s.date) compte += " du " + esc(dateLongue(s.date));
+      if (s.pour != null && s.contre != null) {
+        compte += " : " + esc(s.pour) + " pour \u00b7 " + esc(s.contre) + " contre";
+        if (s.abstention != null) compte += " \u00b7 " + esc(s.abstention) + " abstentions";
+      }
+      compte += ".";
+    }
+
+    var lien = "";
+    if (v.source_avant && v.source_avant.url) {
+      var hote = "";
+      try {
+        hote = new URL(v.source_avant.url).hostname.replace(/^www\./, "");
+      } catch (e) {
+        hote = "";
+      }
+      lien =
+        '<a class="variante__lien" href="' + esc(v.source_avant.url) + '" rel="noopener">' +
+        esc(v.source_avant.nom || "Source sur " + hote) + "</a>";
+    }
+
+    return (
+      '<section class="variante">' +
+      '<p class="etiquette">Ce qui a changé</p>' +
+      (v.reference ? '<p class="variante__ref">' + esc(v.reference) + "</p>" : "") +
+      '<blockquote class="variante__citation">\u00ab\u00a0' + esc(v.avant) + "\u00a0\u00bb</blockquote>" +
+      '<p class="variante__note">Rédaction du texte de la commission, avant le vote.</p>' +
+      (compte ? '<p class="variante__compte">' + compte + "</p>" : "") +
+      '<p class="variante__note">Le texte adopté ne contient plus cette phrase.</p>' +
+      lien +
+      "</section>"
+    );
+  }
+
+  function carteQuiz(loi, q, qi) {
+    var donnee = reponsesDe(loi.id)[qi];
+    var repondu = donnee != null;
+    return (
+      '<div class="carte" data-quiz="' + qi + '">' +
+      '<p>' + esc(q.question) + "</p>" +
+      q.options
+        .map(function (o, oi) {
+          var marque = "";
+          if (repondu) {
+            if (oi === q.bonne) marque = ' data-etat="juste"';
+            else if (oi === donnee) marque = ' data-etat="faux"';
+          }
+          return (
+            '<button class="quiz__option" type="button" data-action="quiz" data-quiz="' + qi +
+            '" data-option="' + oi + '"' + (repondu ? " disabled" : "") + marque + ">" +
+            esc(o) + "</button>"
+          );
+        })
+        .join("") +
+      '<p class="mono" data-source' + (repondu ? "" : " hidden") + ">" + esc(q.source) + "</p>" +
+      "</div>"
     );
   }
 
@@ -470,20 +552,7 @@
       '<p class="etiquette">Vérifier</p>' +
       loi.quiz
         .map(function (q, qi) {
-          return (
-            '<div class="carte" data-quiz="' + qi + '">' +
-            '<p>' + esc(q.question) + "</p>" +
-            q.options
-              .map(function (o, oi) {
-                return (
-                  '<button class="quiz__option" type="button" data-action="quiz" data-quiz="' + qi +
-                  '" data-option="' + oi + '">' + esc(o) + "</button>"
-                );
-              })
-              .join("") +
-            '<p class="mono" data-source hidden>' + esc(q.source) + "</p>" +
-            "</div>"
-          );
+          return carteQuiz(loi, q, qi);
         })
         .join("") +
       "</div>" +
@@ -1043,16 +1112,23 @@
       var qi = Number(el.getAttribute("data-quiz"));
       var oi = Number(el.getAttribute("data-option"));
       var q = etat.loi.quiz[qi];
+      var deja = reponsesDe(etat.loi.id);
+      if (deja[qi] != null) return;
+      deja[qi] = oi;
+      sauver();
       var bloc = el.closest("[data-quiz='" + qi + "']");
-      bloc.querySelectorAll(".quiz__option").forEach(function (b) {
-        b.disabled = true;
-        var j = Number(b.getAttribute("data-option"));
-        if (j === q.bonne) b.setAttribute("data-etat", "juste");
-        else if (j === oi) b.setAttribute("data-etat", "faux");
-      });
-      var src = bloc.querySelector("[data-source]");
-      if (src) src.hidden = false;
+      if (bloc) {
+        bloc.querySelectorAll(".quiz__option").forEach(function (b) {
+          b.disabled = true;
+          var j = Number(b.getAttribute("data-option"));
+          if (j === q.bonne) b.setAttribute("data-etat", "juste");
+          else if (j === oi) b.setAttribute("data-etat", "faux");
+        });
+        var src = bloc.querySelector("[data-source]");
+        if (src) src.hidden = false;
+      }
       marquer(etat.loi.id, "quiz");
+      return;
     }
   });
 

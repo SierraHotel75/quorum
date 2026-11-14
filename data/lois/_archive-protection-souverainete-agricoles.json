@@ -96,55 +96,55 @@
   ],
   "extraits": [
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "Pour mettre en œuvre les conclusions des conférences de la souveraineté alimentaire, des comités de pilotage régionaux, présidés par le représentant de l'État dans la région et le président du conseil régional et associant la chambre régionale d'agriculture, reconnaissent des projets d'avenir agricole qui respectent les priorités définies au livre préliminaire.",
       "article": "Article 1er",
       "alinea": "II"
     },
     {
-      "tag": "concerne",
+      "tag": "adopte",
       "texte": "Ils bénéficient d'une priorité dans l'accompagnement, notamment financier, par l'État et les collectivités territoriales.",
       "article": "Article 1er",
       "alinea": "II"
     },
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "le ministre chargé de la sécurité sanitaire des aliments ou de la santé animale suspend ou fixe des conditions particulières à l'introduction, à l'importation ou à la mise sur le marché en France de denrées alimentaires ou d'aliments pour animaux contenant des résidus de ces substances ou médicaments et dont il est évident qu'ils sont susceptibles de constituer un risque sérieux pour la santé humaine ou animale.",
       "article": "Article 2",
       "alinea": null
     },
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "Les prescriptions applicables aux projets soumis à l'article L. 214‑3 et affectant une zone humide, notamment celles relatives aux mesures de compensation, sont proportionnées aux fonctionnalités de la zone humide concernée.",
       "article": "Article 7",
       "alinea": "L. 214‑7‑1"
     },
     {
-      "tag": "concerne",
+      "tag": "adopte",
       "texte": "Les zones humides créées par une installation de stockage d'eau peuvent être prises en compte, en tout ou partie, au titre des mesures de compensation des atteintes portées aux zones humides par cette installation, prévues à l'article L. 163‑1, lorsque l'équivalence de leurs fonctionnalités écologiques avec celles des milieux affectés est démontrée et que l'effectivité des gains écologiques est constatée dans les conditions prévues au même article.",
       "article": "Article 7",
       "alinea": "L. 214‑7‑1"
     },
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "Afin de prévenir les dommages à l'élevage dus au loup tout en assurant le maintien de l'espèce dans un état de conservation favorable, un arrêté conjoint des ministres chargés de la protection de la nature et de l'agriculture définit les conditions dans lesquelles cette espèce fait l'objet de mesures de gestion, notamment en termes de prélèvements.",
       "article": "Article 14",
       "alinea": "I bis A"
     },
     {
-      "tag": "concerne",
+      "tag": "adopte",
       "texte": "Les troupeaux de bovins, d'équins et d'asins sont reconnus comme ne pouvant être protégés.",
       "article": "Article 14",
       "alinea": "I bis A"
     },
     {
-      "tag": "concerne",
+      "tag": "adopte",
       "texte": "Lorsque le nombre de loups effectivement prélevés au cours d'une année civile est inférieur au plafond annuel fixé par cet arrêté, la différence est reportée et ajoutée au plafond fixé pour l'année civile suivante, sous réserve du maintien de l'espèce dans un état de conservation favorable.",
       "article": "Article 14",
       "alinea": "I bis B"
     },
     {
-      "tag": "aujourdhui",
+      "tag": "adopte",
       "texte": "À titre expérimental, jusqu'au 30 avril 2028, les allégations relatives à la rémunération des agriculteurs figurant dans une publicité ou sur l'emballage d'un produit s'accompagnent d'une information accessible au consommateur, selon un moyen libre, comprenant des éléments relatifs au prix payé aux agriculteurs ayant vendu la matière première agricole utilisée pour la fabrication du produit.",
       "article": "Article 19 ter",
       "alinea": "II"
@@ -340,7 +340,7 @@
   ],
   "meta": {
     "genere_le": "2026-11-14",
-    "gate": "2",
+    "gate": "3",
     "modele": "génération hors ligne, MCP Hémicycle",
     "controles": [
       { "nom": "Schéma du fichier", "etat": "ok" },
