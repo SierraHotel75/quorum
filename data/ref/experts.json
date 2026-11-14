@@ -1,0 +1,34 @@
+{
+  "verifie_le": "2026-11-14",
+  "note": "Liste fermée des personnes et organisations citables. L'affiliation écrite dans un fichier de loi doit être identique, mot pour mot, à celle de cette fiche. Un nom absent est refusé, avec ou sans drapeau.",
+  "experts": [
+    {
+      "nom": "Annie Genevard",
+      "role": "Ministre de l'agriculture, de l'agroalimentaire et de la souveraineté alimentaire",
+      "affiliation": "Ministère de l'Agriculture, de l'Agro-alimentaire et de la Souveraineté alimentaire",
+      "bord": "pour",
+      "url": "https://agriculture.gouv.fr/la-loi-durgence-pour-la-protection-et-la-souverainete-agricoles-promulguee-par-le-president-de-la"
+    },
+    {
+      "nom": "Laurent Duplomb, Franck Menonville, Pierre Cuypers",
+      "role": "Rapporteurs de la commission des affaires économiques du Sénat",
+      "affiliation": "Sénat — commission des affaires économiques",
+      "bord": "pour",
+      "url": "https://www.senat.fr/rap/l25-762/l25-762-syn.pdf"
+    },
+    {
+      "nom": "Morgane Piederrière",
+      "role": "Responsable du plaidoyer",
+      "affiliation": "France Nature Environnement",
+      "bord": "contre",
+      "url": "https://fne.asso.fr/communique-presse/loi-d-urgence-agricole-accaparement-de-l-eau-et-graines-de-discorde-dans-les"
+    },
+    {
+      "nom": "LPO France",
+      "role": "Communiqué de presse",
+      "affiliation": "Ligue pour la protection des oiseaux",
+      "bord": "contre",
+      "url": "https://www.lpo.fr/qui-sommes-nous/espace-presse/communiques/cp-2026/loi-d-urgence-agricole-plusieurs-organisations-appellent-a-la-censure-du-texte"
+    }
+  ]
+}

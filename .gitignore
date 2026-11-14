@@ -1,0 +1,15 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# Dépendances et sorties de build
+node_modules/
+dist/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Système
+.DS_Store
+Thumbs.db

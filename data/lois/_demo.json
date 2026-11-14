@@ -1,0 +1,238 @@
+{
+  "id": "demo-encadrement-loyers",
+  "demo": true,
+  "titre": "Encadrement des loyers",
+  "theme": "logement",
+  "nb_phrases": 6,
+  "statut": "Adopté",
+  "resume": "Un texte qui fixe un plafond de loyer dans les zones tendues et encadre les nouveaux contrats.",
+  "source": {
+    "nom": "Jeu de démonstration",
+    "url": "https://www.assemblee-nationale.fr/",
+    "texte_url": "https://www.assemblee-nationale.fr/",
+    "licence": "Démonstration locale, non publiée",
+    "consulte_le": "2026-11-14",
+    "note": "Contenu de démonstration, non publié. Aucune donnée réelle n'est présentée comme vérifiée."
+  },
+  "scrutin": {
+    "id": "demo-0000",
+    "date": "2026-03-12",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 0000",
+    "pour": 283,
+    "contre": 256,
+    "abstention": 13,
+    "non_votants": 25,
+    "votants": 552,
+    "suffrages_exprimes": 539,
+    "regle": "majorité des suffrages exprimés"
+  },
+  "sieges_vides": 0,
+  "chronologie": [
+    {
+      "date": "2026-01-12",
+      "chambre": "AN",
+      "texte": "Le texte est déposé à l'Assemblée nationale."
+    },
+    {
+      "date": "2026-02-05",
+      "chambre": "SENAT",
+      "texte": "Le texte est transmis au Sénat."
+    },
+    {
+      "date": "2026-02-19",
+      "chambre": "CMP",
+      "texte": "La commission mixte paritaire examine le texte."
+    },
+    {
+      "date": "2026-03-12",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte."
+    },
+    {
+      "date": "2026-03-26",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte dans la même rédaction."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "aujourdhui",
+      "texte": "Le loyer est encadré dans les zones tendues et pour les logements concernés.",
+      "article": "Article 1",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "si_adopte",
+      "texte": "Le nouveau plafond de loyer s'applique aux contrats conclus après l'entrée en vigueur.",
+      "article": "Article 4",
+      "alinea": "alinéa 1"
+    },
+    {
+      "tag": "concerne",
+      "texte": "Le dispositif s'applique aux baux d'habitation signés à compter du 1er janvier 2027.",
+      "article": "Article 7",
+      "alinea": null
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1",
+      "titre": "Champ d'application",
+      "paragraphes": [
+        "Le loyer est encadré dans les zones tendues et pour les logements concernés.",
+        "Les zones tendues sont celles où le déséquilibre entre l'offre et la demande de logements est le plus marqué."
+      ]
+    },
+    {
+      "reference": "Article 4",
+      "titre": "Entrée en vigueur",
+      "paragraphes": [
+        "Le nouveau plafond de loyer s'applique aux contrats conclus après l'entrée en vigueur.",
+        "Les contrats en cours restent soumis aux règles applicables à leur date de signature."
+      ]
+    },
+    {
+      "reference": "Article 7",
+      "titre": "Baux concernés",
+      "paragraphes": [
+        "Le dispositif s'applique aux baux d'habitation signés à compter du 1er janvier 2027.",
+        "Les logements sociaux et les meublés touristiques relèvent d'un régime distinct."
+      ]
+    }
+  ],
+  "chiffres": [
+    { "valeur": "283", "libelle": "Pour" },
+    { "valeur": "256", "libelle": "Contre" },
+    { "valeur": "13", "libelle": "Abstentions" },
+    { "valeur": "552", "libelle": "Votants" },
+    { "valeur": "539", "libelle": "Exprimés" },
+    { "valeur": "25", "libelle": "Non-votants" }
+  ],
+  "quiz": [
+    {
+      "question": "Le texte s'applique-t-il aux contrats déjà signés ?",
+      "options": ["Oui, à tous les contrats", "Non, aux contrats conclus après l'entrée en vigueur", "Seulement aux logements neufs"],
+      "bonne": 1,
+      "source": "Article 4, alinéa 1"
+    },
+    {
+      "question": "Quel est le nombre de suffrages exprimés ?",
+      "options": ["552", "539", "577"],
+      "bonne": 1,
+      "source": "Scrutin du 12 mars 2026"
+    }
+  ],
+  "arguments": {
+    "pour": [
+      {
+        "titre": "Plafonner les loyers dans les zones tendues",
+        "texte": "Argument de démonstration, placé ici pour occuper la place d'un argument réel, avec sa source.",
+        "source": "Rapport de démonstration, tome I"
+      },
+      {
+        "titre": "Sécuriser les nouveaux contrats",
+        "texte": "Argument de démonstration, sans valeur de contenu. Il sera remplacé par un extrait sourcé.",
+        "source": "Débat de démonstration"
+      }
+    ],
+    "contre": [
+      {
+        "titre": "Un calendrier d'application jugé court",
+        "texte": "Argument de démonstration, sans valeur de contenu. Il sera remplacé par un extrait sourcé.",
+        "source": "Rapport de démonstration, tome II"
+      },
+      {
+        "titre": "Un risque de baisse de l'offre",
+        "texte": "Argument de démonstration, placé ici pour occuper la place d'un argument réel, avec sa source.",
+        "source": "Débat de démonstration"
+      }
+    ]
+  },
+  "presse": {
+    "pour": [
+      {
+        "media": "Le Matin de Lyon",
+        "media_fictif": true,
+        "date": "2026-03-13",
+        "titre": "Un projet structurel pour le territoire",
+        "url": null
+      },
+      {
+        "media": "La Gazette du Nord",
+        "media_fictif": true,
+        "date": "2026-03-14",
+        "titre": "Des mesures attendues par les acteurs locaux",
+        "url": null
+      }
+    ],
+    "contre": [
+      {
+        "media": "L'Écho du Sud",
+        "media_fictif": true,
+        "date": "2026-03-13",
+        "titre": "Un calendrier irréaliste et des moyens insuffisants",
+        "url": null
+      },
+      {
+        "media": "Le Courrier de l'Ouest",
+        "media_fictif": true,
+        "date": "2026-03-15",
+        "titre": "Un risque budgétaire majeur",
+        "url": null
+      }
+    ],
+    "note": "Titres repris tels quels. Aucun commentaire."
+  },
+  "experts": {
+    "pour": [
+      {
+        "nom": "Camille Perrin",
+        "fictif": true,
+        "role": "Économiste du logement",
+        "affiliation": "Laboratoire de démonstration",
+        "argument": "Argument de démonstration, à remplacer par une citation sourcée.",
+        "url": null
+      }
+    ],
+    "contre": [
+      {
+        "nom": "Julien Vasseur",
+        "fictif": true,
+        "role": "Professeur d'économie",
+        "affiliation": "Université de démonstration",
+        "argument": "Argument de démonstration, à remplacer par une citation sourcée.",
+        "url": null
+      }
+    ],
+    "note": "Les spécialistes sont choisis dans une liste de référence vérifiée. Aucun nom n'est inventé en production."
+  },
+  "votes_par_groupe": [
+    { "id": "LFI", "sieges": 70, "pour": 4, "contre": 62, "abstention": 2, "non_votants": 2 },
+    { "id": "GDR", "sieges": 17, "pour": 3, "contre": 13, "abstention": 0, "non_votants": 1 },
+    { "id": "SOC", "sieges": 69, "pour": 58, "contre": 6, "abstention": 2, "non_votants": 3 },
+    { "id": "EcoS", "sieges": 38, "pour": 34, "contre": 1, "abstention": 0, "non_votants": 3 },
+    { "id": "LIOT", "sieges": 23, "pour": 15, "contre": 5, "abstention": 2, "non_votants": 1 },
+    { "id": "EPR", "sieges": 90, "pour": 82, "contre": 2, "abstention": 3, "non_votants": 3 },
+    { "id": "DEM", "sieges": 37, "pour": 33, "contre": 1, "abstention": 2, "non_votants": 1 },
+    { "id": "HOR", "sieges": 36, "pour": 32, "contre": 2, "abstention": 1, "non_votants": 1 },
+    { "id": "DR", "sieges": 48, "pour": 12, "contre": 33, "abstention": 0, "non_votants": 3 },
+    { "id": "RN", "sieges": 122, "pour": 3, "contre": 114, "abstention": 0, "non_votants": 5 },
+    { "id": "UDR", "sieges": 17, "pour": 0, "contre": 16, "abstention": 0, "non_votants": 1 },
+    { "id": "NI", "sieges": 10, "pour": 7, "contre": 1, "abstention": 1, "non_votants": 1 }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "2",
+    "modele": "démonstration locale",
+    "controles": [
+      { "nom": "Schéma du fichier", "etat": "ok" },
+      { "nom": "Chiffres cohérents avec le scrutin", "etat": "ok" },
+      { "nom": "Sièges attribués = 577", "etat": "ok" },
+      { "nom": "Extraits verbatim", "etat": "demo" },
+      { "nom": "Symétrie des bords", "etat": "ok" },
+      { "nom": "Sources des médias", "etat": "demo" },
+      { "nom": "Ressources citées vérifiées", "etat": "demo" }
+    ]
+  }
+}

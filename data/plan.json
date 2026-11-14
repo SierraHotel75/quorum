@@ -1,0 +1,118 @@
+{
+  "jour": "2026-11-14",
+  "titre": "Plan du jour",
+  "debut": "11:30",
+  "fin": "17:30",
+  "lots": [
+    {
+      "code": "WP1",
+      "titre": "Socle de contrôle",
+      "debut": "11:30",
+      "fin": "12:00",
+      "qui": "agent",
+      "sortie": "verifier.mjs refuse la démo",
+      "bloque": "sans lui, aucune dépense de crédit",
+      "taches": [
+        { "id": "1.1", "nom": "Schéma JSON du fichier de loi" },
+        { "id": "1.2", "nom": "Chiffres : total 577 et décompte du scrutin" },
+        { "id": "1.3", "nom": "Extraits présents mot pour mot dans le texte" },
+        { "id": "1.4", "nom": "Symétrie des trois bords" },
+        { "id": "1.5", "nom": "Sources : HTTPS et domaine autorisé" },
+        { "id": "1.6", "nom": "Test négatif sur demo.json" }
+      ]
+    },
+    {
+      "code": "WP2",
+      "titre": "Données réelles",
+      "debut": "12:00",
+      "fin": "13:00",
+      "qui": "toi puis agent",
+      "sortie": "verifier.mjs vert",
+      "bloque": "coût réel d'environ 8 crédits",
+      "taches": [
+        { "id": "2.1", "nom": "Choix du scrutin" },
+        { "id": "2.2", "nom": "Décompte global et par groupe" },
+        { "id": "2.3", "nom": "Texte et extraits verbatim" },
+        { "id": "2.4", "nom": "Chronologie du texte" },
+        { "id": "2.5", "nom": "Presse par flux RSS" },
+        { "id": "2.6", "nom": "Spécialistes sur liste curatée" }
+      ]
+    },
+    {
+      "code": "WP3",
+      "titre": "Bascule démo vers produit",
+      "debut": "13:00",
+      "fin": "13:40",
+      "qui": "agent",
+      "sortie": "plus aucune mention de démonstration",
+      "bloque": "",
+      "taches": [
+        { "id": "3.1", "nom": "Retrait du bandeau de démonstration" },
+        { "id": "3.2", "nom": "Relecture des 15 écrans sur les données réelles" },
+        { "id": "3.3", "nom": "États vides honnêtes" },
+        { "id": "3.4", "nom": "Version de cache incrémentée" }
+      ]
+    },
+    {
+      "code": "WP4",
+      "titre": "Finition mobile",
+      "debut": "13:40",
+      "fin": "14:20",
+      "qui": "agent",
+      "sortie": "capture prise depuis le téléphone réel",
+      "bloque": "adb absent de la machine : platform-tools à installer",
+      "taches": [
+        { "id": "4.1", "nom": "Pré-requis : platform-tools et débogage USB activé" },
+        { "id": "4.2", "nom": "Réseau partagé en Bluetooth, puis adb connect" },
+        { "id": "4.3", "nom": "Test sur téléphone réel, captures d'écran" },
+        { "id": "4.4", "nom": "Légende de l'hémicycle allégée" },
+        { "id": "4.5", "nom": "Contraste, cibles de 44 px, parcours clavier" }
+      ]
+    },
+    {
+      "code": "WP5",
+      "titre": "Démo",
+      "debut": "14:20",
+      "fin": "15:20",
+      "qui": "nous deux",
+      "sortie": "4 minutes, deux fois de suite",
+      "bloque": "",
+      "taches": [
+        { "id": "5.1", "nom": "Script en 9 étapes" },
+        { "id": "5.2", "nom": "Répétition chronométrée" },
+        { "id": "5.3", "nom": "Filet : serveur éteint, captures, vidéo" },
+        { "id": "5.4", "nom": "Plan B si une donnée manque" }
+      ]
+    },
+    {
+      "code": "WP6",
+      "titre": "Présentation",
+      "debut": "15:20",
+      "fin": "16:40",
+      "qui": "toi",
+      "sortie": "le deck se comprend sans commentaire",
+      "bloque": "",
+      "taches": [
+        { "id": "6.1", "nom": "Récit en 2 minutes" },
+        { "id": "6.2", "nom": "Neuf diapos, rendus photo légendés maquette" },
+        { "id": "6.3", "nom": "Preuves : contrôles, sources, coût par loi" },
+        { "id": "6.4", "nom": "Modèle économique v2" }
+      ]
+    },
+    {
+      "code": "WP7",
+      "titre": "Gel",
+      "debut": "16:40",
+      "fin": "17:30",
+      "qui": "tous",
+      "sortie": "on ne code plus, on présente",
+      "bloque": "",
+      "taches": [
+        { "id": "7.1", "nom": "Répétition générale chronométrée" },
+        { "id": "7.2", "nom": "Cinq questions hostiles préparées" },
+        { "id": "7.3", "nom": "Gel du code à 17:15" },
+        { "id": "7.4", "nom": "Sauvegardes : clé, copie, navigateur de secours" }
+      ]
+    }
+  ]
+}

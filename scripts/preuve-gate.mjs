@@ -1,0 +1,299 @@
+#!/usr/bin/env node
+/* Quorum — preuve que le passage de contrôles accepte un fichier complet,
+   et qu'il refuse les mêmes données dès qu'un chiffre ou un média change.
+
+   Le fichier de test est fabriqué dans le dossier temporaire, jamais dans
+   data/lois : rien de faux ne doit traîner dans le dossier publié.
+
+   Usage : node scripts/preuve-gate.mjs
+   Code de sortie 0 si les trois attentes sont tenues. */
+
+import { readFileSync, writeFileSync, mkdtempSync, rmSync } from "node:fs";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { tmpdir } from "node:os";
+import { spawnSync } from "node:child_process";
+
+const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const VERIFIER = join(RACINE, "scripts", "verifier.mjs");
+const DEMO = join(RACINE, "data", "lois", "_demo.json");
+
+const RAPPORT = "https://www.assemblee-nationale.fr/dyn/17/rapports/exemple";
+const SEANCE = "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/exemple";
+
+function fichierComplet() {
+  const loi = JSON.parse(readFileSync(DEMO, "utf8"));
+  delete loi.demo;
+
+  loi.titre = "Encadrement des loyers dans les zones tendues";
+  loi.resume =
+    "Le texte plafonne le loyer des nouveaux contrats dans les zones tendues et fixe une date d'entrée en vigueur.";
+  loi.nb_phrases = 3;
+
+  loi.source = {
+    nom: "Assemblée nationale",
+    url: "https://www.assemblee-nationale.fr/dyn/17/scrutins",
+    texte_url: "https://www.assemblee-nationale.fr/dyn/17/textes/exemple",
+    licence: "Licence Ouverte 2.0",
+    consulte_le: "2026-11-14"
+  };
+  loi.scrutin.id = "demo-0000";
+
+  const extraits = [
+    {
+      tag: "aujourdhui",
+      texte: "Le loyer est encadré dans les zones tendues et pour les logements concernés.",
+      article: "Article 1",
+      alinea: "alinéa 1"
+    },
+    {
+      tag: "si_adopte",
+      texte: "Le nouveau plafond de loyer s'applique aux contrats conclus après l'entrée en vigueur.",
+      article: "Article 2",
+      alinea: "alinéa 1"
+    },
+    {
+      tag: "concerne",
+      texte: "Le dispositif s'applique aux baux d'habitation signés à compter du 1er janvier 2027.",
+      article: "Article 3",
+      alinea: null
+    }
+  ];
+  loi.extraits = extraits;
+  delete loi.article;
+  loi.articles = extraits.map((e) => ({
+    reference: e.article,
+    paragraphes: [e.texte]
+  }));
+
+  loi.arguments = {
+    pour: [
+      {
+        titre: "Plafonner les loyers dans les zones tendues",
+        texte: "Le plafonnement vise à limiter la hausse des loyers là où la demande dépasse l'offre.",
+        source: "Rapport de la commission des affaires économiques",
+        url: RAPPORT
+      },
+      {
+        titre: "Sécuriser les nouveaux contrats",
+        texte: "Le dispositif s'applique aux baux signés après l'entrée en vigueur, avec un délai annoncé.",
+        source: "Compte rendu de la séance publique",
+        url: SEANCE
+      }
+    ],
+    contre: [
+      {
+        titre: "Un calendrier d'application jugé court",
+        texte: "Des élus estiment que le délai entre la publication et l'application est trop resserré.",
+        source: "Compte rendu de la séance publique",
+        url: SEANCE
+      },
+      {
+        titre: "Un risque de baisse de l'offre",
+        texte: "Des intervenants craignent que le plafonnement réduise la mise en location de logements.",
+        source: "Rapport de la commission des affaires économiques",
+        url: RAPPORT
+      }
+    ]
+  };
+
+  loi.presse = {
+    pour: [
+      {
+        media: "Le Monde",
+        date: "2026-03-13",
+        titre: "Le plafonnement des loyers franchit une étape",
+        url: "https://www.lemonde.fr/politique/article/2026/03/13/exemple.html"
+      },
+      {
+        media: "Le Monde",
+        date: "2026-03-14",
+        titre: "Ce que change le texte pour les locataires",
+        url: "https://www.lemonde.fr/immobilier/article/2026/03/14/exemple.html"
+      }
+    ],
+    contre: [
+      {
+        media: "Le Monde",
+        date: "2026-03-13",
+        titre: "Les bailleurs s'inquiètent du calendrier",
+        url: "https://www.lemonde.fr/immobilier/article/2026/03/13/exemple-2.html"
+      },
+      {
+        media: "Le Monde",
+        date: "2026-03-15",
+        titre: "Un dispositif jugé difficile à contrôler",
+        url: "https://www.lemonde.fr/societe/article/2026/03/15/exemple.html"
+      }
+    ]
+  };
+
+  const fiche = {
+    nom: "Camille Perrin",
+    role: "Économiste du logement",
+    affiliation: "Centre de recherche sur le logement",
+    url: "https://www.vie-publique.fr/rapport/1-exemple"
+  };
+  loi.experts = {
+    pour: [
+      {
+        nom: fiche.nom,
+        role: fiche.role,
+        affiliation: fiche.affiliation,
+        argument: "Le plafonnement agit surtout sur les nouveaux contrats, pas sur les baux en cours.",
+        url: fiche.url
+      }
+    ],
+    contre: [
+      {
+        nom: fiche.nom,
+        role: fiche.role,
+        affiliation: fiche.affiliation,
+        argument: "Le contrôle du dispositif supposera des moyens que les services n'ont pas aujourd'hui.",
+        url: fiche.url
+      }
+    ]
+  };
+
+  loi.meta = {
+    genere_le: "2026-11-14",
+    gate: "2",
+    modele: "génération hors ligne",
+    controles: [
+      { nom: "Schéma du fichier", etat: "ok" },
+      { nom: "Chiffres cohérents avec le scrutin", etat: "ok" },
+      { nom: "Sièges attribués = 577", etat: "ok" },
+      { nom: "Extraits verbatim", etat: "ok" },
+      { nom: "Symétrie des bords", etat: "ok" },
+      { nom: "Sources des médias", etat: "ok" },
+      { nom: "Ressources citées vérifiées", etat: "ok" }
+    ]
+  };
+
+  return { loi, fiche };
+}
+
+function lancer(fichier, dossier) {
+  const r = spawnSync(process.execPath, [VERIFIER, fichier], {
+    cwd: RACINE,
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      QUORUM_MEDIAS: join(dossier, "medias.json"),
+      QUORUM_EXPERTS: join(dossier, "experts.json")
+    }
+  });
+  return { code: r.status, sortie: (r.stdout || "") + (r.stderr || "") };
+}
+
+const dossier = mkdtempSync(join(tmpdir(), "quorum-gate-"));
+const resultats = [];
+
+try {
+  const { loi, fiche } = fichierComplet();
+
+  writeFileSync(
+    join(dossier, "medias.json"),
+    JSON.stringify(
+      {
+        verifie_le: "2026-11-14",
+        domaines: ["lemonde.fr"],
+        medias: [
+          { nom: "Le Monde", domaine: "lemonde.fr", flux: "https://www.lemonde.fr/rss/une.xml" }
+        ]
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
+  writeFileSync(
+    join(dossier, "experts.json"),
+    JSON.stringify({ verifie_le: "2026-11-14", experts: [fiche] }, null, 2),
+    "utf8"
+  );
+
+  const complet = join(dossier, "complet.json");
+  writeFileSync(complet, JSON.stringify(loi, null, 2), "utf8");
+
+  const cas1 = lancer(complet, dossier);
+  resultats.push({
+    nom: "fichier complet accepté",
+    attendu: "code 0 et publication autorisée",
+    tenu: cas1.code === 0 && /Publication autorisée/.test(cas1.sortie),
+    sortie: cas1.sortie
+  });
+
+  const faux = JSON.parse(JSON.stringify(loi));
+  faux.scrutin.pour += 1;
+  const fausse = join(dossier, "faux-chiffre.json");
+  writeFileSync(fausse, JSON.stringify(faux, null, 2), "utf8");
+  const cas2 = lancer(fausse, dossier);
+  resultats.push({
+    nom: "un siège de trop refusé",
+    attendu: "code 1 et contrôle WP1.2",
+    tenu: cas2.code === 1 && /WP1\.2/.test(cas2.sortie),
+    sortie: cas2.sortie
+  });
+
+  const vide = JSON.parse(JSON.stringify(loi));
+  vide.sieges_vides = 1;
+  const fausseVide = join(dossier, "faux-siege-vide.json");
+  writeFileSync(fausseVide, JSON.stringify(vide, null, 2), "utf8");
+  const casVide = lancer(fausseVide, dossier);
+  resultats.push({
+    nom: "un siège vide non déclaré refusé",
+    attendu: "code 1 et contrôle WP1.2",
+    tenu: casVide.code === 1 && /WP1\.2/.test(casVide.sortie),
+    sortie: casVide.sortie
+  });
+
+  const groupe = JSON.parse(JSON.stringify(loi));
+  groupe.votes_par_groupe[0].sieges += 1;
+  const fauxGroupe = join(dossier, "faux-siege-groupe.json");
+  writeFileSync(fauxGroupe, JSON.stringify(groupe, null, 2), "utf8");
+  const casGroupe = lancer(fauxGroupe, dossier);
+  resultats.push({
+    nom: "un siège de groupe inventé refusé",
+    attendu: "code 1 et contrôle WP1.2",
+    tenu: casGroupe.code === 1 && /WP1\.2/.test(casGroupe.sortie),
+    sortie: casGroupe.sortie
+  });
+
+  const inconnu = JSON.parse(JSON.stringify(loi));
+  inconnu.presse.pour[0].media = "Le Matin de Lyon";  const mediaInconnu = join(dossier, "faux-media.json");
+  writeFileSync(mediaInconnu, JSON.stringify(inconnu, null, 2), "utf8");
+  const cas3 = lancer(mediaInconnu, dossier);
+  resultats.push({
+    nom: "média hors liste refusé",
+    attendu: "code 1 et média hors liste",
+    tenu: cas3.code === 1 && /média hors liste/.test(cas3.sortie),
+    sortie: cas3.sortie
+  });
+} finally {
+  rmSync(dossier, { recursive: true, force: true });
+}
+
+let echecs = 0;
+for (const r of resultats) {
+  if (r.tenu) {
+    console.log(`[OK] ${r.nom} — ${r.attendu}`);
+  } else {
+    echecs++;
+    console.log(`[X]  ${r.nom} — attendu : ${r.attendu}`);
+    console.log(
+      r.sortie
+        .split("\n")
+        .filter((l) => l.trim())
+        .map((l) => "     " + l)
+        .join("\n")
+    );
+  }
+}
+
+console.log("");
+if (echecs) {
+  console.log(`Preuve non tenue : ${echecs} cas sur ${resultats.length}.`);
+  process.exit(1);
+}
+console.log(`Preuve tenue : ${resultats.length} cas sur ${resultats.length}.`);

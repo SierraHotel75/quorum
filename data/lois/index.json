@@ -1,0 +1,13 @@
+{
+  "genere_le": "2026-11-14",
+  "note": "Une entrée par loi publiée. Un fichier n'entre ici qu'après un passage vert de scripts/verifier.mjs. Les fichiers dont le nom commence par un tiret bas sont des jeux de travail, jamais publiés.",
+  "lois": [
+    {
+      "id": "protection-souverainete-agricoles",
+      "fichier": "data/lois/protection-souverainete-agricoles.json",
+      "titre": "Loi d'urgence pour la protection et la souveraineté agricoles",
+      "theme": "agriculture",
+      "scrutin": "VTANR5L17V8427"
+    }
+  ]
+}

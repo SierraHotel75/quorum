@@ -1,0 +1,38 @@
+# Hémicycle
+
+> Hémicycle réunit les données publiques du Parlement français (Assemblée nationale et Sénat : textes, amendements, scrutins, votes, acteurs), les finances de l'État et de la Sécurité sociale, et des sources publiques lues à la source (collectivités, France Travail, CAF, éducation, sécurité, logement, élections, Eurostat). Le modèle Orcet prédit les votes. Accès par API REST (https://api.hemicycle.ai/v1) et serveur MCP (https://api.hemicycle.ai/mcp), facturés en crédits prépayés. Certains jeux exigent des filtres exacts, listés par /v1/jeux ou l'outil lister_jeux, sans frais.
+
+## Documentation
+
+- [Authentification](https://hemicycle.ai/docs-md/authentification.md)
+- [Clés de test et de production](https://hemicycle.ai/docs-md/cles.md)
+- [Concepts](https://hemicycle.ai/docs-md/concepts.md)
+- [Crédits et coûts](https://hemicycle.ai/docs-md/credits.md)
+- [Démarrage rapide](https://hemicycle.ai/docs-md/demarrage-rapide.md)
+- [Modèle de données](https://hemicycle.ai/docs-md/donnees.md)
+- [Erreurs](https://hemicycle.ai/docs-md/erreurs.md)
+- [Filtres et tris](https://hemicycle.ai/docs-md/filtres.md)
+- [Agents et RAG](https://hemicycle.ai/docs-md/guides/agents.md)
+- [Exemples d'agents](https://hemicycle.ai/docs-md/guides/exemples-agents.md)
+- [Zapier, Make et n8n](https://hemicycle.ai/docs-md/guides/automatisation.md)
+- [Mesurer l'exposition d'une entreprise](https://hemicycle.ai/docs-md/guides/exposition.md)
+- [Prédire un scrutin](https://hemicycle.ai/docs-md/guides/prediction.md)
+- [Suivre un texte](https://hemicycle.ai/docs-md/guides/veille-texte.md)
+- [Identifiants officiels](https://hemicycle.ai/docs-md/identifiants.md)
+- [Limites de débit](https://hemicycle.ai/docs-md/limites.md)
+- [llms.txt](https://hemicycle.ai/docs-md/llms.md)
+- [Installer le serveur MCP](https://hemicycle.ai/docs-md/mcp.md)
+- [Dépannage](https://hemicycle.ai/docs-md/mcp/depannage.md)
+- [Outils disponibles](https://hemicycle.ai/docs-md/mcp/outils.md)
+- [Cycle de vie](https://hemicycle.ai/docs-md/modeles/cycle-de-vie.md)
+- [Marianne](https://hemicycle.ai/docs-md/modeles/marianne.md)
+- [Orcet](https://hemicycle.ai/docs-md/modeles/orcet.md)
+- [Pagination par curseur](https://hemicycle.ai/docs-md/pagination.md)
+- [Sources, fraîcheur et provenance](https://hemicycle.ai/docs-md/provenance.md)
+- [Versions de l'API](https://hemicycle.ai/docs-md/versions.md)
+
+## Pages
+
+- [Données et sources](https://hemicycle.ai/donnees)
+- [Modèles](https://hemicycle.ai/modeles)
+- [Tarifs](https://hemicycle.ai/tarifs?onglet=api)

@@ -1,0 +1,279 @@
+/* Quorum — jetons de design, thème sombre « chambre »
+   Une seule famille de couleur : bois et bordeaux. Pas de bleu dans l'interface.
+   Règles :
+   - le bordeaux #8E1B22 est la couleur d'action (boutons), jamais une donnée ;
+   - le bois #A9744B marque l'éditorial : étiquette de thème, onglet actif, liens ;
+   - les marqueurs de chambre (bleu AN, cyan Sénat) n'apparaissent que dans la
+     chronologie et la carte, parce qu'ils identifient une institution ;
+   - les sièges prennent la couleur de leur groupe parlementaire, d'après la
+     composition publiée ; l'accord avec l'utilisateur ne change que la luminosité.
+   - l'accord avec l'utilisateur ne change pas la teinte, seulement la luminosité.
+   Aucune police distante : l'app doit tourner hors ligne. */
+
+:root {
+  color-scheme: dark;
+
+  /* Fonds */
+  --fond: #151110;
+  --fond-2: #1e1815;
+  --fond-3: #241d19;
+
+  /* Textes */
+  --texte: #ede7dc;
+  --texte-doux: #9a8f82;
+  --texte-faible: #877d70;
+
+  /* Filets */
+  --filet: #3a322c;
+  --filet-fort: #4e443b;
+
+  /* Bois */
+  --bois: #a9744b;
+  --bois-profond: #6b4227;
+
+  /* Bordeaux — action principale, jamais une donnée */
+  --bordeaux: #8e1b22;
+  --bordeaux-haut: #a3242c;
+
+  /* Marqueurs de chambre — donnée uniquement, jamais dans l'interface */
+  --an: #4c7bc8;
+  --senat: #07addb;
+  --commission: #a39c8c;
+
+  /* Sièges — un ton par groupe parlementaire.
+     Source : composition de l'Assemblée nationale, 17e législature
+     (Wikipédia « Assemblée nationale (France) » et site de l'Assemblée).
+     Ces valeurs sont datées : un groupe change de nom ou de taille,
+     le fichier data/ref/groupes.json doit être régénéré avec sa date. */
+  --g-lfi: #c01433;
+  --g-gdr: #8e1b22;
+  --g-soc: #f08a9b;
+  --g-ecos: #2fa84f;
+  --g-liot: #d5a8d5;
+  --g-epr: #f2d200;
+  --g-dem: #f08a24;
+  --g-hor: #2f4fa8;
+  --g-dr: #3f6fc4;
+  --g-udr: #26305e;
+  --g-rn: #16246b;
+  --g-ni: #c9c9c9;
+
+  /* Vote */
+  --pour: #4e9a72;
+  --contre: #cf6357;
+  --abstention: #a39c8c;
+
+  /* Typographie — replis locaux, WOFF2 à ajouter plus tard */
+  --serif: "Newsreader", "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* Échelle typographique */
+  --t-xs: 0.75rem;
+  --t-sm: 0.875rem;
+  --t-md: 1rem;
+  --t-lg: 1.125rem;
+  --t-xl: 1.375rem;
+  --t-2xl: 1.75rem;
+  --t-3xl: 2.25rem;
+  --t-4xl: 3rem;
+
+  /* Grille 8 px */
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2rem;
+  --s5: 2.5rem;
+  --s6: 3rem;
+  --s8: 4rem;
+
+  /* Formes */
+  --rayon: 4px;
+  --largeur-texte: 34rem;
+  --largeur-app: 30rem;
+
+  /* Mouvement */
+  --duree: 160ms;
+  --courbe: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Thème lecture : fond clair, pour les textes longs.
+   Activé sur <html data-theme="lecture">. */
+
+[data-theme="lecture"] {
+  color-scheme: light;
+  --fond: #f6f4ef;
+  --fond-2: #efece4;
+  --fond-3: #e7e3d9;
+  --texte: #161616;
+  --texte-doux: #6e6a63;
+  --texte-faible: #7d7871;
+  --filet: #d9d3c7;
+  --filet-fort: #b8b0a0;
+  --bois: #8a5a34;
+  --bois-profond: #6b4227;
+  --bordeaux: #8e1b22;
+  --bordeaux-haut: #6f141a;
+  --an: #004494;
+  --senat: #0a7fa3;
+  --commission: #8a8578;
+  --siege-gauche: #b06a34;
+  --siege-centre: #8a7a62;
+  --siege-droite: #8e1b22;
+  --siege-ni: #6f665c;
+  --g-lfi: #b8122f;
+  --g-gdr: #8e1b22;
+  --g-soc: #d9647a;
+  --g-ecos: #248a41;
+  --g-liot: #b98ab9;
+  --g-epr: #c9ae00;
+  --g-dem: #c96f14;
+  --g-hor: #24408c;
+  --g-dr: #31589e;
+  --g-udr: #1d2549;
+  --g-rn: #12205c;
+  --g-ni: #b3b3b3;
+  --pour: #2f6b4f;
+  --contre: #9b3a32;
+  --abstention: #8a8578;
+}
+
+/* Reset minimal */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--sans);
+  font-size: var(--t-md);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: contain;
+}
+
+/* Le serif porte la parole officielle */
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--t-3xl);
+}
+
+h2 {
+  font-size: var(--t-2xl);
+}
+
+h3 {
+  font-size: var(--t-xl);
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--filet-fort);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-color: var(--bois);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bois);
+  outline-offset: 2px;
+}
+
+/* Utilitaires de contenu */
+
+.mono {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  color: var(--texte-doux);
+  font-variant-numeric: tabular-nums;
+}
+
+.etiquette {
+  font-family: var(--mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+
+/* Masthead */
+
+.masthead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s3) var(--s2) var(--s2);
+  border-bottom: 1px solid var(--filet);
+}
+
+.masthead__nom {
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.masthead__descripteur {
+  font-size: var(--t-sm);
+  color: var(--texte-doux);
+  text-align: center;
+  line-height: 1.45;
+  max-width: 22rem;
+}
+
+/* Mention d'indépendance, à garder sur toutes les pages */
+
+.mention-independance {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  color: var(--texte-faible);
+  line-height: 1.5;
+  max-width: var(--largeur-texte);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}

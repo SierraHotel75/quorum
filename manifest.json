@@ -1,0 +1,28 @@
+{
+  "name": "Quorum",
+  "short_name": "Quorum",
+  "description": "De l'aide pour accomplir mon devoir civique. Ce qui s'est dit. Ce qui s'est voté.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#151110",
+  "theme_color": "#151110",
+  "categories": ["education", "news", "government"],
+  "icons": [
+    {
+      "src": "assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icone-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

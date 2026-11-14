@@ -1,0 +1,43 @@
+{
+  "verifie_le": "2026-11-14",
+  "note": "Liste fermée des médias suivis. Chaque entrée porte un flux RSS public dont la réponse a été vérifiée le 2026-11-14, et le domaine exact auquel ses articles doivent appartenir. Un titre dont le média n'est pas dans cette liste est refusé, même s'il a l'air crédible. Le bord est une convention de ligne éditoriale, documentée par l'adresse du média : ce n'est pas un jugement sur un article.",
+  "domaines": [
+    "fne.asso.fr",
+    "lpo.fr",
+    "agriculture.gouv.fr"
+  ],
+  "medias": [
+    {
+      "nom": "Le Figaro",
+      "domaine": "lefigaro.fr",
+      "bord": "droite",
+      "reference": "https://www.lefigaro.fr/",
+      "flux": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+      "consulte_le": "2026-11-14"
+    },
+    {
+      "nom": "Réussir",
+      "domaine": "reussir.fr",
+      "bord": "agricole",
+      "reference": "https://www.reussir.fr/",
+      "flux": "https://www.reussir.fr/rss.xml",
+      "consulte_le": "2026-11-14"
+    },
+    {
+      "nom": "Vert",
+      "domaine": "vert.eco",
+      "bord": "gauche",
+      "reference": "https://vert.eco/",
+      "flux": "https://vert.eco/feed/",
+      "consulte_le": "2026-11-14"
+    },
+    {
+      "nom": "altermidi",
+      "domaine": "altermidi.org",
+      "bord": "gauche",
+      "reference": "https://altermidi.org/",
+      "flux": "https://altermidi.org/feed/",
+      "consulte_le": "2026-11-14"
+    }
+  ]
+}

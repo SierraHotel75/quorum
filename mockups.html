@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#151110" />
+    <title>Quorum — maquettes</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #0d0a09;
+        color: var(--texte);
+        font-family: var(--sans);
+        padding: 2rem 1.5rem 4rem;
+      }
+      header {
+        max-width: 72rem;
+        margin: 0 auto 2rem;
+        border-bottom: 1px solid var(--filet);
+        padding-bottom: 1.5rem;
+      }
+      h1 {
+        font-family: var(--serif);
+        font-size: 2rem;
+        letter-spacing: 0.06em;
+        margin: 0 0 0.5rem;
+      }
+      p {
+        margin: 0;
+        color: var(--texte-doux);
+        font-size: 0.9rem;
+        max-width: 46rem;
+      }
+      .grille {
+        max-width: 72rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 1.5rem;
+      }
+      figure {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid var(--filet);
+        border-radius: 4px;
+      }
+      figcaption {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--texte-doux);
+        line-height: 1.5;
+      }
+      .note {
+        max-width: 72rem;
+        margin: 2.5rem auto 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--filet);
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--texte-faible);
+      }
+      a {
+        color: var(--bois);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Quorum — maquettes</h1>
+      <p>
+        Rendus photo de la direction visuelle. Contenus inventés, à légender « maquette » dans les
+        slides. La démonstration live utilise <a href="./">l'application réelle</a>.
+      </p>
+    </header>
+
+    <div class="grille">
+      <figure>
+        <img src="assets/mockups/dark-01-hero.png" alt="Accueil sombre" />
+        <figcaption>01 · Accueil — bois, bordeaux, charbon</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-05-extraits.png" alt="Écran des extraits" />
+        <figcaption>02 · Extraits — phrases verbatim, tags, compteur</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-06-presse.png" alt="Écran de presse" />
+        <figcaption>03 · Presse — deux bords, aucun commentaire</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-04-chronologie.png" alt="Chronologie" />
+        <figcaption>04 · Le fait — marqueurs de chambre</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-08-carte-groupes.png" alt="Carte de l'hémicycle par groupe" />
+        <figcaption>05 · Carte — couleurs des groupes, source publiée</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-07-carte.png" alt="Carte avec la vue Avec vous" />
+        <figcaption>06 · Carte — vue « Avec vous »</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/dark-03-hemicycle.png" alt="Hémicycle en bois et rouge" />
+        <figcaption>07 · Hémicycle — matière de référence</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/mockups/quorum-01-hero.png" alt="Ancienne direction papier" />
+        <figcaption>08 · Ancienne direction papier — abandonnée</figcaption>
+      </figure>
+    </div>
+
+    <p class="note">
+      Toutes ces images sont des maquettes. Aucun chiffre, aucun titre, aucun nom affiché ici n'a
+      valeur de donnée vérifiée.
+    </p>
+  </body>
+</html>

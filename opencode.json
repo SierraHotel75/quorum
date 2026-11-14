@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "providers": {
+    "featherless": {
+      "name": "Featherless",
+      "env": ["FEATHERLESS_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.featherless.ai/v1"
+      },
+      "models": {
+        "deepseek-ai/DeepSeek-V4.1-Flash": { "name": "DeepSeek V4.1 Flash" },
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017": { "name": "DeepSeek V4.1 Flash 1017" },
+        "deepseek-ai/DeepSeek-V4-Flash": { "name": "DeepSeek V4 Flash" },
+        "moonshotai/Kimi-K3.1-Pro": { "name": "Kimi K3.1 Pro" },
+        "Qwen/Qwen3.8-27B": { "name": "Qwen3.8 27B" },
+        "zai-org/GLM-5.3": { "name": "GLM 5.3" }
+      }
+    }
+  },
+  "mcp": {
+    "servers": {
+      "hemicycle": {
+        "type": "remote",
+        "url": "https://api.hemicycle.ai/mcp",
+        "oauth": false,
+        "headers": {
+          "Authorization": "Bearer {env:HEMICYCLE_API_KEY}"
+        }
+      }
+    }
+  }
+}

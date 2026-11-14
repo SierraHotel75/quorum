@@ -1,0 +1,355 @@
+{
+  "id": "protection-souverainete-agricoles",
+  "titre": "Loi d'urgence pour la protection et la souveraineté agricoles",
+  "theme": "agriculture",
+  "nb_phrases": 24,
+  "statut": "Promulgué",
+  "resume": "Un texte qui crée des « projets d'avenir agricole », encadre les importations de denrées traitées avec des substances interdites dans l'Union européenne, simplifie les règles sur l'eau et les zones humides, crée un régime spécifique de gestion du loup et renforce la place des agriculteurs dans les négociations commerciales. Adopté le 20 juillet 2026, promulgué le 18 août 2026 après une décision partiellement conforme du Conseil constitutionnel.",
+  "source": {
+    "nom": "Assemblée nationale",
+    "url": "https://www.assemblee-nationale.fr/dyn/17/scrutins/8427",
+    "texte_url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054707007",
+    "licence": "Licence Ouverte 2.0",
+    "consulte_le": "2026-11-14",
+    "note": "Décompte du scrutin public n° 8427 du 20 juillet 2026 sur le texte de la commission mixte paritaire. Texte promulgué : loi n° 2026-796 du 18 août 2026."
+  },
+  "scrutin": {
+    "id": "VTANR5L17V8427",
+    "date": "2026-07-20",
+    "chambre": "Assemblée nationale",
+    "numero": "n° 8427",
+    "pour": 296,
+    "contre": 224,
+    "abstention": 41,
+    "non_votants": 1,
+    "votants": 561,
+    "suffrages_exprimes": 520,
+    "regle": "majorité des suffrages exprimés"
+  },
+  "sieges_vides": 15,
+  "chronologie": [
+    {
+      "date": "2026-04-08",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Présentation en Conseil des ministres et dépôt du projet de loi. Le Gouvernement engage la procédure accélérée."
+    },
+    {
+      "date": "2026-05-07",
+      "chambre": "COMMISSION",
+      "texte": "La commission des affaires économiques de l'Assemblée nationale adopte le texte (rapport n° 2765)."
+    },
+    {
+      "date": "2026-05-19",
+      "chambre": "AN",
+      "texte": "Début de la discussion en séance publique à l'Assemblée nationale."
+    },
+    {
+      "date": "2026-06-02",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte en première lecture."
+    },
+    {
+      "date": "2026-06-03",
+      "chambre": "SENAT",
+      "texte": "Le texte adopté par l'Assemblée nationale est transmis au Sénat."
+    },
+    {
+      "date": "2026-06-17",
+      "chambre": "COMMISSION",
+      "texte": "La commission des affaires économiques du Sénat adopte le texte (rapport n° 762)."
+    },
+    {
+      "date": "2026-07-02",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte en première lecture par 219 voix pour et 111 voix contre."
+    },
+    {
+      "date": "2026-07-16",
+      "chambre": "CMP",
+      "texte": "La commission mixte paritaire s'accorde sur un texte de compromis (rapport n° 3067)."
+    },
+    {
+      "date": "2026-07-20",
+      "chambre": "AN",
+      "texte": "L'Assemblée nationale adopte le texte de la commission mixte paritaire par 296 voix pour, 224 contre et 41 abstentions."
+    },
+    {
+      "date": "2026-07-21",
+      "chambre": "SENAT",
+      "texte": "Le Sénat adopte le texte de la commission mixte paritaire. Le texte est définitivement adopté."
+    },
+    {
+      "date": "2026-07-24",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Le Conseil constitutionnel est saisi du texte par plus de soixante députés."
+    },
+    {
+      "date": "2026-08-14",
+      "chambre": "CONSEIL_CONSTITUTIONNEL",
+      "texte": "Décision n° 2026-914 DC : le texte est déclaré partiellement conforme à la Constitution."
+    },
+    {
+      "date": "2026-08-18",
+      "chambre": "GOUVERNEMENT",
+      "texte": "Promulgation de la loi n° 2026-796, publiée au Journal officiel le 19 août 2026."
+    }
+  ],
+  "extraits": [
+    {
+      "tag": "aujourdhui",
+      "texte": "Pour mettre en œuvre les conclusions des conférences de la souveraineté alimentaire, des comités de pilotage régionaux, présidés par le représentant de l'État dans la région et le président du conseil régional et associant la chambre régionale d'agriculture, reconnaissent des projets d'avenir agricole qui respectent les priorités définies au livre préliminaire.",
+      "article": "Article 1er",
+      "alinea": "II"
+    },
+    {
+      "tag": "concerne",
+      "texte": "Ils bénéficient d'une priorité dans l'accompagnement, notamment financier, par l'État et les collectivités territoriales.",
+      "article": "Article 1er",
+      "alinea": "II"
+    },
+    {
+      "tag": "aujourdhui",
+      "texte": "le ministre chargé de la sécurité sanitaire des aliments ou de la santé animale suspend ou fixe des conditions particulières à l'introduction, à l'importation ou à la mise sur le marché en France de denrées alimentaires ou d'aliments pour animaux contenant des résidus de ces substances ou médicaments et dont il est évident qu'ils sont susceptibles de constituer un risque sérieux pour la santé humaine ou animale.",
+      "article": "Article 2",
+      "alinea": null
+    },
+    {
+      "tag": "aujourdhui",
+      "texte": "Les prescriptions applicables aux projets soumis à l'article L. 214‑3 et affectant une zone humide, notamment celles relatives aux mesures de compensation, sont proportionnées aux fonctionnalités de la zone humide concernée.",
+      "article": "Article 7",
+      "alinea": "L. 214‑7‑1"
+    },
+    {
+      "tag": "concerne",
+      "texte": "Les zones humides créées par une installation de stockage d'eau peuvent être prises en compte, en tout ou partie, au titre des mesures de compensation des atteintes portées aux zones humides par cette installation, prévues à l'article L. 163‑1, lorsque l'équivalence de leurs fonctionnalités écologiques avec celles des milieux affectés est démontrée et que l'effectivité des gains écologiques est constatée dans les conditions prévues au même article.",
+      "article": "Article 7",
+      "alinea": "L. 214‑7‑1"
+    },
+    {
+      "tag": "aujourdhui",
+      "texte": "Afin de prévenir les dommages à l'élevage dus au loup tout en assurant le maintien de l'espèce dans un état de conservation favorable, un arrêté conjoint des ministres chargés de la protection de la nature et de l'agriculture définit les conditions dans lesquelles cette espèce fait l'objet de mesures de gestion, notamment en termes de prélèvements.",
+      "article": "Article 14",
+      "alinea": "I bis A"
+    },
+    {
+      "tag": "concerne",
+      "texte": "Les troupeaux de bovins, d'équins et d'asins sont reconnus comme ne pouvant être protégés.",
+      "article": "Article 14",
+      "alinea": "I bis A"
+    },
+    {
+      "tag": "concerne",
+      "texte": "Lorsque le nombre de loups effectivement prélevés au cours d'une année civile est inférieur au plafond annuel fixé par cet arrêté, la différence est reportée et ajoutée au plafond fixé pour l'année civile suivante, sous réserve du maintien de l'espèce dans un état de conservation favorable.",
+      "article": "Article 14",
+      "alinea": "I bis B"
+    },
+    {
+      "tag": "aujourdhui",
+      "texte": "À titre expérimental, jusqu'au 30 avril 2028, les allégations relatives à la rémunération des agriculteurs figurant dans une publicité ou sur l'emballage d'un produit s'accompagnent d'une information accessible au consommateur, selon un moyen libre, comprenant des éléments relatifs au prix payé aux agriculteurs ayant vendu la matière première agricole utilisée pour la fabrication du produit.",
+      "article": "Article 19 ter",
+      "alinea": "II"
+    }
+  ],
+  "articles": [
+    {
+      "reference": "Article 1er",
+      "titre": "Projets d'avenir agricole",
+      "note": "II de l'article L. 611‑1‑1 du code rural et de la pêche maritime, créé par l'article premier.",
+      "paragraphes": [
+        "II. – Pour mettre en œuvre les conclusions des conférences de la souveraineté alimentaire, des comités de pilotage régionaux, présidés par le représentant de l'État dans la région et le président du conseil régional et associant la chambre régionale d'agriculture, reconnaissent des projets d'avenir agricole qui respectent les priorités définies au livre préliminaire.",
+        "Ces projets peuvent concerner une ou plusieurs régions. Ils bénéficient d'une priorité dans l'accompagnement, notamment financier, par l'État et les collectivités territoriales. Des engagements réciproques entre les participants au projet d'avenir agricole peuvent être pris par voie contractuelle."
+      ]
+    },
+    {
+      "reference": "Article 2",
+      "titre": "Importations de denrées traitées avec des substances interdites",
+      "note": "Passage du dernier alinéa de l'article L. 236‑1 A du code rural et de la pêche maritime, tel que réécrit.",
+      "paragraphes": [
+        "à titre conservatoire et jusqu'à l'adoption par la Commission européenne des mesures adéquates, en cas de retrait ou de non‑renouvellement de l'approbation d'une substance active phytopharmaceutique ou de l'autorisation d'un médicament vétérinaire dans l'Union européenne pour des motifs liés à la protection de la santé ou de l'environnement, le ministre chargé de la sécurité sanitaire des aliments ou de la santé animale suspend ou fixe des conditions particulières à l'introduction, à l'importation ou à la mise sur le marché en France de denrées alimentaires ou d'aliments pour animaux contenant des résidus de ces substances ou médicaments et dont il est évident qu'ils sont susceptibles de constituer un risque sérieux pour la santé humaine ou animale."
+      ]
+    },
+    {
+      "reference": "Article 7",
+      "titre": "Projets affectant une zone humide",
+      "note": "Article L. 214‑7‑1 du code de l'environnement, rétabli.",
+      "paragraphes": [
+        "Art. L. 214‑7‑1. – Les prescriptions applicables aux projets soumis à l'article L. 214‑3 et affectant une zone humide, notamment celles relatives aux mesures de compensation, sont proportionnées aux fonctionnalités de la zone humide concernée.",
+        "Les zones humides créées par une installation de stockage d'eau peuvent être prises en compte, en tout ou partie, au titre des mesures de compensation des atteintes portées aux zones humides par cette installation, prévues à l'article L. 163‑1, lorsque l'équivalence de leurs fonctionnalités écologiques avec celles des milieux affectés est démontrée et que l'effectivité des gains écologiques est constatée dans les conditions prévues au même article."
+      ]
+    },
+    {
+      "reference": "Article 14",
+      "titre": "Gestion du loup",
+      "note": "I bis de l'article L. 411‑1 du code de l'environnement, créé par l'article 14.",
+      "paragraphes": [
+        "I bis. – A. – Afin de prévenir les dommages à l'élevage dus au loup tout en assurant le maintien de l'espèce dans un état de conservation favorable, un arrêté conjoint des ministres chargés de la protection de la nature et de l'agriculture définit les conditions dans lesquelles cette espèce fait l'objet de mesures de gestion, notamment en termes de prélèvements.",
+        "Les troupeaux de bovins, d'équins et d'asins sont reconnus comme ne pouvant être protégés.",
+        "B. – Un arrêté conjoint des ministres chargés de la protection de la nature et de l'agriculture fixe, chaque année, le nombre maximal de loups pouvant être détruits à l'échelle nationale, en fonction de la population lupine et de la pression de prédation.",
+        "Lorsque le nombre de loups effectivement prélevés au cours d'une année civile est inférieur au plafond annuel fixé par cet arrêté, la différence est reportée et ajoutée au plafond fixé pour l'année civile suivante, sous réserve du maintien de l'espèce dans un état de conservation favorable."
+      ]
+    },
+    {
+      "reference": "Article 19 ter",
+      "titre": "Information sur la rémunération des agriculteurs",
+      "note": "II de l'article 19 ter, à titre expérimental.",
+      "paragraphes": [
+        "II. – À titre expérimental, jusqu'au 30 avril 2028, les allégations relatives à la rémunération des agriculteurs figurant dans une publicité ou sur l'emballage d'un produit s'accompagnent d'une information accessible au consommateur, selon un moyen libre, comprenant des éléments relatifs au prix payé aux agriculteurs ayant vendu la matière première agricole utilisée pour la fabrication du produit.",
+        "Cette expérimentation concerne les filières laitière, bovine et avicole. Les produits utilisant un label ou un système de garantie de commerce équitable reconnu dans les conditions prévues au III de l'article 60 de la loi n° 2005‑882 du 2 août 2005 en faveur des petites et moyennes entreprises sont exclus du champ de l'expérimentation."
+      ]
+    }
+  ],
+  "chiffres": [
+    { "valeur": "296", "libelle": "Pour" },
+    { "valeur": "224", "libelle": "Contre" },
+    { "valeur": "41", "libelle": "Abstentions" },
+    { "valeur": "561", "libelle": "Votants" },
+    { "valeur": "520", "libelle": "Exprimés" },
+    { "valeur": "1", "libelle": "Non-votants" }
+  ],
+  "quiz": [
+    {
+      "question": "Que prévoit l'article 7 pour les projets qui affectent une zone humide ?",
+      "options": [
+        "Des prescriptions proportionnées aux fonctionnalités de la zone humide",
+        "Une interdiction de tout projet en zone humide",
+        "Une compensation identique pour toutes les zones humides"
+      ],
+      "bonne": 0,
+      "source": "Article 7, article L. 214‑7‑1 du code de l'environnement"
+    },
+    {
+      "question": "Quel est le nombre de suffrages exprimés lors du vote du 20 juillet 2026 ?",
+      "options": ["561", "520", "577"],
+      "bonne": 1,
+      "source": "Scrutin public n° 8427 du 20 juillet 2026"
+    }
+  ],
+  "arguments": {
+    "pour": [
+      {
+        "titre": "Reconquérir la souveraineté alimentaire",
+        "texte": "Le Sénat présente le texte comme devant « contribuer à la reconquête de la souveraineté alimentaire française », avec des projets d'avenir agricole prioritaires pour l'accompagnement financier de l'État et des régions.",
+        "source": "Sénat — La loi en clair",
+        "url": "https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/urgence-agricole.html"
+      },
+      {
+        "titre": "Protéger les élevages de la prédation",
+        "texte": "La commission des affaires économiques du Sénat juge que « la plupart des dispositions visant à diminuer la prédation du loup » vont « dans le bon sens », alors que le texte initial « manquait d'ambition sur ce point ».",
+        "source": "Sénat — Rapport n° 762 du 17 juin 2026",
+        "url": "https://www.senat.fr/rap/l25-762/l25-762-syn.pdf"
+      }
+    ],
+    "contre": [
+      {
+        "titre": "Un affaiblissement de la protection des zones humides",
+        "texte": "Des sénateurs du groupe CRCE-K demandent la suppression de l'article 7 : « Sous couvert de proportionner les prescriptions applicables aux projets affectant une zone humide, cet article risque en réalité d'affaiblir la protection de ces milieux particulièrement fragiles. »",
+        "source": "Sénat — Amendement n° 721 du 25 juin 2026",
+        "url": "https://www.senat.fr/amendements/2025-2026/763/Amdt_721.html"
+      },
+      {
+        "titre": "Un volet commercial jugé « dénaturé »",
+        "texte": "La commission des affaires économiques du Sénat estime que le volet consacré aux relations commerciales « a été dénaturé et n'apparaît désormais ni souhaitable, ni cohérent ».",
+        "source": "Sénat — Rapport n° 762 du 17 juin 2026",
+        "url": "https://www.senat.fr/rap/l25-762/l25-762-syn.pdf"
+      }
+    ]
+  },
+  "presse": {
+    "pour_titre": "Presse généraliste et agricole",
+    "pour": [
+      {
+        "media": "Le Figaro",
+        "date": "2026-07-21",
+        "titre": "Le Parlement adopte définitivement la loi d'urgence agricole, avec son volet sur les pesticides",
+        "url": "https://www.lefigaro.fr/actualite-france/le-parlement-adopte-definitivement-la-loi-d-urgence-agricole-avec-son-volet-sur-les-pesticides-20260721"
+      },
+      {
+        "media": "Réussir",
+        "date": "2026-08-17",
+        "titre": "Loi d'urgence agricole : FNSEA, Confédération paysanne, CGB, AGPM… les réactions après la décision du Conseil constitutionnel",
+        "url": "https://www.reussir.fr/loi-durgence-agricole-fnsea-confederation-paysanne-cgb-agpm-les-reactions-apres-la-decision-du"
+      }
+    ],
+    "contre_titre": "Presse environnementale",
+    "contre": [
+      {
+        "media": "Vert",
+        "date": "2026-07-22",
+        "titre": "Pesticides, bassines, loups, élevages… Que contient la loi d'urgence agricole, définitivement adoptée ?",
+        "url": "https://vert.eco/agriculture/pesticides-bassines-loups-elevages-que-contient-la-loi-durgence-agricole-definitivement-adoptee/"
+      },
+      {
+        "media": "altermidi",
+        "date": "2026-08-11",
+        "titre": "Décryptage: Urgence agricole : à qui profite la loi ?",
+        "url": "https://altermidi.org/2026/08/11/urgence-agricole-a-qui-profite-la-loi"
+      }
+    ],
+    "note": "Titres repris tels quels, avec leur date et leur lien. Aucun commentaire."
+  },
+  "experts": {
+    "pour_titre": "Les porteurs du texte",
+    "pour": [
+      {
+        "nom": "Annie Genevard",
+        "role": "Ministre de l'agriculture, de l'agroalimentaire et de la souveraineté alimentaire",
+        "affiliation": "Ministère de l'Agriculture, de l'Agro-alimentaire et de la Souveraineté alimentaire",
+        "argument": "Cette loi, construite à partir des préoccupations concrètes exprimées par les agriculteurs sur le terrain, entre aujourd'hui en vigueur. C'est une victoire pour notre agriculture et pour notre souveraineté alimentaire, obtenue dans des délais records, et contre les velléités de quelques-uns de rabaisser notre agriculture.",
+        "url": "https://agriculture.gouv.fr/la-loi-durgence-pour-la-protection-et-la-souverainete-agricoles-promulguee-par-le-president-de-la"
+      },
+      {
+        "nom": "Laurent Duplomb, Franck Menonville, Pierre Cuypers",
+        "role": "Rapporteurs de la commission des affaires économiques du Sénat",
+        "affiliation": "Sénat — commission des affaires économiques",
+        "argument": "La commission a adopté de nombreux amendements pour revenir et enrichir les ambitions initiales du texte et apporter des solutions concrètes aux agriculteurs pour soutenir notre souveraineté agricole.",
+        "url": "https://www.senat.fr/rap/l25-762/l25-762-syn.pdf"
+      }
+    ],
+    "contre_titre": "Les organisations critiques",
+    "contre": [
+      {
+        "nom": "Morgane Piederrière",
+        "role": "Responsable du plaidoyer",
+        "affiliation": "France Nature Environnement",
+        "argument": "Face au changement climatique, l'agriculture a besoin d'investissements massifs dans la transition agroécologique et de garantir un revenu digne aux paysan.nes, pas de nouveaux reculs environnementaux. Affaiblir la protection de l'eau, détruire les zones humides et réintroduire des pesticides dont la dangerosité est avérée, c'est saborder la capacité même de notre agriculture à produire demain.",
+        "url": "https://fne.asso.fr/communique-presse/loi-d-urgence-agricole-accaparement-de-l-eau-et-graines-de-discorde-dans-les"
+      },
+      {
+        "nom": "LPO France",
+        "role": "Communiqué de presse",
+        "affiliation": "Ligue pour la protection des oiseaux",
+        "argument": "Présentée comme une réponse à la crise agricole, la loi d'urgence agricole multiplie les reculs environnementaux et sanitaires et n'apporte aucune solution durable aux besoins des agriculteurs.",
+        "url": "https://www.lpo.fr/qui-sommes-nous/espace-presse/communiques/cp-2026/loi-d-urgence-agricole-plusieurs-organisations-appellent-a-la-censure-du-texte"
+      }
+    ],
+    "note": "Citations reprises telles quelles, avec leur source. Les personnes et organisations citées figurent dans une liste de référence vérifiée ; aucun nom n'est inventé."
+  },
+  "votes_par_groupe": [
+    { "id": "LFI", "sieges": 71, "pour": 0, "contre": 71, "abstention": 0, "non_votants": 0 },
+    { "id": "GDR", "sieges": 15, "pour": 0, "contre": 15, "abstention": 0, "non_votants": 0 },
+    { "id": "SOC", "sieges": 68, "pour": 0, "contre": 66, "abstention": 2, "non_votants": 0 },
+    { "id": "EcoS", "sieges": 38, "pour": 0, "contre": 38, "abstention": 0, "non_votants": 0 },
+    { "id": "LIOT", "sieges": 23, "pour": 8, "contre": 4, "abstention": 11, "non_votants": 0 },
+    { "id": "EPR", "sieges": 83, "pour": 51, "contre": 15, "abstention": 16, "non_votants": 1 },
+    { "id": "DEM", "sieges": 36, "pour": 19, "contre": 11, "abstention": 6, "non_votants": 0 },
+    { "id": "HOR", "sieges": 31, "pour": 24, "contre": 3, "abstention": 4, "non_votants": 0 },
+    { "id": "DR", "sieges": 48, "pour": 48, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "RN", "sieges": 122, "pour": 122, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "UDR", "sieges": 17, "pour": 17, "contre": 0, "abstention": 0, "non_votants": 0 },
+    { "id": "NI", "sieges": 10, "pour": 7, "contre": 1, "abstention": 2, "non_votants": 0 }
+  ],
+  "meta": {
+    "genere_le": "2026-11-14",
+    "gate": "2",
+    "modele": "génération hors ligne, MCP Hémicycle",
+    "controles": [
+      { "nom": "Schéma du fichier", "etat": "ok" },
+      { "nom": "Chiffres cohérents avec le scrutin", "etat": "ok" },
+      { "nom": "Sièges attribués = 577", "etat": "ok" },
+      { "nom": "Extraits verbatim", "etat": "ok" },
+      { "nom": "Symétrie des bords", "etat": "ok" },
+      { "nom": "Sources des médias", "etat": "ok" },
+      { "nom": "Ressources citées vérifiées", "etat": "ok" }
+    ]
+  }
+}

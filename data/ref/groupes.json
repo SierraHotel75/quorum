@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "titre": "Composition de l'Assemblée nationale",
+    "legislature": "17e",
+    "total_sieges": 577,
+    "date_releve": "2026-11-14",
+    "sources": [
+      {
+        "nom": "Assemblée nationale — composition",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/composition"
+      },
+      {
+        "nom": "Wikipédia — Assemblée nationale (France)",
+        "url": "https://fr.wikipedia.org/wiki/Assembl%C3%A9e_nationale_(France)"
+      }
+    ],
+    "note_couleurs": "Les teintes sont celles de la composition publiée. La variante sombre ne change que la luminosité, pour rester lisible sur fond #151110. Aucune teinte n'est inventée.",
+    "note_ordre": "Ordre de placement dans l'hémicycle, de la gauche vers la droite.",
+    "avertissement": "Un groupe peut changer de nom, de taille ou de place. Ce fichier doit être régénéré et redaté avant publication."
+  },
+  "groupes": [
+    { "id": "LFI", "nom": "La France insoumise", "couleur": "#C01433", "couleur_sombre": "#C01433", "sieges": 70 },
+    { "id": "GDR", "nom": "Gauche démocrate et républicaine", "couleur": "#8E1B22", "couleur_sombre": "#B02830", "sieges": 17 },
+    { "id": "SOC", "nom": "Socialistes et apparentés", "couleur": "#F08A9B", "couleur_sombre": "#F08A9B", "sieges": 69 },
+    { "id": "EcoS", "nom": "Écologiste et social", "couleur": "#2FA84F", "couleur_sombre": "#2FA84F", "sieges": 38 },
+    { "id": "LIOT", "nom": "Libertés, indépendants, outre-mer et territoires", "couleur": "#D5A8D5", "couleur_sombre": "#D5A8D5", "sieges": 23 },
+    { "id": "EPR", "nom": "Ensemble pour la République", "couleur": "#F2D200", "couleur_sombre": "#E0C43A", "sieges": 90 },
+    { "id": "DEM", "nom": "Les Démocrates", "couleur": "#F08A24", "couleur_sombre": "#F08A24", "sieges": 37 },
+    { "id": "HOR", "nom": "Horizons et apparentés", "couleur": "#2F4FA8", "couleur_sombre": "#2E4E9E", "sieges": 36 },
+    { "id": "DR", "nom": "Droite républicaine", "couleur": "#3F6FC4", "couleur_sombre": "#7C9BE8", "sieges": 48 },
+    { "id": "RN", "nom": "Rassemblement national", "couleur": "#16246B", "couleur_sombre": "#4A60C4", "sieges": 122 },
+    { "id": "UDR", "nom": "Union des droites pour la République", "couleur": "#26305E", "couleur_sombre": "#3A3F7A", "sieges": 17 },
+    { "id": "NI", "nom": "Non inscrits", "couleur": "#C9C9C9", "couleur_sombre": "#C9C9C9", "sieges": 10 }
+  ]
+}
