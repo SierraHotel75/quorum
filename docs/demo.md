@@ -13,7 +13,7 @@ Avant de commencer : navigation privée, ou `localStorage.removeItem("quorum.v1"
 | 5 | Votre vote | cliquer **Pour** | « Le vote arrive maintenant, une fois le texte lu. Il reste dans ce navigateur : pas de compte, pas de serveur, pas de trace. » | 15 s |
 | 6 | Les chiffres | répondre au quiz | « 258 pour, 84 contre : ça mesure le rétablissement de l'article 11. La clause de sûreté, elle, est tombée par 178 contre 163, le même jour. Quinze voix d'écart. » | 20 s |
 | 7 | Le débat, mot pour mot | montrer une citation, ouvrir un compte rendu | « Ici, aucune reformulation : trois voix de chaque côté, chacune recopiée du compte rendu. Le contrôle refuse le fichier si un seul mot change. » | 35 s |
-| 8 | Les chiffres vérifiés | lire les trois cartes | « 3 % et 1 % : confirmés par la CIIVISE. 70 % : non documenté, parce que le rapport de 2022 n'est publié nulle part. Un chiffre sans source ne devient pas un fait. » | 30 s |
+| 8 | Les chiffres vérifiés | lire les trois cartes | « 3 % et 1 % : confirmés par la CIIVISE. 70 % : non documenté, parce que le rapport de 2022 n'a pas été retrouvé. Un chiffre sans source ne devient pas un fait. » | 30 s |
 | 9 | La presse | survoler les deux colonnes | « Des titres réels, datés, liés. Aucun commentaire, aucun classement politique. » | 15 s |
 | 10 | Votre vote final | cliquer **Contre**, lire le résultat | « Deuxième vote, après le débat. Changer d'avis ne rapporte rien : les points ne récompensent que le parcours. » | 15 s |
 | 11 | La carte | basculer **Avec vous** | « 577 sièges, 224 non occupés, jamais attribués à un groupe. Voilà où est votre voix. » | 20 s |

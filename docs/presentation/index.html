@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quorum — trois directions de deck</title>
+<style>
+  :root{
+    --fond:#151110; --fond-2:#1e1815; --texte:#ede7dc; --doux:#9a8f82;
+    --bois:#a9744b; --bordeaux:#8e1b22; --filet:#3a322c; --filet-fort:#4e443b;
+    --pour:#4e9a72; --contre:#cf6357; --abst:#a39c8c;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Cascadia Mono",Consolas,ui-monospace,monospace;
+    --paper:#f6f4ef; --paper-2:#efece4; --paper-3:#e7e3d9;
+    --ink:#161616; --ink-doux:#6e6a63; --paper-line:#d9d3c7; --wood-light:#8a5a34;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:#0c0a09;color:var(--texte);font-family:var(--sans);line-height:1.55}
+  h1,h2,h3,h4,p,figure,blockquote,ol,ul,dl,dd{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+
+  .board{max-width:1560px;margin:0 auto;padding:56px 48px 72px}
+  .head{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:end;padding-bottom:36px;border-bottom:1px solid var(--filet)}
+  .mast{display:block;font-family:var(--serif);font-size:24px;letter-spacing:.34em;color:var(--bois);margin-bottom:22px}
+  .head h1{font-family:var(--serif);font-size:56px;line-height:1.02;letter-spacing:-.025em;font-weight:600}
+  .head p{margin-top:18px;max-width:760px;font-size:16px;line-height:1.6;color:var(--doux)}
+  .head-meta{font-family:var(--mono);font-size:12px;line-height:1.8;color:var(--doux)}
+  .head-meta b{display:block;color:var(--texte);font-weight:400;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--filet);position:sticky;top:0;background:#0c0a09;z-index:20}
+  .tab{appearance:none;background:none;border:0;border-bottom:2px solid transparent;color:var(--doux);text-align:left;padding:20px 24px 18px;cursor:pointer;font:inherit;transition:color .14s ease,border-color .14s ease,background-color .14s ease}
+  .tab:hover{color:var(--texte);background:#12100e}
+  .tab[aria-selected="true"]{color:var(--texte);border-bottom-color:var(--bois)}
+  .tab .tag{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--bois);margin-bottom:6px}
+  .tab .name{display:block;font-family:var(--serif);font-size:24px;line-height:1.1}
+  .tab .kicker{display:block;font-size:12px;color:var(--doux);margin-top:5px}
+  .tab:focus-visible{outline:2px solid var(--bois);outline-offset:-3px}
+
+  .panel{padding-top:48px}
+  [hidden]{display:none!important}
+
+  .dir-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;padding-bottom:36px;border-bottom:1px solid var(--filet)}
+  .dir-head h2{font-family:var(--serif);font-size:48px;line-height:1.05;font-weight:600;letter-spacing:-.02em}
+  .dir-head h2 span{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--bois);margin-bottom:10px;font-weight:400}
+  .dir-head .idea{margin-top:16px;font-size:16px;line-height:1.6;color:var(--doux);max-width:640px}
+  .carry{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.3;border-left:1px solid var(--bois);padding-left:24px;align-self:center}
+  .carry span{display:block;font-family:var(--mono);font-style:normal;font-size:11px;letter-spacing:.14em;color:var(--doux);margin-top:12px;text-transform:uppercase}
+
+  .dir-body{display:grid;grid-template-columns:318px minmax(0,1fr);gap:48px;padding-top:36px}
+  .rail{position:sticky;top:108px;align-self:start}
+  .rail section{padding:16px 0;border-top:1px solid var(--filet)}
+  .rail section:first-child{border-top:0;padding-top:0}
+  .rail h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bois);font-weight:400;margin-bottom:8px}
+  .rail p,.rail li{font-size:13.5px;line-height:1.6;color:var(--doux)}
+  .rail ol{list-style:none;padding:0}
+  .rail ol li{display:grid;grid-template-columns:20px 1fr;gap:8px;padding:3px 0;color:#8a8075}
+  .rail ol li.shown{color:var(--texte)}
+  .rail ol li b{font-family:var(--mono);font-size:11px;font-weight:400;color:inherit}
+  .rail .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .chip{width:26px;height:26px;border:1px solid rgba(255,255,255,.14);border-radius:2px}
+  .rail .hex{font-family:var(--mono);font-size:10.5px;color:#8a8075;margin-top:8px;line-height:1.7}
+
+  .plates{display:flex;flex-direction:column;gap:56px;min-width:0}
+  .plate{min-width:0}
+  .plate-cap{display:flex;justify-content:space-between;align-items:baseline;gap:20px;font-family:var(--mono);font-size:12px;color:var(--doux);padding-bottom:8px;border-bottom:1px solid var(--filet);margin-bottom:12px}
+  .plate-cap b{color:var(--texte);font-weight:400;letter-spacing:.06em}
+  .frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;border:1px solid #2a2320;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+  .slide{position:absolute;top:0;left:0;width:1920px;height:1080px;transform-origin:top left;transform:scale(var(--s,.5));overflow:hidden;background:var(--fond);color:var(--texte);font-family:var(--sans)}
+
+  .missing{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#1e1815;color:var(--doux);font-family:var(--mono);font-size:16px;text-align:center;padding:20px;border:1px dashed var(--filet-fort)}
+  .missing strong{color:var(--texte);font-weight:400;letter-spacing:.12em;text-transform:uppercase}
+  .is-missing{position:relative;background:#1e1815}
+  .is-missing::after{content:"Maquette — capture indisponible";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#1e1815;color:var(--doux);font-family:var(--mono);font-size:15px;line-height:1.4;text-align:center;padding:12px;border:1px dashed var(--filet-fort)}
+  .is-missing img{display:none}
+
+  /* ---------- A · Le compte rendu ---------- */
+  .sa{background:var(--fond)}
+  .sa .a-top,.sb .sb-top,.sc .c-top{position:absolute;left:96px;right:96px;top:56px;display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+  .sa .a-mast{font-family:var(--serif);font-size:26px;letter-spacing:.34em;color:var(--texte)}
+
+  .a1 .a-main{position:absolute;left:96px;right:96px;top:200px;display:grid;grid-template-columns:186px 1fr;gap:44px}
+  .a1 .a-margin{border-right:1px solid var(--filet);padding-right:28px}
+  .a1 .a-label{font-family:var(--mono);font-size:16px;letter-spacing:.14em;color:var(--bois);text-transform:uppercase}
+  .a1 .a-margin p{margin-top:18px;font-family:var(--mono);font-size:20px;line-height:1.55;color:var(--doux)}
+  .a1 h2{font-family:var(--serif);font-size:144px;line-height:.96;letter-spacing:-.03em;font-weight:600;text-wrap:balance}
+  .a1 h2 em{font-style:italic;font-weight:400}
+  .a1 .a-sub{margin-top:34px;font-size:30px;line-height:1.4;color:var(--doux);max-width:1080px}
+  .a1 .a-foot{position:absolute;left:96px;right:96px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;gap:60px;border-top:1px solid var(--filet);padding-top:26px}
+  .a1 .a-phrase{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1.2}
+  .a1 .a-note{font-family:var(--mono);font-size:18px;line-height:1.5;color:var(--doux);text-align:right;max-width:470px}
+
+  .a2 .a-counts{position:absolute;left:96px;right:96px;top:168px;display:grid;grid-template-columns:1fr 1fr}
+  .a2 .a-count{padding-right:56px}
+  .a2 .a-count + .a-count{border-left:1px solid var(--filet);padding-left:64px;padding-right:0}
+  .a2 .a-cote2{font-family:var(--mono);font-size:18px;line-height:1.4;color:var(--bois)}
+  .a2 .a-numrow{display:flex;align-items:baseline;gap:24px;margin-top:14px}
+  .a2 .a-big{font-family:var(--serif);font-size:186px;line-height:.9;letter-spacing:-.04em;font-weight:600}
+  .a2 .a-lab{font-family:var(--mono);font-size:18px;letter-spacing:.12em;color:var(--doux);text-transform:uppercase}
+  .a2 .a-mid{font-family:var(--serif);font-size:186px;line-height:.9;letter-spacing:-.04em;color:var(--texte);font-weight:600}
+  .a2 .a-ecart{display:inline-block;margin-top:24px;border-top:1px solid var(--filet);padding-top:14px;font-family:var(--mono);font-size:22px;color:var(--texte)}
+  .a2 .a-quote{position:absolute;left:96px;right:96px;bottom:62px;border-top:1px solid var(--filet-fort);padding-top:24px;display:flex;justify-content:space-between;align-items:baseline;gap:40px}
+  .a2 .a-quote p{font-family:var(--serif);font-size:56px;line-height:1.1;font-weight:600}
+  .a2 .a-quote span{font-family:var(--mono);font-size:18px;line-height:1.45;color:var(--doux);text-align:right;max-width:520px}
+
+  .a3 .a-controls{position:absolute;left:96px;right:96px;top:150px;display:grid;grid-template-columns:1fr 520px;gap:84px}
+  .a3 h3{font-family:var(--serif);font-size:74px;line-height:1.03;letter-spacing:-.02em;font-weight:600;margin-bottom:32px}
+  .a3 ol{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:52px}
+  .a3 li{display:flex;gap:16px;align-items:baseline;border-top:1px solid var(--filet);padding:11px 0;font-size:25px;line-height:1.25}
+  .a3 li span{font-family:var(--mono);font-size:16px;color:var(--bois);min-width:62px}
+  .a3 .a-refus h4{font-family:var(--mono);font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--bois);font-weight:400;margin-bottom:12px}
+  .a3 .a-refus p{border-top:1px solid var(--filet);padding:13px 0;font-size:24px;line-height:1.35}
+  .a3 .a-refus b{display:block;margin-top:5px;font-family:var(--mono);font-size:16px;letter-spacing:.1em;color:var(--doux);font-weight:400;text-transform:uppercase}
+  .a3 .a-shot{position:absolute;right:96px;bottom:54px;width:236px}
+  .a3 .a-shot img{display:block;width:236px;height:420px;object-fit:cover;object-position:top;border:1px solid var(--filet)}
+  .a3 .a-shot figcaption{margin-top:9px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--doux)}
+  .a3 .a-closing{position:absolute;left:96px;bottom:66px;max-width:920px;font-family:var(--serif);font-style:italic;font-size:38px;line-height:1.25;color:var(--texte)}
+
+  /* ---------- B · La chambre ---------- */
+  .sb{background:#151110}
+  .b1 .b-577{position:absolute;left:88px;top:196px;font-family:var(--serif);font-size:420px;line-height:.82;letter-spacing:-.06em;font-weight:600}
+  .b1 .b-sieges{position:absolute;left:100px;top:590px;font-family:var(--mono);font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+  .b1 .b-break{position:absolute;right:96px;top:236px;width:640px;border-left:1px solid var(--filet);padding-left:56px}
+  .b1 .b-break div{padding:20px 0;border-bottom:1px solid var(--filet)}
+  .b1 .b-break div:first-child{padding-top:0}
+  .b1 .b-break b{display:block;font-family:var(--serif);font-size:100px;line-height:.95;font-weight:600}
+  .b1 .b-break span{display:block;margin-top:4px;font-family:var(--mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+  .b1 .b-phrase{position:absolute;left:96px;bottom:72px;font-family:var(--serif);font-style:italic;font-size:46px;line-height:1.2}
+  .b1 .b-foot{position:absolute;right:96px;bottom:82px;font-family:var(--mono);font-size:18px;line-height:1.6;color:var(--doux);text-align:right}
+  .b1 .b-foot .p{color:var(--pour)} .b1 .b-foot .c{color:var(--contre)}
+
+  .b2 .b-left{position:absolute;left:96px;top:158px;width:720px}
+  .b2 h3{font-family:var(--serif);font-size:88px;line-height:1.02;letter-spacing:-.025em;font-weight:600}
+  .b2 .b-band{margin-top:36px;border-top:1px solid var(--filet-fort);border-bottom:1px solid var(--filet);padding:18px 0}
+  .b2 .b-band b{font-family:var(--serif);font-size:64px;font-weight:600;line-height:1;letter-spacing:-.02em}
+  .b2 .b-band span{display:block;margin-top:4px;font-family:var(--mono);font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+  .b2 .b-band em{font-family:var(--mono);font-style:normal;font-size:19px;color:var(--texte);letter-spacing:.04em}
+  .b2 .b-note{margin-top:26px;font-size:28px;line-height:1.45;color:var(--doux);max-width:640px}
+  .b2 .b-note b{color:var(--texte);font-weight:500}
+  .b2 .b-shot{position:absolute;right:78px;top:142px;width:830px;height:790px;overflow:hidden;border:1px solid var(--filet)}
+  .b2 .b-shot img{position:absolute;left:0;top:-322px;width:830px}
+  .b2 .b-cap{position:absolute;right:78px;bottom:52px;width:830px;font-family:var(--mono);font-size:16px;line-height:1.5;color:var(--doux)}
+  .b2 .b-cap b{color:var(--texte);font-weight:400}
+
+  .b3 .b-verdicts{position:absolute;left:96px;top:156px;right:96px}
+  .b3 .b-label{font-family:var(--mono);font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:var(--bois);margin-bottom:10px}
+  .b3 h3{font-family:var(--serif);font-size:196px;line-height:.94;letter-spacing:-.035em;font-weight:600}
+  .b3 .b-line{display:flex;justify-content:space-between;align-items:baseline;gap:40px;border-top:1px solid var(--filet);padding:12px 0;margin-top:8px}
+  .b3 .b-line p{font-size:28px;line-height:1.35;color:var(--doux);max-width:1060px}
+  .b3 .b-line span{font-family:var(--mono);font-size:18px;color:var(--texte);letter-spacing:.06em;white-space:nowrap}
+  .b3 .b-phrase{position:absolute;left:96px;bottom:64px;font-family:var(--serif);font-style:italic;font-size:52px}
+
+  /* ---------- C · Le dossier ---------- */
+  .sc{background:var(--paper);color:var(--ink)}
+  .sc .c-top{color:var(--ink-doux)}
+  .c1 .c-cote{position:absolute;right:96px;top:132px;width:436px;border:1px solid var(--paper-line);background:var(--paper-2);padding:16px 20px;font-family:var(--mono);font-size:17px;line-height:1.6;color:var(--ink-doux)}
+  .c1 .c-cote b{display:block;color:var(--ink);font-weight:400;letter-spacing:.08em}
+  .c1 h2{position:absolute;left:96px;top:250px;width:1080px;font-family:var(--serif);font-size:138px;line-height:.98;letter-spacing:-.03em;font-weight:600}
+  .c1 .c-sub{position:absolute;left:96px;top:548px;width:1060px;font-size:32px;line-height:1.45;color:var(--ink-doux)}
+  .c1 .c-pieces{position:absolute;left:96px;bottom:196px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;width:1060px}
+  .c1 .c-pieces div{border-top:1px solid var(--paper-line);padding-top:12px}
+  .c1 .c-pieces b{display:block;font-family:var(--serif);font-size:64px;line-height:1;font-weight:600}
+  .c1 .c-pieces span{display:block;margin-top:5px;font-family:var(--mono);font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-doux)}
+  .c1 .c-shot{position:absolute;right:96px;top:330px;width:400px}
+  .c1 .c-shot img{display:block;width:400px;height:640px;object-fit:cover;object-position:top;border:1px solid var(--paper-line)}
+  .c1 .c-shot figcaption{margin-top:8px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--ink-doux)}
+  .c1 .c-stamp{position:absolute;left:96px;bottom:66px;width:300px;border:2px solid var(--bordeaux);outline:1px solid var(--bordeaux);outline-offset:3px;padding:12px 16px;transform:rotate(-2deg);color:var(--bordeaux)}
+  .c1 .c-stamp b{display:block;font-family:var(--mono);font-size:38px;line-height:1;letter-spacing:.08em}
+  .c1 .c-stamp span{display:block;margin-top:6px;font-family:var(--mono);font-size:16px;letter-spacing:.08em;text-transform:uppercase}
+
+  .c2 h2{position:absolute;left:96px;top:126px;font-family:var(--serif);font-size:92px;line-height:1;letter-spacing:-.025em;font-weight:600}
+  .c2 .c-table{position:absolute;left:96px;right:96px;top:336px}
+  .c2 .c-row{display:grid;grid-template-columns:1fr 260px 520px;align-items:baseline;border-top:1px solid var(--paper-line);padding:10px 0}
+  .c2 .c-row.head{border-top:0;border-bottom:1px solid var(--ink);padding:0 0 8px;font-family:var(--mono);font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-doux)}
+  .c2 .c-row.head span:nth-child(2){text-align:right}
+  .c2 .c-lab{font-size:29px}
+  .c2 .c-val{font-family:var(--mono);font-size:48px;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .c2 .c-ctl{font-family:var(--mono);font-size:20px;color:var(--ink-doux);padding-left:56px}
+  .c2 .c-row.total{border-top:2px solid var(--ink);margin-top:2px}
+  .c2 .c-row.total .c-lab{font-weight:600}
+  .c2 .c-src{position:absolute;left:96px;right:96px;bottom:58px;border-top:1px solid var(--paper-line);padding-top:14px;font-family:var(--mono);font-size:16px;line-height:1.5;color:var(--ink-doux)}
+
+  .c3 h2{position:absolute;left:96px;top:118px;font-family:var(--serif);font-size:92px;line-height:1;letter-spacing:-.025em;font-weight:600}
+  .c3 .c-cols{position:absolute;left:96px;right:96px;top:330px;display:grid;grid-template-columns:700px 480px 360px;gap:56px}
+  .c3 h3{font-family:var(--mono);font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--wood-light);font-weight:400;margin-bottom:12px}
+  .c3 ol{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:34px}
+  .c3 li{display:flex;gap:12px;border-top:1px solid var(--paper-line);padding:9px 0;font-size:24px;line-height:1.25}
+  .c3 li span{font-family:var(--mono);font-size:16px;color:var(--ink-doux);min-width:52px}
+  .c3 .c-refus p{border-top:1px solid var(--paper-line);padding:12px 0;font-size:24px;line-height:1.35}
+  .c3 .c-refus b{display:block;margin-top:4px;font-family:var(--mono);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--bordeaux);font-weight:400}
+  .c3 .c-shot img{display:block;width:360px;height:560px;object-fit:cover;object-position:top;border:1px solid var(--paper-line)}
+  .c3 .c-shot figcaption{margin-top:8px;font-family:var(--mono);font-size:16px;line-height:1.4;color:var(--ink-doux)}
+  .c3 .c-stamp{position:absolute;left:96px;bottom:52px;border:2px solid var(--bordeaux);outline:1px solid var(--bordeaux);outline-offset:3px;padding:10px 16px;transform:rotate(-2deg);color:var(--bordeaux)}
+  .c3 .c-stamp b{font-family:var(--mono);font-size:30px;letter-spacing:.08em;font-weight:400}
+  .c3 .c-stamp span{margin-left:14px;font-family:var(--mono);font-size:16px;letter-spacing:.1em;text-transform:uppercase}
+
+  .board-foot{margin-top:72px;border-top:1px solid var(--filet);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:40px;font-family:var(--mono);font-size:12px;line-height:1.7;color:#8a8075}
+  .board-foot b{color:var(--doux);font-weight:400}
+
+  @media (max-width:1180px){
+    .board{padding:40px 28px 56px}
+    .head{grid-template-columns:1fr;gap:24px}
+    .head h1{font-size:44px}
+    .dir-head{grid-template-columns:1fr;gap:28px}
+    .dir-body{grid-template-columns:1fr;gap:28px}
+    .rail{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+    .rail section:first-child{grid-column:1/-1}
+  }
+  @media (max-width:760px){
+    .board{padding:28px 16px 48px}
+    .head h1{font-size:36px}
+    .tabs{grid-template-columns:1fr;position:static}
+    .tab{border-bottom:1px solid var(--filet)}
+    .tab[aria-selected="true"]{background:#151110}
+    .rail{grid-template-columns:1fr}
+    .board-foot{grid-template-columns:1fr}
+    .plate-cap{font-size:11px}
+  }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <header class="head">
+    <div>
+      <span class="mast">QUORUM</span>
+      <h1>Trois directions de deck</h1>
+      <p>Planche de prévisualisation. Neuf diapos de démonstration à l'échelle 1920 × 1080, réduites pour l'écran. Les diapos montrent une direction, pas le deck final. Les captures sont celles de l'application (390 px), jamais des maquettes.</p>
+    </div>
+    <div class="head-meta">
+      <b>Contenus</b>
+      data/lois/protection-enfants.json<br>
+      scrutin n° 8429 · 21 juillet 2026<br>
+      variante n° 8428 · même jour<br><br>
+      <b>Lecture</b>
+      onglets A · B · C<br>
+      3 diapos sur 10 par direction<br>
+      structure complète dans 3-directions.md
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Directions de deck">
+    <button class="tab" id="tab-a" role="tab" aria-selected="true" aria-controls="panel-a" type="button">
+      <span class="tag">DIRECTION A</span>
+      <span class="name">Le compte rendu</span>
+      <span class="kicker">document imprimé, marge de cote, deux colonnes</span>
+    </button>
+    <button class="tab" id="tab-b" role="tab" aria-selected="false" aria-controls="panel-b" type="button">
+      <span class="tag">DIRECTION B</span>
+      <span class="name">La chambre</span>
+      <span class="kicker">l'échelle des sièges et l'arc, une seule fois</span>
+    </button>
+    <button class="tab" id="tab-c" role="tab" aria-selected="false" aria-controls="panel-c" type="button">
+      <span class="tag">DIRECTION C</span>
+      <span class="name">Le dossier</span>
+      <span class="kicker">pièces, bordereau, tampon de contrôle</span>
+    </button>
+  </nav>
+
+  <!-- ================= A ================= -->
+  <section class="panel" id="panel-a" role="tabpanel" aria-labelledby="tab-a">
+    <div class="dir-head">
+      <div>
+        <h2><span>DIRECTION A · RECOMMANDÉE</span>Le compte rendu</h2>
+        <p class="idea">Le deck est traité comme un compte rendu imprimé. Une marge de cote porte le numéro de scrutin, la date et la source ; deux colonnes portent le texte. La neutralité se voit dans la forme du document, pas dans un slogan.</p>
+      </div>
+      <blockquote class="carry">« Deux décomptes, le même jour, sur le même article. »<span>La phrase qui porte</span></blockquote>
+    </div>
+
+    <div class="dir-body">
+      <aside class="rail">
+        <section>
+          <h3>Structure · 10 diapos</h3>
+          <ol>
+            <li class="shown"><b>1</b><span>Couverture · 8429</span></li>
+            <li><b>2</b><span>Le fait · 13 étapes</span></li>
+            <li><b>3</b><span>Article 11 · b) (Supprimé)</span></li>
+            <li><b>4</b><span>Premier vote · privé</span></li>
+            <li class="shown"><b>5</b><span>Les deux décomptes</span></li>
+            <li><b>6</b><span>Débat · 3 + 3 citations</span></li>
+            <li><b>7</b><span>Chiffres vérifiés</span></li>
+            <li><b>8</b><span>Presse · 2 + 2 titres</span></li>
+            <li><b>9</b><span>Vote final · 8 actions</span></li>
+            <li class="shown"><b>10</b><span>Carte + contrôles</span></li>
+          </ol>
+        </section>
+        <section>
+          <h3>Typographie</h3>
+          <p>Serif pour les titres et les citations, sans-serif pour le corps, mono pour les cotes. Titres 96–148 px, corps 30–34 px, cotes 18 px.</p>
+        </section>
+        <section>
+          <h3>Palette · tokens</h3>
+          <div class="chips">
+            <span class="chip" style="background:#151110"></span>
+            <span class="chip" style="background:#ede7dc"></span>
+            <span class="chip" style="background:#a9744b"></span>
+            <span class="chip" style="background:#8e1b22"></span>
+            <span class="chip" style="background:#4e9a72"></span>
+            <span class="chip" style="background:#cf6357"></span>
+          </div>
+          <p class="hex">fond #151110 · texte #ede7dc<br>bois #a9744b · bordeaux #8e1b22<br>pour #4e9a72 · contre #cf6357</p>
+        </section>
+        <section>
+          <h3>Chiffres</h3>
+          <p>Un rapport par diapo : 258 / 84 / 10, puis 178 / 163 / 5. L'écart de 15 voix est écrit, pas dessiné. Aucune barre, aucun camembert.</p>
+        </section>
+        <section>
+          <h3>Captures</h3>
+          <p>Une pièce jointe par diapo au maximum : encadrée, légendée avec son écran et sa largeur. Elle prouve un écran, elle ne décore pas.</p>
+        </section>
+      </aside>
+
+      <div class="plates">
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>A1 · Couverture · diapo 1</b><span>aucune capture · le document est le visuel</span></figcaption>
+          <div class="frame">
+            <div class="slide sa a1">
+              <div class="a-top"><span class="a-mast">QUORUM</span><span>n° 8429 · 21 juillet 2026</span></div>
+              <div class="a-main">
+                <div class="a-margin">
+                  <span class="a-label">Le devoir</span>
+                  <p>Assemblée nationale<br>Première lecture<br>Texte n° 338</p>
+                </div>
+                <div>
+                  <h2>Ce qui s'est dit.<br><em>Ce qui s'est voté.</em></h2>
+                  <p class="a-sub">Projet de loi relatif à la protection des enfants</p>
+                </div>
+              </div>
+              <div class="a-foot">
+                <p class="a-phrase">Deux décomptes, le même jour,<br>sur le même article.</p>
+                <p class="a-note">Texte non définitivement adopté —<br>commission mixte paritaire convoquée<br>le 5 novembre 2026.</p>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>A2 · Diapo 5 · les deux décomptes</b><span>source : protection-enfants.json · variante</span></figcaption>
+          <div class="frame">
+            <div class="slide sa a2">
+              <div class="a-top"><span>Le même jour, deux scrutins</span><span>21 juillet 2026</span></div>
+              <div class="a-counts">
+                <div class="a-count">
+                  <p class="a-cote2">n° 8429 · rétablir l'article 11</p>
+                  <div class="a-numrow"><span class="a-big">258</span><span class="a-lab">pour</span></div>
+                  <div class="a-numrow"><span class="a-big">84</span><span class="a-lab">contre</span></div>
+                  <div class="a-numrow"><span class="a-mid">10</span><span class="a-lab">abstentions</span></div>
+                </div>
+                <div class="a-count">
+                  <p class="a-cote2">n° 8428 · période de sûreté à trente ans</p>
+                  <div class="a-numrow"><span class="a-big">178</span><span class="a-lab">pour</span></div>
+                  <div class="a-numrow"><span class="a-big">163</span><span class="a-lab">contre</span></div>
+                  <div class="a-numrow"><span class="a-mid">5</span><span class="a-lab">abstentions</span></div>
+                  <p class="a-ecart">15 voix d'écart</p>
+                </div>
+              </div>
+              <div class="a-quote">
+                <p>« b) (Supprimé) »</p>
+                <span>Texte adopté n° 338, article 11, alinéa 4<br>La clause retirée est citée mot pour mot.</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>A3 · Diapo 10, volet contrôles</b><span>10 contrôles · gate 5 · capture de l'app</span></figcaption>
+          <div class="frame">
+            <div class="slide sa a3">
+              <div class="a-top"><span>Avant publication</span><span>gate 5</span></div>
+              <div class="a-controls">
+                <div>
+                  <h3>Dix contrôles.<br>Un fichier accepté ou refusé.</h3>
+                  <ol>
+                    <li><span>WP1.1</span>Schéma du fichier</li>
+                    <li><span>WP1.2</span>Chiffres cohérents</li>
+                    <li><span>WP1.2</span>Sièges attribués = 577</li>
+                    <li><span>WP1.3</span>Extraits verbatim</li>
+                    <li><span>WP1.4</span>Symétrie des bords</li>
+                    <li><span>WP1.5</span>Sources des médias</li>
+                    <li><span>WP1.6</span>Ressources citées</li>
+                    <li><span>WP1.7</span>Variante contrôlée</li>
+                    <li><span>WP1.8</span>Débat cité</li>
+                    <li><span>WP1.9</span>Chiffres vérifiés</li>
+                  </ol>
+                </div>
+                <div class="a-refus">
+                  <h4>Trois refus</h4>
+                  <p>Citation retouchée d'un seul mot<b>refus</b></p>
+                  <p>Verdict « confirmé » sans source<b>refus</b></p>
+                  <p>« Non documenté » avec une source<b>refus</b></p>
+                </div>
+              </div>
+              <p class="a-closing">Une citation retouchée d'un seul mot refuse le fichier entier.</p>
+              <figure class="a-shot">
+                <img src="../captures/mobile-390-verif.png" alt="Capture de l'écran Les chiffres, vérifiés : trois cartes avec les verdicts Confirmé, Confirmé, Non documenté." onerror="this.closest('figure').classList.add('is-missing')">
+                <figcaption>Capture de l'app · 390 px · 14 novembre 2026</figcaption>
+              </figure>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= B ================= -->
+  <section class="panel" id="panel-b" role="tabpanel" aria-labelledby="tab-b" hidden>
+    <div class="dir-head">
+      <div>
+        <h2><span>DIRECTION B</span>La chambre</h2>
+        <p class="idea">Le deck prend l'échelle des sièges comme unité. L'arc apparaît une seule fois, en capture réelle ; le reste est typographique. Les nombres occupent la page, les citations passent en colonnes.</p>
+      </div>
+      <blockquote class="carry">« Les absents restent des absents. »<span>La phrase qui porte</span></blockquote>
+    </div>
+
+    <div class="dir-body">
+      <aside class="rail">
+        <section>
+          <h3>Structure · 10 diapos</h3>
+          <ol>
+            <li class="shown"><b>1</b><span>Couverture · 577</span></li>
+            <li><b>2</b><span>Le fait · 13 étapes</span></li>
+            <li><b>3</b><span>Article 11 · b) (Supprimé)</span></li>
+            <li><b>4</b><span>Premier vote · hors arc</span></li>
+            <li class="shown"><b>5</b><span>Les deux décomptes</span></li>
+            <li><b>6</b><span>Débat · deux colonnes</span></li>
+            <li class="shown"><b>7</b><span>Verdicts · sans couleur</span></li>
+            <li><b>8</b><span>Presse · quatre titres</span></li>
+            <li><b>9</b><span>Parcours · 8 actions</span></li>
+            <li><b>10</b><span>Contrôles · gate 5</span></li>
+          </ol>
+        </section>
+        <section>
+          <h3>Typographie</h3>
+          <p>Nombres en serif 196–420 px, titres 72–110 px, corps 28–32 px, cotes 17–19 px. L'arc est le seul objet non typographique.</p>
+        </section>
+        <section>
+          <h3>Palette · tokens</h3>
+          <div class="chips">
+            <span class="chip" style="background:#151110"></span>
+            <span class="chip" style="background:#ede7dc"></span>
+            <span class="chip" style="background:#4e9a72"></span>
+            <span class="chip" style="background:#cf6357"></span>
+            <span class="chip" style="background:#a39c8c"></span>
+          </div>
+          <p class="hex">fond #151110 · texte #ede7dc<br>pour #4e9a72 · contre #cf6357<br>abstention #a39c8c</p>
+        </section>
+        <section>
+          <h3>Chiffres</h3>
+          <p>577 en couverture, puis 353 / 224 / 0, puis 258 / 84 / 10 / 1 / 224. Le second scrutin reste un bandeau : 178 / 163, 15 voix.</p>
+        </section>
+        <section>
+          <h3>Captures</h3>
+          <p>Une fenêtre de preuve, recadrée : la carte une seule fois. Aucune capture en fond plein, aucune capture pour décorer un nombre.</p>
+        </section>
+      </aside>
+
+      <div class="plates">
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>B1 · Couverture · diapo 1</b><span>577 sièges · 353 présents · 224 non occupés</span></figcaption>
+          <div class="frame">
+            <div class="slide sb b1">
+              <div class="sb-top"><span>Quorum · la chambre</span><span>n° 8429</span></div>
+              <div class="b-577">577</div>
+              <div class="b-sieges">sièges à l'Assemblée nationale</div>
+              <div class="b-break">
+                <div><b>353</b><span>présents au scrutin</span></div>
+                <div><b>224</b><span>sièges non occupés</span></div>
+                <div><b>0</b><span>absent attribué à un groupe</span></div>
+              </div>
+              <p class="b-phrase">Les absents restent des absents.</p>
+              <p class="b-foot">258 <span class="p">pour</span> · 84 <span class="c">contre</span> · 10 abstentions<br>1 non-votant</p>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>B2 · Diapo 5 · les deux décomptes</b><span>capture de l'app recadrée · 390 px</span></figcaption>
+          <div class="frame">
+            <div class="slide sb b2">
+              <div class="sb-top"><span>Le même jour, deux décomptes</span><span>21 juillet 2026</span></div>
+              <div class="b-left">
+                <h3>258 contre 84<br>ne dit pas tout.</h3>
+                <div class="b-band">
+                  <b>178 — 163</b>
+                  <span>n° 8428 · 5 abstentions · 15 voix d'écart</span>
+                  <em>Période de sûreté à trente ans : retirée du texte.</em>
+                </div>
+                <p class="b-note">Le texte adopté porte <b>« b) (Supprimé) »</b>. Ni le titre ni le décompte principal ne le disent : il faut lire l'alinéa et le second scrutin.</p>
+              </div>
+              <figure class="b-shot">
+                <img src="../captures/mobile-390-carte.png" alt="Capture de l'écran La carte : hémicycle de points colorés par groupe, sièges non occupés en gris." onerror="this.closest('figure').classList.add('is-missing')">
+              </figure>
+              <p class="b-cap"><b>Capture de l'app · 390 px · 14 novembre 2026.</b> Sur la carte, la couleur est celle du groupe ; le gris marque un siège non occupé. Aucun absent n'est attribué.</p>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>B3 · Diapo 7 · les verdicts</b><span>3 % · 1 % · 70 % · aucune couleur de camp</span></figcaption>
+          <div class="frame">
+            <div class="slide sb b3">
+              <div class="sb-top"><span>Les chiffres, vérifiés</span><span>trois chiffres</span></div>
+              <div class="b-verdicts">
+                <p class="b-label">Ce que la source établit</p>
+                <h3>Confirmé</h3>
+                <div class="b-line">
+                  <p>Moins de 3 % des auteurs condamnés · moins de 1 % des agresseurs incestueux. CIIVISE, rapport public de novembre 2023 et bilan du 15 juin 2026.</p>
+                  <span>3 % · 1 %</span>
+                </div>
+                <h3>Non documenté</h3>
+                <div class="b-line">
+                  <p>70 % des affaires de viol sans acte d'enquête. Le rapport inter-inspections de juillet 2022 n'a pas été retrouvé sur un site officiel.</p>
+                  <span>70 %</span>
+                </div>
+              </div>
+              <p class="b-phrase">Confirmé n'est pas pour.</p>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= C ================= -->
+  <section class="panel" id="panel-c" role="tabpanel" aria-labelledby="tab-c" hidden>
+    <div class="dir-head">
+      <div>
+        <h2><span>DIRECTION C</span>Le dossier</h2>
+        <p class="idea">Le deck est la chemise de l'affaire : pièces numérotées, bordereau, tampon de contrôle. Le passage gate 5 est un tampon sur le fichier, jamais sur la loi. Thème clair de lecture, tableaux plutôt que cartes.</p>
+      </div>
+      <blockquote class="carry">« Un dossier, pas un flux. »<span>La phrase qui porte</span></blockquote>
+    </div>
+
+    <div class="dir-body">
+      <aside class="rail">
+        <section>
+          <h3>Structure · 10 diapos</h3>
+          <ol>
+            <li class="shown"><b>1</b><span>Chemise · quatre pièces</span></li>
+            <li><b>2</b><span>Le fait · 13 étapes</span></li>
+            <li><b>3</b><span>Article 11 · b) (Supprimé)</span></li>
+            <li><b>4</b><span>Premier vote · privé</span></li>
+            <li class="shown"><b>5</b><span>Bordereau du scrutin</span></li>
+            <li><b>6</b><span>Débat · 3 + 3 citations</span></li>
+            <li><b>7</b><span>Chiffres vérifiés</span></li>
+            <li><b>8</b><span>Presse · 2 + 2 titres</span></li>
+            <li><b>9</b><span>Vote final · parcours</span></li>
+            <li class="shown"><b>10</b><span>Carte + gate 5</span></li>
+          </ol>
+        </section>
+        <section>
+          <h3>Typographie</h3>
+          <p>Serif 96–132 px pour les titres, sans-serif 28–32 px pour le corps, mono 20–26 px pour les pièces, montants et contrôles.</p>
+        </section>
+        <section>
+          <h3>Palette · tokens light</h3>
+          <div class="chips">
+            <span class="chip" style="background:#f6f4ef"></span>
+            <span class="chip" style="background:#161616"></span>
+            <span class="chip" style="background:#8a5a34"></span>
+            <span class="chip" style="background:#8e1b22"></span>
+            <span class="chip" style="background:#2f6b4f"></span>
+            <span class="chip" style="background:#9b3a32"></span>
+          </div>
+          <p class="hex">papier #f6f4ef · encre #161616<br>bois #8a5a34 · bordeaux #8e1b22<br>pour #2f6b4f · contre #9b3a32</p>
+        </section>
+        <section>
+          <h3>Chiffres</h3>
+          <p>Tableau aligné à droite, chiffres tabulaires. Chaque ligne porte son contrôle : 258 + 84 + 10 = 352 ; 258 + 84 = 342 ; 353 + 224 = 577.</p>
+        </section>
+        <section>
+          <h3>Captures</h3>
+          <p>Une pièce du dossier : encadrée, numérotée, datée. Posée, pas collée. Aucun ruban, aucun trombone dessiné.</p>
+        </section>
+      </aside>
+
+      <div class="plates">
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>C1 · Couverture · diapo 1</b><span>4 pièces · capture de l'article · tampon gate 5</span></figcaption>
+          <div class="frame">
+            <div class="slide sc c1">
+              <div class="c-top"><span>Quorum · document de soutenance</span><span>14 novembre 2026</span></div>
+              <div class="c-cote"><b>PIÈCE N° 8429</b>Scrutin du 21 juillet 2026<br>Assemblée nationale · 1re lecture</div>
+              <h2>Le dossier<br>d'une loi.</h2>
+              <p class="c-sub">Neuf extraits, six citations, quatre titres de presse, trois chiffres vérifiés. Chaque pièce porte sa source.</p>
+              <div class="c-pieces">
+                <div><b>9</b><span>extraits</span></div>
+                <div><b>6</b><span>citations</span></div>
+                <div><b>4</b><span>titres</span></div>
+                <div><b>3</b><span>chiffres vérifiés</span></div>
+              </div>
+              <div class="c-stamp"><b>GATE 5</b><span>contrôles du fichier</span></div>
+              <figure class="c-shot">
+                <img src="../captures/mobile-390-article.png" alt="Capture de l'écran Article entier : le texte adopté de l'article 11, avec la mention b) (Supprimé)." onerror="this.closest('figure').classList.add('is-missing')">
+                <figcaption>Pièce — capture de l'app · 390 px · 14 novembre 2026</figcaption>
+              </figure>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>C2 · Diapo 5 · le bordereau</b><span>trois additions vérifiées · source AN</span></figcaption>
+          <div class="frame">
+            <div class="slide sc c2">
+              <div class="c-top"><span>Le bordereau du scrutin</span><span>n° 8429 · 21 juillet 2026</span></div>
+              <h2>Ce que le fichier<br>doit additionner.</h2>
+              <div class="c-table">
+                <div class="c-row head"><span>Ligne</span><span>Valeur</span><span>Contrôle</span></div>
+                <div class="c-row"><span class="c-lab">Pour</span><span class="c-val">258</span><span class="c-ctl">décompte du scrutin</span></div>
+                <div class="c-row"><span class="c-lab">Contre</span><span class="c-val">84</span><span class="c-ctl">décompte du scrutin</span></div>
+                <div class="c-row"><span class="c-lab">Abstentions</span><span class="c-val">10</span><span class="c-ctl">décompte du scrutin</span></div>
+                <div class="c-row"><span class="c-lab">Votants</span><span class="c-val">352</span><span class="c-ctl">258 + 84 + 10 = 352</span></div>
+                <div class="c-row"><span class="c-lab">Exprimés</span><span class="c-val">342</span><span class="c-ctl">258 + 84 = 342</span></div>
+                <div class="c-row"><span class="c-lab">Sièges présents</span><span class="c-val">353</span><span class="c-ctl">352 votants + 1 non-votant</span></div>
+                <div class="c-row"><span class="c-lab">Sièges non occupés</span><span class="c-val">224</span><span class="c-ctl">aucun groupe ne les reçoit</span></div>
+                <div class="c-row total"><span class="c-lab">Total</span><span class="c-val">577</span><span class="c-ctl">353 + 224 = 577</span></div>
+              </div>
+              <p class="c-src">Source : Assemblée nationale, scrutin public n° 8429 du 21 juillet 2026, Licence Ouverte (Etalab). Fichier : data/lois/protection-enfants.json.</p>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="plate">
+          <figcaption class="plate-cap"><b>C3 · Diapo 10, volet contrôles</b><span>10 contrôles · 3 refus · capture de l'app</span></figcaption>
+          <div class="frame">
+            <div class="slide sc c3">
+              <div class="c-top"><span>Ce que le fichier doit passer</span><span>gate 5</span></div>
+              <h2>Dix contrôles,<br>trois refus.</h2>
+              <div class="c-cols">
+                <div>
+                  <h3>Contrôles</h3>
+                  <ol>
+                    <li><span>WP1.1</span>Schéma du fichier</li>
+                    <li><span>WP1.2</span>Chiffres cohérents</li>
+                    <li><span>WP1.2</span>Sièges = 577</li>
+                    <li><span>WP1.3</span>Extraits verbatim</li>
+                    <li><span>WP1.4</span>Symétrie des bords</li>
+                    <li><span>WP1.5</span>Sources des médias</li>
+                    <li><span>WP1.6</span>Ressources citées</li>
+                    <li><span>WP1.7</span>Variante contrôlée</li>
+                    <li><span>WP1.8</span>Débat cité</li>
+                    <li><span>WP1.9</span>Chiffres vérifiés</li>
+                  </ol>
+                </div>
+                <div class="c-refus">
+                  <h3>Refus</h3>
+                  <p>Citation retouchée d'un seul mot<b>fichier refusé</b></p>
+                  <p>Verdict « confirmé » sans source<b>fichier refusé</b></p>
+                  <p>« Non documenté » avec une source<b>fichier refusé</b></p>
+                </div>
+                <figure class="c-shot">
+                  <img src="../captures/mobile-390-verif.png" alt="Capture de l'écran Les chiffres, vérifiés : le verdict Confirmé, sa citation et sa source CIIVISE." onerror="this.closest('figure').classList.add('is-missing')">
+                  <figcaption>Pièce — capture de l'app · 390 px</figcaption>
+                </figure>
+              </div>
+              <div class="c-stamp"><b>GATE 5</b><span>contrôles du fichier</span></div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer class="board-foot">
+    <div><b>Sources de contenu</b><br>data/lois/protection-enfants.json · data/ref/verbatim.json · data/ref/groupes.json<br>docs/demo.md · docs/slides.md · docs/questions.md · README.md</div>
+    <div><b>Règles tenues</b><br>Aucune image distante, aucun CDN, aucune police distante. Les captures sont chargées depuis ../captures/. Les visuels de assets/mockups/ ne sont pas utilisés. Aucun avis sur la loi.</div>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('[role="tabpanel"]'));
+
+    function select(index, focus) {
+      tabs.forEach(function (tab, i) {
+        var on = i === index;
+        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        tab.tabIndex = on ? 0 : -1;
+        panels[i].hidden = !on;
+      });
+      if (focus) tabs[index].focus();
+      fit();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.tabIndex = i === 0 ? 0 : -1;
+      tab.addEventListener('click', function () { select(i, false); });
+      tab.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+          event.preventDefault();
+          var next = (i + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+          select(next, true);
+        }
+      });
+    });
+
+    var frames = Array.prototype.slice.call(document.querySelectorAll('.frame'));
+    function fit() {
+      frames.forEach(function (frame) {
+        var scale = frame.clientWidth / 1920;
+        frame.style.setProperty('--s', scale);
+      });
+    }
+    frames.forEach(function (frame) {
+      if ('ResizeObserver' in window) new ResizeObserver(fit).observe(frame);
+    });
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit);
+    fit();
+  })();
+</script>
+</body>
+</html>
