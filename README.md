@@ -30,6 +30,63 @@ d'actualité la raconte.
 8. **Votre vote final** — le même vote ou un autre ; l'application ne commente ni l'un ni l'autre.
 9. **La carte** — l'hémicycle, un point par siège, pour situer le scrutin et votre position.
 
+## Les évolutions possibles
+
+Le socle est déjà celui d'un corpus : une génération hors ligne écrit des JSON, un
+contrôle les accepte, l'application les sert sans backend. Ajouter une loi ne touche
+pas au front.
+
+| Évolution | Ce qu'elle change pour le lecteur | État |
+|---|---|---|
+| Archive de lois | toutes les lois, pas seulement celle du jour | 1 loi publiée |
+| Recherche dans l'archive | retrouver un texte, un article, une citation | désactivée sous 10 lois |
+| Recherche par le sens (RAG) | chercher une idée, pas un mot-clé | non implémenté |
+| Séries thématiques | relier plusieurs lois d'un même thème | non implémenté |
+| Sénat comme vote principal | suivre aussi la seconde chambre | bloqué : `data/ref/senat.json` absent |
+| Backend de génération | produire les fiches en tâche de fond | non implémenté |
+| Générateur versionné | rendre la collecte reproductible | absent : écriture manuelle |
+| API du corpus | servir les mêmes données à des tiers | non implémenté |
+
+Le détail technique de ces évolutions est dans `docs/roadmap.md` et
+`docs/pipeline-freemium.md`.
+
+## Le business model possible
+
+> **Non implémenté.** Aucun compte, aucun paiement, aucun backend payant n'existe
+> aujourd'hui. Tout ce qui est publié est gratuit et lisible hors ligne.
+
+Le produit est un corpus généré une fois, servi à tous en fichiers statiques : le coût
+de production est mesuré, le coût marginal d'un lecteur supplémentaire reste celui de
+l'hébergement.
+
+| Gratuit (état actuel) | Payant (envisageable, non implémenté) |
+|---|---|
+| la loi du jour, en entier | archive thématique au-delà de la loi du jour |
+| la chronologie, le résumé, l'article entier | séries historiques (« les lois de… ») |
+| le premier vote, les chiffres | recherche plein texte dans l'archive |
+| le débat mot pour mot | export, dossiers de travail |
+| les chiffres vérifiés, la presse | API ou licence B2B du même corpus |
+| `#/methode`, `#/arbre` | — |
+
+Trois axes de revenus possibles, sans prix fixé à ce jour : un abonnement grand public
+pour l'archive, une licence du corpus pour les rédactions, ONG et collectivités, et une
+API pour les développeurs. Aucun tarif n'est documenté ; la recharge Hémicycle commence
+à 100 € HT.
+
+Trois interdits structurent l'offre :
+
+1. **On ne vend pas le résultat d'un vote.** Le vote n'est ni collecté ni monnayable ;
+   les XP ne récompensent que le parcours.
+2. **La chronologie ne dépend pas du paiement.** La chronologie, le vote et le débat de
+   la loi du jour restent gratuits : payer ne change pas ce qui est vrai.
+3. **On ne vend pas de données personnelles.** Il n'y en a pas aujourd'hui.
+
+Le coût de production mesuré est de 0,08 à 0,15 € par loi (trajet minimal ou complet),
+0,23 à 0,25 € avec les agrégats. À 1 000 lois, la collecte coûte 80 à 150 € ; le stockage,
+l'hébergement et le paiement ne sont pas mesurés. Ce qui bloque une offre payante
+aujourd'hui : la redistribution commerciale des données Hémicycle n'est pas documentée,
+et la licence des données du Sénat n'est pas confirmée.
+
 ## Les écrans
 
 Écrans réels, capturés par `node scripts/captures.mjs` (680 × 960, thème sombre).
@@ -192,8 +249,8 @@ est vraie ; il prouve que la publication refuse ce qui n'est pas vérifiable.
 - Le classement d'un titre de presse dans sa colonne éditoriale n'est pas contrôlé par
   le gate ; la colonne n'est pas une donnée officielle.
 - Le gate refuse l'invention, pas le mauvais choix de sélection.
-- Le RAG, le backend et le freemium décrits dans `docs/roadmap.md` ne sont pas
-  implémentés.
+- Le RAG, le backend et le freemium décrits plus haut ne sont pas implémentés ; le
+  détail est dans `docs/roadmap.md`.
 
 ## Contribuer
 
