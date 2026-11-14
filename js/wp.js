@@ -70,9 +70,17 @@
     return lot.taches;
   }
 
+  /* Une tâche peut arriver cochée depuis le plan : le travail déjà fait ne
+     doit pas apparaître en retard à la première ouverture. Une case touchée
+     dans le navigateur l'emporte toujours sur cette valeur par défaut. */
+  function cochee(lot, t) {
+    var v = etat.taches[lot.code + ":" + t.id];
+    return v === undefined ? t.fait === true : v === true;
+  }
+
   function faitesDe(lot) {
     return lot.taches.filter(function (t) {
-      return etat.taches[lot.code + ":" + t.id] === true;
+      return cochee(lot, t);
     }).length;
   }
 
@@ -169,7 +177,7 @@
       lot.taches
         .map(function (t) {
           var id = lot.code + ":" + t.id;
-          var fait = etat.taches[id] === true;
+          var fait = cochee(lot, t);
           return (
             '<li class="tache" data-fait="' +
             fait +
@@ -283,7 +291,14 @@
 
       if (e.target.id === "reinit") {
         if (!window.confirm("Décocher toutes les tâches ?")) return;
+        /* Un effacement explicite doit aussi décocher les tâches arrivées
+           cochées depuis le plan, sinon le bouton ne ferait rien sur elles. */
         etat = { taches: {} };
+        plan.lots.forEach(function (lot) {
+          lot.taches.forEach(function (t) {
+            etat.taches[lot.code + ":" + t.id] = false;
+          });
+        });
         masquerFaits = false;
         sauver();
         rendre();
@@ -348,7 +363,7 @@
 
     var lot = restant[0];
     var tache = lot.taches.filter(function (t) {
-      return etat.taches[lot.code + ":" + t.id] !== true;
+      return !cochee(lot, t);
     })[0];
     var now = maintenant();
     var quand;

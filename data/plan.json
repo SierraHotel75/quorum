@@ -13,12 +13,14 @@
       "sortie": "verifier.mjs refuse la démo",
       "bloque": "sans lui, aucune dépense de crédit",
       "taches": [
-        { "id": "1.1", "nom": "Schéma JSON du fichier de loi" },
-        { "id": "1.2", "nom": "Chiffres : total 577 et décompte du scrutin" },
-        { "id": "1.3", "nom": "Extraits présents mot pour mot dans le texte" },
-        { "id": "1.4", "nom": "Symétrie des trois bords" },
-        { "id": "1.5", "nom": "Sources : HTTPS et domaine autorisé" },
-        { "id": "1.6", "nom": "Test négatif sur demo.json" }
+        { "id": "1.1", "nom": "Schéma JSON du fichier de loi", "fait": true },
+        { "id": "1.2", "nom": "Chiffres : total 577 et décompte du scrutin", "fait": true },
+        { "id": "1.3", "nom": "Extraits présents mot pour mot dans le texte", "fait": true },
+        { "id": "1.4", "nom": "Symétrie des quatre bords", "fait": true },
+        { "id": "1.5", "nom": "Sources : HTTPS et domaine autorisé", "fait": true },
+        { "id": "1.6", "nom": "Test négatif sur demo.json", "fait": true },
+        { "id": "1.7", "nom": "Citations du débat recoupées au compte rendu", "fait": true },
+        { "id": "1.8", "nom": "Chiffres du débat : verdict et source", "fait": true }
       ]
     },
     {
@@ -30,12 +32,13 @@
       "sortie": "verifier.mjs vert",
       "bloque": "coût réel d'environ 8 crédits",
       "taches": [
-        { "id": "2.1", "nom": "Choix du scrutin" },
-        { "id": "2.2", "nom": "Décompte global et par groupe" },
-        { "id": "2.3", "nom": "Texte et extraits verbatim" },
-        { "id": "2.4", "nom": "Chronologie du texte" },
-        { "id": "2.5", "nom": "Presse par flux RSS" },
-        { "id": "2.6", "nom": "Spécialistes sur liste curatée" }
+        { "id": "2.1", "nom": "Choix du scrutin", "fait": true },
+        { "id": "2.2", "nom": "Décompte global et par groupe", "fait": true },
+        { "id": "2.3", "nom": "Texte et extraits verbatim", "fait": true },
+        { "id": "2.4", "nom": "Chronologie du texte", "fait": true },
+        { "id": "2.5", "nom": "Presse par flux RSS", "fait": true },
+        { "id": "2.6", "nom": "Spécialistes sur liste curatée", "fait": true },
+        { "id": "2.7", "nom": "Débat : neuf citations, quatre séances", "fait": true }
       ]
     },
     {
@@ -47,10 +50,13 @@
       "sortie": "plus aucune mention de démonstration",
       "bloque": "",
       "taches": [
-        { "id": "3.1", "nom": "Retrait du bandeau de démonstration" },
-        { "id": "3.2", "nom": "Relecture des 15 écrans sur les données réelles" },
-        { "id": "3.3", "nom": "États vides honnêtes" },
-        { "id": "3.4", "nom": "Version de cache incrémentée" }
+        { "id": "3.1", "nom": "Retrait du bandeau de démonstration", "fait": true },
+        { "id": "3.2", "nom": "Relecture de tous les écrans sur les données réelles", "fait": true },
+        { "id": "3.3", "nom": "États vides honnêtes", "fait": true },
+        { "id": "3.4", "nom": "Version de cache incrémentée", "fait": true },
+        { "id": "3.5", "nom": "Écran /debat : trois voix par bord", "fait": true },
+        { "id": "3.6", "nom": "Écran /verif : trois chiffres, trois verdicts", "fait": true },
+        { "id": "3.7", "nom": "Parcours : le vote après le texte", "fait": true }
       ]
     },
     {
@@ -78,7 +84,7 @@
       "sortie": "4 minutes, deux fois de suite",
       "bloque": "",
       "taches": [
-        { "id": "5.1", "nom": "Script en 9 étapes" },
+        { "id": "5.1", "nom": "Script en 12 étapes" },
         { "id": "5.2", "nom": "Répétition chronométrée" },
         { "id": "5.3", "nom": "Filet : serveur éteint, captures, vidéo" },
         { "id": "5.4", "nom": "Plan B si une donnée manque" }
