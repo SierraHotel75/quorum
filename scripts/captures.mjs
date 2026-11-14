@@ -117,10 +117,18 @@ await envoyer("Emulation.setDeviceMetricsOverride",
 
 mkdirSync(join(RACINE, "docs", "captures"), { recursive: true });
 const lignes = [];
+let compteur = 0;
 
 for (const [nom, route] of ROUTES) {
+  // Chaque capture part d'une mémoire vierge : aucun écran ne montre un vote
+  // ni une progression héritée de la capture précédente. Le paramètre `c`
+  // force un rechargement complet, un changement de hash seul ne suffit pas.
+  await evaluer(
+    `localStorage.setItem("quorum.v1", JSON.stringify({version:1,votes:{},progres:{},intro:true}))`,
+    sessionId
+  );
   await envoyer("Page.navigate",
-    { url: `http://127.0.0.1:8000/?w=${LARGEUR}#/${route}` }, sessionId);
+    { url: `http://127.0.0.1:8000/?w=${LARGEUR}&c=${++compteur}#/${route}` }, sessionId);
   let pret = false;
   for (let i = 0; i < 40 && !pret; i++) {
     await attendre(150);

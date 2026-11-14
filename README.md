@@ -16,19 +16,27 @@ Puis vous votez. Pour vous. Sans compte, sans avis de l'application, sans classe
 ## Le parcours
 
 Un devoir se lit dans l'ordre où une loi se fait, pas dans l'ordre où un fil
-d'actualité la raconte.
+d'actualité la raconte. Dix étapes, en trois temps.
+
+**Avant votre vote**
 
 1. **La chronologie** — du dépôt du texte au vote, chaque étape datée, avec sa source.
-2. **Le résumé et le texte entier** — ce que change la loi, puis l'article travaillé
-   mot pour mot, alinéa par alinéa.
-3. **Votre vote** — après avoir lu, pas avant.
-4. **Les chiffres** — pour, contre, abstentions, votants, exprimés, et la règle appliquée.
-5. **Le débat, mot pour mot** — trois voix de chaque côté, recopiées des comptes rendus.
-6. **Les chiffres vérifiés** — ce que les députés ont affirmé, confronté à une source,
+2. **Le résumé** — ce que change la loi, en quelques phrases sourcées.
+3. **L'article entier** — le texte travaillé mot pour mot, alinéa par alinéa.
+
+**Votre premier vote**
+
+4. **Votre vote** — après avoir lu, pas avant.
+
+**Après votre vote**
+
+5. **Les chiffres** — pour, contre, abstentions, votants, exprimés, et la règle appliquée.
+6. **Le débat, mot pour mot** — trois voix de chaque côté, recopiées des comptes rendus.
+7. **Les chiffres vérifiés** — ce que les députés ont affirmé, confronté à une source,
    avec un verdict qui ne dit jamais si la loi est bonne.
-7. **La presse** — les titres des journaux, tels quels, avec leur date et leur lien.
-8. **Votre vote final** — le même vote ou un autre ; l'application ne commente ni l'un ni l'autre.
-9. **La carte** — l'hémicycle, un point par siège, pour situer le scrutin et votre position.
+8. **La presse** — les titres des journaux, tels quels, avec leur date et leur lien.
+9. **Votre vote final** — le même vote ou un autre ; l'application ne commente ni l'un ni l'autre.
+10. **La carte** — l'hémicycle, un point par siège, pour situer le scrutin et votre position.
 
 ## Les évolutions possibles
 
@@ -273,6 +281,8 @@ node scripts/captures.mjs       # captures du README, 680 px
 - `preuve-gate.mjs` doit rendre `Preuve tenue : 12 cas sur 12.`
 - `mobile.mjs` et `captures.mjs` pilotent le Chrome installé via le protocole DevTools,
   sur un serveur déjà lancé à `http://127.0.0.1:8000`. Chrome absent : définir `CHROME_PATH`.
+  `captures.mjs` part d'une mémoire locale vierge pour chaque écran : aucune capture ne
+  montre un vote ni une progression héritée d'un autre écran.
 
 Règles de contribution :
 
